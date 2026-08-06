@@ -1,0 +1,60 @@
+# Rust
+/target/
+**/*.rs.bk
+Cargo.lock.tmp
+
+# Editors and local agent tooling
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.codex/
+.claude/
+graphify-out/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local Ossus state
+.ossus/cache/
+.ossus/index/
+.ossus/store/
+.ossus/transactions/
+.ossus/audit/
+.ossus/local.toml
+skills.lock.json.tmp
+
+# Untrusted Researcher runtime data
+research-quarantine/
+research-evidence/
+research-work/
+
+# External-origin content must never enter the privileged repository (ADR-012,
+# Gate S0 decision D5). Archives and import allowlists are staged outside it.
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+catalog/imports/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# Reports and coverage
+coverage/
+*.profraw
+lcov.info
+reports/local/
+
+# Temporary archives
+*.tmp
+*.part

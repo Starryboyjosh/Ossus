@@ -1,0 +1,48 @@
+name: Capability taxonomy proposal
+description: Add, split, merge, deprecate, or clarify a governed capability.
+title: "[Taxonomy]: "
+labels: ["taxonomy", "design-review"]
+body:
+  - type: input
+    id: capability
+    attributes:
+      label: Proposed capability ID
+      placeholder: domain.capability
+    validations:
+      required: true
+  - type: textarea
+    id: definition
+    attributes:
+      label: Stable definition
+    validations:
+      required: true
+  - type: textarea
+    id: included
+    attributes:
+      label: Included behaviors
+    validations:
+      required: true
+  - type: textarea
+    id: excluded
+    attributes:
+      label: Excluded behaviors
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Positive and negative task examples
+    validations:
+      required: true
+  - type: textarea
+    id: neighbors
+    attributes:
+      label: Neighboring capabilities and aliases
+    validations:
+      required: true
+  - type: textarea
+    id: goldens
+    attributes:
+      label: Golden-case impact
+    validations:
+      required: true

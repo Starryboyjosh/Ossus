@@ -1,0 +1,50 @@
+schema_version = "1.0.0"
+capability_schema = "1.0.0"
+id = "ossus-example.frontend-review"
+name = "Frontend Review"
+description = "Reviews visual quality, responsive layout, and accessibility boundaries."
+resource_type = "skill"
+budget_probe = ["item-001", "item-002", "item-003", "item-004", "item-005", "item-006", "item-007", "item-008", "item-009", "item-010", "item-011", "item-012", "item-013", "item-014", "item-015", "item-016", "item-017", "item-018", "item-019", "item-020", "item-021", "item-022", "item-023", "item-024", "item-025", "item-026", "item-027", "item-028", "item-029", "item-030", "item-031", "item-032", "item-033", "item-034", "item-035", "item-036", "item-037", "item-038", "item-039", "item-040", "item-041", "item-042", "item-043", "item-044", "item-045", "item-046", "item-047", "item-048", "item-049", "item-050"]
+categories = ["frontend", "quality"]
+triggers = ["review frontend", "responsive layout", "visual quality"]
+exclusions = ["backend-only task", "database migration"]
+
+[source]
+mode = "remote-index"
+repository = "https://example.invalid/frontend-review.git"
+commit = "0123456789abcdef0123456789abcdef01234567"
+subpath = "skills/frontend-review"
+tree_hash = "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+license = "MIT"
+
+[capabilities]
+required = ["frontend.visual-design", "frontend.responsive-layout"]
+optional = ["frontend.accessibility"]
+
+[compatibility]
+surfaces = ["agent-skills-standard", "claude-code-cli", "codex-cli"]
+portability = "portable-standard"
+scopes = ["project", "user-global", "custom-path"]
+
+[runtime]
+requirements = ["instruction-only"]
+external_tools = []
+
+[risk]
+tier = "R0"
+notes = "Declarative instructions only."
+
+[review]
+status = "approved"
+tier = "light-human"
+approved_commit = "abcdef0123456789abcdef0123456789abcdef01"
+reviewer_ids = ["reviewer-001"]
+
+[context]
+measured_tokens = 2800
+measurement_method = "host-tokenizer-v1"
+
+[distribution]
+mode = "source-only"
+notice_required = false
+

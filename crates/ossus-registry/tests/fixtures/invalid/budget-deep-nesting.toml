@@ -1,0 +1,50 @@
+schema_version = "1.0.0"
+capability_schema = "1.0.0"
+id = "ossus-example.frontend-review"
+name = "Frontend Review"
+description = "Reviews visual quality, responsive layout, and accessibility boundaries."
+resource_type = "skill"
+budget_probe = { level01 = { level02 = { level03 = { level04 = { level05 = { level06 = { level07 = { level08 = { level09 = { level10 = { level11 = { level12 = { level13 = { level14 = { level15 = { level16 = { level17 = { level18 = { level19 = { level20 = { level21 = { level22 = { level23 = { level24 = { level25 = { level26 = { level27 = { level28 = { level29 = { level30 = { level31 = { level32 = { level33 = { level34 = { level35 = { level36 = { level37 = { level38 = { level39 = { level40 = "leaf" } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } } }
+categories = ["frontend", "quality"]
+triggers = ["review frontend", "responsive layout", "visual quality"]
+exclusions = ["backend-only task", "database migration"]
+
+[source]
+mode = "remote-index"
+repository = "https://example.invalid/frontend-review.git"
+commit = "0123456789abcdef0123456789abcdef01234567"
+subpath = "skills/frontend-review"
+tree_hash = "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+license = "MIT"
+
+[capabilities]
+required = ["frontend.visual-design", "frontend.responsive-layout"]
+optional = ["frontend.accessibility"]
+
+[compatibility]
+surfaces = ["agent-skills-standard", "claude-code-cli", "codex-cli"]
+portability = "portable-standard"
+scopes = ["project", "user-global", "custom-path"]
+
+[runtime]
+requirements = ["instruction-only"]
+external_tools = []
+
+[risk]
+tier = "R0"
+notes = "Declarative instructions only."
+
+[review]
+status = "approved"
+tier = "light-human"
+approved_commit = "abcdef0123456789abcdef0123456789abcdef01"
+reviewer_ids = ["reviewer-001"]
+
+[context]
+measured_tokens = 2800
+measurement_method = "host-tokenizer-v1"
+
+[distribution]
+mode = "source-only"
+notice_required = false
+

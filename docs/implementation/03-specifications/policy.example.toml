@@ -1,0 +1,25 @@
+schema_version = "1.0.0"
+
+[activation]
+risk_max = "R2"
+max_resources = 5
+hard_max_resources = 8
+allow_implicit = ["R0", "R1"]
+require_confirmation = ["R2", "R3", "R4"]
+deny = ["R5"]
+allow_modified_local = false
+require_hash_verification = true
+
+[sources]
+allow = ["project", "user", "official"]
+deny_unknown_identity = true
+allow_mutable_refs = false
+
+[runtime]
+allow = ["instruction-only", "filesystem-only"]
+confirm = ["shell-required", "network-required", "external-cli-required", "mcp-required"]
+deny = ["host-api-required"]
+
+[surfaces]
+allow = ["claude-code-cli", "agent-skills-standard"]
+warn_unknown_host_version = true

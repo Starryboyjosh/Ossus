@@ -1,0 +1,15 @@
+[package]
+name = "ossus-resolver"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish = false
+
+[dependencies]
+ossus-core.workspace = true
+ossus-policy.workspace = true
+ossus-registry.workspace = true
+
+[lints]
+workspace = true

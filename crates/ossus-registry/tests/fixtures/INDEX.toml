@@ -1,0 +1,631 @@
+schema_version = "1.0.0"
+
+[[fixtures]]
+file = "invalid/unknown-field-top-level.toml"
+expectation = "invalid"
+defect = "unknown key `flavor` at the top level"
+rule = "F-11"
+notes = ""
+reason_code = "manifest.field.unknown"
+
+[[fixtures]]
+file = "invalid/unknown-field-source.toml"
+expectation = "invalid"
+defect = "unknown key `flavor` inside `[source]`"
+rule = "F-11"
+notes = ""
+reason_code = "manifest.field.unknown"
+
+[[fixtures]]
+file = "invalid/origin-top-level.toml"
+expectation = "invalid"
+defect = "origin metadata at the top level"
+rule = "F-12"
+notes = ""
+reason_code = "manifest.field.unknown"
+
+[[fixtures]]
+file = "invalid/author-capabilities-top-level.toml"
+expectation = "invalid"
+defect = "author capability claims at the top level"
+rule = "F-12"
+notes = ""
+reason_code = "manifest.field.unknown"
+
+[[fixtures]]
+file = "invalid/upstream-triggers-top-level.toml"
+expectation = "invalid"
+defect = "upstream trigger claims at the top level"
+rule = "F-12"
+notes = ""
+reason_code = "manifest.field.unknown"
+
+[[fixtures]]
+file = "invalid/stars-top-level.toml"
+expectation = "invalid"
+defect = "upstream popularity metadata at the top level"
+rule = "F-12"
+notes = ""
+reason_code = "manifest.field.unknown"
+
+[[fixtures]]
+file = "invalid/unknown-field-review.toml"
+expectation = "invalid"
+defect = "unknown key `reviewed_by` inside `[review]`"
+rule = "F-11"
+notes = ""
+reason_code = "manifest.field.unknown"
+
+[[fixtures]]
+file = "invalid/schema-version-unknown-major.toml"
+expectation = "invalid"
+defect = "unknown canonical manifest schema major `2`"
+rule = "version-policy"
+notes = ""
+reason_code = "version.unsupported-major"
+
+[[fixtures]]
+file = "invalid/schema-version-malformed.toml"
+expectation = "invalid"
+defect = "malformed canonical manifest schema version"
+rule = "version-policy"
+notes = ""
+reason_code = "version.invalid-format"
+
+[[fixtures]]
+file = "invalid/capability-schema-major-mismatch.toml"
+expectation = "invalid"
+defect = "capability taxonomy major does not match the loaded V1 taxonomy"
+rule = "version-policy"
+notes = "The JSON schema checks semantic-version shape only; taxonomy version compatibility is semantic validation."
+reason_code = "capability-schema.version-mismatch"
+
+[[fixtures]]
+file = "invalid/remote-index-license-absent.toml"
+expectation = "invalid"
+defect = "remote-index source omits required license"
+rule = "F-03"
+notes = ""
+reason_code = "source.license.required-for-shared-source"
+
+[[fixtures]]
+file = "invalid/vendored-license-absent.toml"
+expectation = "invalid"
+defect = "vendored source omits required license"
+rule = "F-03"
+notes = ""
+reason_code = "source.license.required-for-shared-source"
+
+[[fixtures]]
+file = "valid/local-private-license-absent.toml"
+expectation = "valid"
+defect = "local-private source may omit license"
+rule = "F-03"
+notes = ""
+
+[[fixtures]]
+file = "invalid/pair-remote-index-vendored-redistributable.toml"
+expectation = "invalid"
+defect = "remote-index contradicts vendored-redistributable"
+rule = "F-08"
+notes = ""
+reason_code = "distribution.mode.contradicts-source-mode"
+
+[[fixtures]]
+file = "invalid/pair-vendored-source-only.toml"
+expectation = "invalid"
+defect = "vendored source contradicts source-only distribution"
+rule = "F-08"
+notes = ""
+reason_code = "distribution.mode.contradicts-source-mode"
+
+[[fixtures]]
+file = "invalid/pair-local-private-vendored-redistributable.toml"
+expectation = "invalid"
+defect = "local-private source contradicts vendored-redistributable"
+rule = "F-08"
+notes = ""
+reason_code = "distribution.mode.contradicts-source-mode"
+
+[[fixtures]]
+file = "valid/pair-remote-index-source-only.toml"
+expectation = "valid"
+defect = "permitted remote-index and source-only pair"
+rule = "F-08"
+notes = ""
+
+[[fixtures]]
+file = "valid/pair-remote-index-approved-install-only.toml"
+expectation = "valid"
+defect = "permitted remote-index and approved-install-only pair"
+rule = "F-08"
+notes = ""
+
+[[fixtures]]
+file = "valid/pair-vendored-approved-install-only.toml"
+expectation = "valid"
+defect = "permitted vendored and approved-install-only pair"
+rule = "F-08"
+notes = ""
+
+[[fixtures]]
+file = "valid/pair-vendored-vendored-redistributable.toml"
+expectation = "valid"
+defect = "permitted vendored and vendored-redistributable pair"
+rule = "F-08"
+notes = ""
+
+[[fixtures]]
+file = "valid/pair-local-private-source-only.toml"
+expectation = "valid"
+defect = "permitted local-private and source-only pair"
+rule = "F-08"
+notes = ""
+
+[[fixtures]]
+file = "valid/pair-local-private-approved-install-only.toml"
+expectation = "valid"
+defect = "permitted local-private and approved-install-only pair"
+rule = "F-08"
+notes = ""
+
+[[fixtures]]
+file = "invalid/commit-41-characters.toml"
+expectation = "invalid"
+defect = "source commit has 41 hexadecimal characters"
+rule = "F-09"
+notes = ""
+reason_code = "source.commit.invalid-format"
+
+[[fixtures]]
+file = "invalid/commit-50-characters.toml"
+expectation = "invalid"
+defect = "source commit has 50 hexadecimal characters"
+rule = "F-09"
+notes = ""
+reason_code = "source.commit.invalid-format"
+
+[[fixtures]]
+file = "invalid/commit-63-characters.toml"
+expectation = "invalid"
+defect = "source commit has 63 hexadecimal characters"
+rule = "F-09"
+notes = ""
+reason_code = "source.commit.invalid-format"
+
+[[fixtures]]
+file = "invalid/commit-non-hex.toml"
+expectation = "invalid"
+defect = "source commit contains non-hexadecimal character `g`"
+rule = "F-09"
+notes = ""
+reason_code = "source.commit.invalid-format"
+
+[[fixtures]]
+file = "invalid/commit-uppercase.toml"
+expectation = "invalid"
+defect = "source commit is not lowercase canonical form"
+rule = "F-09"
+notes = ""
+reason_code = "source.commit.not-normalized"
+
+[[fixtures]]
+file = "invalid/approved-commit-abbreviated.toml"
+expectation = "invalid"
+defect = "review approved_commit is a 7-character abbreviation"
+rule = "F-09"
+notes = "Document tension: the JSON schema currently permits 7 to 64 characters, while F-09 requires a full 40- or 64-character hexadecimal commit identity. This fixture is expected to fail semantic validation."
+reason_code = "review.approved_commit.invalid-format"
+
+[[fixtures]]
+file = "valid/commit-case-variant-a.toml"
+expectation = "valid"
+defect = "lowercase source commit identity with lowercase evidence comment"
+rule = "F-09"
+notes = "Paired with commit-case-variant-b.toml; comments are non-canonical evidence and must not create a second identity."
+
+[[fixtures]]
+file = "valid/commit-case-variant-b.toml"
+expectation = "valid"
+defect = "lowercase source commit identity with uppercase evidence comment"
+rule = "F-09"
+notes = "Paired with commit-case-variant-a.toml; the only difference is comment case, so both canonical manifests resolve to one lowercase identity."
+
+[[fixtures]]
+file = "invalid/surface-wrong-case.toml"
+expectation = "invalid"
+defect = "surface uses wrong case"
+rule = "F-10"
+notes = ""
+reason_code = "compatibility.surfaces.unknown"
+
+[[fixtures]]
+file = "invalid/surface-unknown.toml"
+expectation = "invalid"
+defect = "surface is not in the governed nine-value set"
+rule = "F-10"
+notes = ""
+reason_code = "compatibility.surfaces.unknown"
+
+[[fixtures]]
+file = "invalid/capability-required-duplicate.toml"
+expectation = "invalid"
+defect = "duplicate capability in capabilities.required"
+rule = "schema"
+notes = ""
+reason_code = "list.duplicate"
+
+[[fixtures]]
+file = "invalid/capability-required-optional-overlap.toml"
+expectation = "invalid"
+defect = "same capability appears in required and optional capability sets"
+rule = "taxonomy-v1"
+notes = "Cross-list disjointness is semantic validation; JSON Schema uniqueItems applies within each list only."
+reason_code = "capability.id.overlap"
+
+[[fixtures]]
+file = "invalid/triggers-13-items.toml"
+expectation = "invalid"
+defect = "triggers contains 13 items"
+rule = "schema"
+notes = ""
+reason_code = "list.count.out-of-range"
+
+[[fixtures]]
+file = "invalid/exclusions-13-items.toml"
+expectation = "invalid"
+defect = "exclusions contains 13 items"
+rule = "schema"
+notes = ""
+reason_code = "list.count.out-of-range"
+
+[[fixtures]]
+file = "invalid/categories-9-items.toml"
+expectation = "invalid"
+defect = "categories contains 9 items"
+rule = "schema"
+notes = ""
+reason_code = "list.count.out-of-range"
+
+[[fixtures]]
+file = "invalid/categories-empty.toml"
+expectation = "invalid"
+defect = "categories is empty"
+rule = "schema"
+notes = ""
+reason_code = "list.count.out-of-range"
+
+[[fixtures]]
+file = "invalid/surfaces-duplicate.toml"
+expectation = "invalid"
+defect = "compatibility.surfaces contains a duplicate"
+rule = "schema"
+notes = ""
+reason_code = "list.duplicate"
+
+[[fixtures]]
+file = "invalid/surfaces-empty.toml"
+expectation = "invalid"
+defect = "compatibility.surfaces is empty"
+rule = "schema"
+notes = ""
+reason_code = "list.count.out-of-range"
+
+[[fixtures]]
+file = "invalid/runtime-requirements-empty.toml"
+expectation = "invalid"
+defect = "runtime.requirements is empty"
+rule = "schema"
+notes = ""
+reason_code = "list.count.out-of-range"
+
+[[fixtures]]
+file = "invalid/capability-required-17-items.toml"
+expectation = "invalid"
+defect = "capabilities.required contains 17 items"
+rule = "schema"
+notes = ""
+reason_code = "list.count.out-of-range"
+
+[[fixtures]]
+file = "invalid/reviewer-ids-9-items.toml"
+expectation = "invalid"
+defect = "review.reviewer_ids contains 9 items"
+rule = "schema"
+notes = ""
+reason_code = "list.count.out-of-range"
+
+[[fixtures]]
+file = "invalid/reviewer-ids-empty.toml"
+expectation = "invalid"
+defect = "review.reviewer_ids is empty"
+rule = "schema"
+notes = ""
+reason_code = "list.count.out-of-range"
+
+[[fixtures]]
+file = "invalid/risk-r0-shell-required.toml"
+expectation = "invalid"
+defect = "R0 declares shell-required runtime"
+rule = "risk-tier-policy"
+notes = ""
+reason_code = "risk.tier.below-runtime-requirement"
+
+[[fixtures]]
+file = "invalid/risk-r0-network-required.toml"
+expectation = "invalid"
+defect = "R0 declares network-required runtime"
+rule = "risk-tier-policy"
+notes = ""
+reason_code = "risk.tier.below-runtime-requirement"
+
+[[fixtures]]
+file = "invalid/risk-r1-mcp-required.toml"
+expectation = "invalid"
+defect = "R1 under-declares an mcp-required runtime"
+rule = "risk-tier-policy"
+notes = ""
+reason_code = "risk.tier.below-runtime-requirement"
+
+[[fixtures]]
+file = "invalid/risk-r5-excluded.toml"
+expectation = "invalid"
+defect = "R5 resources are excluded from the stable Registry"
+rule = "risk-tier-policy"
+notes = "Document tension: the JSON schema enum includes R5 so the tier can be represented, while RISK_TIERS.md excludes R5 from the stable initial Registry. This fixture is schema-valid but must fail admission semantic validation."
+reason_code = "risk.tier.excluded-from-registry"
+
+[[fixtures]]
+file = "invalid/risk-r4-light-human.toml"
+expectation = "invalid"
+defect = "R4 uses light-human review instead of security-human review"
+rule = "risk-tier-policy"
+notes = ""
+reason_code = "review.tier.insufficient-for-risk"
+
+[[fixtures]]
+file = "invalid/risk-r3-full-human.toml"
+expectation = "invalid"
+defect = "R3 uses full-human review instead of security-human review"
+rule = "risk-tier-policy"
+notes = ""
+reason_code = "review.tier.insufficient-for-risk"
+
+[[fixtures]]
+file = "valid/risk-r4-instruction-only.toml"
+expectation = "valid"
+defect = "R4 over-declares risk for instruction-only runtime"
+rule = "risk-tier-policy"
+notes = "Over-declaring risk is allowed; review remains security-human with two reviewer IDs."
+
+[[fixtures]]
+file = "valid/risk-r3-shell-security-review.toml"
+expectation = "valid"
+defect = "R3 shell runtime has security-human review"
+rule = "risk-tier-policy"
+notes = ""
+
+[[fixtures]]
+file = "invalid/vendored-redistributable-notice-absent.toml"
+expectation = "invalid"
+defect = "vendored-redistributable omits notice_required"
+rule = "distribution-notice"
+notes = "The JSON schema does not encode this conditional; DATA_CONTRACTS.md requires semantic rejection."
+reason_code = "distribution.notice-required.missing-for-redistribution"
+
+[[fixtures]]
+file = "invalid/vendored-redistributable-notice-false.toml"
+expectation = "invalid"
+defect = "vendored-redistributable sets notice_required false"
+rule = "distribution-notice"
+notes = "The JSON schema does not encode this conditional; DATA_CONTRACTS.md requires semantic rejection."
+reason_code = "distribution.notice-required.missing-for-redistribution"
+
+[[fixtures]]
+file = "invalid/source-only-notice-true.toml"
+expectation = "invalid"
+defect = "source-only sets notice_required true even though notice is meaningful only for vendored redistribution"
+rule = "distribution-notice"
+notes = "The JSON schema does not encode this conditional; DATA_CONTRACTS.md requires semantic rejection."
+reason_code = "distribution.notice-required.not-applicable"
+
+[[fixtures]]
+file = "invalid/capability-unknown.toml"
+expectation = "invalid"
+defect = "capability ID is absent from the V1 taxonomy"
+rule = "taxonomy-v1"
+notes = ""
+reason_code = "capability.id.unmapped"
+
+[[fixtures]]
+file = "invalid/capability-three-levels.toml"
+expectation = "invalid"
+defect = "capability ID has three levels"
+rule = "taxonomy-v1"
+notes = "V1 canonical capabilities have exactly domain and name components."
+reason_code = "capability.id.invalid-format"
+
+[[fixtures]]
+file = "invalid/capability-alias-in-canonical-list.toml"
+expectation = "invalid"
+defect = "alias `project-audit` is used where a canonical capability ID is required"
+rule = "taxonomy-v1"
+notes = "The real alias `project-audit` maps to canonical target `project.discovery`."
+reason_code = "capability.id.alias-not-canonical"
+
+[[fixtures]]
+file = "invalid/capability-uppercase.toml"
+expectation = "invalid"
+defect = "capability ID contains uppercase characters"
+rule = "taxonomy-v1"
+notes = ""
+reason_code = "capability.id.invalid-format"
+
+[[fixtures]]
+file = "invalid/id-too-short.toml"
+expectation = "invalid"
+defect = "id has only 2 characters"
+rule = "schema"
+notes = ""
+reason_code = "resource.id.invalid-format"
+
+[[fixtures]]
+file = "invalid/id-underscore.toml"
+expectation = "invalid"
+defect = "id contains an underscore"
+rule = "schema"
+notes = ""
+reason_code = "resource.id.invalid-format"
+
+[[fixtures]]
+file = "invalid/id-leading-hyphen.toml"
+expectation = "invalid"
+defect = "id starts with a hyphen"
+rule = "schema"
+notes = ""
+reason_code = "resource.id.invalid-format"
+
+[[fixtures]]
+file = "invalid/id-uppercase.toml"
+expectation = "invalid"
+defect = "id contains uppercase characters"
+rule = "schema"
+notes = ""
+reason_code = "resource.id.invalid-format"
+
+[[fixtures]]
+file = "invalid/tree-hash-wrong-prefix.toml"
+expectation = "invalid"
+defect = "tree_hash uses sha512 prefix"
+rule = "schema"
+notes = ""
+reason_code = "source.tree-hash.invalid-format"
+
+[[fixtures]]
+file = "invalid/tree-hash-63-hex.toml"
+expectation = "invalid"
+defect = "tree_hash contains 63 hexadecimal characters"
+rule = "schema"
+notes = ""
+reason_code = "source.tree-hash.invalid-format"
+
+[[fixtures]]
+file = "invalid/tree-hash-uppercase.toml"
+expectation = "invalid"
+defect = "tree_hash uses uppercase hexadecimal"
+rule = "schema"
+notes = ""
+reason_code = "source.tree-hash.invalid-format"
+
+[[fixtures]]
+file = "invalid/missing-source.toml"
+expectation = "invalid"
+defect = "required `[source]` section is absent"
+rule = "schema"
+notes = ""
+reason_code = "manifest.field.missing"
+
+[[fixtures]]
+file = "invalid/missing-capabilities.toml"
+expectation = "invalid"
+defect = "required `[capabilities]` section is absent"
+rule = "schema"
+notes = ""
+reason_code = "manifest.field.missing"
+
+[[fixtures]]
+file = "invalid/missing-compatibility.toml"
+expectation = "invalid"
+defect = "required `[compatibility]` section is absent"
+rule = "schema"
+notes = ""
+reason_code = "manifest.field.missing"
+
+[[fixtures]]
+file = "invalid/missing-runtime.toml"
+expectation = "invalid"
+defect = "required `[runtime]` section is absent"
+rule = "schema"
+notes = ""
+reason_code = "manifest.field.missing"
+
+[[fixtures]]
+file = "invalid/missing-risk.toml"
+expectation = "invalid"
+defect = "required `[risk]` section is absent"
+rule = "schema"
+notes = ""
+reason_code = "manifest.field.missing"
+
+[[fixtures]]
+file = "invalid/missing-review.toml"
+expectation = "invalid"
+defect = "required `[review]` section is absent"
+rule = "schema"
+notes = ""
+reason_code = "manifest.field.missing"
+
+[[fixtures]]
+file = "invalid/missing-distribution.toml"
+expectation = "invalid"
+defect = "required `[distribution]` section is absent"
+rule = "schema"
+notes = ""
+reason_code = "manifest.field.missing"
+
+[[fixtures]]
+file = "invalid/missing-categories.toml"
+expectation = "invalid"
+defect = "required categories field is absent"
+rule = "schema"
+notes = ""
+reason_code = "manifest.field.missing"
+
+[[fixtures]]
+file = "invalid/budget-long-string.toml"
+expectation = "invalid"
+defect = "description must be amplified past the 32 KiB parser string budget"
+rule = "parser-budget"
+notes = "Amplification seed: repeat the description value in memory until it exceeds 32 KiB, then parse. The checked-in value is about 180 characters and remains below the schema's 512-character description limit; the amplified case targets the parser budget before schema validation."
+reason_code = "budget.string-length.exceeded"
+
+[[fixtures]]
+file = "invalid/budget-deep-nesting.toml"
+expectation = "invalid"
+defect = "nested inline table exceeds parser depth 32"
+rule = "parser-budget"
+notes = "The `budget_probe` key is deliberately outside the canonical schema so it can carry arbitrary nesting. The parser must reject depth about 40 before schema validation; otherwise F-11 would also reject the key."
+reason_code = "budget.nesting-depth.exceeded"
+
+[[fixtures]]
+file = "invalid/budget-many-items.toml"
+expectation = "invalid"
+defect = "list seed must be amplified past the 2,000-item parser budget"
+rule = "parser-budget"
+notes = "Amplification seed: expand `budget_probe` in memory from 50 unique items to 2,001 before parsing. The unknown key permits an arbitrary seed list; the parser-budget check must run before schema validation, which would otherwise reject the key under F-11."
+reason_code = "budget.list-items.exceeded"
+
+[[fixtures]]
+file = "invalid/malformed-unterminated-string.toml"
+expectation = "invalid"
+defect = "TOML contains an unterminated description string"
+rule = "toml-parser"
+notes = ""
+reason_code = "manifest.toml.invalid"
+
+[[fixtures]]
+file = "invalid/malformed-duplicate-key.toml"
+expectation = "invalid"
+defect = "TOML repeats `tier` in the same `[risk]` table"
+rule = "toml-parser"
+notes = ""
+reason_code = "manifest.toml.invalid"
+
+[[generated_cases]]
+case = "invalid-utf8"
+expectation = "invalid"
+defect = "input contains invalid UTF-8 bytes"
+rule = "toml-parser"
+notes = "Generate this case in the Rust test as raw bytes. A repository .toml text fixture cannot safely encode invalid UTF-8."
+reason_code = "encoding.utf8.invalid"
+

@@ -1,0 +1,8 @@
+include = ["**/*.toml"]
+exclude = ["target/**"]
+
+[formatting]
+align_entries = false
+array_trailing_comma = true
+column_width = 100
+reorder_keys = false

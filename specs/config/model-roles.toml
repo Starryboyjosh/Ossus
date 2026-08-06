@@ -1,0 +1,27 @@
+schema_version = "1.0.0"
+security_waves = ["WAVE-000", "WAVE-007", "WAVE-010", "WAVE-017", "WAVE-018", "WAVE-020", "WAVE-021", "WAVE-023"]
+
+[roles]
+
+[roles.architecture_owner]
+responsibility = "Maintains product coherence and approves WAVE boundaries."
+configured_model = "gpt-5.6-thinking"
+
+[roles.implementation_agent]
+responsibility = "Implements non-security WAVEs and produces test evidence."
+configured_model = "configurable"
+
+[roles.security_implementer]
+responsibility = "Owns every security WAVE and reviews its final diff and evidence."
+configured_model = "opus-5"
+required = true
+no_automatic_fallback = true
+
+[roles.implementation_support]
+responsibility = "Performs attributed, bounded implementation and test work under the security owner's scope."
+configured_model = "luna-max"
+required = false
+grants_security_authority = false
+
+[roles.human_approver]
+responsibility = "Resolves disputed findings, accepts residual risk, and closes security gates."

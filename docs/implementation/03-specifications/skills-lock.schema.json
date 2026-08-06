@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ossus.dev/schemas/skills-lock-1.0.0.json",
+  "title": "Ossus Skills Lock",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "ossus_version",
+    "taxonomy_version",
+    "taxonomy_hash",
+    "policy_hash",
+    "catalog_snapshots",
+    "target",
+    "resources"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "ossus_version": {
+      "type": "string"
+    },
+    "taxonomy_version": {
+      "type": "string"
+    },
+    "taxonomy_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "policy_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "catalog_snapshots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source",
+          "snapshot"
+        ],
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "snapshot": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "target": {
+      "type": "object",
+      "required": [
+        "surface",
+        "scope"
+      ],
+      "properties": {
+        "surface": {
+          "type": "string"
+        },
+        "host_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scope": {
+          "type": "string"
+        }
+      }
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "source_commit",
+          "tree_hash",
+          "adapter",
+          "capabilities",
+          "materialization"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "source_commit": {
+            "type": "string"
+          },
+          "tree_hash": {
+            "type": "string"
+          },
+          "adapter": {
+            "type": "string"
+          },
+          "capabilities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "materialization": {
+            "type": "string"
+          },
+          "local_state": {
+            "enum": [
+              "clean",
+              "modified",
+              "unknown",
+              "missing"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

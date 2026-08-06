@@ -1,0 +1,23 @@
+---
+source: tests/cli_snapshots.rs
+---
+status: 0
+stdout:
+Ossus — local-first agent capability Registry and Resolver
+
+USAGE:
+    ossus <COMMAND>
+
+BOOTSTRAP COMMANDS:
+    help       Show this help
+    version    Show the scaffold package version
+    status     Show domain and implementation status
+    plan       Show the implementation-plan entry point
+
+VALIDATION COMMANDS:
+    validate   Validate canonical manifest files
+
+PLANNED COMMAND GROUPS:
+    init config registry search show scan resolve explain
+    activate deactivate lock doctor eval audit research
+stderr:

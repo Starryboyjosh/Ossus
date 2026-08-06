@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "ossus_version": "0.1.0",
+  "taxonomy_version": "1.0.0",
+  "taxonomy_hash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "policy_hash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "catalog_snapshots": [
+    {
+      "source": "official",
+      "snapshot": "git:0123456789abcdef"
+    }
+  ],
+  "target": {
+    "surface": "claude-code-cli",
+    "host_version": null,
+    "scope": "project"
+  },
+  "resources": [
+    {
+      "id": "ossus-example.frontend-review",
+      "source_commit": "0123456789abcdef0123456789abcdef01234567",
+      "tree_hash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "adapter": "claude-code-v1",
+      "capabilities": [
+        "frontend.visual-design",
+        "frontend.responsive-layout"
+      ],
+      "materialization": ".claude/skills/frontend-review",
+      "local_state": "clean"
+    }
+  ]
+}

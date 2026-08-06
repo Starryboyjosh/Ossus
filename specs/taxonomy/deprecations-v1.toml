@@ -1,0 +1,6 @@
+schema_version = "1.0.0"
+deprecations = []
+
+[policy]
+minimum_alias_lifetime_major_versions = 1
+removal_requires = ["migration_notes", "affected_manifest_report", "golden_case_updates", "resolver_compatibility_test"]

@@ -1,0 +1,43 @@
+schema_version = "1.0.0"
+default_surface = "claude-code-cli"
+default_scope = "project"
+offline_by_default = true
+max_active_resources = 5
+hard_max_active_resources = 8
+allow_external_model_fallback = false
+
+[paths]
+# home = "/custom/ossus/home"
+
+[resolver]
+minimum_confidence = 0.72
+persist_raw_task = false
+semantic_fallback = "disabled"
+
+[policy]
+risk_max = "R2"
+allow_modified_local = false
+require_explicit_confirmation_for = ["R3", "R4"]
+block = ["R5"]
+allow_implicit_r4 = false
+
+[[registries]]
+id = "project"
+kind = "project"
+priority = 300
+path = ".ossus/registry"
+enabled = true
+
+[[registries]]
+id = "user"
+kind = "private"
+priority = 200
+path = "${OSSUS_HOME}/registries/user"
+enabled = true
+
+[[registries]]
+id = "official"
+kind = "official"
+priority = 100
+path = "${OSSUS_HOME}/registries/official"
+enabled = true

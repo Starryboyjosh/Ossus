@@ -1,0 +1,434 @@
+{
+  "package": "ossus-implementation-plan",
+  "version": "1.0.0-planning",
+  "active_language": "English",
+  "historical_language": "Spanish originals preserved",
+  "file_count_excluding_manifest": 85,
+  "files": [
+    {
+      "path": "00-original-context/ORIGINAL_MASTER_PLAN_V1_SPANISH.md",
+      "sha256": "b350e6608bcefc8931cdd04bb66668ac39b76ef2ea24442cae0b8b9bd0209f12",
+      "bytes": 34916
+    },
+    {
+      "path": "00-original-context/ORIGINAL_MASTER_PLAN_V2_SPANISH.md",
+      "sha256": "24ab580f00f9f2157bae6a56843985701796f372845f29b2bb3af4d406252ea4",
+      "bytes": 43569
+    },
+    {
+      "path": "00-original-context/README.md",
+      "sha256": "7988b6c34e2b098acd60f5a0c9e3311f846c90af05fdad0ad29a0efb5291a87e",
+      "bytes": 676
+    },
+    {
+      "path": "01-master-context/DECISION_LOG.md",
+      "sha256": "5fd98d93f46e61b96838a2e65a82d7843b0c88e7dfe71638617d9f7ec2bfbf5a",
+      "bytes": 3829
+    },
+    {
+      "path": "01-master-context/GLOSSARY.md",
+      "sha256": "2c133d41af78e8dd04e65470bc3c2ee66ba7d90e02959b3a9dc88d0cd577da37",
+      "bytes": 2128
+    },
+    {
+      "path": "01-master-context/OSSUS_MASTER_CONTEXT.md",
+      "sha256": "7f3673de3e045c449f88a705abd711f51ac129256f9e431bffd0299b659cd43a",
+      "bytes": 7116
+    },
+    {
+      "path": "01-master-context/OSSUS_MASTER_PLAN_ENGLISH.md",
+      "sha256": "82469509bc5d2f83a1ae3e08a6b174360fc4b7125633fe1fe9636d776798e429",
+      "bytes": 2456
+    },
+    {
+      "path": "01-master-context/PROJECT_CHARTER.md",
+      "sha256": "a76a111c466ca8e93cfe325092e0d81d7da6cfd74048fa53f70d6df642aec281",
+      "bytes": 2542
+    },
+    {
+      "path": "02-architecture/CLI_CONTRACT.md",
+      "sha256": "f33e4494d09da19d7c2f3ff89c84fe77e287c21eeb9c35d4bf3be8f7a43f8de8",
+      "bytes": 3675
+    },
+    {
+      "path": "02-architecture/DATA_CONTRACTS.md",
+      "sha256": "7004b6c271f2f819d49195bc22ad49f58e9995f483fadcda0707cdcba6e70db1",
+      "bytes": 3097
+    },
+    {
+      "path": "02-architecture/REGISTRY_DESIGN.md",
+      "sha256": "7e35fe1ad54d29432ab816fd61c6c18c8f9679f8db97148d8aa7e1c9107116b1",
+      "bytes": 2204
+    },
+    {
+      "path": "02-architecture/RESEARCHER_FUTURE_DESIGN.md",
+      "sha256": "5c2737daca0c3c4e96188d6b8683d97702685f50e473d3737af366993b38f2d6",
+      "bytes": 2586
+    },
+    {
+      "path": "02-architecture/RESOLVER_DESIGN.md",
+      "sha256": "a0db3aae945039f3bb63944d756f183e1042148875096de484dbd4a2c01d2a33",
+      "bytes": 3875
+    },
+    {
+      "path": "02-architecture/RUST_WORKSPACE.md",
+      "sha256": "00f76d0cf8806e287ff164611d8e0af54517702ab7d06226e62f42f9d7c0d8d7",
+      "bytes": 4435
+    },
+    {
+      "path": "02-architecture/SOURCE_AND_INSTALLATION_MODEL.md",
+      "sha256": "28db561d7fef1eae6e956f163ee989804f7a6bcbdaa95f4d8d5931e472b2f18d",
+      "bytes": 2088
+    },
+    {
+      "path": "02-architecture/SYSTEM_ARCHITECTURE.md",
+      "sha256": "1d707b2fab460b816c4ec9db1610b2b0bb55d6a0a64f222ab359a6ea644c42ae",
+      "bytes": 3047
+    },
+    {
+      "path": "03-specifications/CAPABILITY_GOVERNANCE.md",
+      "sha256": "bb262c6a807e7f01f25cd1592ec3ccaba1fa757b2919d6f52687f220a96a331a",
+      "bytes": 1501
+    },
+    {
+      "path": "03-specifications/aliases-v1.yaml",
+      "sha256": "d234fd4c9ffbe5b9c826a34cff7e3680babf36be6b723d395656c7d2f656b0f7",
+      "bytes": 1761
+    },
+    {
+      "path": "03-specifications/canonical-manifest.example.toml",
+      "sha256": "5ff5d03b391f86670beda3a92579087c8488588a7760e2acba8f246cba0b6fe6",
+      "bytes": 1372
+    },
+    {
+      "path": "03-specifications/canonical-manifest.schema.json",
+      "sha256": "4ab36138e33613e8adbb5a346b0872279d87242ee310699eb93ad29b15fb557d",
+      "bytes": 6816
+    },
+    {
+      "path": "03-specifications/capabilities-v1.yaml",
+      "sha256": "c86dd71c4e185b4ca400d90e5352d95ddf26ac2b22798e13697179687b018e99",
+      "bytes": 6883
+    },
+    {
+      "path": "03-specifications/deprecations-v1.yaml",
+      "sha256": "adaf7f971f632451e4fc0d4b24c18191aa2d28eafce2bbb466d31d89d57d274a",
+      "bytes": 223
+    },
+    {
+      "path": "03-specifications/model-roles.yaml",
+      "sha256": "a2efdcf3c581b7462b430a211692c2de9ffcb7b95c86fcfa3ba6de0ea0d1349d",
+      "bytes": 984
+    },
+    {
+      "path": "03-specifications/ossus-config.example.toml",
+      "sha256": "f3646e862b52e2e80e8e3642e31ca9cd32777a5a88ddaa0dcdedc7c06fb46786",
+      "bytes": 824
+    },
+    {
+      "path": "03-specifications/policy.example.toml",
+      "sha256": "129ece960826f4ed52a54f93f441b5cb0fa4fc1f302e730b8a2f638932b10c00",
+      "bytes": 627
+    },
+    {
+      "path": "03-specifications/skills-lock.example.json",
+      "sha256": "0b8eb312fefb533f23a6c2d1ca96f928e2688b7c3403f9877f9002d912eae566",
+      "bytes": 863
+    },
+    {
+      "path": "03-specifications/skills-lock.schema.json",
+      "sha256": "a18dce782cfe59ac8a0ea5b94f6f5fd948ccfac458599d478c282a82c4f72af4",
+      "bytes": 2255
+    },
+    {
+      "path": "04-security/ACTIVATION_SECURITY.md",
+      "sha256": "c690d106b5bff23128c60c9fe0920312b14861986ebdd9665873acad6bda75ef",
+      "bytes": 1633
+    },
+    {
+      "path": "04-security/RISK_TIERS.md",
+      "sha256": "95ec50430601df96ce91ec898625f1823451760e3602882a2ecd0eb55159e631",
+      "bytes": 1454
+    },
+    {
+      "path": "04-security/SECURITY_GATES.md",
+      "sha256": "65db57e0b199a433fae9cdb2079c85955fbaee5544763bb71ccb36419254cc77",
+      "bytes": 1797
+    },
+    {
+      "path": "04-security/SECURITY_GOVERNANCE.md",
+      "sha256": "70eb8a6a0fb5f1da523df36de2146f7be62f783b383bdd1d61b61a4fe05bbeae",
+      "bytes": 1434
+    },
+    {
+      "path": "04-security/STAGING_AND_CI.md",
+      "sha256": "175ad924c9f70f7c3b6b751f81d23bc8a1e44cda145798f6396d4e5a4a306a4c",
+      "bytes": 1406
+    },
+    {
+      "path": "04-security/SUPPLY_CHAIN.md",
+      "sha256": "de372f3f0a9271d1905913a044ddb96a36076af39c2f394709c490ae71fde474",
+      "bytes": 1373
+    },
+    {
+      "path": "04-security/THREAT_MODEL.md",
+      "sha256": "8072ab7212cbace8df7760ff6259c61b901b2db5890e227a8d68f112825c4bb3",
+      "bytes": 4333
+    },
+    {
+      "path": "04-security/TRUST_BOUNDARIES.md",
+      "sha256": "d2e168a15d92bd14c15e43ef4e7a019822cd00570f4c706c8c399edb360b2a1e",
+      "bytes": 1467
+    },
+    {
+      "path": "05-evaluations/EVALUATION_STRATEGY.md",
+      "sha256": "7b81b8f325d2698d17c2e7cd9b95e0410efb228b6a187ab8cad5939cc9ede880",
+      "bytes": 1519
+    },
+    {
+      "path": "05-evaluations/METRICS.md",
+      "sha256": "78174842f3c034b5c9e111b8f9b158e26aed4db8159a2af47bd3441f07f13527",
+      "bytes": 1085
+    },
+    {
+      "path": "05-evaluations/goldens-v1.yaml",
+      "sha256": "d21e1db4339d397d98db486498f2dd02f03f5306d1f79a1ed61d30539d1965bd",
+      "bytes": 13701
+    },
+    {
+      "path": "05-evaluations/seed-catalog-profiles.yaml",
+      "sha256": "12a06222925b5005151960eb33bce62d00f5e07c000f38303bac854b8f6a3761",
+      "bytes": 5668
+    },
+    {
+      "path": "06-waves/00-plan-security-review.md",
+      "sha256": "8a57044037c6482b80480fe1a6c18ded0f2463afcb84991c724e98e83bf69265",
+      "bytes": 2150
+    },
+    {
+      "path": "06-waves/01-rust-workspace-bootstrap.md",
+      "sha256": "f39c59d8a465473b5edd29df857745ec44f98f46136e2b53a29b804387cf784a",
+      "bytes": 2047
+    },
+    {
+      "path": "06-waves/02-spec-and-taxonomy.md",
+      "sha256": "a1677c6cc00a38691c5b8582050c86f6c431137b7052bc97c08402f7f717eeda",
+      "bytes": 1980
+    },
+    {
+      "path": "06-waves/03-registry-and-search.md",
+      "sha256": "c50aa626f16eefc1820a5b66526ace75266791591a54b5cd1b543a6332fd3c9a",
+      "bytes": 2036
+    },
+    {
+      "path": "06-waves/04-project-scanner.md",
+      "sha256": "7724be13f0fe1fa522941848edfecea8a59e63537614a08a7a0f8ef0137cd768",
+      "bytes": 1878
+    },
+    {
+      "path": "06-waves/05-resolver-core.md",
+      "sha256": "fb5d58e0abe9f987d3014b6db1a15b872d9020af21e7d2ddc562bd75b48a28cf",
+      "bytes": 1961
+    },
+    {
+      "path": "06-waves/06-golden-evaluation-harness.md",
+      "sha256": "4ed8f3ee56aef25becc66882f1809fbabf2d6e636994a05e700d25e619654519",
+      "bytes": 1838
+    },
+    {
+      "path": "06-waves/07-activation-security-boundary.md",
+      "sha256": "f77c7584b616c2d24122267f0c90f7b3eaba46ced223161f2804f28eabee55d9",
+      "bytes": 2241
+    },
+    {
+      "path": "06-waves/08-claude-code-adapter.md",
+      "sha256": "a881d530cb8fb70daa4c23ad29aa701842e025c6b934e5452810453b7e2df1f1",
+      "bytes": 1963
+    },
+    {
+      "path": "06-waves/09-cli-vertical-slice.md",
+      "sha256": "118159fbc4fd98e481ae48caaf71769762ca52439fed983dc7113b0fecb9f8d9",
+      "bytes": 1825
+    },
+    {
+      "path": "06-waves/10-security-hardening-and-supply-chain.md",
+      "sha256": "ab8779a33bf98e6b9d50643c4406d49de8861cd90949ce1c9abde6253bbfb254",
+      "bytes": 2129
+    },
+    {
+      "path": "06-waves/11-v0-release.md",
+      "sha256": "0aee874eecb94bf569e74ee1531920885b629a1c40ace06d6ba89d222a4e9ea8",
+      "bytes": 1681
+    },
+    {
+      "path": "06-waves/12-registry-sync-and-index-install.md",
+      "sha256": "82bc912ba6015b7e3614d77ef2a40873647b9f1e453a128434afeb95f3e31c61",
+      "bytes": 1800
+    },
+    {
+      "path": "06-waves/13-private-catalogs-and-precedence.md",
+      "sha256": "304e0f71e6bd7daf3f0596b87a02979a7f7ddc1e19c4f22510c5e38eb64a3bc6",
+      "bytes": 1579
+    },
+    {
+      "path": "06-waves/14-codex-adapter.md",
+      "sha256": "9815ef2982f2b43298cca4a4905d5368dd6875fd87d641cce1194458d3604f1f",
+      "bytes": 1824
+    },
+    {
+      "path": "06-waves/15-local-semantic-fallback.md",
+      "sha256": "e0e08c78530a5722445ab460f1a5067d84d328437298aa5b9cc3b7c886cc8da1",
+      "bytes": 1734
+    },
+    {
+      "path": "06-waves/16-cross-platform-distribution.md",
+      "sha256": "ab821fd3d609832e3a5015c75bb53c2452f67955b47c1508efc3265f75de5cf7",
+      "bytes": 1653
+    },
+    {
+      "path": "06-waves/17-researcher-security-design.md",
+      "sha256": "43cee69ee7261c357447b42ccfbcc25c50972de0ba7a5a5f83694a9b5ba2e922",
+      "bytes": 2007
+    },
+    {
+      "path": "06-waves/18-passive-intake-and-evidence.md",
+      "sha256": "9a32fd6bb8cf7721b955d3dd724db91c0dcbd2da7c24fd6c452bd16e409d47af",
+      "bytes": 2029
+    },
+    {
+      "path": "06-waves/19-github-discovery.md",
+      "sha256": "0d767cc4152f9f17d5a895648cde2104dec82f8d6091880f86fe8bcda42c4e00",
+      "bytes": 1749
+    },
+    {
+      "path": "06-waves/20-static-analysis-integrations.md",
+      "sha256": "8346c444b15abf275b6ee021dda82a9d026874c7410373b0a38d938345e15e36",
+      "bytes": 1913
+    },
+    {
+      "path": "06-waves/21-human-admission-workflow.md",
+      "sha256": "78a5308fb7785df03080799b5f69e69fa42757cc04a9575717d8be87b11c146e",
+      "bytes": 2053
+    },
+    {
+      "path": "06-waves/22-reddit-community-signals.md",
+      "sha256": "f294511fa25ccfbd089041ea9f532911a2e934b01def86b6cd0be247e50f9a65",
+      "bytes": 1878
+    },
+    {
+      "path": "06-waves/23-researcher-security-audit.md",
+      "sha256": "95bab155973b8340ecf829b640742a1125ffe1f34a880aa5f69392367ef4f2fe",
+      "bytes": 2004
+    },
+    {
+      "path": "06-waves/24-beta-release.md",
+      "sha256": "1a5ad0fc2f437490216472ccf84f1c412e3cde3777a33f076b3c4e835c7f3548",
+      "bytes": 1761
+    },
+    {
+      "path": "06-waves/WAVE_INDEX.md",
+      "sha256": "167219a11dee52e41d2680650171a23cd85589891c997f5181c6bca7634f9487",
+      "bytes": 3127
+    },
+    {
+      "path": "07-prompts/FINDINGS_DISPOSITION.md",
+      "sha256": "8512250279a63f80dbf3f7bc52862cc2f4486e047610cdb87750b8eb785c57f7",
+      "bytes": 666
+    },
+    {
+      "path": "07-prompts/GENERAL_IMPLEMENTER.md",
+      "sha256": "4c5411c2543761edcaefc941ac6424957abb83c89e6f2329680e6b42bb3f402c",
+      "bytes": 1191
+    },
+    {
+      "path": "07-prompts/GENERAL_REVIEWER.md",
+      "sha256": "c3de5ca0b7fe1bd7dae51008b7dead6389b6c9e269c539b41e2ec2aeda0f62db",
+      "bytes": 832
+    },
+    {
+      "path": "07-prompts/HUMAN_SECURITY_CLOSURE.md",
+      "sha256": "327781c5d68f37945bbef33214e9ad5c0d1eecd52f7b0b51f42ea1fe11885062",
+      "bytes": 743
+    },
+    {
+      "path": "07-prompts/PLAN_REVIEW_OPUS5.md",
+      "sha256": "567e302327a90000061fb14af7f23de46e479a0e918f4f6fb2fe52dbb5418f86",
+      "bytes": 1215
+    },
+    {
+      "path": "07-prompts/SECURITY_IMPLEMENTATION_OPUS5.md",
+      "sha256": "cdb4213c7e7de31a5fd9cdcfa62bc473ce7aef07b9c60ed6b3edbe5aa7c0cb2e",
+      "bytes": 1617
+    },
+    {
+      "path": "07-prompts/SECURITY_REVIEW_OPUS5.md",
+      "sha256": "69016469dc165145798961f25bcfd912b9fcce52d179e9d21554ffd4d8fc45ef",
+      "bytes": 1078
+    },
+    {
+      "path": "07-prompts/START_OSSUS_REPOSITORY.md",
+      "sha256": "e378362b94cca326351e08c2bea676f169a94e7db2b3ad52df14535883cfa1fe",
+      "bytes": 1635
+    },
+    {
+      "path": "08-operations/BLOCKED_DIAGNOSTIC_TEMPLATE.md",
+      "sha256": "ed54640949f195b8992b316f155c2619f9259c7831d97c62301bc83036ca6382",
+      "bytes": 746
+    },
+    {
+      "path": "08-operations/CHANGE_CONTROL.md",
+      "sha256": "387575f5032100c37640130526110b675bb1e7993c90470db70ce60c479373ca",
+      "bytes": 882
+    },
+    {
+      "path": "08-operations/HANDOFF_TEMPLATE.md",
+      "sha256": "bf5ae36a4f3b4659418fe9c321ab9f0db45cbb400696067bc88d2288464c608f",
+      "bytes": 341
+    },
+    {
+      "path": "08-operations/RELEASE_CHECKLIST.md",
+      "sha256": "8954361ac3002960be7a06f11176e039ebac2f835998905887ee813897f94745",
+      "bytes": 582
+    },
+    {
+      "path": "08-operations/REVIEW_REPORT_TEMPLATE.md",
+      "sha256": "d7472d1df3bfbbdfde2b410efaa5100d0b474d232a58e9974b6c475721b09813",
+      "bytes": 458
+    },
+    {
+      "path": "08-operations/WAVE_REPORT_TEMPLATE.md",
+      "sha256": "ec5c54d93eb40051938793eed152ca02a688ca3d7a6240d9600e916fd3a99d0a",
+      "bytes": 494
+    },
+    {
+      "path": "09-roadmap/BACKLOG_AFTER_BETA.md",
+      "sha256": "89ee6f08688f3dd6297fba5b8adae536bd58a607c81548fe439f3c4071bd7ed1",
+      "bytes": 629
+    },
+    {
+      "path": "09-roadmap/DEFINITION_OF_DONE.md",
+      "sha256": "22172e5204d4c7c678d6172aab4f10fa3bf2e03e7e2b714a89d0449a5b2e4401",
+      "bytes": 1358
+    },
+    {
+      "path": "09-roadmap/DEPENDENCY_GRAPH.md",
+      "sha256": "6ff777db401fc9420ce95dd8fb6aac38e4e93a9060de8c3a1e36d84439e2276c",
+      "bytes": 821
+    },
+    {
+      "path": "09-roadmap/PHASES_AND_GATES.md",
+      "sha256": "fb351556f248ad1c8427eb29c06665db9697af7d39307c59000683a5bdac2d46",
+      "bytes": 3649
+    },
+    {
+      "path": "README.md",
+      "sha256": "96b59c3d7077248f5dcf185415f26cfb058bcd1b67e1d8deb95d92d1c6da833e",
+      "bytes": 3810
+    },
+    {
+      "path": "SOURCES.md",
+      "sha256": "07e9d905aa62af5e3f10a85e2d83e1063374b3e438309d3066a8fdfb4728ea38",
+      "bytes": 1684
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+schema_version = "1.0.0"
+capability_schema = "1.0.0"
+id = "ossus-example.frontend-review"
+name = "Frontend Review"
+description = "Reviews visual quality, responsive layout, and accessibility boundaries."
+resource_type = "skill"
+categories = ["frontend", "quality"]
+triggers = ["review frontend", "responsive layout", "visual quality"]
+exclusions = ["backend-only task", "database migration"]
+
+[source]
+mode = "remote-index"
+repository = "https://example.invalid/frontend-review.git"
+commit = "0123456789abcdef0123456789abcdef01234567"
+subpath = "skills/frontend-review"
+tree_hash = "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+license = "MIT"
+
+[capabilities]
+required = ["frontend.visual-design", "frontend.visual-design"]
+optional = ["frontend.accessibility"]
+
+[compatibility]
+surfaces = ["agent-skills-standard", "claude-code-cli", "codex-cli"]
+portability = "portable-standard"
+scopes = ["project", "user-global", "custom-path"]
+
+[runtime]
+requirements = ["instruction-only"]
+external_tools = []
+
+[risk]
+tier = "R0"
+notes = "Declarative instructions only."
+
+[review]
+status = "approved"
+tier = "light-human"
+approved_commit = "abcdef0123456789abcdef0123456789abcdef01"
+reviewer_ids = ["reviewer-001"]
+
+[context]
+measured_tokens = 2800
+measurement_method = "host-tokenizer-v1"
+
+[distribution]
+mode = "source-only"
+notice_required = false
+

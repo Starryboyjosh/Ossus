@@ -1,0 +1,309 @@
+schema_version = "1.0.0"
+
+[[capabilities]]
+id = "project.discovery"
+domain = "project"
+name = "discovery"
+definition = "Inspect and summarize a project structure and technical signals."
+status = "active"
+
+[[capabilities]]
+id = "architecture.system-design"
+domain = "architecture"
+name = "system-design"
+definition = "Design or review system-level architecture."
+status = "active"
+
+[[capabilities]]
+id = "architecture.api-design"
+domain = "architecture"
+name = "api-design"
+definition = "Design API contracts, boundaries and semantics."
+status = "active"
+
+[[capabilities]]
+id = "architecture.data-modeling"
+domain = "architecture"
+name = "data-modeling"
+definition = "Design conceptual and logical data models."
+status = "active"
+
+[[capabilities]]
+id = "frontend.implementation"
+domain = "frontend"
+name = "implementation"
+definition = "Implement frontend interfaces and components."
+status = "active"
+
+[[capabilities]]
+id = "frontend.visual-design"
+domain = "frontend"
+name = "visual-design"
+definition = "Improve or evaluate visual hierarchy and interface quality."
+status = "active"
+
+[[capabilities]]
+id = "frontend.responsive-layout"
+domain = "frontend"
+name = "responsive-layout"
+definition = "Make interfaces adapt across viewport sizes."
+status = "active"
+
+[[capabilities]]
+id = "frontend.accessibility"
+domain = "frontend"
+name = "accessibility"
+definition = "Improve accessibility semantics and interaction."
+status = "active"
+
+[[capabilities]]
+id = "frontend.motion"
+domain = "frontend"
+name = "motion"
+definition = "Design or implement interface motion and transitions."
+status = "active"
+
+[[capabilities]]
+id = "frontend.performance"
+domain = "frontend"
+name = "performance"
+definition = "Measure or improve frontend performance."
+status = "active"
+
+[[capabilities]]
+id = "backend.api-implementation"
+domain = "backend"
+name = "api-implementation"
+definition = "Implement backend APIs and handlers."
+status = "active"
+
+[[capabilities]]
+id = "backend.authentication"
+domain = "backend"
+name = "authentication"
+definition = "Implement user or service authentication."
+status = "active"
+
+[[capabilities]]
+id = "backend.authorization"
+domain = "backend"
+name = "authorization"
+definition = "Implement roles, permissions and access decisions."
+status = "active"
+
+[[capabilities]]
+id = "backend.data-access"
+domain = "backend"
+name = "data-access"
+definition = "Implement repositories, ORM access and persistence boundaries."
+status = "active"
+
+[[capabilities]]
+id = "backend.background-jobs"
+domain = "backend"
+name = "background-jobs"
+definition = "Implement asynchronous or scheduled backend jobs."
+status = "active"
+
+[[capabilities]]
+id = "database.schema-design"
+domain = "database"
+name = "schema-design"
+definition = "Design database schemas and constraints."
+status = "active"
+
+[[capabilities]]
+id = "database.migrations"
+domain = "database"
+name = "migrations"
+definition = "Create or review database migrations."
+status = "active"
+
+[[capabilities]]
+id = "database.query-performance"
+domain = "database"
+name = "query-performance"
+definition = "Diagnose and optimize database queries."
+status = "active"
+
+[[capabilities]]
+id = "testing.unit"
+domain = "testing"
+name = "unit"
+definition = "Create or improve isolated unit tests."
+status = "active"
+
+[[capabilities]]
+id = "testing.integration"
+domain = "testing"
+name = "integration"
+definition = "Test interactions between components or services."
+status = "active"
+
+[[capabilities]]
+id = "testing.end-to-end"
+domain = "testing"
+name = "end-to-end"
+definition = "Test complete user or system flows."
+status = "active"
+
+[[capabilities]]
+id = "testing.visual"
+domain = "testing"
+name = "visual"
+definition = "Perform screenshot or visual-regression testing."
+status = "active"
+
+[[capabilities]]
+id = "quality.code-review"
+domain = "quality"
+name = "code-review"
+definition = "Review code for correctness and maintainability."
+status = "active"
+
+[[capabilities]]
+id = "quality.refactoring"
+domain = "quality"
+name = "refactoring"
+definition = "Improve structure without intended behavior changes."
+status = "active"
+
+[[capabilities]]
+id = "quality.debugging"
+domain = "quality"
+name = "debugging"
+definition = "Diagnose and correct defects."
+status = "active"
+
+[[capabilities]]
+id = "security.threat-modeling"
+domain = "security"
+name = "threat-modeling"
+definition = "Identify assets, boundaries, threats and mitigations."
+status = "active"
+
+[[capabilities]]
+id = "security.secure-coding"
+domain = "security"
+name = "secure-coding"
+definition = "Implement or review secure coding controls."
+status = "active"
+
+[[capabilities]]
+id = "security.dependency-audit"
+domain = "security"
+name = "dependency-audit"
+definition = "Audit third-party dependency risk."
+status = "active"
+
+[[capabilities]]
+id = "security.secrets-handling"
+domain = "security"
+name = "secrets-handling"
+definition = "Protect credentials and sensitive configuration."
+status = "active"
+
+[[capabilities]]
+id = "security.identity-access"
+domain = "security"
+name = "identity-access"
+definition = "Review identity, session and access-control security."
+status = "active"
+
+[[capabilities]]
+id = "security.supply-chain"
+domain = "security"
+name = "supply-chain"
+definition = "Protect builds, releases, CI and source provenance."
+status = "active"
+
+[[capabilities]]
+id = "devops.containers"
+domain = "devops"
+name = "containers"
+definition = "Build or diagnose containerized environments."
+status = "active"
+
+[[capabilities]]
+id = "devops.ci-cd"
+domain = "devops"
+name = "ci-cd"
+definition = "Create or review CI/CD pipelines."
+status = "active"
+
+[[capabilities]]
+id = "devops.deployment"
+domain = "devops"
+name = "deployment"
+definition = "Prepare or perform deployment workflows."
+status = "active"
+
+[[capabilities]]
+id = "devops.observability"
+domain = "devops"
+name = "observability"
+definition = "Implement logs, metrics and traces."
+status = "active"
+
+[[capabilities]]
+id = "documentation.technical-writing"
+domain = "documentation"
+name = "technical-writing"
+definition = "Create technical documentation and operational guides."
+status = "active"
+
+[[capabilities]]
+id = "documentation.api-reference"
+domain = "documentation"
+name = "api-reference"
+definition = "Create API reference material."
+status = "active"
+
+[[capabilities]]
+id = "workflow.git"
+domain = "workflow"
+name = "git"
+definition = "Improve Git history, branching or collaboration workflows."
+status = "active"
+
+[[capabilities]]
+id = "workflow.release"
+domain = "workflow"
+name = "release"
+definition = "Prepare versioned releases and changelogs."
+status = "active"
+
+[[capabilities]]
+id = "ai.prompt-design"
+domain = "ai"
+name = "prompt-design"
+definition = "Design reusable prompts and instruction packages."
+status = "active"
+
+[[capabilities]]
+id = "ai.agent-orchestration"
+domain = "ai"
+name = "agent-orchestration"
+definition = "Design multi-agent task and review workflows."
+status = "active"
+
+[[capabilities]]
+id = "ai.mcp-integration"
+domain = "ai"
+name = "mcp-integration"
+definition = "Integrate agents with MCP servers and tools."
+status = "active"
+
+[[capabilities]]
+id = "data.analysis"
+domain = "data"
+name = "analysis"
+definition = "Inspect, transform and interpret datasets."
+status = "active"
+
+[[capabilities]]
+id = "data.visualization"
+domain = "data"
+name = "visualization"
+definition = "Create visual representations of data."
+status = "active"

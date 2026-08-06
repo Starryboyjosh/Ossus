@@ -1,0 +1,182 @@
+schema_version = "1.0.0"
+purpose = "Profiles to fill with reviewed real resources during WAVE 03."
+
+[[profiles]]
+id = "seed.frontend-design-review"
+resource_type = "skill"
+category = "frontend"
+required_capabilities = ["frontend.visual-design"]
+required_surfaces = ["agent-skills-standard", "claude-code-cli", "codex-cli"]
+maximum_risk = "R0"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.frontend-responsive-a11y"
+resource_type = "skill"
+category = "frontend"
+required_capabilities = ["frontend.responsive-layout", "frontend.accessibility"]
+required_surfaces = ["agent-skills-standard", "claude-code-cli", "codex-cli"]
+maximum_risk = "R0"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.frontend-implementation"
+resource_type = "skill"
+category = "frontend"
+required_capabilities = ["frontend.implementation"]
+required_surfaces = ["agent-skills-standard", "claude-code-cli"]
+maximum_risk = "R1"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.frontend-performance"
+resource_type = "skill"
+category = "frontend"
+required_capabilities = ["frontend.performance"]
+required_surfaces = ["claude-code-cli", "codex-cli"]
+maximum_risk = "R1"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.visual-browser-validation"
+resource_type = "skill"
+category = "testing"
+required_capabilities = ["testing.visual", "testing.end-to-end"]
+required_surfaces = ["claude-code-cli"]
+maximum_risk = "R2"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.api-design"
+resource_type = "prompt-pack"
+category = "backend"
+required_capabilities = ["architecture.api-design"]
+required_surfaces = ["agent-skills-standard", "claude-code-cli", "codex-cli"]
+maximum_risk = "R0"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.backend-api"
+resource_type = "skill"
+category = "backend"
+required_capabilities = ["backend.api-implementation"]
+required_surfaces = ["claude-code-cli", "codex-cli"]
+maximum_risk = "R1"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.auth-security"
+resource_type = "skill"
+category = "security"
+required_capabilities = ["backend.authentication", "security.identity-access"]
+required_surfaces = ["claude-code-cli"]
+maximum_risk = "R1"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.schema-design"
+resource_type = "prompt-pack"
+category = "database"
+required_capabilities = ["database.schema-design", "architecture.data-modeling"]
+required_surfaces = ["agent-skills-standard", "claude-code-cli", "codex-cli"]
+maximum_risk = "R0"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.migration-review"
+resource_type = "skill"
+category = "database"
+required_capabilities = ["database.migrations", "quality.code-review"]
+required_surfaces = ["claude-code-cli", "codex-cli"]
+maximum_risk = "R1"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.unit-testing"
+resource_type = "skill"
+category = "testing"
+required_capabilities = ["testing.unit"]
+required_surfaces = ["agent-skills-standard", "claude-code-cli", "codex-cli"]
+maximum_risk = "R0"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.integration-testing"
+resource_type = "skill"
+category = "testing"
+required_capabilities = ["testing.integration"]
+required_surfaces = ["claude-code-cli", "codex-cli"]
+maximum_risk = "R1"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.code-review"
+resource_type = "skill"
+category = "quality"
+required_capabilities = ["quality.code-review"]
+required_surfaces = ["agent-skills-standard", "claude-code-cli", "codex-cli"]
+maximum_risk = "R0"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.threat-model"
+resource_type = "prompt-pack"
+category = "security"
+required_capabilities = ["security.threat-modeling"]
+required_surfaces = ["agent-skills-standard", "claude-code-cli", "codex-cli"]
+maximum_risk = "R0"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.dependency-audit-cli"
+resource_type = "skill"
+category = "security"
+required_capabilities = ["security.dependency-audit"]
+required_surfaces = ["standalone-cli"]
+maximum_risk = "R3"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.supply-chain-review"
+resource_type = "skill"
+category = "security"
+required_capabilities = ["security.supply-chain"]
+required_surfaces = ["claude-code-cli"]
+maximum_risk = "R1"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.container-review"
+resource_type = "skill"
+category = "devops"
+required_capabilities = ["devops.containers"]
+required_surfaces = ["claude-code-cli", "codex-cli"]
+maximum_risk = "R1"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.ci-review"
+resource_type = "skill"
+category = "devops"
+required_capabilities = ["devops.ci-cd"]
+required_surfaces = ["claude-code-cli"]
+maximum_risk = "R1"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.technical-writing"
+resource_type = "prompt-pack"
+category = "documentation"
+required_capabilities = ["documentation.technical-writing"]
+required_surfaces = ["agent-skills-standard", "claude-code-cli", "codex-cli"]
+maximum_risk = "R0"
+status = "unfilled"
+
+[[profiles]]
+id = "seed.mcp-integration"
+resource_type = "mcp-server"
+category = "ai-agents"
+required_capabilities = ["ai.mcp-integration"]
+required_surfaces = ["generic-mcp-client", "codex-cli"]
+maximum_risk = "R3"
+status = "unfilled"

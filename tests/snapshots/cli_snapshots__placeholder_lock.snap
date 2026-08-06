@@ -1,0 +1,9 @@
+---
+source: tests/cli_snapshots.rs
+---
+status: 69
+stdout:
+stderr:
+ossus: command 'lock' is planned but not implemented in the repository scaffold
+see docs/implementation/06-waves/WAVE_INDEX.md
+

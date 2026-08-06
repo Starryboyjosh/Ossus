@@ -1,0 +1,9 @@
+[default.extend-words]
+Ossus = "Ossus"
+Opus = "Opus"
+
+[files]
+extend-exclude = [
+  "docs/implementation/00-original-context/**",
+  "docs/product/ossus-explainer.html",
+]

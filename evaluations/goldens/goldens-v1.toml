@@ -1,0 +1,456 @@
+schema_version = "1.0.0"
+taxonomy_version = "1.0.0"
+
+[[cases]]
+id = "GOLD-001"
+project_fixture = "react-landing"
+user_task = "Make the page responsive and improve accessibility"
+expected_capabilities = ["frontend.responsive-layout", "frontend.accessibility"]
+forbidden_capabilities = ["backend.authentication"]
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-002"
+project_fixture = "dashboard-ui"
+user_task = "Improve the dashboard aesthetics"
+expected_capabilities = ["frontend.visual-design"]
+forbidden_capabilities = ["frontend.motion"]
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-003"
+project_fixture = "frontend-motion"
+user_task = "Add transition animations"
+expected_capabilities = ["frontend.motion"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-004"
+project_fixture = "nextjs-app"
+user_task = "Reduce initial page load"
+expected_capabilities = ["frontend.performance"]
+forbidden_capabilities = ["quality.refactoring"]
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-005"
+project_fixture = "mockup-to-ui"
+user_task = "Build components from the mockup"
+expected_capabilities = ["frontend.implementation", "frontend.visual-design"]
+forbidden_capabilities = []
+max_selected_resources = 3
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-006"
+project_fixture = "a11y-page"
+user_task = "Fix contrast and keyboard navigation"
+expected_capabilities = ["frontend.accessibility"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-007"
+project_fixture = "visual-regression"
+user_task = "Screenshots differ across browsers"
+expected_capabilities = ["testing.visual", "quality.debugging"]
+forbidden_capabilities = []
+max_selected_resources = 3
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-008"
+project_fixture = "css-regression"
+user_task = "The UI is misaligned after CSS changes"
+expected_capabilities = ["quality.debugging", "frontend.visual-design"]
+forbidden_capabilities = []
+max_selected_resources = 3
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-009"
+project_fixture = "static-site"
+user_task = "Improve this static HTML page without a framework"
+expected_capabilities = ["frontend.implementation"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-010"
+project_fixture = "copy-only"
+user_task = "Change only the hero copy"
+expected_capabilities = []
+forbidden_capabilities = ["frontend.implementation", "frontend.visual-design"]
+max_selected_resources = 1
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-011"
+project_fixture = "fastapi-api"
+user_task = "Create a FastAPI endpoint"
+expected_capabilities = ["backend.api-implementation"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-012"
+project_fixture = "api-design"
+user_task = "Design the API before implementation"
+expected_capabilities = ["architecture.api-design"]
+forbidden_capabilities = ["backend.api-implementation"]
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-013"
+project_fixture = "oauth-login"
+user_task = "Implement OAuth authentication"
+expected_capabilities = ["backend.authentication", "security.identity-access"]
+forbidden_capabilities = []
+max_selected_resources = 3
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-014"
+project_fixture = "rbac"
+user_task = "Add roles and permissions"
+expected_capabilities = ["backend.authorization", "security.identity-access"]
+forbidden_capabilities = []
+max_selected_resources = 3
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-015"
+project_fixture = "background-worker"
+user_task = "Create a background task worker"
+expected_capabilities = ["backend.background-jobs"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-016"
+project_fixture = "intermittent-endpoint"
+user_task = "Diagnose an intermittent endpoint error"
+expected_capabilities = ["quality.debugging"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-017"
+project_fixture = "external-api"
+user_task = "Integrate an external API"
+expected_capabilities = ["backend.api-implementation"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-018"
+project_fixture = "service-refactor"
+user_task = "Refactor the service without changing behavior"
+expected_capabilities = ["quality.refactoring"]
+forbidden_capabilities = ["architecture.system-design"]
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-019"
+project_fixture = "new-entities"
+user_task = "Design new database entities"
+expected_capabilities = ["database.schema-design", "architecture.data-modeling"]
+forbidden_capabilities = []
+max_selected_resources = 3
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-020"
+project_fixture = "alembic-migration"
+user_task = "Create an Alembic migration"
+expected_capabilities = ["database.migrations"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-021"
+project_fixture = "slow-postgres"
+user_task = "Diagnose a slow PostgreSQL query"
+expected_capabilities = ["database.query-performance", "quality.debugging"]
+forbidden_capabilities = []
+max_selected_resources = 3
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-022"
+project_fixture = "dangerous-migration"
+user_task = "Review a potentially dangerous migration"
+expected_capabilities = ["database.migrations", "quality.code-review"]
+forbidden_capabilities = []
+max_selected_resources = 3
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-023"
+project_fixture = "orm-change"
+user_task = "Change ORM without changing schema"
+expected_capabilities = ["backend.data-access", "quality.refactoring"]
+forbidden_capabilities = ["database.schema-design"]
+max_selected_resources = 3
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-024"
+project_fixture = "unit-tests"
+user_task = "Add unit tests"
+expected_capabilities = ["testing.unit"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-025"
+project_fixture = "api-db-integration"
+user_task = "Test API and database integration"
+expected_capabilities = ["testing.integration"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-026"
+project_fixture = "signup-e2e"
+user_task = "Test the complete signup flow"
+expected_capabilities = ["testing.end-to-end"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-027"
+project_fixture = "pull-request"
+user_task = "Review this pull request"
+expected_capabilities = ["quality.code-review"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-028"
+project_fixture = "stack-trace"
+user_task = "Fix this bug from a stack trace"
+expected_capabilities = ["quality.debugging"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-029"
+project_fixture = "duplicate-code"
+user_task = "Remove code duplication"
+expected_capabilities = ["quality.refactoring"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-030"
+project_fixture = "ambiguous-project"
+user_task = "Improve the whole project"
+expected_capabilities = []
+forbidden_capabilities = []
+max_selected_resources = 0
+expected_low_confidence = true
+
+[[cases]]
+id = "GOLD-031"
+project_fixture = "api-threat-model"
+user_task = "Threat model this API"
+expected_capabilities = ["security.threat-modeling"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-032"
+project_fixture = "secrets-review"
+user_task = "Review secret handling"
+expected_capabilities = ["security.secrets-handling"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-033"
+project_fixture = "dependency-vulns"
+user_task = "Audit vulnerable dependencies"
+expected_capabilities = ["security.dependency-audit", "security.supply-chain"]
+forbidden_capabilities = []
+max_selected_resources = 3
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-034"
+project_fixture = "login-hardening"
+user_task = "Harden the login flow"
+expected_capabilities = ["security.identity-access", "backend.authentication", "security.secure-coding"]
+forbidden_capabilities = []
+max_selected_resources = 4
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-035"
+project_fixture = "github-actions"
+user_task = "Review GitHub Actions security"
+expected_capabilities = ["security.supply-chain", "devops.ci-cd"]
+forbidden_capabilities = []
+max_selected_resources = 3
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-036"
+project_fixture = "r1-policy"
+user_task = "Use an external skill that requires shell"
+expected_capabilities = []
+forbidden_capabilities = []
+max_selected_resources = 0
+expected_low_confidence = true
+policy_fixture = "risk-max-r1"
+required_policy_outcome = "deny-shell-resource"
+
+[[cases]]
+id = "GOLD-037"
+project_fixture = "remote-write-mcp"
+user_task = "Activate an MCP server with remote write access"
+expected_capabilities = ["ai.mcp-integration"]
+forbidden_capabilities = []
+max_selected_resources = 1
+expected_low_confidence = true
+policy_fixture = "default"
+required_policy_outcome = "require-explicit-r4"
+
+[[cases]]
+id = "GOLD-038"
+project_fixture = "declarative-pack"
+user_task = "Use a declarative prompt pack"
+expected_capabilities = ["ai.prompt-design"]
+forbidden_capabilities = []
+max_selected_resources = 1
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-039"
+project_fixture = "dockerfile"
+user_task = "Create a Dockerfile"
+expected_capabilities = ["devops.containers"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-040"
+project_fixture = "ci-tests"
+user_task = "Create a CI test pipeline"
+expected_capabilities = ["devops.ci-cd"]
+forbidden_capabilities = []
+max_selected_resources = 3
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-041"
+project_fixture = "deployment"
+user_task = "Deploy the application"
+expected_capabilities = ["devops.deployment"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-042"
+project_fixture = "observability"
+user_task = "Add logs and metrics"
+expected_capabilities = ["devops.observability"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-043"
+project_fixture = "container-only-bug"
+user_task = "Debug a failure that occurs only in the container"
+expected_capabilities = ["quality.debugging", "devops.containers"]
+forbidden_capabilities = []
+max_selected_resources = 3
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-044"
+project_fixture = "api-docs"
+user_task = "Document the API"
+expected_capabilities = ["documentation.api-reference"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-045"
+project_fixture = "technical-manual"
+user_task = "Create a technical operations manual"
+expected_capabilities = ["documentation.technical-writing"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-046"
+project_fixture = "clean-commits"
+user_task = "Prepare clean commits"
+expected_capabilities = ["workflow.git"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-047"
+project_fixture = "release"
+user_task = "Prepare a release"
+expected_capabilities = ["workflow.release"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-048"
+project_fixture = "new-skill"
+user_task = "Design a new agent skill"
+expected_capabilities = ["ai.prompt-design"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-049"
+project_fixture = "connect-mcp"
+user_task = "Connect an agent to an MCP server"
+expected_capabilities = ["ai.mcp-integration"]
+forbidden_capabilities = []
+max_selected_resources = 2
+expected_low_confidence = false
+
+[[cases]]
+id = "GOLD-050"
+project_fixture = "csv-chart"
+user_task = "Analyze a CSV and create a chart"
+expected_capabilities = ["data.analysis", "data.visualization"]
+forbidden_capabilities = ["frontend.implementation"]
+max_selected_resources = 3
+expected_low_confidence = false

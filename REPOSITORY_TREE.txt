@@ -1,0 +1,385 @@
+ossus/
+├── .cargo/
+│   └── config.toml
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug.yml
+│   │   ├── config.yml
+│   │   ├── feature.yml
+│   │   └── taxonomy.yml
+│   ├── workflows/
+│   │   └── ci.yml
+│   ├── CODEOWNERS
+│   ├── copilot-instructions.md
+│   ├── dependabot.yml
+│   └── PULL_REQUEST_TEMPLATE.md
+├── .ossus/
+│   ├── config.toml
+│   ├── policy.toml
+│   └── README.md
+├── .vscode/
+│   ├── extensions.json
+│   └── settings.json
+├── catalog/
+│   ├── examples/
+│   │   ├── canonical-manifest.example.toml
+│   │   └── README.md
+│   ├── official/
+│   │   ├── manifests/
+│   │   │   └── .gitkeep
+│   │   └── README.md
+│   └── README.md
+├── crates/
+│   ├── ossus-adapter-claude/
+│   │   ├── src/
+│   │   │   └── lib.rs
+│   │   └── Cargo.toml
+│   ├── ossus-cli/
+│   │   ├── src/
+│   │   │   └── main.rs
+│   │   ├── tests/
+│   │   │   └── validate.rs
+│   │   └── Cargo.toml
+│   ├── ossus-core/
+│   │   ├── src/
+│   │   │   ├── display.rs
+│   │   │   ├── enums.rs
+│   │   │   ├── error.rs
+│   │   │   ├── ids.rs
+│   │   │   ├── lib.rs
+│   │   │   └── version.rs
+│   │   └── Cargo.toml
+│   ├── ossus-eval/
+│   │   ├── src/
+│   │   │   └── lib.rs
+│   │   └── Cargo.toml
+│   ├── ossus-policy/
+│   │   ├── src/
+│   │   │   └── lib.rs
+│   │   └── Cargo.toml
+│   ├── ossus-registry/
+│   │   ├── src/
+│   │   │   ├── budget.rs
+│   │   │   ├── diagnostic.rs
+│   │   │   ├── lib.rs
+│   │   │   ├── manifest.rs
+│   │   │   ├── taxonomy.rs
+│   │   │   └── validate.rs
+│   │   ├── tests/
+│   │   │   ├── fixtures/
+│   │   │   │   ├── invalid/
+│   │   │   │   │   ├── approved-commit-abbreviated.toml
+│   │   │   │   │   ├── author-capabilities-top-level.toml
+│   │   │   │   │   ├── budget-deep-nesting.toml
+│   │   │   │   │   ├── budget-long-string.toml
+│   │   │   │   │   ├── budget-many-items.toml
+│   │   │   │   │   ├── capability-alias-in-canonical-list.toml
+│   │   │   │   │   ├── capability-required-17-items.toml
+│   │   │   │   │   ├── capability-required-duplicate.toml
+│   │   │   │   │   ├── capability-required-optional-overlap.toml
+│   │   │   │   │   ├── capability-schema-major-mismatch.toml
+│   │   │   │   │   ├── capability-three-levels.toml
+│   │   │   │   │   ├── capability-unknown.toml
+│   │   │   │   │   ├── capability-uppercase.toml
+│   │   │   │   │   ├── categories-9-items.toml
+│   │   │   │   │   ├── categories-empty.toml
+│   │   │   │   │   ├── commit-41-characters.toml
+│   │   │   │   │   ├── commit-50-characters.toml
+│   │   │   │   │   ├── commit-63-characters.toml
+│   │   │   │   │   ├── commit-non-hex.toml
+│   │   │   │   │   ├── commit-uppercase.toml
+│   │   │   │   │   ├── exclusions-13-items.toml
+│   │   │   │   │   ├── id-leading-hyphen.toml
+│   │   │   │   │   ├── id-too-short.toml
+│   │   │   │   │   ├── id-underscore.toml
+│   │   │   │   │   ├── id-uppercase.toml
+│   │   │   │   │   ├── malformed-duplicate-key.toml
+│   │   │   │   │   ├── malformed-unterminated-string.toml
+│   │   │   │   │   ├── missing-capabilities.toml
+│   │   │   │   │   ├── missing-categories.toml
+│   │   │   │   │   ├── missing-compatibility.toml
+│   │   │   │   │   ├── missing-distribution.toml
+│   │   │   │   │   ├── missing-review.toml
+│   │   │   │   │   ├── missing-risk.toml
+│   │   │   │   │   ├── missing-runtime.toml
+│   │   │   │   │   ├── missing-source.toml
+│   │   │   │   │   ├── origin-top-level.toml
+│   │   │   │   │   ├── pair-local-private-vendored-redistributable.toml
+│   │   │   │   │   ├── pair-remote-index-vendored-redistributable.toml
+│   │   │   │   │   ├── pair-vendored-source-only.toml
+│   │   │   │   │   ├── remote-index-license-absent.toml
+│   │   │   │   │   ├── reviewer-ids-9-items.toml
+│   │   │   │   │   ├── reviewer-ids-empty.toml
+│   │   │   │   │   ├── risk-r0-network-required.toml
+│   │   │   │   │   ├── risk-r0-shell-required.toml
+│   │   │   │   │   ├── risk-r1-mcp-required.toml
+│   │   │   │   │   ├── risk-r3-full-human.toml
+│   │   │   │   │   ├── risk-r4-light-human.toml
+│   │   │   │   │   ├── risk-r5-excluded.toml
+│   │   │   │   │   ├── runtime-requirements-empty.toml
+│   │   │   │   │   ├── schema-version-malformed.toml
+│   │   │   │   │   ├── schema-version-unknown-major.toml
+│   │   │   │   │   ├── source-only-notice-true.toml
+│   │   │   │   │   ├── stars-top-level.toml
+│   │   │   │   │   ├── surface-unknown.toml
+│   │   │   │   │   ├── surface-wrong-case.toml
+│   │   │   │   │   ├── surfaces-duplicate.toml
+│   │   │   │   │   ├── surfaces-empty.toml
+│   │   │   │   │   ├── tree-hash-63-hex.toml
+│   │   │   │   │   ├── tree-hash-uppercase.toml
+│   │   │   │   │   ├── tree-hash-wrong-prefix.toml
+│   │   │   │   │   ├── triggers-13-items.toml
+│   │   │   │   │   ├── unknown-field-review.toml
+│   │   │   │   │   ├── unknown-field-source.toml
+│   │   │   │   │   ├── unknown-field-top-level.toml
+│   │   │   │   │   ├── upstream-triggers-top-level.toml
+│   │   │   │   │   ├── vendored-license-absent.toml
+│   │   │   │   │   ├── vendored-redistributable-notice-absent.toml
+│   │   │   │   │   └── vendored-redistributable-notice-false.toml
+│   │   │   │   ├── valid/
+│   │   │   │   │   ├── commit-case-variant-a.toml
+│   │   │   │   │   ├── commit-case-variant-b.toml
+│   │   │   │   │   ├── local-private-license-absent.toml
+│   │   │   │   │   ├── pair-local-private-approved-install-only.toml
+│   │   │   │   │   ├── pair-local-private-source-only.toml
+│   │   │   │   │   ├── pair-remote-index-approved-install-only.toml
+│   │   │   │   │   ├── pair-remote-index-source-only.toml
+│   │   │   │   │   ├── pair-vendored-approved-install-only.toml
+│   │   │   │   │   ├── pair-vendored-vendored-redistributable.toml
+│   │   │   │   │   ├── risk-r3-shell-security-review.toml
+│   │   │   │   │   └── risk-r4-instruction-only.toml
+│   │   │   │   ├── INDEX.toml
+│   │   │   │   └── README.md
+│   │   │   ├── wave_t4.rs
+│   │   │   ├── wave_t4_review.rs
+│   │   │   └── wave_t5_fixtures.rs
+│   │   └── Cargo.toml
+│   └── ossus-resolver/
+│       ├── src/
+│       │   └── lib.rs
+│       └── Cargo.toml
+├── docs/
+│   ├── architecture/
+│   │   ├── CLI_CONTRACT.md
+│   │   ├── DATA_CONTRACTS.md
+│   │   ├── REGISTRY_DESIGN.md
+│   │   ├── RESEARCHER_FUTURE_DESIGN.md
+│   │   ├── RESOLVER_DESIGN.md
+│   │   ├── RUST_WORKSPACE.md
+│   │   ├── SOURCE_AND_INSTALLATION_MODEL.md
+│   │   └── SYSTEM_ARCHITECTURE.md
+│   ├── implementation/
+│   │   ├── 00-original-context/
+│   │   │   ├── ORIGINAL_MASTER_PLAN_V1_SPANISH.md
+│   │   │   ├── ORIGINAL_MASTER_PLAN_V2_SPANISH.md
+│   │   │   └── README.md
+│   │   ├── 01-master-context/
+│   │   │   ├── DECISION_LOG.md
+│   │   │   ├── GLOSSARY.md
+│   │   │   ├── OSSUS_MASTER_CONTEXT.md
+│   │   │   ├── OSSUS_MASTER_PLAN_ENGLISH.md
+│   │   │   └── PROJECT_CHARTER.md
+│   │   ├── 02-architecture/
+│   │   │   ├── CLI_CONTRACT.md
+│   │   │   ├── DATA_CONTRACTS.md
+│   │   │   ├── REGISTRY_DESIGN.md
+│   │   │   ├── RESEARCHER_FUTURE_DESIGN.md
+│   │   │   ├── RESOLVER_DESIGN.md
+│   │   │   ├── RUST_WORKSPACE.md
+│   │   │   ├── SOURCE_AND_INSTALLATION_MODEL.md
+│   │   │   └── SYSTEM_ARCHITECTURE.md
+│   │   ├── 03-specifications/
+│   │   │   ├── aliases-v1.toml
+│   │   │   ├── canonical-manifest.example.toml
+│   │   │   ├── canonical-manifest.schema.json
+│   │   │   ├── capabilities-v1.toml
+│   │   │   ├── CAPABILITY_GOVERNANCE.md
+│   │   │   ├── deprecations-v1.toml
+│   │   │   ├── model-roles.toml
+│   │   │   ├── ossus-config.example.toml
+│   │   │   ├── policy.example.toml
+│   │   │   ├── skills-lock.example.json
+│   │   │   └── skills-lock.schema.json
+│   │   ├── 04-security/
+│   │   │   ├── ACTIVATION_SECURITY.md
+│   │   │   ├── RISK_TIERS.md
+│   │   │   ├── SECURITY_GATES.md
+│   │   │   ├── SECURITY_GOVERNANCE.md
+│   │   │   ├── STAGING_AND_CI.md
+│   │   │   ├── SUPPLY_CHAIN.md
+│   │   │   ├── THREAT_MODEL.md
+│   │   │   └── TRUST_BOUNDARIES.md
+│   │   ├── 05-evaluations/
+│   │   │   ├── EVALUATION_STRATEGY.md
+│   │   │   ├── goldens-v1.toml
+│   │   │   ├── METRICS.md
+│   │   │   └── seed-catalog-profiles.toml
+│   │   ├── 06-waves/
+│   │   │   ├── 00-plan-security-review.md
+│   │   │   ├── 01-rust-workspace-bootstrap.md
+│   │   │   ├── 02-spec-and-taxonomy.md
+│   │   │   ├── 03-registry-and-search.md
+│   │   │   ├── 04-project-scanner.md
+│   │   │   ├── 05-resolver-core.md
+│   │   │   ├── 06-golden-evaluation-harness.md
+│   │   │   ├── 07-activation-security-boundary.md
+│   │   │   ├── 08-claude-code-adapter.md
+│   │   │   ├── 09-cli-vertical-slice.md
+│   │   │   ├── 10-security-hardening-and-supply-chain.md
+│   │   │   ├── 11-v0-release.md
+│   │   │   ├── 12-registry-sync-and-index-install.md
+│   │   │   ├── 13-private-catalogs-and-precedence.md
+│   │   │   ├── 14-codex-adapter.md
+│   │   │   ├── 15-local-semantic-fallback.md
+│   │   │   ├── 16-cross-platform-distribution.md
+│   │   │   ├── 17-researcher-security-design.md
+│   │   │   ├── 18-passive-intake-and-evidence.md
+│   │   │   ├── 19-github-discovery.md
+│   │   │   ├── 20-static-analysis-integrations.md
+│   │   │   ├── 21-human-admission-workflow.md
+│   │   │   ├── 22-reddit-community-signals.md
+│   │   │   ├── 23-researcher-security-audit.md
+│   │   │   ├── 24-beta-release.md
+│   │   │   └── WAVE_INDEX.md
+│   │   ├── 07-prompts/
+│   │   │   ├── FINDINGS_DISPOSITION.md
+│   │   │   ├── GENERAL_IMPLEMENTER.md
+│   │   │   ├── GENERAL_REVIEWER.md
+│   │   │   ├── HUMAN_SECURITY_CLOSURE.md
+│   │   │   ├── PLAN_REVIEW_OPUS5.md
+│   │   │   ├── SECURITY_IMPLEMENTATION_OPUS5.md
+│   │   │   ├── SECURITY_REVIEW_OPUS5.md
+│   │   │   └── START_OSSUS_REPOSITORY.md
+│   │   ├── 08-operations/
+│   │   │   ├── BLOCKED_DIAGNOSTIC_TEMPLATE.md
+│   │   │   ├── CHANGE_CONTROL.md
+│   │   │   ├── HANDOFF_TEMPLATE.md
+│   │   │   ├── RELEASE_CHECKLIST.md
+│   │   │   ├── REVIEW_REPORT_TEMPLATE.md
+│   │   │   ├── WAVE-000_FINDINGS_DISPOSITION.md
+│   │   │   ├── WAVE-000_GATE_S0_CLOSURE.md
+│   │   │   ├── WAVE-000_OPUS5_PLAN_REVIEW.md
+│   │   │   ├── WAVE-000_PREPARATION_AND_CHANGE_SUMMARY.md
+│   │   │   ├── WAVE-000_REPORT.md
+│   │   │   ├── WAVE-001_REPORT.md
+│   │   │   ├── WAVE-002_GATE_S1_CLOSURE.md
+│   │   │   ├── WAVE-002_T4_REPORT.md
+│   │   │   └── WAVE_REPORT_TEMPLATE.md
+│   │   ├── 09-roadmap/
+│   │   │   ├── BACKLOG_AFTER_BETA.md
+│   │   │   ├── DEFINITION_OF_DONE.md
+│   │   │   ├── DEPENDENCY_GRAPH.md
+│   │   │   └── PHASES_AND_GATES.md
+│   │   ├── CURRENT_WAVE.md
+│   │   ├── PACKAGE_MANIFEST.json
+│   │   ├── README.md
+│   │   └── SOURCES.md
+│   ├── product/
+│   │   ├── DECISION_LOG.md
+│   │   ├── GLOSSARY.md
+│   │   ├── ossus-explainer.html
+│   │   ├── OSSUS_MASTER_CONTEXT.md
+│   │   ├── OSSUS_MASTER_PLAN.md
+│   │   └── PROJECT_CHARTER.md
+│   ├── roadmap/
+│   │   ├── BACKLOG_AFTER_BETA.md
+│   │   ├── DEFINITION_OF_DONE.md
+│   │   ├── DEPENDENCY_GRAPH.md
+│   │   └── PHASES_AND_GATES.md
+│   ├── security/
+│   │   ├── ACTIVATION_SECURITY.md
+│   │   ├── RISK_TIERS.md
+│   │   ├── SECURITY_GATES.md
+│   │   ├── SECURITY_GOVERNANCE.md
+│   │   ├── STAGING_AND_CI.md
+│   │   ├── SUPPLY_CHAIN.md
+│   │   ├── THREAT_MODEL.md
+│   │   └── TRUST_BOUNDARIES.md
+│   ├── ADDING_A_RESOURCE.md
+│   ├── GETTING_STARTED.md
+│   ├── HOST_COMPATIBILITY.md
+│   └── README.md
+├── evaluations/
+│   ├── fixtures/
+│   │   └── README.md
+│   ├── goldens/
+│   │   └── goldens-v1.toml
+│   ├── reports/
+│   │   └── .gitkeep
+│   ├── README.md
+│   └── seed-catalog-profiles.toml
+├── examples/
+│   ├── sample-project/
+│   │   └── README.md
+│   └── README.md
+├── reports/
+│   ├── README.md
+│   └── WAVE-000-almanac-orchestration-preparation.md
+├── scripts/
+│   ├── check-layout.sh
+│   ├── check-repository-layout.py
+│   ├── verify.ps1
+│   └── verify.sh
+├── specs/
+│   ├── config/
+│   │   ├── model-roles.toml
+│   │   ├── ossus-config.example.toml
+│   │   └── policy.example.toml
+│   ├── examples/
+│   │   ├── canonical-manifest.example.toml
+│   │   └── skills-lock.example.json
+│   ├── schemas/
+│   │   ├── canonical-manifest.schema.json
+│   │   └── skills-lock.schema.json
+│   ├── taxonomy/
+│   │   ├── aliases-v1.toml
+│   │   ├── capabilities-v1.toml
+│   │   ├── deprecations-v1.toml
+│   │   └── GOVERNANCE.md
+│   └── README.md
+├── tests/
+│   ├── snapshots/
+│   │   ├── cli_snapshots__placeholder_activate.snap
+│   │   ├── cli_snapshots__placeholder_audit.snap
+│   │   ├── cli_snapshots__placeholder_config.snap
+│   │   ├── cli_snapshots__placeholder_deactivate.snap
+│   │   ├── cli_snapshots__placeholder_doctor.snap
+│   │   ├── cli_snapshots__placeholder_eval.snap
+│   │   ├── cli_snapshots__placeholder_explain.snap
+│   │   ├── cli_snapshots__placeholder_init.snap
+│   │   ├── cli_snapshots__placeholder_lock.snap
+│   │   ├── cli_snapshots__placeholder_registry.snap
+│   │   ├── cli_snapshots__placeholder_research.snap
+│   │   ├── cli_snapshots__placeholder_resolve.snap
+│   │   ├── cli_snapshots__placeholder_scan.snap
+│   │   ├── cli_snapshots__placeholder_search.snap
+│   │   ├── cli_snapshots__placeholder_show.snap
+│   │   ├── cli_snapshots__root_help_output.snap
+│   │   └── cli_snapshots__version_output.snap
+│   └── cli_snapshots.rs
+├── .editorconfig
+├── .gitattributes
+├── .gitignore
+├── AGENTS.md
+├── ARCHITECTURE.md
+├── Cargo.lock
+├── Cargo.toml
+├── CHANGELOG.md
+├── CLAUDE.md
+├── clippy.toml
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── deny.toml
+├── GOVERNANCE.md
+├── LICENSE-APACHE
+├── LICENSE-MIT
+├── README.md
+├── REPOSITORY_MANIFEST.json
+├── REPOSITORY_TREE.txt
+├── ROADMAP.md
+├── rust-toolchain.toml
+├── rustfmt.toml
+├── SECURITY.md
+├── SUPPORT.md
+├── taplo.toml
+└── typos.toml

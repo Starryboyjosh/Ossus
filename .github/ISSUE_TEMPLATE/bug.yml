@@ -1,0 +1,42 @@
+name: Bug report
+description: Report reproducible incorrect Ossus behavior.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: Do not report vulnerabilities here. Use SECURITY.md.
+  - type: input
+    id: version
+    attributes:
+      label: Ossus version or commit
+      placeholder: 0.0.0 / commit hash
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options: [Linux, macOS, Windows, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What happened?
+      description: Include the exact command and complete safe error output.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Remove secrets, private source, and candidate payloads.
+    validations:
+      required: true

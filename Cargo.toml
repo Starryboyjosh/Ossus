@@ -1,0 +1,38 @@
+[workspace]
+members = [
+  "crates/ossus-cli",
+  "crates/ossus-core",
+  "crates/ossus-registry",
+  "crates/ossus-resolver",
+  "crates/ossus-policy",
+  "crates/ossus-adapter-claude",
+  "crates/ossus-eval",
+]
+resolver = "3"
+
+[workspace.package]
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT OR Apache-2.0"
+authors = ["Ossus contributors"]
+
+[workspace.dependencies]
+serde = { version = "=1.0.229", features = ["derive"] }
+toml = { version = "=1.1.4", default-features = false, features = ["parse", "serde"] }
+
+ossus-adapter-claude = { path = "crates/ossus-adapter-claude", version = "0.0.0" }
+ossus-core = { path = "crates/ossus-core", version = "0.0.0" }
+ossus-eval = { path = "crates/ossus-eval", version = "0.0.0" }
+ossus-policy = { path = "crates/ossus-policy", version = "0.0.0" }
+ossus-registry = { path = "crates/ossus-registry", version = "0.0.0" }
+ossus-resolver = { path = "crates/ossus-resolver", version = "0.0.0" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+unused_must_use = "deny"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+expect_used = "deny"
+unwrap_used = "deny"
