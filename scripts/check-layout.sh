@@ -14,3 +14,5 @@ if [[ -d catalog/imports ]]; then
     printf 'forbidden directory found: catalog/imports/\n' >&2
     exit 1
 fi
+
+python3 scripts/generate-repository-inventories.py --check

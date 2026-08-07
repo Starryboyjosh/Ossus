@@ -1,29 +1,33 @@
 # Current implementation WAVE
 
 ```text
-WAVE-002 — Trusted specifications and taxonomy
+WAVE-003 — Registry and local search
 ```
 
-Status: **implemented and independently reviewed; Security Gate S1 closure is pending named-human approval**. WAVE-003 remains blocked until the project owner records that decision in `08-operations/WAVE-002_GATE_S1_CLOSURE.md`.
+Status: **in progress**. Security Gate S1 was closed by the named project owner, Starryboyjosh, on 2026-08-06 in `08-operations/WAVE-002_GATE_S1_CLOSURE.md`.
 
-WAVE-002 delivered typed core contracts, canonical TOML manifest loading, bounded parsing, taxonomy loading, deterministic semantic validation, CLI diagnostics, the ADR-017 TOML conversion, and an executable negative-fixture corpus. The implementation report and Opus 5 review evidence are in `08-operations/WAVE-002_T4_REPORT.md`.
+WAVE-003 implements the disposable local SQLite/FTS Registry index, deterministic rebuild, trusted-metadata search and show APIs, Registry status, and the corresponding CLI commands. It also requires 20 real seed resources with provenance and license evidence. Those resources are not approved until the named human reviews the concrete candidate package; automated validation cannot substitute for that decision.
 
-## Gate S1 evidence
+## WAVE-003 acceptance state
 
 | Requirement | State |
 |---|---|
-| schemas reject unknown major versions | Done — canonical fixtures and typed schema-version checks fail closed |
-| parser budgets tested | Done — byte, UTF-8, nesting, string and collection limits have executable tests |
-| canonical/origin separation explicit | Done — F-12 origin fields are rejected and cannot deserialize into canonical state |
-| taxonomy and policy hashes supported | Done — the lockfile schema requires canonical lowercase `sha256:<64 hex>` identities and layout regression checks reject missing or malformed values |
-| Opus 5 final review | Done — review addendum and final evidence recorded in the WAVE report |
-| named-human closure | **Open** — model review is evidence, not certification |
+| Gate S1 named-human closure | Done — V0 authority ratified and correlated-review risk accepted |
+| SQLite schema and versioned migrations | In progress |
+| Deterministic atomic rebuild | In progress |
+| Exact, capability, category and FTS search | In progress |
+| Surface, source, runtime and risk filters | In progress |
+| `search`, `show`, `registry status`, `registry reindex` CLI | In progress |
+| 20 real seed candidates researched | Pending |
+| 20 concrete candidates explicitly human-approved | Pending — mandatory checkpoint |
+| WAVE-003 report and final verification | Pending |
 
 ## Preceding WAVEs
 
 - WAVE-000 is complete. Security Gate S0 was closed on 2026-08-04 by the project owner in `08-operations/WAVE-000_GATE_S0_CLOSURE.md`.
-- WAVE-001 is implemented and verified. Its remote CI evidence can be collected after the authorized first commit is pushed.
+- WAVE-001 is implemented and verified.
+- WAVE-002 is implemented and independently reviewed. It delivered typed core contracts, canonical TOML manifest loading, bounded parsing, taxonomy loading, deterministic semantic validation, CLI diagnostics, the ADR-017 TOML conversion, and the executable fixture corpus. Evidence is in `08-operations/WAVE-002_T4_REPORT.md`.
 
-## Next WAVE
+## Scope boundary
 
-WAVE-003 must not begin until Gate S1 is closed by a named human against `07-prompts/HUMAN_SECURITY_CLOSURE.md`.
+Do not implement WAVE-004 or later behavior. Remote Registry synchronization, resource-body installation, Resolver behavior, Researcher automation, activation, and future command groups remain outside WAVE-003.

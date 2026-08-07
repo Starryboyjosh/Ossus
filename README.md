@@ -2,7 +2,7 @@
 
 > A local-first Registry and deterministic Resolver for agent skills, prompt packs, and MCP servers.
 
-[![Status: architecture-first](https://img.shields.io/badge/status-architecture--first-5c4ee5)](#project-status)
+[![Status: WAVE-003 in progress](https://img.shields.io/badge/status-WAVE--003%20in%20progress-5c4ee5)](#project-status)
 [![Rust 2024](https://img.shields.io/badge/Rust-2024-black?logo=rust)](Cargo.toml)
 [![Security model](https://img.shields.io/badge/security-threat--modeled-167a4a)](docs/security/THREAT_MODEL.md)
 
@@ -16,29 +16,23 @@ Ossus is not another folder of prompts. It is the control layer around that fold
 
 ## Project status
 
-This repository is a **repository-ready architecture and Rust workspace scaffold**. Product behavior beyond the bootstrap commands is intentionally not implemented yet.
-
-The current implementation gate is:
+This repository is under active implementation. **WAVE-002 is complete**, Security Gate S1 is closed, and the current implementation WAVE is:
 
 ```text
-WAVE-000 — Opus 5 security and architecture review
+WAVE-003 — Registry and local search (in progress)
 ```
 
-Before substantial implementation, run the Opus 5 plan review under [`docs/implementation/07-prompts/`](docs/implementation/07-prompts/), disposition every finding, and close Security Gate S0 with a human decision.
+Implemented foundations include:
 
-The scaffold currently provides:
+- the Rust Cargo workspace and `ossus` bootstrap binary;
+- typed shared IDs, versions, enums, and stable diagnostics;
+- canonical TOML manifest loading with bounded parsing;
+- governed taxonomy and semantic validation;
+- executable negative fixtures and trusted lockfile hash contracts;
+- security, governance, CI, and the WAVE-000 through WAVE-024 implementation plan;
+- original Spanish architecture documents retained as historical records.
 
-- the full Rust Cargo workspace;
-- the `ossus` bootstrap binary;
-- canonical specifications and schemas;
-- the 44-capability taxonomy;
-- 50 initial golden Resolver cases;
-- security, governance, and contribution documents;
-- GitHub issue forms and least-privilege CI;
-- the complete implementation plan from WAVE-000 through WAVE-024;
-- the original Spanish architecture documents as historical design records.
-
-It does **not** yet claim to provide a functioning Registry, Resolver, Researcher, sandbox, or secure activation engine.
+WAVE-003 is adding the local SQLite/FTS Registry and its search, show, status, and reindex commands. Until its acceptance criteria pass, the repository does **not** claim those commands are complete. Resolver, Researcher, installation, activation, and later-WAVE behavior remain unimplemented.
 
 ## The three domains
 
@@ -110,7 +104,7 @@ ossus audit
 ossus research
 ```
 
-In the scaffold, use:
+For the currently implemented bootstrap surface, use:
 
 ```bash
 cargo run -p ossus -- --help
@@ -118,7 +112,7 @@ cargo run -p ossus -- status
 cargo run -p ossus -- plan
 ```
 
-All product commands that belong to later WAVEs return an explicit “planned but not implemented” error rather than pretending to work.
+Commands outside the current implemented WAVE return an explicit “planned but not implemented” error rather than pretending to work.
 
 ## Repository structure
 
@@ -152,7 +146,7 @@ A generated full tree is available at [`REPOSITORY_TREE.txt`](REPOSITORY_TREE.tx
 - `rustfmt`
 - Clippy
 
-### Verify the scaffold
+### Verify the repository
 
 Linux or macOS:
 

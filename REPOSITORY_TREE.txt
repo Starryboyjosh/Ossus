@@ -10,20 +10,20 @@ ossus/
 │   ├── workflows/
 │   │   └── ci.yml
 │   ├── CODEOWNERS
+│   ├── PULL_REQUEST_TEMPLATE.md
 │   ├── copilot-instructions.md
-│   ├── dependabot.yml
-│   └── PULL_REQUEST_TEMPLATE.md
+│   └── dependabot.yml
 ├── .ossus/
+│   ├── README.md
 │   ├── config.toml
-│   ├── policy.toml
-│   └── README.md
+│   └── policy.toml
 ├── .vscode/
 │   ├── extensions.json
 │   └── settings.json
 ├── catalog/
 │   ├── examples/
-│   │   ├── canonical-manifest.example.toml
-│   │   └── README.md
+│   │   ├── README.md
+│   │   └── canonical-manifest.example.toml
 │   ├── official/
 │   │   ├── manifests/
 │   │   │   └── .gitkeep
@@ -189,11 +189,11 @@ ossus/
 │   │   │   ├── SOURCE_AND_INSTALLATION_MODEL.md
 │   │   │   └── SYSTEM_ARCHITECTURE.md
 │   │   ├── 03-specifications/
+│   │   │   ├── CAPABILITY_GOVERNANCE.md
 │   │   │   ├── aliases-v1.toml
 │   │   │   ├── canonical-manifest.example.toml
 │   │   │   ├── canonical-manifest.schema.json
 │   │   │   ├── capabilities-v1.toml
-│   │   │   ├── CAPABILITY_GOVERNANCE.md
 │   │   │   ├── deprecations-v1.toml
 │   │   │   ├── model-roles.toml
 │   │   │   ├── ossus-config.example.toml
@@ -211,8 +211,8 @@ ossus/
 │   │   │   └── TRUST_BOUNDARIES.md
 │   │   ├── 05-evaluations/
 │   │   │   ├── EVALUATION_STRATEGY.md
-│   │   │   ├── goldens-v1.toml
 │   │   │   ├── METRICS.md
+│   │   │   ├── goldens-v1.toml
 │   │   │   └── seed-catalog-profiles.toml
 │   │   ├── 06-waves/
 │   │   │   ├── 00-plan-security-review.md
@@ -277,10 +277,10 @@ ossus/
 │   ├── product/
 │   │   ├── DECISION_LOG.md
 │   │   ├── GLOSSARY.md
-│   │   ├── ossus-explainer.html
 │   │   ├── OSSUS_MASTER_CONTEXT.md
 │   │   ├── OSSUS_MASTER_PLAN.md
-│   │   └── PROJECT_CHARTER.md
+│   │   ├── PROJECT_CHARTER.md
+│   │   └── ossus-explainer.html
 │   ├── roadmap/
 │   │   ├── BACKLOG_AFTER_BETA.md
 │   │   ├── DEFINITION_OF_DONE.md
@@ -318,6 +318,7 @@ ossus/
 ├── scripts/
 │   ├── check-layout.sh
 │   ├── check-repository-layout.py
+│   ├── generate-repository-inventories.py
 │   ├── verify.ps1
 │   └── verify.sh
 ├── specs/
@@ -332,10 +333,10 @@ ossus/
 │   │   ├── canonical-manifest.schema.json
 │   │   └── skills-lock.schema.json
 │   ├── taxonomy/
+│   │   ├── GOVERNANCE.md
 │   │   ├── aliases-v1.toml
 │   │   ├── capabilities-v1.toml
-│   │   ├── deprecations-v1.toml
-│   │   └── GOVERNANCE.md
+│   │   └── deprecations-v1.toml
 │   └── README.md
 ├── tests/
 │   ├── snapshots/
@@ -362,14 +363,12 @@ ossus/
 ├── .gitignore
 ├── AGENTS.md
 ├── ARCHITECTURE.md
-├── Cargo.lock
-├── Cargo.toml
 ├── CHANGELOG.md
 ├── CLAUDE.md
-├── clippy.toml
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
-├── deny.toml
+├── Cargo.lock
+├── Cargo.toml
 ├── GOVERNANCE.md
 ├── LICENSE-APACHE
 ├── LICENSE-MIT
@@ -377,9 +376,11 @@ ossus/
 ├── REPOSITORY_MANIFEST.json
 ├── REPOSITORY_TREE.txt
 ├── ROADMAP.md
-├── rust-toolchain.toml
-├── rustfmt.toml
 ├── SECURITY.md
 ├── SUPPORT.md
+├── clippy.toml
+├── deny.toml
+├── rust-toolchain.toml
+├── rustfmt.toml
 ├── taplo.toml
 └── typos.toml

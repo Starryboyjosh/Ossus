@@ -2,8 +2,8 @@
 
 //! Shared domain contracts for Ossus.
 //!
-//! The crate is intentionally small during the repository scaffold. Product
-//! types are added only by their assigned implementation WAVEs.
+//! Product types are added only by their assigned implementation WAVEs; this
+//! crate owns contracts shared across the permanent product domains.
 
 use std::fmt;
 
@@ -26,7 +26,7 @@ pub use version::{SCHEMA_VERSION, Version, validate_schema_version};
 pub const PRODUCT_NAME: &str = "Ossus";
 
 /// Current implementation WAVE for the repository.
-pub const CURRENT_WAVE: &str = "WAVE-002";
+pub const CURRENT_WAVE: &str = "WAVE-003";
 
 /// The three permanent product domains.
 pub const DOMAINS: [&str; 3] = ["Researcher", "Registry", "Resolver"];
@@ -60,7 +60,7 @@ mod tests {
     #[test]
     fn exposes_stable_bootstrap_metadata() {
         assert_eq!(PRODUCT_NAME, "Ossus");
-        assert_eq!(CURRENT_WAVE, "WAVE-002");
+        assert_eq!(CURRENT_WAVE, "WAVE-003");
         assert_eq!(DOMAINS, ["Researcher", "Registry", "Resolver"]);
     }
 }

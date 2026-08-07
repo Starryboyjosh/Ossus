@@ -1,9 +1,15 @@
-# Ossus — Implementation Planning Package
+# Ossus — Implementation Package
 
-**Project name:** Ossus  
-**Primary interface:** Rust command-line application  
-**Core domains:** Researcher, Registry, Resolver  
-**Package status:** implementation-ready planning baseline  
+**Project name:** Ossus
+
+**Primary interface:** Rust command-line application
+
+**Core domains:** Researcher, Registry, Resolver
+
+**Package status:** active implementation and governance record
+
+**Current implementation WAVE:** WAVE-003
+
 **Language of implementation and active documentation:** English
 
 Ossus is a local-first system for discovering, reviewing, indexing, selecting, and activating agent skills and related reusable resources.
@@ -74,7 +80,7 @@ The Researcher is last because it is the most dangerous and expensive component.
 
 ## Model governance for this project
 
-Permanent architecture uses roles rather than model brands. This implementation project fixes concrete models in `03-specifications/model-roles.yaml`.
+Permanent architecture uses roles rather than model brands. This implementation project records concrete model roles in `03-specifications/model-roles.toml`.
 
 Mandatory rules:
 
@@ -85,16 +91,8 @@ Mandatory rules:
 - Model review is evidence, not a security guarantee.
 - A human closes every security gate and resolves disputed findings or residual risk.
 
-## Repository creation
+## Repository status
 
-The Git repository does not exist yet. When implementation starts:
+This package now lives inside the active Git repository. WAVE-001 established the Rust workspace, and subsequent WAVEs preserve their specifications, prompts, reports, and closure records here as governed implementation history.
 
-```bash
-mkdir ossus
-cd ossus
-git init
-```
-
-Then follow `06-waves/01-rust-workspace-bootstrap.md` or paste `07-prompts/START_OSSUS_REPOSITORY.md` into the first implementation session.
-
-The planning package itself is not intended to be copied wholesale into the product repository. Copy the active specifications and operational templates selected by WAVE 01, while retaining this package outside the repository as architectural source material.
+Use `CURRENT_WAVE.md` for the active state. Historical Spanish originals remain under `00-original-context/`; active authorities and explicitly checked mirrors live at their repository paths.

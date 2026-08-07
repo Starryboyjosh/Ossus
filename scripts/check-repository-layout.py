@@ -91,6 +91,10 @@ except (json.JSONDecodeError, OSError, ValueError) as error:
     print(f"invalid trusted contract: {error}", file=sys.stderr)
     raise SystemExit(1) from error
 
+# Each first path is the active repository authority. The second is an
+# intentional governed mirror retained in the implementation package for
+# historical continuity. Mirrors must remain byte-identical; divergence must be
+# an explicit governance change rather than an unnoticed copy edit.
 mirror_pairs = [
     (
         "specs/schemas/skills-lock.schema.json",
@@ -105,9 +109,9 @@ mirror_pairs = [
         "docs/implementation/02-architecture/DATA_CONTRACTS.md",
     ),
 ]
-for source, mirror in mirror_pairs:
-    if (root / source).read_bytes() != (root / mirror).read_bytes():
-        print(f"mirror differs: {source} != {mirror}", file=sys.stderr)
+for authority, mirror in mirror_pairs:
+    if (root / authority).read_bytes() != (root / mirror).read_bytes():
+        print(f"governed mirror differs: {authority} != {mirror}", file=sys.stderr)
         raise SystemExit(1)
 
 print("repository layout: ok")

@@ -1,7 +1,16 @@
 {
   "name": "ossus",
-  "kind": "repository-scaffold",
-  "current_wave": "WAVE-002",
+  "kind": "implementation-repository",
+  "current_wave": "WAVE-003",
+  "generation": {
+    "source": "git tracked files",
+    "self_excluded": [
+      "REPOSITORY_MANIFEST.json",
+      "REPOSITORY_TREE.txt",
+      "docs/implementation/PACKAGE_MANIFEST.json"
+    ]
+  },
+  "file_count_excluding_generated_inventories": 321,
   "files": [
     {
       "path": ".cargo/config.toml",
@@ -95,8 +104,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 2769,
-      "sha256": "ddd93e954c089eca345c79c391e714a92452889d7e0901ed2efd2a0248be605a"
+      "bytes": 2866,
+      "sha256": "96a73140b6f7c0ef339a7ddf770e60b7a48bf17c31ae1efb528cd1a52b1d6d8b"
     },
     {
       "path": "ARCHITECTURE.md",
@@ -110,8 +119,8 @@
     },
     {
       "path": "CLAUDE.md",
-      "bytes": 428,
-      "sha256": "f70430cf1f8e76fa18ad75919b8c4ef38325f1c31f17ea858658bee5b8ac1ed7"
+      "bytes": 462,
+      "sha256": "56b2014385a8ce30f748272f61cd52fc9f43c839144cae7ad2732cd63440b080"
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -150,13 +159,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8896,
-      "sha256": "16c324e3f16ee826f3a986a2b02eecab933150cac52af74c52aa607d30c00069"
-    },
-    {
-      "path": "REPOSITORY_TREE.txt",
-      "bytes": 17711,
-      "sha256": "ba92e8fb45e847338e5658717d2e323db0e8def52d044db216541f76463e9a04"
+      "bytes": 8862,
+      "sha256": "0b6d54fe68e4af0d7cf9be18b52e6025635350ebd69c8e39eec535e97a77be09"
     },
     {
       "path": "ROADMAP.md",
@@ -255,8 +259,8 @@
     },
     {
       "path": "crates/ossus-core/src/lib.rs",
-      "bytes": 2044,
-      "sha256": "e7052ed3382092c223418860fc52cffd853ad9b762b9c49e5d6fdf86ef202d0a"
+      "bytes": 2050,
+      "sha256": "27bd9dc89d75e4b673b01537eec3334419f642bd27565201ce04b40629448c6f"
     },
     {
       "path": "crates/ossus-core/src/version.rs",
@@ -1235,8 +1239,8 @@
     },
     {
       "path": "docs/implementation/08-operations/WAVE-002_GATE_S1_CLOSURE.md",
-      "bytes": 6858,
-      "sha256": "fc1dd99cea8bb636dfcece5d53f7362ab3be30f6c75c266df9d3e7efdd3743f5"
+      "bytes": 7036,
+      "sha256": "a78b77b2bab3eabdb4aea5a8f26778e167ad89e260c15ddb6ae790f1ee3d25e2"
     },
     {
       "path": "docs/implementation/08-operations/WAVE-002_T4_REPORT.md",
@@ -1270,18 +1274,13 @@
     },
     {
       "path": "docs/implementation/CURRENT_WAVE.md",
-      "bytes": 1849,
-      "sha256": "2d75250d0c9d53f8c0ccd4a17acafcdb77babe9788465a9e8c73b08ec1647aac"
-    },
-    {
-      "path": "docs/implementation/PACKAGE_MANIFEST.json",
-      "bytes": 14697,
-      "sha256": "a32a705a32fbd88a1eaafad36ff70ae54bd9fed20b93480f8ecae7cc9654795f"
+      "bytes": 2069,
+      "sha256": "a75cfe64e6d1e16e7b6f404c3fbd57b867638894d99966f0be4978848114468b"
     },
     {
       "path": "docs/implementation/README.md",
-      "bytes": 3810,
-      "sha256": "96b59c3d7077248f5dcf185415f26cfb058bcd1b67e1d8deb95d92d1c6da833e"
+      "bytes": 3759,
+      "sha256": "34acf1135b4f16f0ad3853cecfb341cdd93bc5258dc6395a134501180827ffbb"
     },
     {
       "path": "docs/implementation/SOURCES.md",
@@ -1435,13 +1434,18 @@
     },
     {
       "path": "scripts/check-layout.sh",
-      "bytes": 409,
-      "sha256": "170473890db53b86d882accb4f6b9764f2db28481710610aee678103290310a0"
+      "bytes": 469,
+      "sha256": "9e6b62248883dc5019c930d400f09eed6569524d172a7c90a256d9838eb83f84"
     },
     {
       "path": "scripts/check-repository-layout.py",
-      "bytes": 4220,
-      "sha256": "260087f1f33b63e801a1ff6a03a70b628bdc7b8dc8e301a97a98b8238df40710"
+      "bytes": 4530,
+      "sha256": "b17517478a1c5a268929255150308abf2a8daf1235cf547a22b6e177ab632113"
+    },
+    {
+      "path": "scripts/generate-repository-inventories.py",
+      "bytes": 5348,
+      "sha256": "fb38bc96673b3941fbb75da3113f8c45b9b0b483cdc31b119c9b071c6621bda3"
     },
     {
       "path": "scripts/verify.ps1",

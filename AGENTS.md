@@ -2,7 +2,7 @@
 
 ## Current implementation state
 
-The repository has implemented **WAVE-002** and is awaiting named-human closure of Security Gate S1. WAVE-003 remains blocked until that closure is recorded.
+The repository has implemented **WAVE-002** and closed Security Gate S1 through the named project owner. **WAVE-003 is in progress**; it is not complete until all acceptance evidence, including 20 explicitly human-approved real seed entries, is recorded.
 
 Do not implement later WAVEs merely because their folders or command names exist.
 
