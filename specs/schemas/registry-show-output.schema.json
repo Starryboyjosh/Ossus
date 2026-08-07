@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ossus.dev/schemas/registry-show-output-1.0.0.json",
+  "title": "Ossus Registry Show Output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "resource"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "resource": {
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "registry-search-output.schema.json#/$defs/resource" }
+      ]
+    }
+  }
+}

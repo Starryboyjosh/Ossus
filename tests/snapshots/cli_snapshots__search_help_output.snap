@@ -1,0 +1,14 @@
+---
+source: crates/ossus-cli/../../tests/cli_snapshots.rs
+expression: "cli_output(&[\"search\", \"--help\"])"
+---
+status: 0
+stdout:
+USAGE:
+    ossus search [TEXT] [FILTERS] [--index PATH]
+
+FILTERS:
+    --exact VALUE --capability ID --category NAME --surface SURFACE
+    --source-mode MODE --runtime REQUIREMENT --risk-max TIER
+    --limit N --offset N
+stderr:

@@ -1,0 +1,9 @@
+---
+source: crates/ossus-cli/../../tests/cli_snapshots.rs
+expression: "cli_output(&[\"show\", \"--help\"])"
+---
+status: 0
+stdout:
+USAGE:
+    ossus show <RESOURCE-ID> [--index PATH]
+stderr:

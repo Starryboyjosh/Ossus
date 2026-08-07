@@ -3,9 +3,11 @@
 use std::cmp::Ordering;
 
 use ossus_core::ContractError;
+use serde::Serialize;
 
 /// The contract boundary at which a diagnostic was produced.
-#[derive(Clone, Copy, Debug, Eq, Ord, PartialEq, PartialOrd)]
+#[derive(Clone, Copy, Debug, Eq, Ord, PartialEq, PartialOrd, Serialize)]
+#[serde(rename_all = "snake_case")]
 pub enum DiagnosticClass {
     /// The manifest or taxonomy has invalid shape, syntax, or contract data.
     Schema,
@@ -24,7 +26,8 @@ impl DiagnosticClass {
 }
 
 /// The severity of a diagnostic.
-#[derive(Clone, Copy, Debug, Eq, Ord, PartialEq, PartialOrd)]
+#[derive(Clone, Copy, Debug, Eq, Ord, PartialEq, PartialOrd, Serialize)]
+#[serde(rename_all = "snake_case")]
 pub enum DiagnosticSeverity {
     /// The input cannot be admitted.
     Error,
@@ -43,7 +46,7 @@ impl DiagnosticSeverity {
 }
 
 /// A bounded, stable diagnostic for a malformed or semantically invalid input.
-#[derive(Clone, Debug, Eq, PartialEq)]
+#[derive(Clone, Debug, Eq, PartialEq, Serialize)]
 pub struct Diagnostic {
     /// Whether the diagnostic is a schema or taxonomy failure.
     pub class: DiagnosticClass,

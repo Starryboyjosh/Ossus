@@ -2,20 +2,26 @@
 
 //! Trusted canonical metadata and local index.
 //!
-//! Canonical manifest loading, bounded parsing, taxonomy lookup, and semantic
-//! validation live at this trusted boundary. Indexing and search belong to later
-//! WAVEs.
+//! Canonical manifest loading, bounded parsing, taxonomy lookup, semantic
+//! validation, and the disposable local search index live at this trusted
+//! boundary.
 
 use ossus_core::ComponentState;
 
 mod budget;
 mod diagnostic;
+mod index;
 mod manifest;
 mod taxonomy;
 mod validate;
 
 pub use budget::Budget;
 pub use diagnostic::{Diagnostic, DiagnosticClass, DiagnosticSeverity};
+pub use index::{
+    ExcludedManifest, INDEX_SCHEMA_VERSION, OUTPUT_SCHEMA_VERSION, RegistryConflict, RegistryError,
+    RegistryStatus, ReindexReport, ResourceRecord, SearchQuery, SearchResults, ShowResult,
+    rebuild_index, registry_status, search_index, show_resource,
+};
 pub use manifest::{
     CanonicalManifest, Capabilities, Compatibility, Context, Distribution, ManifestValidation,
     Review, Risk, Runtime, Source, load_canonical_manifest, load_canonical_manifest_report,
@@ -25,7 +31,7 @@ pub use manifest::{
 pub use taxonomy::{CapabilityDefinition, DeprecationPolicy, Taxonomy};
 pub use validate::validate_manifest;
 
-/// Display label used by the bootstrap CLI.
+/// Display label used by the CLI and component inventory.
 pub const COMPONENT_NAME: &str = "Registry";
 
 /// Reports that canonical manifest and taxonomy validation is implemented.

@@ -10,7 +10,7 @@
       "docs/implementation/PACKAGE_MANIFEST.json"
     ]
   },
-  "file_count_excluding_generated_inventories": 321,
+  "file_count_excluding_generated_inventories": 326,
   "files": [
     {
       "path": ".cargo/config.toml",
@@ -134,13 +134,13 @@
     },
     {
       "path": "Cargo.lock",
-      "bytes": 10008,
-      "sha256": "8dbda87fcd945515c70ec448bb243619a308b3ef2a989d782b5edad3d3172a6a"
+      "bytes": 16575,
+      "sha256": "09b7a7198fa829a2fa44475df229c98e96c80d3959a0c27a548c3685065d0cc5"
     },
     {
       "path": "Cargo.toml",
-      "bytes": 1130,
-      "sha256": "9b0e97f0a75b0282c5505a807983c1b499ca8603abb93844e1d653deaea1b674"
+      "bytes": 1213,
+      "sha256": "9974bf99f580b2880b6a3a7e0c1a84372a905da533540f295067797e71a6726b"
     },
     {
       "path": "GOVERNANCE.md",
@@ -219,13 +219,13 @@
     },
     {
       "path": "crates/ossus-cli/Cargo.toml",
-      "bytes": 553,
-      "sha256": "9ce60e5599efa863480f6cdd2b243a661779655ba3430fb481266957e99ed230"
+      "bytes": 625,
+      "sha256": "407d77aeafb153c0ed55238801416a54023d8ba41ec480e38143296e197ae6a1"
     },
     {
       "path": "crates/ossus-cli/src/main.rs",
-      "bytes": 12925,
-      "sha256": "c32135ca486a225f18087d05b2069794d8764e33da6b08ff754a4cc6fce8a3e2"
+      "bytes": 25842,
+      "sha256": "facec379e8e50de91e99bb0d7b4714f4ace6e09ba68acd5b6d55082586a7070a"
     },
     {
       "path": "crates/ossus-cli/tests/validate.rs",
@@ -289,8 +289,8 @@
     },
     {
       "path": "crates/ossus-registry/Cargo.toml",
-      "bytes": 270,
-      "sha256": "488f1221be4ffcbbe1ca14b590f89c564f63723bc940f0ffd29a3d2d2d288c55"
+      "bytes": 365,
+      "sha256": "224ab8958e641ca0717c6073a5f965017484a011e60095fd316a351ab9714827"
     },
     {
       "path": "crates/ossus-registry/src/budget.rs",
@@ -299,13 +299,18 @@
     },
     {
       "path": "crates/ossus-registry/src/diagnostic.rs",
-      "bytes": 4376,
-      "sha256": "442f5312be39febc646430f8eda2d9e44d9a96ea70a5cb15630761dba5383b34"
+      "bytes": 4503,
+      "sha256": "cd375f919ed84ec0beec47047cbb6aff3361bbfdc78a57de888743d41ec2f572"
+    },
+    {
+      "path": "crates/ossus-registry/src/index.rs",
+      "bytes": 48755,
+      "sha256": "5015a739b1e1edde0842f0d99a445a5cc06aeac8266b51b9332252228a79a536"
     },
     {
       "path": "crates/ossus-registry/src/lib.rs",
-      "bytes": 1370,
-      "sha256": "a6809fff91ac56220a7eb2430a798a567df3f440f770e9333632f74ace43eea5"
+      "bytes": 1663,
+      "sha256": "dcf0ac2ad7dc5012d904f0b1c6ad0a6ba90ea9f0b2f19fd63346ca4f1f4a2719"
     },
     {
       "path": "crates/ossus-registry/src/manifest.rs",
@@ -1493,6 +1498,26 @@
       "sha256": "dfe0a740fb6403987335885780b0c9b76a4618db49f70f0a35bee459fad80e2e"
     },
     {
+      "path": "specs/schemas/registry-reindex-output.schema.json",
+      "bytes": 1475,
+      "sha256": "48c8d77d38af4c0695e9e5238c9e0c1eacee61b5fcfba9a9c553fb92a25bf508"
+    },
+    {
+      "path": "specs/schemas/registry-search-output.schema.json",
+      "bytes": 2086,
+      "sha256": "44605f8ed966ba6e97dae847aca28d0acfc86823c6f0639ce54233d2901fd928"
+    },
+    {
+      "path": "specs/schemas/registry-show-output.schema.json",
+      "bytes": 491,
+      "sha256": "79ff1031dc6a45da0e27aa6fe9fdb3a6121837c15330faf1f048067d06a3f99d"
+    },
+    {
+      "path": "specs/schemas/registry-status-output.schema.json",
+      "bytes": 1073,
+      "sha256": "0024a1ca14f76bb58d5f73b8ed91902c996f6fe7b98c956935f4ba9bfa7548fc"
+    },
+    {
       "path": "specs/schemas/skills-lock.schema.json",
       "bytes": 2432,
       "sha256": "a90e442385e5b95f320e55b5d798ca87de0dcfa88056db0330ea9a814f5b05d4"
@@ -1524,8 +1549,8 @@
     },
     {
       "path": "tests/cli_snapshots.rs",
-      "bytes": 1677,
-      "sha256": "097a8e4da647fe332ffda8564eac5c18ea7506685c1ae5a02277590d4bf05228"
+      "bytes": 5454,
+      "sha256": "405177f4850daea9184702e178acce96bbb74349d0e0ba8a67b20408d0069a4a"
     },
     {
       "path": "tests/snapshots/cli_snapshots__placeholder_activate.snap",
@@ -1573,11 +1598,6 @@
       "sha256": "9772aeec3c3cc51c5164f4d7fd21a97f65d89066228d41ce8d652bffa5a06c8f"
     },
     {
-      "path": "tests/snapshots/cli_snapshots__placeholder_registry.snap",
-      "bytes": 198,
-      "sha256": "e037992ac36927448bcd30d7c7fd9a9e18967500ad8fedc394db503b3d2b59c7"
-    },
-    {
       "path": "tests/snapshots/cli_snapshots__placeholder_research.snap",
       "bytes": 198,
       "sha256": "5b887b97f90354f23c983855f50772889c65bc249703ea7089f5b8419b506345"
@@ -1593,19 +1613,24 @@
       "sha256": "ac272e045d25449cbc1107655c3206774c26baf31bf327b6778c75a07ab61b7b"
     },
     {
-      "path": "tests/snapshots/cli_snapshots__placeholder_search.snap",
-      "bytes": 196,
-      "sha256": "fe673239ca8f33eb3e5d371cd701796cb8f773a82a86e8fc78da671e36e9ae33"
-    },
-    {
-      "path": "tests/snapshots/cli_snapshots__placeholder_show.snap",
-      "bytes": 194,
-      "sha256": "0981c2c855cef4a1b83e8915cf16d5a0a7360fdab441101d2eae16eeb6d1e1ae"
+      "path": "tests/snapshots/cli_snapshots__registry_help_output.snap",
+      "bytes": 255,
+      "sha256": "7fb324782b5895b2406c73053632dd754ff4f5175ce125c676c18f52cbadf4de"
     },
     {
       "path": "tests/snapshots/cli_snapshots__root_help_output.snap",
-      "bytes": 573,
-      "sha256": "8574644d91bb1e9cce124480cc536782df29de5efc699df52eb8f9eb0ee2f3df"
+      "bytes": 763,
+      "sha256": "2a28a2e867b54ad1d5070180decc603e9dad1654f3ea8c7b1722c7816f088baf"
+    },
+    {
+      "path": "tests/snapshots/cli_snapshots__search_help_output.snap",
+      "bytes": 360,
+      "sha256": "34b8efbc9903fc53f37eaaa61a7cd3bf0ca1f337206b2bc0740e60361c0827b0"
+    },
+    {
+      "path": "tests/snapshots/cli_snapshots__show_help_output.snap",
+      "bytes": 189,
+      "sha256": "9002597621d95d3b4ba1a18dd2879ff67859fb4f79218f15331b541f59e0c7f5"
     },
     {
       "path": "tests/snapshots/cli_snapshots__version_output.snap",

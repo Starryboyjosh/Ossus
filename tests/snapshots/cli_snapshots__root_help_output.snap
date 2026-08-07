@@ -1,5 +1,6 @@
 ---
-source: tests/cli_snapshots.rs
+source: crates/ossus-cli/../../tests/cli_snapshots.rs
+expression: "cli_output(&[\"--help\"])"
 ---
 status: 0
 stdout:
@@ -14,10 +15,13 @@ BOOTSTRAP COMMANDS:
     status     Show domain and implementation status
     plan       Show the implementation-plan entry point
 
-VALIDATION COMMANDS:
+REGISTRY COMMANDS:
     validate   Validate canonical manifest files
+    registry   Inspect or rebuild the local metadata index
+    search     Search canonical Registry metadata
+    show       Show one indexed resource
 
 PLANNED COMMAND GROUPS:
-    init config registry search show scan resolve explain
-    activate deactivate lock doctor eval audit research
+    init config scan resolve explain activate deactivate
+    lock doctor eval audit research
 stderr:

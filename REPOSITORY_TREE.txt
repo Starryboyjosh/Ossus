@@ -61,6 +61,7 @@ ossus/
 │   │   ├── src/
 │   │   │   ├── budget.rs
 │   │   │   ├── diagnostic.rs
+│   │   │   ├── index.rs
 │   │   │   ├── lib.rs
 │   │   │   ├── manifest.rs
 │   │   │   ├── taxonomy.rs
@@ -331,6 +332,10 @@ ossus/
 │   │   └── skills-lock.example.json
 │   ├── schemas/
 │   │   ├── canonical-manifest.schema.json
+│   │   ├── registry-reindex-output.schema.json
+│   │   ├── registry-search-output.schema.json
+│   │   ├── registry-show-output.schema.json
+│   │   ├── registry-status-output.schema.json
 │   │   └── skills-lock.schema.json
 │   ├── taxonomy/
 │   │   ├── GOVERNANCE.md
@@ -349,13 +354,13 @@ ossus/
 │   │   ├── cli_snapshots__placeholder_explain.snap
 │   │   ├── cli_snapshots__placeholder_init.snap
 │   │   ├── cli_snapshots__placeholder_lock.snap
-│   │   ├── cli_snapshots__placeholder_registry.snap
 │   │   ├── cli_snapshots__placeholder_research.snap
 │   │   ├── cli_snapshots__placeholder_resolve.snap
 │   │   ├── cli_snapshots__placeholder_scan.snap
-│   │   ├── cli_snapshots__placeholder_search.snap
-│   │   ├── cli_snapshots__placeholder_show.snap
+│   │   ├── cli_snapshots__registry_help_output.snap
 │   │   ├── cli_snapshots__root_help_output.snap
+│   │   ├── cli_snapshots__search_help_output.snap
+│   │   ├── cli_snapshots__show_help_output.snap
 │   │   └── cli_snapshots__version_output.snap
 │   └── cli_snapshots.rs
 ├── .editorconfig

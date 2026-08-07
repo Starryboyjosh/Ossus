@@ -1,0 +1,10 @@
+---
+source: crates/ossus-cli/../../tests/cli_snapshots.rs
+expression: "cli_output(&[\"registry\", \"--help\"])"
+---
+status: 0
+stdout:
+USAGE:
+    ossus registry status [--index PATH]
+    ossus registry reindex [--manifest-root PATH] [--index PATH]
+stderr:

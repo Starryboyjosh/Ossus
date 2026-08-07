@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ossus.dev/schemas/registry-status-output-1.0.0.json",
+  "title": "Ossus Registry Status Output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "exists", "index_schema_version", "compatible",
+    "integrity_ok", "fts5_available", "reindex_required", "resource_count",
+    "excluded_count", "catalog_fingerprint", "detail"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "exists": { "type": "boolean" },
+    "index_schema_version": { "type": ["integer", "null"], "minimum": 0 },
+    "compatible": { "type": "boolean" },
+    "integrity_ok": { "type": "boolean" },
+    "fts5_available": { "type": "boolean" },
+    "reindex_required": { "type": "boolean" },
+    "resource_count": { "type": "integer", "minimum": 0 },
+    "excluded_count": { "type": "integer", "minimum": 0 },
+    "catalog_fingerprint": {
+      "type": ["string", "null"],
+      "pattern": "^fnv1a64:[0-9a-f]{16}$"
+    },
+    "detail": { "type": "string" }
+  }
+}

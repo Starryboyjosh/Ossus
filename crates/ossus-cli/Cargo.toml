@@ -17,10 +17,13 @@ ossus-eval.workspace = true
 ossus-policy.workspace = true
 ossus-registry.workspace = true
 ossus-resolver.workspace = true
+serde.workspace = true
+serde_json.workspace = true
 
 [dev-dependencies]
 assert_cmd = "=2.0.17"
 insta = "=1.43.2"
+tempfile = "=3.26.0"
 
 [[test]]
 name = "cli_snapshots"
