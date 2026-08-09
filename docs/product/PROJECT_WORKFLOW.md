@@ -53,10 +53,12 @@ verification are recorded. The official catalog is currently **2** against a
 provisional 16 admission-bearing slots; profiles 10, 17, 18, and 20 are
 intentionally unresolved. Profiles 6 and 9 are standard-only admissions with
 no Claude/Codex claim; profile 10 needs an enforced read-only adapter; profile
-15 has an accepted surface correction but no admission; profile 16 remains
-valid but unfilled; and the
-original profile-20 MCP candidate is rejected while a replacement is
-conditional. These are not approvals.
+15 has an accepted surface correction but its candidate is blocked after an
+independent review found no bounded adapter, freshness protocol or redaction
+evidence; profile 16 remains valid but unfilled; and the original profile-20
+MCP candidate is rejected while a replacement is conditional. Profiles 5, 7,
+11 and 12 have explicit amendment packets, not approvals. These are not
+approvals.
 
 The catalog has no quota. Catalog growth is an outcome of successful review,
 never a goal that overrides review, and discovery volume must never create
@@ -77,6 +79,12 @@ WAVE-003 must finish seed admission and release evidence. WAVE-004 is the next
 authorized WAVE only after WAVE-003 closes; it adds bounded project scanning.
 Resolution, installation, activation, host adapters, remote synchronization,
 and automated Researcher discovery belong to still later WAVEs.
+
+The final-admission sprint used bounded reviews rather than a quota-driven
+discovery sweep. Catalog growth is an outcome of successful review, and
+discovery volume must never create admission pressure. The amendment packets
+and temporary governance lessons are recorded in the WAVE-003 operations
+documents.
 
 The Closure Agent has the last word on an evidence-backed WAVE decision. The
 implementer, independent reviewer, and Closure Agent remain separate roles;

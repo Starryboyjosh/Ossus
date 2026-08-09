@@ -9,6 +9,11 @@ Review → Closure chain and were materialized as the two official manifests in
 `agent-skills-standard` only; no Claude Code, Codex, standalone CLI or
 cross-host claim is implied.
 
+Profile-design amendments for execution-heavy profiles 5, 7, 11 and 12 are
+recorded in `WAVE-003_PROFILE_AMENDMENT_DECISIONS.md`. They are Curator packets
+only; they do not change the canonical taxonomy, approve a candidate, or
+authorize a manifest.
+
 ## Proposal matrix
 
 | Profile | Proposed ID/type | Required capabilities | Proposed risk/runtime | Source lock |

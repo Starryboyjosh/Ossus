@@ -3,7 +3,9 @@
 Date: 2026-08-08
 State: profile reconciliation completed for the active batch; two candidates are
 official Registry entries and the remaining candidates are evidence-only. The
-provisional admission-bearing target is 16 of 20 governed profiles.
+provisional admission-bearing target is 16 of 20 governed profiles. The final
+bounded sprint added no official entry: profile 15 is independently blocked and
+profiles 5, 7, 11 and 12 have amendment packets only.
 
 ## Decision boundary
 
@@ -29,7 +31,7 @@ decision. No manifest was added merely to reach twenty.
 | 12 | `seed.integration-testing` | addyosmani `test-driven-development` | `f493…`; `sha256:215b…cfda`; MIT | Profile R3 amendment/split required; current source is blocked for local writes, shell/test and browser/MCP execution; no admission |
 | 13 | `seed.code-review` | addyosmani `code-review-and-quality` | `f493…`; `sha256:bbe388…a2ba`; MIT | Conditional R3; no automatic audits, cross-skill activation or merge authority; profile R0 substitution required |
 | 14 | `seed.threat-model` | OpenAI `security-threat-model` prompt template | `49f948faa9258a0c61caceaf225e179651397431`; `skills/.curated/security-threat-model/references/prompt-template.md`; `sha256:2859871a9d51726123f2b97b28edb64c53900bad5195cb6d54fbedfd004b56a1`; Apache-2.0 | Conditional R3 prompt-pack adaptation; embedded prompt is untrusted; profile R0 substitution required |
-| 15 | `seed.dependency-audit-cli` | GitHub `security-review` fallback | `ab7544…`; `skills/security-review`; `sha256:cbda6a05f7821345a816febb4dbf677980d55ed7aaefd84e9cafe333e2c65511`; MIT | Closure accepted the profile-level substitution to `agent-skills-standard`; Registry admission is blocked pending Curator proposal/full review and it is never a standalone CLI |
+| 15 | `seed.dependency-audit-cli` | GitHub `security-review` fallback | `ab7544…`; `skills/security-review`; `sha256:cbda6a05f7821345a816febb4dbf677980d55ed7aaefd84e9cafe333e2c65511`; MIT | Closure accepted the profile-level substitution to `agent-skills-standard`; independent review `admission-review-a/profile-15-dependency-audit-20260808` blocks Registry admission pending a bounded adapter, freshness protocol, redaction evidence and a later Closure decision; it is never a standalone CLI |
 | 16 | `seed.supply-chain-review` | Microsoft hve-core `supply-chain-security` | `dd0f4920f73bbceae71a045a5344332fc1a6bb2b`; `.github/skills/security/supply-chain-security`; `sha256:858229f7683a85f54a203e2fce98f93de99f6800571202d11ada0b48ce00fde5` | Unresolved/rejected for now: composite incorporated licensing, incomplete external references, and no direct Claude Code evidence |
 | 17 | `seed.container-review` | GitHub `multi-stage-dockerfile` | `ab7544…`; `sha256:f59c…4549`; MIT | Intentionally unresolved; profile remains R1/read-only, but fresh exact tuple/hash/license/content/capability and host evidence is required |
 | 18 | `seed.ci-review` | GitHub `github-actions-hardening` | `ab7544…`; `sha256:febf…c5cb`; MIT | Intentionally unresolved; profile remains R1/read-only, but fresh exact tuple/hash/license/reference/content and Claude evidence is required |
@@ -137,3 +139,16 @@ authorized.
    surfaces, runtime, risk and permissions into canonical Ossus manifests.
 6. Only after Closure accepts exact evidence, add approved manifests to
    `catalog/official/manifests/` and rebuild the Registry incrementally.
+
+## Final-admission sprint result
+
+The sprint used bounded Luna Max reviews rather than another broad discovery
+sweep. No candidate met the complete Curator → independent review → Closure
+chain beyond the already admitted profiles 6 and 9. Profile 15 has a valid
+immutable MIT source tuple and accepted standard-only profile substitution, but
+the independent review found that the broad source is not constrained to
+dependency manifests/lockfiles, has no immutable adapter, and lacks a current
+advisory freshness and secret-redaction protocol. It is therefore **BLOCKED —
+NOT READY FOR CLOSURE**. Profiles 5, 7, 11 and 12 are documented as proposed R3
+amendments in `WAVE-003_PROFILE_AMENDMENT_DECISIONS.md`; no profile amendment or
+candidate admission was silently applied.

@@ -139,3 +139,22 @@ the Agent Skills standard surface and do not supply Claude Code, Codex,
 standalone-CLI, or aggregate cross-host coverage. Materialization checks remain
 future host work and are not inferred as implemented adapters. The official
 Registry count is **2 / 16 provisional admission-bearing slots**.
+
+## Final-admission sprint review
+
+The final bounded review did not create a new Closure candidate. Admission
+Review Agent A recorded a distinct block for profile 15:
+`admission-review-a/profile-15-dependency-audit-20260808`. The pinned MIT
+subtree is source-safe and standard-shaped, but the candidate is a broad
+security scanner rather than an enforced dependency-only adapter. It lacks a
+current advisory freshness protocol, mandatory secret/private-registry
+redaction evidence, and a reviewed adapter that restricts scope to manifests and
+lockfiles. It is **not ready for Closure** and remains out of the official
+Registry.
+
+The same sprint produced Curator-only amendment packets for profiles 5, 7, 11
+and 12 in `WAVE-003_PROFILE_AMENDMENT_DECISIONS.md`. Those packets propose
+explicit R3 contracts where execution, browser, command or write behavior is
+intrinsic; they are not profile approvals or resource admissions. A bounded
+profile-16 replacement triage found no clean candidate, so the profile remains
+valid and intentionally unfilled. No later-WAVE implementation was started.

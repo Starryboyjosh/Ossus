@@ -98,11 +98,14 @@ content hash, license, reviewed capabilities/compatibility/runtime/risk/context,
 and separated Curator Agent, Admission Review Agent, and Closure Agent evidence.
 Research output cannot approve itself. The current admission ledger has **two
 official entries** (profiles 6 and 9): both are standard-only profile
-substitutions. Profile 10 needs an enforced read-only adapter, profile 15 has
-an accepted surface correction but no admitted resource, profile 16 retains a
-valid but unfilled profile, profiles 17/18 are intentionally unresolved, and
-profile 20's original calculator is rejected while its replacement is
-conditional.
+substitutions. Profile 10 needs an enforced read-only adapter; profile 15 has
+an accepted surface correction but its independent admission review is blocked
+on a dependency-only adapter, freshness protocol and redaction evidence;
+profile 16 retains a valid but unfilled profile, profiles 17/18 are
+intentionally unresolved, and profile 20's original calculator is rejected
+while its replacement is conditional. Profiles 5, 7, 11 and 12 have
+Curator-only R3 amendment packets; no amendment or candidate is approved by
+those packets.
 
 #### Catalog-pressure invariant
 

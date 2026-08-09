@@ -10,7 +10,7 @@
       "docs/implementation/PACKAGE_MANIFEST.json"
     ]
   },
-  "file_count_excluding_generated_inventories": 371,
+  "file_count_excluding_generated_inventories": 373,
   "files": [
     {
       "path": ".cargo/config.toml",
@@ -819,8 +819,8 @@
     },
     {
       "path": "docs/architecture/IMPLEMENTATION_WORKFLOW.md",
-      "bytes": 6345,
-      "sha256": "c126605249fefae81d9c9e91ecd106fc1cfee645cf0ab693eeace3c61738bf81"
+      "bytes": 6561,
+      "sha256": "1e86f24b8ccd189046caa6f9bee31d7e6ceb5e5f554725b2398d8dbc4d52ee7d"
     },
     {
       "path": "docs/architecture/REGISTRY_DESIGN.md",
@@ -1248,6 +1248,11 @@
       "sha256": "32b3f59d943fcebb1f904d6ebe67972899632381907cd0f6612a754e74060326"
     },
     {
+      "path": "docs/implementation/08-operations/HANDOFF_2026-08-08_WAVE-003_FINAL_ADMISSION_SPRINT.md",
+      "bytes": 5079,
+      "sha256": "0d7d21e007b901c47915e09a15d777eb578486780ec2309aa23463957539e7ef"
+    },
+    {
       "path": "docs/implementation/08-operations/HANDOFF_2026-08-08_WAVE-003_POST_PUSH.md",
       "bytes": 4069,
       "sha256": "32f7ba616c17bc268c1367660e17cbca6a8aeca633b70353eb1fc7a46235ae30"
@@ -1309,28 +1314,33 @@
     },
     {
       "path": "docs/implementation/08-operations/WAVE-003_CANONICAL_PROPOSALS.md",
-      "bytes": 7223,
-      "sha256": "f621bf6538bd4e233a877aead56bb7c064a8f2d45a46588935c60216542f34d2"
+      "bytes": 7474,
+      "sha256": "7debb717a463a474bd9fad83d00873c052cb14acdfe11f3112c73e9a8f634eba"
+    },
+    {
+      "path": "docs/implementation/08-operations/WAVE-003_PROFILE_AMENDMENT_DECISIONS.md",
+      "bytes": 7494,
+      "sha256": "8d582d64093289cc65862db38c9fbfa1650657a05233106429e18f7c57b65e13"
     },
     {
       "path": "docs/implementation/08-operations/WAVE-003_REPORT.md",
-      "bytes": 6012,
-      "sha256": "5994de8418aa2b6897ca37b5ad72794e9f0816074dc94d384ee77575aef3fd17"
+      "bytes": 8614,
+      "sha256": "e3d47c929aa01be3582792401d8f9464e23e104cf8c5203f58ef475a735fea3a"
     },
     {
       "path": "docs/implementation/08-operations/WAVE-003_SEED_ADMISSION_AND_SOURCE_REPORT.md",
-      "bytes": 12259,
-      "sha256": "c3001e02ecc6bae4e46feb6226d08e7d45c4c58cd04e2a2f9d75f1be1afc8728"
+      "bytes": 13312,
+      "sha256": "9fd532e9bce4dbbc04e6691a11c18898481edbb6ccea75cd7730a9cee06de289"
     },
     {
       "path": "docs/implementation/08-operations/WAVE-003_SEED_CLOSURE_2026-08-08.md",
-      "bytes": 7038,
-      "sha256": "bb636b91f7e62e5bf62ac0c0681783a933aa87ce5b5a7ae363c7e9b062f8f8da"
+      "bytes": 8128,
+      "sha256": "037beacb4fc7fbcf9c9def9a6be1616166a6fdfcda4d040ef81e01376e027a56"
     },
     {
       "path": "docs/implementation/08-operations/WAVE-003_SEED_PROFILE_RECONCILIATION.md",
-      "bytes": 13217,
-      "sha256": "2997b46147db001a94e05827301ecf8081301dbc8ee76c60e8a0f8e77d248b8b"
+      "bytes": 13444,
+      "sha256": "79c8979a24779170779499e13f3df2c87ac502b43154d929cdd410b08d384a19"
     },
     {
       "path": "docs/implementation/08-operations/WAVE_REPORT_TEMPLATE.md",
@@ -1359,8 +1369,8 @@
     },
     {
       "path": "docs/implementation/08-operations/wave-summaries/WAVE-003_SUMMARY.md",
-      "bytes": 2961,
-      "sha256": "8174db73cf9ed56bfff38654b79e8915a0c235d908a97fdd0f28b4f1171ee8c5"
+      "bytes": 3432,
+      "sha256": "d93e26bbf2354b177841a9df5b02702a0cdffcc8805e99b10618a18454cb1d35"
     },
     {
       "path": "docs/implementation/08-operations/wave-summaries/WAVE-004_SUMMARY.md",
@@ -1489,8 +1499,8 @@
     },
     {
       "path": "docs/implementation/CURRENT_WAVE.md",
-      "bytes": 2793,
-      "sha256": "871ab499d646b039c85b33d4f86bf3302b8db7b3569ed937f75fce9b097154b0"
+      "bytes": 3090,
+      "sha256": "278a17c6063821204002149583e6cc002c8dded64a354ecfcb570262006d5d68"
     },
     {
       "path": "docs/implementation/README.md",
@@ -1529,8 +1539,8 @@
     },
     {
       "path": "docs/product/PROJECT_WORKFLOW.md",
-      "bytes": 3786,
-      "sha256": "2ed8adafc0b0ade65593d1721796f6632ef5006af2b6fbc80aa97bc6cb71f3f5"
+      "bytes": 4275,
+      "sha256": "d97dbb09957c7e5498fbd0b83b257d9aa5e1f54a42cf7ffb204016560b9b2df3"
     },
     {
       "path": "docs/product/ossus-explainer.html",
