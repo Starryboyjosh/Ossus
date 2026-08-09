@@ -1,5 +1,7 @@
 # Gate S1 — Trusted contracts: human closure package
 
+> **Historical evidence:** ADR-020 and `docs/AGENT_AUTHORITY.md` supersede this document's authority requirements for decisions on or after 2026-08-07. This note does not change recorded facts.
+
 **Gate:** S1 — Trusted contracts (`docs/security/SECURITY_GATES.md`)
 **Required before:** WAVE-003 Registry indexing
 **Prepared by:** Opus 5 (`claude-opus-5`), 2026-08-05

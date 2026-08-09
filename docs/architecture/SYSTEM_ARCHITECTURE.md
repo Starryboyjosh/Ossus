@@ -38,7 +38,7 @@ UNTRUSTED
 External source
   └─ Researcher quarantine
       └─ evidence bundle
-          └─ human review boundary
+          └─ Agent Review Authority boundary
 
 TRUSTED CONTROL PLANE
 Canonical manifests
@@ -116,7 +116,9 @@ source reference
   → external scanners
   → provisional analysis
   → evidence bundle
-  → human canonicalization
+  → Curator Agent preparation
+  → independent admission review
+  → Closure Agent decision
   → separate Registry contribution
 ```
 

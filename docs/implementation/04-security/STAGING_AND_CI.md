@@ -37,7 +37,7 @@ Prefer offline analysis on uploaded immutable artifacts.
 
 ## Main-repository path controls
 
-Even trusted contributions must not modify release workflows, signing configuration, admission policy, taxonomy governance or security model assignments without security ownership review and human approval.
+Even trusted contributions must not modify release workflows, signing configuration, admission policy, taxonomy governance or security-role assignments without independent security review and a distinct Closure Agent decision. Human review may provide additional evidence but is not required.
 
 ## Artifact handling
 

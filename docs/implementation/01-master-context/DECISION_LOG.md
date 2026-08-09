@@ -96,7 +96,7 @@ Use a separate staging repository or fork with no secrets and no privileged CI.
 
 ## ADR-013 — Risk-scaled human review
 
-**Status:** accepted
+**Status:** superseded by ADR-020 for new decisions; retained as historical policy
 
 Every approved entry has human authority, but required reviewers and tests scale from R0 to R4.
 
@@ -104,7 +104,7 @@ R5 is excluded from stable V0.
 
 ## ADR-014 — Security model assignments
 
-**Status:** accepted for this implementation project
+**Status:** superseded by ADR-020; retained as historical policy
 
 Opus 5 owns every security WAVE and reviews its final diff and evidence. Luna Max or another implementation agent may assist with attributed, bounded implementation and test work. A human closes every security gate.
 
@@ -188,10 +188,67 @@ Rationale: WAVE-007 requires a "host-neutral activation API" that no crate owned
 
 ## ADR-019 — MSRV and reviewed toolchain policy
 
-**Status:** proposed
+**Status:** accepted by Agent Review Authority, 2026-08-07
 
-`rust-version` in the workspace manifest declares the minimum supported Rust version (MSRV) for published Ossus crates. It is chosen from the lowest stable toolchain that supports the current Rust edition, required language and library features, and the documented supported build targets. Raising the MSRV requires an ADR proposal, compatibility evidence from the supported targets, and human acceptance before the manifest changes.
+`rust-version` in the workspace manifest declares the minimum supported Rust version (MSRV) for published Ossus crates. It is chosen from the lowest stable toolchain that supports the current Rust edition, required language and library features, and the documented supported build targets. Raising the MSRV requires an ADR proposal, compatibility evidence from the supported targets, and Agent Review Authority acceptance before the manifest changes.
 
 The release and required CI toolchain is a separately reviewed, explicitly pinned stable version in `rust-toolchain.toml`. The pinned toolchain may be newer than the MSRV and provides reproducible formatting, lint and test evidence. CI also runs the same quality checks against floating `stable` as an advisory early-warning job; that job does not change the supported MSRV or release toolchain.
 
 When the pinned toolchain is updated, the implementer must record the exact version, rerun the required format, Clippy, test and dependency checks, inspect the lockfile and review compiler or dependency changes. A pin update does not by itself raise the MSRV. The MSRV may be raised only through a later accepted ADR and a deliberate release-policy change.
+
+## ADR-020 — Agent-final review and closure authority
+
+**Status:** accepted by project-owner instruction, 2026-08-07
+
+The Agent Review Authority has the final word on technical acceptance, Registry
+admission, risk disposition, security-gate closure and release readiness. Human
+review is optional evidence and is not a mandatory approval step.
+
+Every decision uses role separation: an Implementer Agent prepares the change,
+an Independent Review Agent reviews it, and a distinct Closure Agent makes the
+final decision. Security-sensitive work uses a Security Review Agent. The
+Closure Agent may not have implemented or independently reviewed the same
+change. Critical and high findings must be corrected and re-reviewed rather
+than accepted as residual risk.
+
+This ADR supersedes the human-final authority clauses of ADR-013 and ADR-014 and
+the human-acceptance clause formerly present in ADR-019. It also removes named
+model monopoly from the protocol: model choice is configuration, while role
+capability, independence, evidence and attribution are normative.
+
+Canonical-manifest schema version 1 retains the serialized review-tier strings
+`light-human`, `full-human` and `security-human` for backward compatibility.
+Under this ADR they are legacy names for focused, complete and security-agent
+review depth; they no longer require a human actor. `reviewer_ids` may identify
+agents or review runs. A later schema-major version may rename those values.
+
+Historical gate records remain truthful evidence of the process used at the
+time. This ADR governs new decisions from its effective date and does not
+rewrite their signatures. The normative workflow is
+`docs/AGENT_AUTHORITY.md`.
+
+## ADR-021 — Canonical Git resource tree hash
+
+**Status:** accepted 2026-08-08 by the distinct WAVE-003 Security Closure Agent after independent security re-review
+
+For an immutable Git commit and canonical subpath, `source.tree_hash` uses the
+`ossus-git-tree-v1` framing implemented by `scripts/hash-git-resource.py`.
+The digest walks the selected committed files in Git's strict raw-path byte
+order and hashes a domain separator followed by each file's Git mode, path
+length and bytes, blob length and bytes, all with explicit NUL delimiters.
+
+Only regular non-executable blobs (`100644`), executable blobs (`100755`), and
+symbolic-link blobs (`120000`) are admitted. Gitlinks/submodules, empty
+selections, subpaths containing NUL or other non-canonical components,
+non-canonical commits, more than 100,000 files, files over 64 MiB,
+listings over 32 MiB, and aggregate content over 512 MiB are rejected. Hashing
+requires a full object ID matching the repository object format, disables Git
+replacement objects, removes inherited `GIT_*` routing, reads objects without
+checkout, never executes candidate content, and fails after a 300-second global
+deadline.
+
+Rationale: a plain `git archive` digest is not a sufficient cross-tool contract.
+Archive metadata differs when a commit versus a tree object is supplied, and
+repository-controlled export attributes may omit or rewrite bytes. The framed
+blob algorithm is explicit, reproducible, independent of tar serialization,
+and binds file modes and the canonical source path as well as content.

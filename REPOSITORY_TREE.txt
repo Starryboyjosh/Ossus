@@ -151,6 +151,7 @@ ossus/
 │   │   │   │   │   └── risk-r4-instruction-only.toml
 │   │   │   │   ├── INDEX.toml
 │   │   │   │   └── README.md
+│   │   │   ├── release_fts5.rs
 │   │   │   ├── wave_t4.rs
 │   │   │   ├── wave_t4_review.rs
 │   │   │   └── wave_t5_fixtures.rs
@@ -163,6 +164,8 @@ ossus/
 │   ├── architecture/
 │   │   ├── CLI_CONTRACT.md
 │   │   ├── DATA_CONTRACTS.md
+│   │   ├── GIT_RESOURCE_HASH.md
+│   │   ├── IMPLEMENTATION_WORKFLOW.md
 │   │   ├── REGISTRY_DESIGN.md
 │   │   ├── RESEARCHER_FUTURE_DESIGN.md
 │   │   ├── RESOLVER_DESIGN.md
@@ -183,6 +186,7 @@ ossus/
 │   │   ├── 02-architecture/
 │   │   │   ├── CLI_CONTRACT.md
 │   │   │   ├── DATA_CONTRACTS.md
+│   │   │   ├── GIT_RESOURCE_HASH.md
 │   │   │   ├── REGISTRY_DESIGN.md
 │   │   │   ├── RESEARCHER_FUTURE_DESIGN.md
 │   │   │   ├── RESOLVER_DESIGN.md
@@ -252,8 +256,37 @@ ossus/
 │   │   │   ├── SECURITY_REVIEW_OPUS5.md
 │   │   │   └── START_OSSUS_REPOSITORY.md
 │   │   ├── 08-operations/
+│   │   │   ├── wave-summaries/
+│   │   │   │   ├── README.md
+│   │   │   │   ├── WAVE-000_SUMMARY.md
+│   │   │   │   ├── WAVE-001_SUMMARY.md
+│   │   │   │   ├── WAVE-002_SUMMARY.md
+│   │   │   │   ├── WAVE-003_SUMMARY.md
+│   │   │   │   ├── WAVE-004_SUMMARY.md
+│   │   │   │   ├── WAVE-005_SUMMARY.md
+│   │   │   │   ├── WAVE-006_SUMMARY.md
+│   │   │   │   ├── WAVE-007_SUMMARY.md
+│   │   │   │   ├── WAVE-008_SUMMARY.md
+│   │   │   │   ├── WAVE-009_SUMMARY.md
+│   │   │   │   ├── WAVE-010_SUMMARY.md
+│   │   │   │   ├── WAVE-011_SUMMARY.md
+│   │   │   │   ├── WAVE-012_SUMMARY.md
+│   │   │   │   ├── WAVE-013_SUMMARY.md
+│   │   │   │   ├── WAVE-014_SUMMARY.md
+│   │   │   │   ├── WAVE-015_SUMMARY.md
+│   │   │   │   ├── WAVE-016_SUMMARY.md
+│   │   │   │   ├── WAVE-017_SUMMARY.md
+│   │   │   │   ├── WAVE-018_SUMMARY.md
+│   │   │   │   ├── WAVE-019_SUMMARY.md
+│   │   │   │   ├── WAVE-020_SUMMARY.md
+│   │   │   │   ├── WAVE-021_SUMMARY.md
+│   │   │   │   ├── WAVE-022_SUMMARY.md
+│   │   │   │   ├── WAVE-023_SUMMARY.md
+│   │   │   │   └── WAVE-024_SUMMARY.md
 │   │   │   ├── BLOCKED_DIAGNOSTIC_TEMPLATE.md
 │   │   │   ├── CHANGE_CONTROL.md
+│   │   │   ├── HANDOFF_2026-08-07_AGENT_AUTHORITY.md
+│   │   │   ├── HANDOFF_2026-08-08_WAVE-003.md
 │   │   │   ├── HANDOFF_TEMPLATE.md
 │   │   │   ├── RELEASE_CHECKLIST.md
 │   │   │   ├── REVIEW_REPORT_TEMPLATE.md
@@ -265,6 +298,8 @@ ossus/
 │   │   │   ├── WAVE-001_REPORT.md
 │   │   │   ├── WAVE-002_GATE_S1_CLOSURE.md
 │   │   │   ├── WAVE-002_T4_REPORT.md
+│   │   │   ├── WAVE-003_REPORT.md
+│   │   │   ├── WAVE-003_SEED_ADMISSION_AND_SOURCE_REPORT.md
 │   │   │   └── WAVE_REPORT_TEMPLATE.md
 │   │   ├── 09-roadmap/
 │   │   │   ├── BACKLOG_AFTER_BETA.md
@@ -281,6 +316,7 @@ ossus/
 │   │   ├── OSSUS_MASTER_CONTEXT.md
 │   │   ├── OSSUS_MASTER_PLAN.md
 │   │   ├── PROJECT_CHARTER.md
+│   │   ├── PROJECT_WORKFLOW.md
 │   │   └── ossus-explainer.html
 │   ├── roadmap/
 │   │   ├── BACKLOG_AFTER_BETA.md
@@ -297,6 +333,7 @@ ossus/
 │   │   ├── THREAT_MODEL.md
 │   │   └── TRUST_BOUNDARIES.md
 │   ├── ADDING_A_RESOURCE.md
+│   ├── AGENT_AUTHORITY.md
 │   ├── GETTING_STARTED.md
 │   ├── HOST_COMPATIBILITY.md
 │   └── README.md
@@ -320,6 +357,8 @@ ossus/
 │   ├── check-layout.sh
 │   ├── check-repository-layout.py
 │   ├── generate-repository-inventories.py
+│   ├── hash-git-resource.py
+│   ├── test-hash-git-resource.py
 │   ├── verify.ps1
 │   └── verify.sh
 ├── specs/

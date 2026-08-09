@@ -2,7 +2,7 @@
 
 ## Responsibility
 
-The Registry answers what resources exist, who approved their canonical metadata, where immutable content is located, which capabilities they cover, which hosts and runtimes they support, what risk and review conditions apply and whether local content matches the approved source.
+The Registry answers what resources exist, which Agent Review Authority decision admitted their canonical metadata, where immutable content is located, which capabilities they cover, which hosts and runtimes they support, what risk and review conditions apply and whether local content matches the admitted source.
 
 It does not decide the final selection. That is the Resolver.
 

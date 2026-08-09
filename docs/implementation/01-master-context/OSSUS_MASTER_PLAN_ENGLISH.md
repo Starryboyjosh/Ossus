@@ -45,6 +45,21 @@ The final dangerous step is activation, not discovery.
 
 Even an approved skill can influence an agent. Therefore canonical metadata is curator-owned, policy filters precede scoring, resource content is fixed and hashed, active sets are small, host materialization is transactional, R4 is never implicit and candidates remain outside trusted CI and Registry state.
 
+Technical acceptance, risk disposition, Registry admission, and security-gate
+closure follow ADR-020. An Implementer Agent prepares evidence, an Independent
+Review Agent evaluates it, and a separate Closure Agent makes the final decision.
+Registry entries use Curator Agent, Admission Review Agent, and Closure Agent
+roles. Human review is optional supporting evidence; model names are deployment
+configuration. The Researcher remains evidence-only and cannot approve or
+activate candidates.
+
+## WAVE reader summaries
+
+Every WAVE has a summary under
+`docs/implementation/08-operations/wave-summaries/` with a technical summary,
+a practical plain-language summary, status, evidence, dependencies/gates, and
+remaining work. Final evidence must be reflected before a WAVE closes.
+
 ## MVP
 
 The V0 release contains 44 capabilities, 20 manually curated entries, a local SQLite Registry, bounded project scanner, deterministic Resolver, 50 goldens, Claude Code adapter, lockfile, integrity audit and cross-platform CLI release candidate.
@@ -62,7 +77,7 @@ After V0:
 7. Passive intake.
 8. GitHub discovery.
 9. External analysis integration.
-10. Human admission workflow.
+10. Agent admission workflow.
 11. Reddit community evidence.
 12. Researcher security audit.
 13. Beta release.

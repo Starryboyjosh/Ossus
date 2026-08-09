@@ -41,7 +41,7 @@ Build a dependable local CLI for curating and resolving agent capabilities witho
 ## Explicitly out of V0
 
 - public website;
-- autonomous approval;
+- approval without independent review and Closure Agent decision;
 - custom sandbox;
 - custom static-analysis engine;
 - Reddit crawler;
@@ -74,6 +74,16 @@ Priority order:
 - updates never change active content without verification;
 - security warnings cannot be hidden by a manifest;
 - schemas and taxonomy are versioned independently from the binary.
+
+## Review and admission governance
+
+ADR-020 assigns final technical acceptance, risk disposition, Registry
+admission, and gate closure to a Closure Agent. Every WAVE separates the
+Implementer Agent, Independent Review Agent, and Closure Agent; model names are
+configuration. Registry admission separately requires a Curator Agent, Admission
+Review Agent, and Closure Agent. Human review may provide additional evidence
+but is optional. The Researcher remains evidence-only and cannot approve or
+activate its candidates.
 
 ## License posture
 

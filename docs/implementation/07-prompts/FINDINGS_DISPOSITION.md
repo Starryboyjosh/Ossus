@@ -1,14 +1,19 @@
-# Disposition Opus 5 security findings
+# Disposition security findings
 
-Process the Opus 5 security report claim by claim.
+Process the Independent Security Review Agent report claim by claim. Record the
+reviewer's selected model/configuration and run identifier.
 
-Create a table with finding ID, Opus position, supporting evidence, conflicting implementation or test evidence, affected invariant, deterministic verification, human decision, resulting action and residual risk.
+Create a table with finding ID, reviewer position, supporting evidence, conflicting implementation or test evidence, affected invariant, deterministic verification, Closure Agent decision, resulting action and residual risk.
 
 Rules:
 
 - do not average severity with another agent's opinion;
 - a critical or high concern remains blocking until evidence resolves it;
 - uncertainty must remain visible;
-- accepted risk needs named human approval and reason;
-- Luna Max or other agent contributions must be attributed and verified;
+- critical and high findings cannot be accepted as residual risk and require correction plus independent re-review;
+- medium accepted risk needs bounded rationale, owner, expiry or revisit trigger, and compensating controls;
+- implementation-support contributions must be attributed and independently verified;
 - corrections become a separate scoped WAVE or patch plan.
+
+The Closure Agent must be separate from both Implementer Agent and Independent
+Review Agent. Human evidence is optional and does not replace the final agent decision.

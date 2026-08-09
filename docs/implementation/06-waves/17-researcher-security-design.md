@@ -28,7 +28,7 @@ Freeze Researcher boundaries, contracts and execution prohibitions before code.
 
 - Researcher security specification.
 - Opus 5 security review and attributed support evidence.
-- Human Gate S5 design closure.
+- Distinct Closure Agent Gate S5 design decision.
 
 ## Required tests and evidence
 
@@ -47,11 +47,10 @@ Freeze Researcher boundaries, contracts and execution prohibitions before code.
 
 This is a security WAVE.
 
-- Opus 5 owns the assigned security work and reviews the final implementation or audit evidence.
-- Luna Max or another implementation agent may assist only through attributed, bounded tasks.
-- The human closes the gate.
-- There is no automatic replacement if Opus 5 is unavailable.
-- Model review is evidence, not certification.
+- A capable independent Security Review Agent reviews the final design and evidence.
+- Implementation agents may assist only through attributed, bounded tasks.
+- A distinct Closure Agent closes the gate and has the final word.
+- Human review is optional additional evidence.
 
 
 ## Copy-ready implementation instruction

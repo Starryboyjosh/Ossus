@@ -1,29 +1,63 @@
 # Getting started
 
-## Clone and inspect
+Ossus is currently implementing WAVE-003. It can validate canonical resource
+manifests and build a disposable local search index from approved manifest
+metadata. It does not yet install, resolve, activate, synchronize, or discover
+resources.
 
-```bash
-git clone <repository-url> ossus
-cd ossus
-```
-
-Read `AGENTS.md` before assigning the repository to a coding agent.
-
-## Verify the Rust scaffold
+## Verify the repository
 
 ```bash
 ./scripts/verify.sh
 cargo run -p ossus -- status
 ```
 
-The scaffold reports `WAVE-000`. Planned commands deliberately fail with a not-implemented exit code.
+Read `AGENTS.md` and `docs/implementation/CURRENT_WAVE.md` before assigning
+repository work to an agent. WAVE-004 and later functionality remains out of
+scope while WAVE-003 is open.
 
-## Begin implementation correctly
+## Validate manifests
 
-1. Run the Opus 5 plan review prompt.
-2. Disposition every finding and apply the required plan corrections.
-3. Record human Security Gate S0 closure.
-4. Update `docs/implementation/CURRENT_WAVE.md` to WAVE-001.
-5. Implement only `docs/implementation/06-waves/01-rust-workspace-bootstrap.md`.
+```bash
+cargo run -p ossus -- validate catalog/examples/canonical-manifest.example.toml
+cargo run -p ossus -- --format json validate catalog/examples/canonical-manifest.example.toml
+```
 
-The repository already contains the workspace that WAVE-001 expected to create. The WAVE-001 implementation agent must audit, correct, and complete it rather than recreate it blindly.
+Validation checks the bounded canonical schema and governed taxonomy. A valid
+file is not automatically approved or indexed.
+
+## Build and inspect a local Registry index
+
+```bash
+cargo run -p ossus -- registry reindex \
+  --manifest-root catalog/official/manifests \
+  --index .ossus/registry.sqlite3
+
+cargo run -p ossus -- registry status --index .ossus/registry.sqlite3
+```
+
+Reindexing reads canonical metadata, excludes invalid manifests, detects
+conflicts, and replaces the disposable SQLite index deterministically. It does
+not approve, download, install, resolve, or activate resource bodies. A missing,
+corrupt, or incompatible index is reported as requiring reindexing.
+
+## Search and show metadata
+
+```bash
+cargo run -p ossus -- search "responsive design" --index .ossus/registry.sqlite3
+cargo run -p ossus -- search \
+  --capability frontend.accessibility \
+  --surface codex-cli \
+  --risk-max R1 \
+  --index .ossus/registry.sqlite3
+cargo run -p ossus -- show <resource-id> --index .ossus/registry.sqlite3
+```
+
+Add `--format json` anywhere in an invocation for versioned machine-readable
+output. Search operates only on approved canonical metadata stored in the local
+index; it never reads upstream resource bodies.
+
+The official WAVE-003 seed catalog remains unavailable until every real seed
+has completed separated Curator Agent, Admission Review Agent, and Closure Agent
+admission. Planned commands such as `scan`, `resolve`, `activate`, `sync`, and
+Researcher discovery are intentionally not part of this workflow.

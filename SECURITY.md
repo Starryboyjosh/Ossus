@@ -43,9 +43,10 @@ Ossus does not currently claim to:
 
 Security WAVEs require:
 
-1. Opus 5 implementation review or plan review;
-2. attributed implementation and test evidence, including any Luna Max assistance;
+1. an Implementer Agent's attributed implementation and test evidence;
+2. an Independent Security Review Agent's review of the final diff and evidence;
 3. explicit findings disposition;
-4. human closure.
+4. a distinct Closure Agent's final decision;
+5. technical and practical WAVE summaries linked to the closure record.
 
-See `docs/security/SECURITY_GOVERNANCE.md`.
+Human review may be added as evidence but is not required for final technical authority. See [`docs/AGENT_AUTHORITY.md`](docs/AGENT_AUTHORITY.md) and `docs/security/SECURITY_GOVERNANCE.md`.

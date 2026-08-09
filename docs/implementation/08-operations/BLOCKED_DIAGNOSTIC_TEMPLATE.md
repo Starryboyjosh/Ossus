@@ -5,7 +5,10 @@ Use only after repeated attempts or a serious technical block.
 ## Metadata
 
 - WAVE:
-- Implementer:
+- Implementer Agent and run ID:
+- Independent Review Agent and run ID:
+- Closure Agent and run ID:
+- Model/configuration identifiers:
 - Environment:
 - OS:
 - Rust toolchain:
@@ -13,6 +16,10 @@ Use only after repeated attempts or a serious technical block.
 - Working tree status:
 
 ## Block summary
+
+## Technical summary
+
+## Practical summary
 
 ## Expected behavior
 

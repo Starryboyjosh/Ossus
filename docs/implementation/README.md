@@ -78,18 +78,9 @@ Researcher
 
 The Researcher is last because it is the most dangerous and expensive component. The Resolver is where the earliest practical value exists.
 
-## Model governance for this project
+## Agent review authority
 
-Permanent architecture uses roles rather than model brands. This implementation project records concrete model roles in `03-specifications/model-roles.toml`.
-
-Mandatory rules:
-
-- Every security WAVE is owned and reviewed by **Opus 5**.
-- **Luna Max** or another implementation agent may assist with bounded implementation and test work when its contribution is explicitly attributed.
-- Assistance does not replace the required Opus 5 security assessment of the final diff and evidence.
-- If Opus 5 is unavailable, a security WAVE pauses. It is not silently reassigned.
-- Model review is evidence, not a security guarantee.
-- A human closes every security gate and resolves disputed findings or residual risk.
+ADR-020 and `docs/AGENT_AUTHORITY.md` govern new WAVE decisions. Every WAVE uses an Implementer Agent, independent Review Agent (Security Review Agent when applicable), and distinct Closure Agent with final technical authority. No self-review or self-closure is permitted. Human review is optional additional evidence; it is not a required approval step. Every WAVE's reader summary must contain technical and practical summaries, evidence, dependencies/gates, status, and remaining work.
 
 ## Repository status
 

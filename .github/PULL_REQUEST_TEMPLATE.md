@@ -18,14 +18,15 @@ paste exact commands and results
 
 - [ ] No security boundary changed.
 - [ ] Security review is required and linked below.
-- [ ] Opus 5 security assessment completed where mandatory.
-- [ ] Luna Max or other implementation assistance is explicitly attributed.
-- [ ] Human gate closure recorded where mandatory.
+- [ ] Independent Security Review Agent assessment completed where mandatory.
+- [ ] All implementation assistance is explicitly attributed.
+- [ ] Distinct Closure Agent decision recorded where mandatory.
+- [ ] Technical and practical WAVE summaries are linked or updated.
 
 ## Evaluation impact
 
 - [ ] No taxonomy, golden, scoring, or threshold behavior changed.
-- [ ] Required goldens were added or updated through approved change control.
+- [ ] Required goldens were added or updated through accepted change control.
 
 ## Residual risks
 

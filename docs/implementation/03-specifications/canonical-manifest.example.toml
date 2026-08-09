@@ -37,7 +37,7 @@ notes = "Declarative instructions only."
 status = "approved"
 tier = "light-human"
 approved_commit = "abcdef0123456789abcdef0123456789abcdef01"
-reviewer_ids = ["reviewer-001"]
+reviewer_ids = ["agent-review-run-001"]
 
 [context]
 measured_tokens = 2800

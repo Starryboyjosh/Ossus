@@ -32,8 +32,10 @@ Use Rust edition 2024 and a Cargo workspace. The binary must be named `ossus`. T
 
 Do not implement Registry indexing, resolution, activation, source discovery or network behavior in this WAVE.
 
-Do not commit or push unless the human explicitly requests it.
+Do not commit or push unless the explicit operational authorization for that external action is present.
 
-Run every command required by WAVE 001. Correct normal failures. When complete, produce the report from `08-operations/WAVE_REPORT_TEMPLATE.md`.
+Run every command required by WAVE 001. Correct normal failures. When complete,
+produce the report from `08-operations/WAVE_REPORT_TEMPLATE.md`, including
+technical and practical summaries and evidence for separate review and closure.
 
 If genuinely blocked after repeated attempts, produce `08-operations/BLOCKED_DIAGNOSTIC_TEMPLATE.md` with complete logs and only the full contents of directly involved code files.

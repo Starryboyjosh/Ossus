@@ -29,7 +29,7 @@ Challenge and correct the implementation plan before product implementation.
 - Opus 5 report.
 - Finding disposition matrix.
 - Updated plan and ADRs.
-- Human Gate S0 closure.
+- Distinct Closure Agent Gate S0 decision.
 
 ## Required tests and evidence
 
@@ -47,15 +47,14 @@ Challenge and correct the implementation plan before product implementation.
 
 This is a security WAVE.
 
-- Opus 5 performs the assigned security and architecture review.
-- Luna Max or another implementation agent may assist only with attributed, bounded evidence gathering or test preparation.
-- The human closes the gate.
-- There is no automatic replacement if Opus 5 is unavailable.
-- Model review is evidence, not certification.
+- A capable independent Security Review Agent performs the security and architecture review.
+- Implementation agents may assist only with attributed, bounded evidence gathering or test preparation.
+- A distinct Closure Agent closes the gate and has the final word.
+- Human review is optional additional evidence.
 
 ## Copy-ready implementation instruction
 
-Use `07-prompts/PLAN_REVIEW_OPUS5.md`, then `FINDINGS_DISPOSITION.md` and the human closure checklist.
+Use the plan security-review prompt, then `FINDINGS_DISPOSITION.md` and the agent closure checklist.
 
 Read `README.md`, the master context, decision log, referenced specifications and this WAVE. Implement only this WAVE. Produce the standard WAVE report. Do not commit or push unless the human explicitly requests it.
 

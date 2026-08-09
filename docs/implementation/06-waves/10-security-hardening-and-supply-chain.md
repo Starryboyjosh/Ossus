@@ -31,7 +31,7 @@ Harden dependencies, CI, release inputs, parsers, audit output and policy bypass
 - Security suite.
 - Opus 5 security report.
 - Implementation-support attribution and final evidence assessment.
-- Human Gate S4 closure.
+- Distinct Closure Agent Gate S4 decision.
 
 ## Required tests and evidence
 
@@ -54,11 +54,10 @@ Harden dependencies, CI, release inputs, parsers, audit output and policy bypass
 
 This is a security WAVE.
 
-- Opus 5 owns the assigned security work and reviews the final implementation or audit evidence.
-- Luna Max or another implementation agent may assist only through attributed, bounded tasks.
-- The human closes the gate.
-- There is no automatic replacement if Opus 5 is unavailable.
-- Model review is evidence, not certification.
+- A capable independent Security Review Agent reviews the final implementation and evidence.
+- Implementation agents may assist only through attributed, bounded tasks.
+- A distinct Closure Agent closes the gate and has the final word.
+- Human review is optional additional evidence.
 
 
 ## Copy-ready implementation instruction

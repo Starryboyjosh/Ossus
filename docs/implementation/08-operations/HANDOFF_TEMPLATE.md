@@ -4,6 +4,10 @@
 
 ## What is complete
 
+## Technical summary
+
+## Practical summary
+
 ## What is not complete
 
 ## Important decisions
@@ -17,6 +21,10 @@
 ## Open findings
 
 ## Security gates
+
+For every gate, record the Implementer Agent, independent reviewer, Closure
+Agent, their model/configuration and run identifiers, the final decision, and
+any optional human evidence.
 
 ## Next WAVE prerequisites
 

@@ -39,7 +39,7 @@ Implement typed trusted contracts, taxonomy loading and bounded validation.
 - Validation library and CLI diagnostics.
 - Version and migration documentation.
 - TOML taxonomy and evaluation data with an equivalence report against the retired YAML originals.
-- **Gate S1 closure record**, prepared for the human approver.
+- **Gate S1 closure record**, prepared for the distinct Closure Agent.
 
 ## Required tests and evidence
 

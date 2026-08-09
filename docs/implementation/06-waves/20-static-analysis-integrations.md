@@ -51,11 +51,10 @@ Integrate mature scanners into disposable jobs and normalize findings.
 
 This is a security WAVE.
 
-- Opus 5 owns the assigned security work and reviews the final implementation or audit evidence.
-- Luna Max or another implementation agent may assist only through attributed, bounded tasks.
-- The human closes the gate.
-- There is no automatic replacement if Opus 5 is unavailable.
-- Model review is evidence, not certification.
+- A capable independent Security Review Agent reviews the final implementation and evidence.
+- Implementation agents may assist only through attributed, bounded tasks.
+- A distinct Closure Agent closes the gate and has the final word.
+- Human review is optional additional evidence.
 
 
 ## Copy-ready implementation instruction

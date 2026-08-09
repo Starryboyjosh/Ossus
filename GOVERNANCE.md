@@ -2,38 +2,45 @@
 
 ## Roles
 
-### Architecture owner
+### Architecture owner agent
 
 Maintains product coherence, WAVE boundaries, ADRs, and long-term compatibility.
 
-### Taxonomy maintainer
+### Taxonomy maintainer agent
 
 Governs the capability vocabulary independently from individual resources.
 
-### Registry curator
+### Curator Agent
 
-Creates or approves canonical metadata and source locks.
+Prepares canonical metadata and source locks. It cannot admit its own entry.
 
-### Security implementer
+### Implementer Agent
 
-Owns security WAVEs and reviews their final evidence. For this project, the configured model is Opus 5.
+Implements an assigned WAVE and produces evidence. It cannot independently review or close the same WAVE.
 
-### Implementation support
+### Independent Review Agent
 
-Performs bounded implementation and test work under the security implementer's written scope. Luna Max is the preferred support model when available, but support output has no independent security authority.
+Reviews the final diff and evidence without implementing the reviewed change. Security-sensitive work requires an Independent Security Review Agent.
 
-### Human approver
+### Closure Agent
 
-Resolves disagreement, accepts residual risk, and closes security gates.
+Has final technical, admission, gate, risk-disposition, and release-readiness authority after verifying the evidence and independent review. It cannot have implemented or independently reviewed the same change.
+
+### Implementation support agent
+
+Performs bounded implementation or test work under an Implementer Agent's scope. Support output has no review or closure authority.
 
 ## Decision rules
 
-- No model can approve a Registry entry.
+- A Registry admission requires separate Curator, Admission Review, and Closure Agents.
 - No Researcher component can write trusted canonical state directly.
 - Critical and high security findings block closure.
-- Threshold reductions require explicit architecture approval.
+- Threshold reductions require an ADR and Closure Agent acceptance under the applicable change-control process.
 - An implementation failure is not solved by weakening goldens.
 - Security model names are implementation configuration, not permanent protocol.
+- Every WAVE records a technical summary and practical plain-language summary before closure.
+
+The normative authority and evidence rules are in [`docs/AGENT_AUTHORITY.md`](docs/AGENT_AUTHORITY.md).
 
 ## Initial maintainer
 

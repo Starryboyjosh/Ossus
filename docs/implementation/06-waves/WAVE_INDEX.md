@@ -2,7 +2,11 @@
 
 Each WAVE is scoped, ordered and gated.
 
-The **Security** column marks WAVEs Opus 5 owns and implements. A WAVE marked `No` may still **close a security gate**, which requires Opus 5 review of its final diff and evidence plus human closure; those are listed in the **Closes gate** column. Delegating the implementation of such a WAVE is permitted; delegating its gate closure is not.
+## ADR-020 authority, role separation, and reader summaries
+
+ADR-020 governs every WAVE contract below, superseding conflicting active role, review, admission, closure, and release wording. Every WAVE records an Implementer Agent, an independent Review Agent (a Security Review Agent where security-sensitive), and a distinct Closure Agent with final technical authority. No agent may close its own implementation or review. Human review is optional additional evidence, never a final-approval prerequisite. Security work requires an independent Security Review Agent, not a fixed model brand.
+
+Every WAVE also requires its reader summary in `08-operations/wave-summaries/` to be created or updated with current status, technical summary, practical plain-language summary, evidence, dependencies/gates, and remaining work. Historical records retain their dated facts but do not govern post-ADR-020 decisions.
 
 | WAVE | Phase | Title | Assigned role | Security | Closes gate | Depends on |
 |---|---|---|---|---|---|---|
@@ -27,7 +31,7 @@ The **Security** column marks WAVEs Opus 5 owns and implements. A WAVE marked `N
 | WAVE-018 | Phase 5 | Passive quarantine intake and evidence | Opus 5 security owner; optional Luna Max implementation support | Yes | S5 | WAVE-017 |
 | WAVE-019 | Phase 5 | GitHub discovery connector | Implementation agent with mandatory Opus 5 review | No | — | WAVE-018 |
 | WAVE-020 | Phase 5 | External analysis integrations | Opus 5 security owner; optional Luna Max implementation support | Yes | — | WAVE-018 |
-| WAVE-021 | Phase 5 | Human review and admission workflow | Opus 5 security owner; optional Luna Max implementation support | Yes | S6 | WAVE-019 and WAVE-020 |
+| WAVE-021 | Phase 5 | Agent review and admission workflow | Implementer Agent; independent Security Review Agent; distinct Closure Agent | Yes | S6 | WAVE-019 and WAVE-020 |
 | WAVE-022 | Phase 5 | Reddit community evidence | Implementation agent with privacy/security review | No | — | WAVE-021 |
 | WAVE-023 | Phase 5 | Researcher end-to-end security audit | Opus 5 security auditor; optional Luna Max evidence support | Yes | — | WAVE-022 |
 | WAVE-024 | Phase 6 | Ossus beta release | Release owner with architecture/security approval | No | S7 | WAVE-023 |

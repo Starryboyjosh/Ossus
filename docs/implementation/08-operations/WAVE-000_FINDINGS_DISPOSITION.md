@@ -1,5 +1,7 @@
 # WAVE-000 — Finding disposition matrix
 
+> **Historical evidence:** ADR-020 and `docs/AGENT_AUTHORITY.md` supersede this document's authority requirements for decisions on or after 2026-08-07. This note does not change recorded facts.
+
 Companion to `WAVE-000_OPUS5_PLAN_REVIEW.md`. Prepared per `docs/implementation/07-prompts/FINDINGS_DISPOSITION.md`.
 
 **Format note.** The prompt specifies nine columns per finding. Rendered as a nine-column table this is unreadable, so each finding is a block with the nine required fields as labelled lines. No field is omitted.

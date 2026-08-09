@@ -2,7 +2,7 @@
 
 **Phase:** Phase 2  
 **Assigned role:** Implementation agent  
-**Depends on:** WAVE-002, and on **Security Gate S1 being closed by a named human**  
+**Depends on:** WAVE-002 and historical Security Gate S1 closure; ADR-020 governs any new decision
 **Security WAVE:** no
 
 ## Objective
@@ -11,7 +11,11 @@ Build the index-first Registry and searchable manual seed catalog.
 
 ## In scope
 
-- Select and human-curate 20 real seed entries matching the profiles.
+- Reconcile the 20 seed coverage profiles against ecosystem evidence, then
+  admit only resources that survive the Curator Agent → independent Admission
+  Review Agent → distinct Closure Agent chain. Twenty is a coverage objective,
+  not a quota; profile substitutions, intentionally unresolved decisions, and
+  a smaller minimum useful catalog must be explicit and architecture-compliant.
 - Create canonical manifests and provenance/license records.
 - Implement SQLite schema, migrations and rebuild.
 - Implement exact, capability, category and FTS search.
@@ -26,7 +30,8 @@ Build the index-first Registry and searchable manual seed catalog.
 
 ## Expected deliverables
 
-- 20 reviewed manifests.
+- Reviewed manifests for the reconciled minimum useful catalog; no profile is
+  counted until its canonical resource is admitted.
 - Rebuildable local index.
 - `ossus search`, `show`, `registry status` and `reindex`.
 - Seed license/source report.
@@ -43,7 +48,9 @@ Build the index-first Registry and searchable manual seed catalog.
 
 ## Acceptance criteria
 
-- Every profile is filled or an approved substitution is documented.
+- Every profile has a governed final disposition (admitted, approved
+  substitution, intentionally unresolved, or removed by architecture
+  decision), and every admitted resource has a complete authority chain.
 - The set includes host-exclusive, cross-host and standalone-CLI examples.
 - Search never reads resource bodies.
 - Index is disposable.
@@ -51,12 +58,12 @@ Build the index-first Registry and searchable manual seed catalog.
 
 ## Review workflow
 
-Use an implementation agent and a reviewer. Require Opus 5 security review whenever the work changes a trust boundary, network source, host path, permission, update mechanism or CI configuration.
+Use an Implementer Agent, independent Review Agent, and distinct Closure Agent. Require an independent Security Review Agent whenever the work changes a trust boundary, network source, host path, permission, update mechanism, or CI configuration; no self-review or self-closure.
 
 
 ## Copy-ready implementation instruction
 
-Use the general implementer prompt. Human source curation is mandatory; do not fabricate approvals.
+Use the general implementer prompt. Independent agent admission is mandatory; do not fabricate entries, evidence, or approvals. Update the WAVE reader summary with technical and practical summaries, evidence, dependencies/gates, status, and remaining work.
 
 Read `README.md`, the master context, decision log, referenced specifications and this WAVE. Implement only this WAVE. Produce the standard WAVE report. Do not commit or push unless the human explicitly requests it.
 

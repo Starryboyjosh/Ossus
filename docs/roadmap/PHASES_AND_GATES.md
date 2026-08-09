@@ -8,10 +8,10 @@ Ossus is implemented as a sequence of measurable vertical increments. A later ph
 
 Outputs:
 
-- Opus 5 adversarial security and architecture plan review;
+- Opus 5 adversarial security and architecture plan review (historical WAVE-000 evidence);
 - attributed implementation-agent evidence where used;
 - explicit finding dispositions;
-- human architecture and security decision.
+- historical human architecture and security decision (for this pre-ADR-020 gate record).
 
 Gate S0 — owner WAVE-000, **closed 2026-08-04**:
 
@@ -33,7 +33,7 @@ Outputs:
 - capability taxonomy V1;
 - parser budgets and version policy.
 
-Gate S1 — owner **WAVE-002**, closed by a named human before WAVE-003 begins:
+Gate S1 — owner **WAVE-002**, historically closed by a named human before WAVE-003 began:
 
 - trusted formats validate deterministically;
 - unknown major versions fail closed;
@@ -46,14 +46,14 @@ Gate S1 — owner **WAVE-002**, closed by a named human before WAVE-003 begins:
 
 Outputs:
 
-- 20 human-curated seed Registry entries;
+- 20 Agent Review Authority-curated seed Registry entries;
 - SQLite search index;
 - bounded project scanner;
 - deterministic Resolver;
 - 50 capability goldens and exact-resource expectations;
 - quality and performance reports.
 
-Gate S2 — owner **WAVE-005**, closed by a named human before WAVE-007 begins. The criteria are in `docs/security/SECURITY_GATES.md`; policy monotonicity (ADR-016) is proven here, not in Phase 3.
+Gate S2 — owner **WAVE-005**, closed by a distinct Closure Agent after independent security review before WAVE-007 begins. The criteria are in `docs/security/SECURITY_GATES.md`; policy monotonicity (ADR-016) is proven here, not in Phase 3.
 
 Gate R0:
 
@@ -117,7 +117,7 @@ Outputs:
 - passive quarantine intake;
 - GitHub discovery;
 - external analysis integrations;
-- human admission workflow;
+- agent-authorized admission workflow;
 - Reddit community evidence;
 - end-to-end Researcher audit.
 
@@ -127,7 +127,7 @@ Gates S5–S7:
 - Researcher has no trusted Registry write path;
 - candidate CI has no secrets or write token;
 - immutable source and evidence are required;
-- canonical fields require human authority;
+- canonical fields require Curator Agent preparation, independent Admission Review Agent review, and Closure Agent authority;
 - community evidence cannot approve or reduce risk;
 - no unresolved critical or high audit finding.
 
@@ -147,4 +147,8 @@ Gate B0:
 
 - every preceding gate is closed;
 - release drill and revocation drill pass;
-- human release owner authorizes publication.
+- a distinct Closure Agent establishes technical release readiness; any external publication action still needs its applicable operational authorization.
+
+## WAVE reader summaries
+
+Every WAVE definition of done includes a concise technical summary and a practical plain-language summary in `docs/implementation/08-operations/wave-summaries/`. The summaries complement, but never replace, WAVE acceptance evidence, dependency order, gate criteria, or Researcher restrictions.

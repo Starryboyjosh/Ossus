@@ -7,7 +7,7 @@
     "source": "git tracked files under docs/implementation/",
     "self_excluded": "PACKAGE_MANIFEST.json"
   },
-  "file_count_excluding_manifest": 94,
+  "file_count_excluding_manifest": 125,
   "files": [
     {
       "path": "00-original-context/ORIGINAL_MASTER_PLAN_V1_SPANISH.md",
@@ -26,33 +26,33 @@
     },
     {
       "path": "01-master-context/DECISION_LOG.md",
-      "bytes": 8931,
-      "sha256": "a906ecc54a052c9df0688279e3f4e575ec2ff1bd45682458e8222a4a4f99ba71"
+      "bytes": 12294,
+      "sha256": "47376b6cffdc203e447f6be0b025bf73e4a552e39cb7fb306c83069f56fde182"
     },
     {
       "path": "01-master-context/GLOSSARY.md",
-      "bytes": 2128,
-      "sha256": "2c133d41af78e8dd04e65470bc3c2ee66ba7d90e02959b3a9dc88d0cd577da37"
+      "bytes": 2989,
+      "sha256": "1ac6ffc7655631cca23d3831cf3391c80a5a57f9c85f797cbd7242bc8e1259d9"
     },
     {
       "path": "01-master-context/OSSUS_MASTER_CONTEXT.md",
-      "bytes": 7530,
-      "sha256": "02b5c1878b02b58ff0de2920ee7d385cd13d81a19ef2ae50fe7690fbae765d2d"
+      "bytes": 8693,
+      "sha256": "bd7b42ce56727e69a94e191765e48613c8c6af10be539c2e8f5e6ba6ac393bbc"
     },
     {
       "path": "01-master-context/OSSUS_MASTER_PLAN_ENGLISH.md",
-      "bytes": 2456,
-      "sha256": "82469509bc5d2f83a1ae3e08a6b174360fc4b7125633fe1fe9636d776798e429"
+      "bytes": 3234,
+      "sha256": "56c49798df91cf1cd112c3962f35f818f806d490c4cb13988d00ff9f88290a63"
     },
     {
       "path": "01-master-context/PROJECT_CHARTER.md",
-      "bytes": 2542,
-      "sha256": "a76a111c466ca8e93cfe325092e0d81d7da6cfd74048fa53f70d6df642aec281"
+      "bytes": 3106,
+      "sha256": "93592ca84f259f45ef252d650597093e02e84e18e68550f1bf642804ff872ca7"
     },
     {
       "path": "02-architecture/CLI_CONTRACT.md",
-      "bytes": 3818,
-      "sha256": "714f890a8faa15751457429e256c4a6e67f267ba791c2872871b1ebfe7fa3c0c"
+      "bytes": 5373,
+      "sha256": "16d6ce77e09214658e134d650bdebd2b5b6a57de2b911053d3cef2bbcfe2b250"
     },
     {
       "path": "02-architecture/DATA_CONTRACTS.md",
@@ -60,14 +60,19 @@
       "sha256": "d8bcf8e90b9b3db03cb9adece2e76a0d4dccc9649fad64c9e715711c56c0b0e3"
     },
     {
+      "path": "02-architecture/GIT_RESOURCE_HASH.md",
+      "bytes": 2762,
+      "sha256": "6f2e3e65442ed2ed65e6f7acf7e0ac5e64ea45421352c41d3a6dfc82c42f9b38"
+    },
+    {
       "path": "02-architecture/REGISTRY_DESIGN.md",
-      "bytes": 2204,
-      "sha256": "7e35fe1ad54d29432ab816fd61c6c18c8f9679f8db97148d8aa7e1c9107116b1"
+      "bytes": 2238,
+      "sha256": "3ac5ca802f45bb89170f27740548d0068e9674badc9c618cb8c53659bf947489"
     },
     {
       "path": "02-architecture/RESEARCHER_FUTURE_DESIGN.md",
-      "bytes": 2586,
-      "sha256": "5c2737daca0c3c4e96188d6b8683d97702685f50e473d3737af366993b38f2d6"
+      "bytes": 2947,
+      "sha256": "58f06e0499ea42321bcbbd14c021055b065c0941f3a0f092fca9561718e2c3c3"
     },
     {
       "path": "02-architecture/RESOLVER_DESIGN.md",
@@ -86,13 +91,13 @@
     },
     {
       "path": "02-architecture/SYSTEM_ARCHITECTURE.md",
-      "bytes": 3132,
-      "sha256": "e4d170d52b3ce2014066499f56fc94f7262f6179906fe784cf9b682000f263f5"
+      "bytes": 3209,
+      "sha256": "fc69941c2c72c52056d7711096afbf0d6cd122082f52935613a71823a99779d0"
     },
     {
       "path": "03-specifications/CAPABILITY_GOVERNANCE.md",
-      "bytes": 1501,
-      "sha256": "bb262c6a807e7f01f25cd1592ec3ccaba1fa757b2919d6f52687f220a96a331a"
+      "bytes": 1683,
+      "sha256": "a469855bc71045f2f9eb56b5a9f935acc9a341f11f3f7c6d138a906437ab454a"
     },
     {
       "path": "03-specifications/aliases-v1.toml",
@@ -101,13 +106,13 @@
     },
     {
       "path": "03-specifications/canonical-manifest.example.toml",
-      "bytes": 1373,
-      "sha256": "bf38588ac87b5aa222a089b97b1896963803ed9b70ddbfed66404bf5e07be290"
+      "bytes": 1381,
+      "sha256": "c8234952f7f8dcf513be1207e937b5bfdc745e123108d1250e4f0d75ea6917a8"
     },
     {
       "path": "03-specifications/canonical-manifest.schema.json",
-      "bytes": 9214,
-      "sha256": "dfe0a740fb6403987335885780b0c9b76a4618db49f70f0a35bee459fad80e2e"
+      "bytes": 9695,
+      "sha256": "279b9e902b73ea2ae2f6658e2668fb8472bbf74d642920b4b172f92085d852d6"
     },
     {
       "path": "03-specifications/capabilities-v1.toml",
@@ -151,28 +156,28 @@
     },
     {
       "path": "04-security/RISK_TIERS.md",
-      "bytes": 1454,
-      "sha256": "95ec50430601df96ce91ec898625f1823451760e3602882a2ecd0eb55159e631"
+      "bytes": 2149,
+      "sha256": "4590eb781ea95da96d514d8f2a2831ca9c02c720eaacc3f6acb07452dfaee14f"
     },
     {
       "path": "04-security/SECURITY_GATES.md",
-      "bytes": 2306,
-      "sha256": "c8f61bb77d965c68420d5d11a7604494d39693008fa9ff46110771ac6b5fc0fe"
+      "bytes": 2553,
+      "sha256": "ea598a9db534c475228acccf8b2b0e5884e5b42b9ed90ec9e86a7d07bb33a18a"
     },
     {
       "path": "04-security/SECURITY_GOVERNANCE.md",
-      "bytes": 1434,
-      "sha256": "70eb8a6a0fb5f1da523df36de2146f7be62f783b383bdd1d61b61a4fe05bbeae"
+      "bytes": 1894,
+      "sha256": "46fad01e2dca91fd6c012c831303402d05ce8886a45a14fcc43fea6b539d9bee"
     },
     {
       "path": "04-security/STAGING_AND_CI.md",
-      "bytes": 1406,
-      "sha256": "175ad924c9f70f7c3b6b751f81d23bc8a1e44cda145798f6396d4e5a4a306a4c"
+      "bytes": 1492,
+      "sha256": "2a6b4c7fdb700879a4f9b6d7b76766976b1f5589268652ab7558ec8e3f8fd854"
     },
     {
       "path": "04-security/SUPPLY_CHAIN.md",
-      "bytes": 1373,
-      "sha256": "de372f3f0a9271d1905913a044ddb96a36076af39c2f394709c490ae71fde474"
+      "bytes": 1463,
+      "sha256": "90753fa2bb9c4af15288527815337366af8c9352a0083d2fbd817aea94036ba5"
     },
     {
       "path": "04-security/THREAT_MODEL.md",
@@ -181,8 +186,8 @@
     },
     {
       "path": "04-security/TRUST_BOUNDARIES.md",
-      "bytes": 1467,
-      "sha256": "d2e168a15d92bd14c15e43ef4e7a019822cd00570f4c706c8c399edb360b2a1e"
+      "bytes": 1752,
+      "sha256": "be8bb805ddab13afda04e43d0be9e5d3fef3319971784b61b824cabbf5843b16"
     },
     {
       "path": "05-evaluations/EVALUATION_STRATEGY.md",
@@ -206,8 +211,8 @@
     },
     {
       "path": "06-waves/00-plan-security-review.md",
-      "bytes": 2150,
-      "sha256": "8a57044037c6482b80480fe1a6c18ded0f2463afcb84991c724e98e83bf69265"
+      "bytes": 2152,
+      "sha256": "70d26305fec7aba6df4f64b4a509395ee46f6e67cd6e33f9d87ecf098106c41c"
     },
     {
       "path": "06-waves/01-rust-workspace-bootstrap.md",
@@ -216,13 +221,13 @@
     },
     {
       "path": "06-waves/02-spec-and-taxonomy.md",
-      "bytes": 5101,
-      "sha256": "0c403a0f7420141baa8fd8b6b54094a30479eecbf8373aa1dfceaadabfa45ac8"
+      "bytes": 5109,
+      "sha256": "bc4a0865045557e0f8a2382570e22a2ba7f4ecbe236c965d9eaa2a3ab36b2e9a"
     },
     {
       "path": "06-waves/03-registry-and-search.md",
-      "bytes": 2344,
-      "sha256": "937dfc97717a0bc8de3453483d3f3e8ab8b5a6cc969199a0ddbf3705534cc0b5"
+      "bytes": 3168,
+      "sha256": "7e3518b4673bcc8d016fda71e05298a3ade8b9e18904fa2fb73aa1016d16e2a5"
     },
     {
       "path": "06-waves/04-project-scanner.md",
@@ -231,8 +236,8 @@
     },
     {
       "path": "06-waves/05-resolver-core.md",
-      "bytes": 3222,
-      "sha256": "8f04768ac269849c0609507ca867346cc3d2cbe882976b3f730b1fee7ac635e9"
+      "bytes": 3230,
+      "sha256": "a738ba6b326e48bab6b3db855c03128689d286d3ae48303f1b0aeaedca9edce6"
     },
     {
       "path": "06-waves/06-golden-evaluation-harness.md",
@@ -241,8 +246,8 @@
     },
     {
       "path": "06-waves/07-activation-security-boundary.md",
-      "bytes": 3796,
-      "sha256": "d98689a5eb7b20d5a6c8102ddc3145b78c49f4c6a6e2125fbd634bd9d21f897d"
+      "bytes": 3765,
+      "sha256": "82e99fb2779ba931bd9afb6bfdf2b7b0100909b2de425f37bd80b07cf14f06be"
     },
     {
       "path": "06-waves/08-claude-code-adapter.md",
@@ -256,8 +261,8 @@
     },
     {
       "path": "06-waves/10-security-hardening-and-supply-chain.md",
-      "bytes": 2534,
-      "sha256": "333d307fec0b01235d9a3ce5458240de03754856ecb7d2b5f6954d45d69efda3"
+      "bytes": 2506,
+      "sha256": "e67d8793533056d63735a2d9a0b5bd6aac48b839148b9e653ddb1f9cb15ff04b"
     },
     {
       "path": "06-waves/11-v0-release.md",
@@ -291,13 +296,13 @@
     },
     {
       "path": "06-waves/17-researcher-security-design.md",
-      "bytes": 2007,
-      "sha256": "43cee69ee7261c357447b42ccfbcc25c50972de0ba7a5a5f83694a9b5ba2e922"
+      "bytes": 1971,
+      "sha256": "daa80fe0863ff4c3d261fc8abb0f7ebbeb0a3fca6e67dd1d3e68bf62a4adee9e"
     },
     {
       "path": "06-waves/18-passive-intake-and-evidence.md",
-      "bytes": 2029,
-      "sha256": "9a32fd6bb8cf7721b955d3dd724db91c0dcbd2da7c24fd6c452bd16e409d47af"
+      "bytes": 2019,
+      "sha256": "9410c44f60a79f8b95598dc3e777cb1b8b2bd31b075aa5c2f39e32fa4f3ccfa4"
     },
     {
       "path": "06-waves/19-github-discovery.md",
@@ -306,13 +311,13 @@
     },
     {
       "path": "06-waves/20-static-analysis-integrations.md",
-      "bytes": 1913,
-      "sha256": "8346c444b15abf275b6ee021dda82a9d026874c7410373b0a38d938345e15e36"
+      "bytes": 1867,
+      "sha256": "fbea5c7ce9bb35ac103cb31f8832c0541e3a5884fad5a8f341877e4d9d734513"
     },
     {
       "path": "06-waves/21-human-admission-workflow.md",
-      "bytes": 2053,
-      "sha256": "78a5308fb7785df03080799b5f69e69fa42757cc04a9575717d8be87b11c146e"
+      "bytes": 2393,
+      "sha256": "879882a076f65c4110c4cc6c578e23556402da5208007f42d46dcbd2c8add8fa"
     },
     {
       "path": "06-waves/22-reddit-community-signals.md",
@@ -321,8 +326,8 @@
     },
     {
       "path": "06-waves/23-researcher-security-audit.md",
-      "bytes": 2004,
-      "sha256": "95bab155973b8340ecf829b640742a1125ffe1f34a880aa5f69392367ef4f2fe"
+      "bytes": 2025,
+      "sha256": "511f08d3d18734b358cd6eb5e34f9b0e886bfd7363e46af9a28eaec0938c1ce2"
     },
     {
       "path": "06-waves/24-beta-release.md",
@@ -331,118 +336,268 @@
     },
     {
       "path": "06-waves/WAVE_INDEX.md",
-      "bytes": 3631,
-      "sha256": "e22a40aa358102e0f28494601f63179f9c82699c74a41a3a80b4dcfad7ef4f15"
+      "bytes": 4210,
+      "sha256": "d81cdc1cc498ce10e517ec592a20a1527e85b7919d191d31e02fef4ee18b3f6f"
     },
     {
       "path": "07-prompts/FINDINGS_DISPOSITION.md",
-      "bytes": 666,
-      "sha256": "8512250279a63f80dbf3f7bc52862cc2f4486e047610cdb87750b8eb785c57f7"
+      "bytes": 1111,
+      "sha256": "6caa7a62b59b31b6fdaafdc016a9e49519c7fd18c5dc701f2be87cbe2074d8bd"
     },
     {
       "path": "07-prompts/GENERAL_IMPLEMENTER.md",
-      "bytes": 1191,
-      "sha256": "4c5411c2543761edcaefc941ac6424957abb83c89e6f2329680e6b42bb3f402c"
+      "bytes": 1576,
+      "sha256": "586dda3b916c8185a336bff440a26d4c65d9ae3517c6462eb6e6a9c84b9b34a0"
     },
     {
       "path": "07-prompts/GENERAL_REVIEWER.md",
-      "bytes": 832,
-      "sha256": "c3de5ca0b7fe1bd7dae51008b7dead6389b6c9e269c539b41e2ec2aeda0f62db"
+      "bytes": 1203,
+      "sha256": "aebe992706a8da4999c809bee2e9fd944964616a075118793d6f4a361b578cce"
     },
     {
       "path": "07-prompts/HUMAN_SECURITY_CLOSURE.md",
-      "bytes": 743,
-      "sha256": "327781c5d68f37945bbef33214e9ad5c0d1eecd52f7b0b51f42ea1fe11885062"
+      "bytes": 1354,
+      "sha256": "1508468212c93d1081750a9679228b980e7850afe7e93ca4dea7b3d25879dc33"
     },
     {
       "path": "07-prompts/PLAN_REVIEW_OPUS5.md",
-      "bytes": 1215,
-      "sha256": "567e302327a90000061fb14af7f23de46e479a0e918f4f6fb2fe52dbb5418f86"
+      "bytes": 1413,
+      "sha256": "301f4cfa7a26228ecec44e228781be7495f480f913b52ab30dc45adc5fd75c7a"
     },
     {
       "path": "07-prompts/SECURITY_IMPLEMENTATION_OPUS5.md",
-      "bytes": 1617,
-      "sha256": "cdb4213c7e7de31a5fd9cdcfa62bc473ce7aef07b9c60ed6b3edbe5aa7c0cb2e"
+      "bytes": 1750,
+      "sha256": "332548aadfc87190b26b767a2e9b68c7279f11666e858625bf16f9d89ddf203d"
     },
     {
       "path": "07-prompts/SECURITY_REVIEW_OPUS5.md",
-      "bytes": 1078,
-      "sha256": "69016469dc165145798961f25bcfd912b9fcce52d179e9d21554ffd4d8fc45ef"
+      "bytes": 1171,
+      "sha256": "f26a704ddf4ba2e59da50bf032bbb7a55f96989417c284b046ad177c6b830bb0"
     },
     {
       "path": "07-prompts/START_OSSUS_REPOSITORY.md",
-      "bytes": 1635,
-      "sha256": "e378362b94cca326351e08c2bea676f169a94e7db2b3ad52df14535883cfa1fe"
+      "bytes": 1767,
+      "sha256": "e275752201cde48ba24e2aa295013cf675c62f140b5430e61b90c64c33aa579a"
     },
     {
       "path": "08-operations/BLOCKED_DIAGNOSTIC_TEMPLATE.md",
-      "bytes": 746,
-      "sha256": "ed54640949f195b8992b316f155c2619f9259c7831d97c62301bc83036ca6382"
+      "bytes": 909,
+      "sha256": "31f40f65c4d8b5f972406b53a49284306279b611ad357753c8eb5d6846162182"
     },
     {
       "path": "08-operations/CHANGE_CONTROL.md",
-      "bytes": 882,
-      "sha256": "387575f5032100c37640130526110b675bb1e7993c90470db70ce60c479373ca"
+      "bytes": 975,
+      "sha256": "d874cfa1042f59ef3802107ee61a1ff32eef7c334e10ca0d9e75c3b865f8d88d"
+    },
+    {
+      "path": "08-operations/HANDOFF_2026-08-07_AGENT_AUTHORITY.md",
+      "bytes": 5741,
+      "sha256": "c21f082dea2ee75a3069aeb04b4dedc5ad98702bdade347ee758b420b58953fb"
+    },
+    {
+      "path": "08-operations/HANDOFF_2026-08-08_WAVE-003.md",
+      "bytes": 10076,
+      "sha256": "0b82bfd7a151744377445d707d2c8a5c97ca360c77e1a2e38dd59eb18e40e692"
     },
     {
       "path": "08-operations/HANDOFF_TEMPLATE.md",
-      "bytes": 341,
-      "sha256": "bf5ae36a4f3b4659418fe9c321ab9f0db45cbb400696067bc88d2288464c608f"
+      "bytes": 569,
+      "sha256": "54e7da62d44da1eda50f093a52ad927d1d24c220bfdf821cd99e409cf9370cab"
     },
     {
       "path": "08-operations/RELEASE_CHECKLIST.md",
-      "bytes": 582,
-      "sha256": "8954361ac3002960be7a06f11176e039ebac2f835998905887ee813897f94745"
+      "bytes": 792,
+      "sha256": "fa581494ad92f4155c58ae765a30c38fef2444876b1b62aa4ab40fb6b69d0310"
     },
     {
       "path": "08-operations/REVIEW_REPORT_TEMPLATE.md",
-      "bytes": 458,
-      "sha256": "d7472d1df3bfbbdfde2b410efaa5100d0b474d232a58e9974b6c475721b09813"
+      "bytes": 879,
+      "sha256": "7aeef269b14eeb534140cafa8aa9b3396822822f058747c02baaba8bc85f8005"
     },
     {
       "path": "08-operations/WAVE-000_FINDINGS_DISPOSITION.md",
-      "bytes": 39529,
-      "sha256": "d37ded5fc7adb8a209902664f69e3d2e8c52a9f348c75318b3f1e34a74a6fd55"
+      "bytes": 39724,
+      "sha256": "b5f3503d6cf385cc35a32f4fcb82ad48e64c0e64887ad95d5aed523358029ca1"
     },
     {
       "path": "08-operations/WAVE-000_GATE_S0_CLOSURE.md",
-      "bytes": 9779,
-      "sha256": "9b2fdfb07392e1b39595f4ada547393f6f6b08ea7f4184cdf8a258ef0c2bc798"
+      "bytes": 9974,
+      "sha256": "98dd04c9fa9c734807af7b1e9a1d1457909a63bb51df9a89b4791d6483cdfc49"
     },
     {
       "path": "08-operations/WAVE-000_OPUS5_PLAN_REVIEW.md",
-      "bytes": 26770,
-      "sha256": "06968c523d74767541afd4ba9fbfef755e745b2f952f553ad7f6a3cf6446197e"
+      "bytes": 26965,
+      "sha256": "58c267a979e4f55e4bbd12cc4ac8e2c76ffe79feda3db6dba35aa52eb1f28d69"
     },
     {
       "path": "08-operations/WAVE-000_PREPARATION_AND_CHANGE_SUMMARY.md",
-      "bytes": 6166,
-      "sha256": "f3541e32102fd916af780c64ea7088da7337a714acdc04c2e2d9a4208a214e75"
+      "bytes": 6361,
+      "sha256": "31bfb7a5f6108b54d28765ec3e929a56ba3007877d33b0735dc93666f13b804f"
     },
     {
       "path": "08-operations/WAVE-000_REPORT.md",
-      "bytes": 11844,
-      "sha256": "2737248a64e51d55fcf2b921ab80ebd395bbb811107042283efcffcc089015df"
+      "bytes": 12039,
+      "sha256": "1fcadce6079abd75af7bb7156d3acd0c0b22d5f0c9c7c35003ddcf2f085bc1bc"
     },
     {
       "path": "08-operations/WAVE-001_REPORT.md",
-      "bytes": 24756,
-      "sha256": "1522cd8b5544c2738a98e93e46f9827f98ca6564b60a64ed89356a729b60a2c6"
+      "bytes": 24951,
+      "sha256": "aefd6b716bc221c80665e42c9c4fad90a224531e258d515cd3adf5403522f79b"
     },
     {
       "path": "08-operations/WAVE-002_GATE_S1_CLOSURE.md",
-      "bytes": 7036,
-      "sha256": "a78b77b2bab3eabdb4aea5a8f26778e167ad89e260c15ddb6ae790f1ee3d25e2"
+      "bytes": 7231,
+      "sha256": "207b7001cf0b0a3d603f55cdc2c2dfb34b6029c77c7333fae012352e1abaff67"
     },
     {
       "path": "08-operations/WAVE-002_T4_REPORT.md",
-      "bytes": 19606,
-      "sha256": "6bcfd2ef03cb2ddb0e39ff4b9af0e6dc8300b45a37217979a5a9474e119f641e"
+      "bytes": 19800,
+      "sha256": "ca481110635cc6b95a9891d50165ed9f17458651bb9024b475f857949c07e69e"
+    },
+    {
+      "path": "08-operations/WAVE-003_REPORT.md",
+      "bytes": 5561,
+      "sha256": "0be5b7a5a01c631e3c2bc18a07d6c8f33911112542cedf670d2062d0e4c17477"
+    },
+    {
+      "path": "08-operations/WAVE-003_SEED_ADMISSION_AND_SOURCE_REPORT.md",
+      "bytes": 12117,
+      "sha256": "f23483faa6b98b8ecebcb98d5efe6548ba5f87a9d384337fe0a41047b26c72cc"
     },
     {
       "path": "08-operations/WAVE_REPORT_TEMPLATE.md",
-      "bytes": 494,
-      "sha256": "ec5c54d93eb40051938793eed152ca02a688ca3d7a6240d9600e916fd3a99d0a"
+      "bytes": 1000,
+      "sha256": "0f3774dfd007e6aded582077a4de0ca0f8d7964c1b8cd6ad96dd47c8b4d96bf0"
+    },
+    {
+      "path": "08-operations/wave-summaries/README.md",
+      "bytes": 997,
+      "sha256": "fe284d4e36c3b093571589f06c2bbae7c22721da9e7581c6c1caadc5edb994e1"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-000_SUMMARY.md",
+      "bytes": 1021,
+      "sha256": "415332b778540fdd48e3ed4f04dd87d51ace7e6221e1debf009c060da8dbac5e"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-001_SUMMARY.md",
+      "bytes": 1045,
+      "sha256": "1c785338a565f17d4ea183e27cdce13790f36cdc38420cff4b1eff3811b07221"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-002_SUMMARY.md",
+      "bytes": 1275,
+      "sha256": "4e058e4dd8203d4425a43df1b0d8922a13de8fcc4a08b9e5ca694d6fd3e71589"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-003_SUMMARY.md",
+      "bytes": 2704,
+      "sha256": "1548b6fac64aa7230131d5b89c00e78e8aae8bc8e68fda3f02ccc023d381da46"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-004_SUMMARY.md",
+      "bytes": 1074,
+      "sha256": "99f8920825b5fbc23528646765a093847053c29b124287a2bdb807b89ae46d4b"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-005_SUMMARY.md",
+      "bytes": 1359,
+      "sha256": "57de9e5d4f579298d0fd9d4b50b113168863bbacf62627576abc553470970feb"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-006_SUMMARY.md",
+      "bytes": 1202,
+      "sha256": "48ad02e2d51fc5de2145037a29f6068c1a8085351d6d18280e14df13e45d452f"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-007_SUMMARY.md",
+      "bytes": 1349,
+      "sha256": "da97df65e608cc4b761a0be00bca1f608f202be7bef5828b000ed307728859a6"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-008_SUMMARY.md",
+      "bytes": 1178,
+      "sha256": "1f2dd3c6b8b4cec16d726fffa52d9c5c18a33c11b1bd281396a6df11d5e994e6"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-009_SUMMARY.md",
+      "bytes": 1293,
+      "sha256": "697789b8376ce14c113e045d42457a82978f07d9f0860583e80246bfeda5c5b3"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-010_SUMMARY.md",
+      "bytes": 1328,
+      "sha256": "23407c0db4786fd57125e99028b05b3c455d163c73d9f8f3c3393781608097ea"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-011_SUMMARY.md",
+      "bytes": 1115,
+      "sha256": "736aa4cc8f40f7d71c6dbe62df7270f0fb820d9a8006cd21f5eed08ad96a1af9"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-012_SUMMARY.md",
+      "bytes": 1342,
+      "sha256": "598727e1c5a28d10d246538028d35f94af6ece5bf5d2920ca9c9e9438d805874"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-013_SUMMARY.md",
+      "bytes": 1096,
+      "sha256": "04d6896f202cf6b1629b46bf0e8d8af02584283763fbfc82836dc33ff4a33e85"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-014_SUMMARY.md",
+      "bytes": 1132,
+      "sha256": "386a8c1a75a7787fe2dc20ad6425a47d9d820d0903863898735595bc6790d859"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-015_SUMMARY.md",
+      "bytes": 1132,
+      "sha256": "ff33ec2c559ac0b8ba9de5c31b7f501d32930f8b8a2e9c47d0ebbd56b062f699"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-016_SUMMARY.md",
+      "bytes": 1133,
+      "sha256": "c86e4e1ad42b27a3b66b4d51e9cbd7e0ed6802a94bdd2985ea6b2484da7b079b"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-017_SUMMARY.md",
+      "bytes": 1175,
+      "sha256": "a3fd29b6cc21e187695f3c5256a7cded1e3fc98fb98389074024b52d199e7f46"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-018_SUMMARY.md",
+      "bytes": 1263,
+      "sha256": "6bf0cdd8381a2c102bfc5b02beb31b984218bc4d281169255c1452599e3e2b28"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-019_SUMMARY.md",
+      "bytes": 1178,
+      "sha256": "0fcbdcfb516592b18dfe674f6f9da65a2d5d828b22583b3a1cc77f10c4e0036e"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-020_SUMMARY.md",
+      "bytes": 1238,
+      "sha256": "e54e82f0cef5d5ace4c0c9194782e03ac72276bccb2ce5c3b72791f2402738c4"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-021_SUMMARY.md",
+      "bytes": 1301,
+      "sha256": "2973f51078dd987bbfe3d95ea15043fa342751be20b88591de324f7ad889399c"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-022_SUMMARY.md",
+      "bytes": 1256,
+      "sha256": "0e8dc55d77beff462bc960e2908c6f7e268c79afb0ca00cd37dd16846695dfaa"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-023_SUMMARY.md",
+      "bytes": 1290,
+      "sha256": "a533e2dbc4bba125d3df24d30006f87785fb42efb48bcd182740d60f2492aa92"
+    },
+    {
+      "path": "08-operations/wave-summaries/WAVE-024_SUMMARY.md",
+      "bytes": 1302,
+      "sha256": "74345a2004ee2a490a35a702e41593a94cc9cc440b22f8d533ea71c3f1ca6115"
     },
     {
       "path": "09-roadmap/BACKLOG_AFTER_BETA.md",
@@ -451,8 +606,8 @@
     },
     {
       "path": "09-roadmap/DEFINITION_OF_DONE.md",
-      "bytes": 1358,
-      "sha256": "22172e5204d4c7c678d6172aab4f10fa3bf2e03e7e2b714a89d0449a5b2e4401"
+      "bytes": 1726,
+      "sha256": "05f52e90bd42361582eb6b2024d86a9f434853ee23d7e577c14d0db643afa7f6"
     },
     {
       "path": "09-roadmap/DEPENDENCY_GRAPH.md",
@@ -461,18 +616,18 @@
     },
     {
       "path": "09-roadmap/PHASES_AND_GATES.md",
-      "bytes": 4262,
-      "sha256": "787ebdffa4acfa918dace87091e2251dec4afb0f2e82a5396a867eae54068ffa"
+      "bytes": 4935,
+      "sha256": "2d4f8f599237c6ff3296de37f465e5c824ac6e341a339f8e53f8961ba14529b7"
     },
     {
       "path": "CURRENT_WAVE.md",
-      "bytes": 2069,
-      "sha256": "a75cfe64e6d1e16e7b6f404c3fbd57b867638894d99966f0be4978848114468b"
+      "bytes": 2708,
+      "sha256": "2f333813661bc167253cbf3e413a9b515e4bb838cabc07a1cb18c33cf90aac59"
     },
     {
       "path": "README.md",
-      "bytes": 3759,
-      "sha256": "34acf1135b4f16f0ad3853cecfb341cdd93bc5258dc6395a134501180827ffbb"
+      "bytes": 3528,
+      "sha256": "dfe4e6decf0abc8745d98a89d40c2e509f389d92334b79021a88ec14d4db243b"
     },
     {
       "path": "SOURCES.md",

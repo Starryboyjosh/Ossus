@@ -37,7 +37,7 @@ Implement integrity verification, transactions, ownership and safe materializati
 - Attack tests.
 - Threat-model delta.
 - Opus 5 security report and implementation-support attribution.
-- Human Gate S3 closure.
+- Distinct Closure Agent Gate S3 decision.
 
 ## Required tests and evidence
 
@@ -64,16 +64,15 @@ Implement integrity verification, transactions, ownership and safe materializati
 
 This is a security WAVE.
 
-- Opus 5 owns the assigned security work and reviews the final implementation or audit evidence.
-- Luna Max or another implementation agent may assist only through attributed, bounded tasks.
-- The human closes the gate.
-- There is no automatic replacement if Opus 5 is unavailable.
-- Model review is evidence, not certification.
+- A capable independent Security Review Agent reviews the final implementation and evidence.
+- Implementation agents may assist only through attributed, bounded tasks.
+- A distinct Closure Agent closes the gate and has the final word.
+- Human review is optional additional evidence.
 
 
 ## Copy-ready implementation instruction
 
-Use the Opus 5 security implementation and final analysis prompts, findings disposition, and human closure checklist.
+Use the security implementation and independent review prompts, findings disposition, and agent closure checklist.
 
 Read `README.md`, the master context, decision log, referenced specifications and this WAVE. Implement only this WAVE. Produce the standard WAVE report. Do not commit or push unless the human explicitly requests it.
 

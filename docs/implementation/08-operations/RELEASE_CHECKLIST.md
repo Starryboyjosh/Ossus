@@ -8,7 +8,9 @@
 - [ ] Cross-platform CLI smoke tests.
 - [ ] Lockfile compatibility tests.
 - [ ] Dependency and license audit.
-- [ ] Security WAVE closure.
+- [ ] Independent security-review evidence and separate Closure Agent decision.
+- [ ] Implementer, reviewer, and Closure Agent identities/configuration/run IDs recorded.
+- [ ] Technical and practical WAVE summaries reflect final evidence.
 - [ ] Release workflow permission review.
 - [ ] Checksums generated.
 - [ ] Changelog.

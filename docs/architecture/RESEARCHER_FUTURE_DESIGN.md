@@ -8,7 +8,7 @@ Researcher development begins only after the Resolver vertical slice passes its 
 
 ## Responsibility
 
-The Researcher discovers external resources and produces evidence for human curation.
+The Researcher discovers external resources and produces evidence for Curator Agent curation.
 
 It has no authority over trusted Registry state.
 
@@ -80,9 +80,9 @@ review-checklist.md
 
 It excludes executable CI from trusted workflows.
 
-## Human admission
+## Agent-authorized admission
 
-A reviewer creates the canonical manifest from evidence.
+A Curator Agent prepares the canonical manifest from evidence. An independent Admission Review Agent checks the proposed contribution, and a distinct Closure Agent makes the final admission, rejection, or blocked decision. Human review may be recorded as additional evidence but is not required. The Researcher remains evidence-only and cannot fill any of these roles for a candidate it discovered.
 
 The admitted change is made in the Registry repository independently from the candidate repository.
 

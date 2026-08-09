@@ -75,7 +75,9 @@
         },
         "subpath": {
           "type": "string",
-          "maxLength": 512
+          "minLength": 1,
+          "maxLength": 512,
+          "pattern": "^[^\\u0000]+$"
         },
         "tree_hash": {
           "type": "string",
@@ -289,6 +291,7 @@
           ]
         },
         "tier": {
+          "description": "Schema-v1 legacy review-depth wire label. The serialized values remain stable for compatibility; they describe focused, complete, or security-agent review depth rather than reviewer identity.",
           "enum": [
             "light-human",
             "full-human",
@@ -301,6 +304,7 @@
           "maxLength": 64
         },
         "reviewer_ids": {
+          "description": "Identifiers for the agent reviewers or review runs that supplied review evidence. Schema v1 preserves this field name and does not encode reviewer species or authority.",
           "type": "array",
           "minItems": 1,
           "maxItems": 8,

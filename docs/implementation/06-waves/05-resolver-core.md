@@ -34,7 +34,7 @@ Map task plus project to a minimal compatible resource set with explanations.
 - Human and JSON output.
 - Reason codes.
 - Scope-aware policy resolution implementing **ADR-016**.
-- **Gate S2 closure record**, prepared for the human approver.
+- **Gate S2 closure record**, prepared for the distinct Closure Agent.
 
 ## Required tests and evidence
 

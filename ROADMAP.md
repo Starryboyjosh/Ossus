@@ -2,7 +2,7 @@
 
 ## Phase 0 — Review the plan
 
-- WAVE-000: Opus 5 security and architecture plan review, findings disposition, human closure.
+- WAVE-000: historical security and architecture plan review, findings disposition, and recorded closure under the governance then in force.
 
 ## Phase 1 — Rust and trusted contracts
 
@@ -30,10 +30,12 @@
 
 ## Phase 5 — Researcher
 
-- Formal security design first, then passive intake, GitHub discovery, external analysis, human admission, Reddit evidence, and an end-to-end audit.
+- Formal security design first, then passive intake, GitHub discovery, external analysis, agent admission, Reddit evidence, and an end-to-end audit.
 
 ## Phase 6 — Beta
 
 - Public Registry operations, incident response, revocation drill, and beta release.
 
 Detailed gates and dependencies are in [`docs/roadmap/`](docs/roadmap/).
+
+Future WAVE acceptance follows the separated-agent model in [`docs/AGENT_AUTHORITY.md`](docs/AGENT_AUTHORITY.md), including required technical and practical summaries.

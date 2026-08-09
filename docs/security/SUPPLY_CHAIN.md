@@ -21,7 +21,7 @@ Recommended tools are selected during WAVE 10 after current verification. Ossus 
 - generate checksums;
 - publish provenance where practical;
 - separate build and release credentials;
-- require human approval for release environment;
+- require explicit operational authorization for the release environment; technical acceptance remains the distinct Closure Agent decision;
 - retain SBOM or dependency inventory;
 - verify installers against release digest.
 

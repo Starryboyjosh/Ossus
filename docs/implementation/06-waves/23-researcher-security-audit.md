@@ -30,7 +30,7 @@ Attack the complete Researcher path before beta.
 - Opus 5 security audit.
 - Attributed implementation-support evidence and final assessment.
 - Correction WAVEs if needed.
-- Human Gate S7 closure.
+- Distinct Closure Agent Gate S7 decision.
 
 ## Required tests and evidence
 
@@ -46,18 +46,17 @@ Attack the complete Researcher path before beta.
 - No unresolved critical/high finding.
 - Researcher cannot approve or activate.
 - Candidate content cannot reach privileged CI.
-- Human closure is recorded.
+- The distinct Closure Agent decision is recorded.
 
 
 ## Mandatory security workflow
 
 This is a security WAVE.
 
-- Opus 5 owns the assigned security audit and reviews the final evidence.
-- Luna Max or another implementation agent may assist only through attributed, bounded tasks.
-- The human closes the gate.
-- There is no automatic replacement if Opus 5 is unavailable.
-- Model review is evidence, not certification.
+- A capable independent Security Review Agent owns the final security audit and evidence review.
+- Implementation agents may assist only through attributed, bounded tasks.
+- A distinct Closure Agent closes the gate and has the final word.
+- Human review is optional additional evidence.
 
 
 ## Copy-ready implementation instruction

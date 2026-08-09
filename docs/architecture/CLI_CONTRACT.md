@@ -23,6 +23,39 @@ The CLI is scriptable by default and offers human output plus `--format json`.
 
 `--offline` is the default behavior for commands that do not explicitly require synchronization or installation.
 
+## Implemented in WAVE-003
+
+The current executable implements only the bootstrap commands plus `validate`,
+`registry status`, `registry reindex`, `search`, and `show`. Other command names
+below are future contracts and return exit code 69 while they remain
+placeholders. Of the planned global flags, `--format human|json` is implemented
+for the Registry commands.
+
+```text
+ossus validate <PATH>...
+ossus registry status [--index PATH]
+ossus registry reindex [--manifest-root PATH] [--index PATH]
+ossus search [TEXT] [--exact VALUE] [--capability ID] [--category NAME]
+             [--surface SURFACE] [--source-mode MODE]
+             [--runtime REQUIREMENT] [--risk-max TIER]
+             [--limit N] [--offset N] [--index PATH]
+ossus show <RESOURCE-ID> [--index PATH]
+```
+
+`--format json` may appear anywhere in the invocation. Registry JSON responses
+carry `schema_version = "1.0.0"`; human output is concise and deterministic.
+Malformed options return 2, schema validation failures return 11, taxonomy
+validation failures return 12, and unavailable, corrupt, conflicting, or
+otherwise unusable Registry state returns 20. An unknown `show` ID also returns
+20.
+
+The default manifest root is `catalog/official/manifests` and the default index
+is `.ossus/registry.sqlite3`. The SQLite index is derived, local, and
+disposable: reindexing replaces it from canonical metadata and never approves,
+installs, resolves, activates, or reads resource bodies. Invalid manifests are
+reported and excluded; namespace or immutable-source conflicts abort the
+rebuild.
+
 ## Command tree
 
 ```text

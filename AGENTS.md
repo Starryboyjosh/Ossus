@@ -2,7 +2,9 @@
 
 ## Current implementation state
 
-The repository has implemented **WAVE-002** and closed Security Gate S1 through the named project owner. **WAVE-003 is in progress**; it is not complete until all acceptance evidence, including 20 explicitly human-approved real seed entries, is recorded.
+The repository has implemented **WAVE-002** and closed Security Gate S1 under the governance then in force. **WAVE-003 is in progress**; it is not complete until all acceptance evidence, including 20 real seed entries explicitly admitted by the Agent Review Authority, is recorded.
+
+ADR-020 and `docs/AGENT_AUTHORITY.md` govern all new decisions. The Closure Agent has the final word; human review is optional evidence, not a required approval step. Preserve role separation between implementer, independent reviewer, and Closure Agent.
 
 Do not implement later WAVEs merely because their folders or command names exist.
 
@@ -52,12 +54,13 @@ The Spanish documents under `docs/implementation/00-original-context/` are histo
 - Correct normal errors before escalating.
 - Never weaken a schema, golden case, threshold, or security policy merely to make tests pass.
 - Produce `docs/implementation/08-operations/WAVE_REPORT_TEMPLATE.md` on completion.
+- Produce or update the WAVE's technical and practical reader summary under `docs/implementation/08-operations/wave-summaries/` before closure.
 - For a genuine repeated block, use `BLOCKED_DIAGNOSTIC_TEMPLATE.md` and include complete logs plus only directly involved code files.
 
 ## Security WAVEs
 
-The following require Opus 5 security ownership and human closure:
+The following require a Security Review Agent and a distinct Closure Agent:
 
 `WAVE-000`, `WAVE-007`, `WAVE-010`, `WAVE-017`, `WAVE-018`, `WAVE-020`, `WAVE-021`, `WAVE-023`.
 
-Luna Max or another implementation agent may assist with bounded implementation and test work, but its output must be attributed and reviewed by Opus 5. If Opus 5 is unavailable, pause the security WAVE. Do not silently substitute another model.
+Any implementation agent may assist with bounded work, but its output must be attributed and independently reviewed. Model names are configuration, not protocol. If no capable independent Security Review Agent and Closure Agent are available, pause the security WAVE rather than allowing an implementer to self-approve.

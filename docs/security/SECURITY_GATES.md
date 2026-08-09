@@ -4,9 +4,9 @@
 
 Required before WAVE 01:
 
-- Opus 5 security and architecture plan review;
+- independent Security Review Agent and architecture review;
 - explicit disposition of every finding;
-- human resolution;
+- decision by a distinct Closure Agent;
 - no unresolved critical finding;
 - implementation assumptions updated.
 
@@ -19,7 +19,7 @@ Required before Registry indexing:
 - canonical/origin separation explicit;
 - taxonomy and policy hashes supported.
 
-Owner: **WAVE-002**. Closed by a named human against `docs/implementation/07-prompts/HUMAN_SECURITY_CLOSURE.md` after Opus 5 review of the WAVE-002 diff and evidence.
+Owner: **WAVE-002**. Its dated named-human closure record remains historical evidence. Under ADR-020, any new, reopened, or replacement decision requires independent Security Review Agent review and a distinct Closure Agent decision; human review is optional evidence.
 
 ## Gate S2 — Resolver policy
 
@@ -31,7 +31,7 @@ Required before activation work:
 - R4 implicit activation test equals zero;
 - policy monotonicity holds: a project-scoped configuration or registry file cannot relax effective policy (ADR-016), proven by the adversarial fixture in the golden suite.
 
-Owner: **WAVE-005**. Closed by a named human against `docs/implementation/07-prompts/HUMAN_SECURITY_CLOSURE.md` after Opus 5 review of the WAVE-005 diff and evidence.
+Owner: **WAVE-005**. Any dated named-human or named-model closure wording is historical evidence only. Under ADR-020, new decisions require independent Security Review Agent review and a distinct Closure Agent decision; human review is optional evidence.
 
 ## Gate S3 — Activation boundary
 
@@ -80,8 +80,8 @@ Required before Researcher beta:
 
 Required before WAVE 24:
 
-- full Opus 5 security audit;
+- full independent Security Review Agent audit;
 - attributed implementation and test evidence;
-- human residual-risk acceptance;
+- Closure Agent residual-risk decision;
 - incident and revocation procedure;
 - release artifact verification.

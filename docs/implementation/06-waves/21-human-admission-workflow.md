@@ -1,18 +1,18 @@
-# WAVE-021 — Human review and admission workflow
+# WAVE-021 — Agent review and admission workflow
 
 **Phase:** Phase 5  
-**Assigned role:** Opus 5 security owner; optional Luna Max implementation support  
+**Assigned role:** Implementer Agent, independent Security Review Agent, and distinct Closure Agent
 **Depends on:** WAVE-019 and WAVE-020  
 **Security WAVE:** yes
 
 ## Objective
 
-Create an auditable path from evidence to human-authored canonical contribution.
+Create an auditable path from evidence to agent-authored canonical contribution.
 
 ## In scope
 
 - Risk-tier checklists.
-- Reviewer identity/approvals.
+- Curator Agent, Admission Review Agent, and Closure Agent identities, with conflict-of-interest attestations.
 - Blank-first canonical manifest drafting with non-authoritative suggestions.
 - Diff/evidence references.
 - Separate staging contribution.
@@ -29,7 +29,7 @@ Create an auditable path from evidence to human-authored canonical contribution.
 - Review-bundle command.
 - Admission package.
 - Checklists.
-- Gate S6 closure.
+- Gate S6 Closure Agent decision.
 
 ## Required tests and evidence
 
@@ -42,26 +42,25 @@ Create an auditable path from evidence to human-authored canonical contribution.
 
 ## Acceptance criteria
 
-- Canonical fields require reviewer action.
-- Risk tier enforces reviewer count.
+- Canonical fields require independent Admission Review Agent action.
+- Risk tier enforces the required independent review depth.
 - Mutable/changed source cannot admit.
-- Opus 5 security assessment and human closure complete.
+- Independent Security Review Agent assessment and distinct Closure Agent decision complete.
 
 
 ## Mandatory security workflow
 
 This is a security WAVE.
 
-- Opus 5 owns the assigned security work and reviews the final implementation or audit evidence.
-- Luna Max or another implementation agent may assist only through attributed, bounded tasks.
-- The human closes the gate.
-- There is no automatic replacement if Opus 5 is unavailable.
-- Model review is evidence, not certification.
+- An Implementer Agent prepares the work and evidence.
+- An independent Security Review Agent reviews the final implementation and evidence.
+- A distinct Closure Agent makes the final gate decision after review; no agent may review or close its own work.
+- Human review is optional additional evidence. Missing or unverifiable evidence fails closed.
 
 
 ## Copy-ready implementation instruction
 
-Use security prompts. Suggestions must never pre-approve Resolver-critical fields.
+Use security prompts. Suggestions must never pre-approve Resolver-critical fields. Update the reader summary with technical and practical summaries, evidence, dependencies/gates, status, and remaining work.
 
 Read `README.md`, the master context, decision log, referenced specifications and this WAVE. Implement only this WAVE. Produce the standard WAVE report. Do not commit or push unless the human explicitly requests it.
 

@@ -15,6 +15,7 @@
 - signature strategy;
 - custom execution environment;
 - security model assignment.
+- agent authority, role separation, or closure evidence semantics.
 
 ## Changes requiring golden updates
 
@@ -38,6 +39,6 @@ If a WAVE becomes substantially larger:
 2. write a scope-delta note;
 3. split the WAVE;
 4. update dependencies and gates;
-5. obtain architecture approval.
+5. obtain independent review and Closure Agent acceptance.
 
 Do not hide a large redesign inside an implementation report.

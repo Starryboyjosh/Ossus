@@ -1,5 +1,7 @@
 # WAVE-001 Report
 
+> **Historical evidence:** ADR-020 and `docs/AGENT_AUTHORITY.md` supersede this document's authority requirements for decisions on or after 2026-08-07. This note does not change recorded facts.
+
 ## Metadata
 
 - WAVE: WAVE-001 — Rust workspace bootstrap

@@ -78,17 +78,27 @@ The Registry stores canonical manifests, provenance, fixed commits and hashes. R
 
 Vendoring is exceptional and requires license and security justification.
 
-### 3.6 Human review is risk-scaled
+### 3.6 Agent Review Authority is risk-scaled
 
-Human authority remains final, but review depth depends on risk.
+Under ADR-020, the Closure Agent has final technical authority. Human review may
+add evidence, but is optional and does not replace the Closure Agent's decision.
+Every WAVE records an Implementer Agent, an Independent Review Agent, and a
+separate Closure Agent. A security WAVE uses a Security Review Agent. An
+implementer may correct findings, but corrections return to independent review
+before closure. Model names are deployment configuration, not product protocol.
 
-R0 declarative resources receive focused full-content review. R2 and above require deeper execution and security review. R5 is excluded from the stable initial catalog.
+Registry admission uses the equivalent separated roles: Curator Agent, Admission
+Review Agent, and Closure Agent. R0 declarative resources receive focused
+full-content review. R2 and above require deeper execution and security review.
+R5 is excluded from the stable initial catalog.
 
 ### 3.7 The Researcher never approves
 
 The Researcher may discover, clone into quarantine, inventory, collect evidence, suggest a provisional mapping and generate a review bundle.
 
-It may never write the final canonical manifest, approve an entry, activate a resource, modify admission policy or write directly to the main Registry.
+It may never write the final canonical manifest, approve or activate a resource,
+modify admission policy, write directly to the main Registry, or hold a Curator
+Agent, Admission Review Agent, or Closure Agent role for a candidate it discovered.
 
 ## 4. Initial resource types
 
@@ -199,7 +209,8 @@ Research commands are unavailable or marked experimental until the Researcher ph
 
 ## 10. Security implementation rule
 
-The following WAVEs are security WAVEs and require Opus 5 security ownership:
+The following are security WAVEs and require a Security Review Agent under the
+role-separation rule:
 
 - WAVE 00
 - WAVE 07
@@ -210,11 +221,23 @@ The following WAVEs are security WAVEs and require Opus 5 security ownership:
 - WAVE 21
 - WAVE 23
 
-Luna Max or another implementation agent may assist with bounded implementation and test work. Opus 5 must review the final diff and evidence, and a human closes each gate.
+The Closure Agent verifies the final evidence and reviewer verdict, then records
+the accepted, rejected, or blocked decision. It must not have implemented or
+independently reviewed that WAVE. Model names used for implementation or review
+are configuration and are recorded as evidence where available.
 
 Other WAVEs may still require a security review when they modify trust boundaries, activation, parsing, networking, source handling, installation, update logic or CI.
 
-## 11. Escalation rule
+## 11. WAVE reader summaries
+
+Every WAVE has a reader summary under
+`docs/implementation/08-operations/wave-summaries/`. Where a WAVE process is
+described, its summary must include both a technical summary and a practical
+plain-language summary, along with status, evidence, dependencies/gates, and
+remaining work. A completed WAVE cannot close until its summary reflects final
+evidence.
+
+## 12. Escalation rule
 
 Normal errors must be investigated and corrected by the implementer.
 
@@ -233,7 +256,7 @@ Use `08-operations/BLOCKED_DIAGNOSTIC_TEMPLATE.md`.
 
 A diagnostic is not a substitute for attempting a correction.
 
-## 12. Definition of success
+## 13. Definition of success
 
 Ossus V0 is successful when it can:
 

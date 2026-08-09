@@ -1,5 +1,7 @@
 # WAVE-000 preparation and change summary
 
+> **Historical evidence:** ADR-020 and `docs/AGENT_AUTHORITY.md` supersede this document's authority requirements for decisions on or after 2026-08-07. This note does not change recorded facts.
+
 ## Status
 
 - WAVE: `WAVE-000 — Opus 5 security and architecture review`

@@ -1,5 +1,7 @@
 # WAVE preparation report — Almanac catalog import and Codex orchestration
 
+> **Historical evidence:** ADR-020 and `docs/AGENT_AUTHORITY.md` supersede this document's authority requirements for decisions on or after 2026-08-07. This note does not change recorded facts.
+
 ## Metadata
 
 - WAVE: WAVE-000 preparation only; Security Gate S0 remains open
@@ -75,7 +77,7 @@ External approved configuration change:
 
 ## Known limitations
 
-- The Almanac entries still need immutable upstream commits/digests, tree/content hashes, canonical capability mappings, runtime observations, risk classification, license evidence, and Ossus human approval.
+- The Almanac entries still need immutable upstream commits/digests, tree/content hashes, canonical capability mappings, runtime observations, risk classification, license evidence, independent Admission Review Agent review, and a distinct Closure Agent decision.
 - The import is not a Resolver source and cannot be installed or activated.
 - The current Codex process may need a new session/restart to reload the newly written global and project settings. The global file already reports Luna/max as the current primary model and `multi_agent` as enabled.
 - The graphify AST subprocess is unavailable in this restricted environment.

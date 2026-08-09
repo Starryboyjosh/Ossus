@@ -48,18 +48,17 @@ Implement passive source intake, inventory, hashing and evidence bundles without
 - No candidate executes.
 - No secrets are available.
 - Evidence is untrusted by type.
-- Opus 5 security assessment and human closure complete.
+- Independent Security Review Agent assessment and distinct Closure Agent decision complete.
 
 
 ## Mandatory security workflow
 
 This is a security WAVE.
 
-- Opus 5 owns the assigned security work and reviews the final implementation or audit evidence.
-- Luna Max or another implementation agent may assist only through attributed, bounded tasks.
-- The human closes the gate.
-- There is no automatic replacement if Opus 5 is unavailable.
-- Model review is evidence, not certification.
+- A capable independent Security Review Agent reviews the final implementation and evidence.
+- Implementation agents may assist only through attributed, bounded tasks.
+- A distinct Closure Agent closes the gate and has the final word.
+- Human review is optional additional evidence.
 
 
 ## Copy-ready implementation instruction

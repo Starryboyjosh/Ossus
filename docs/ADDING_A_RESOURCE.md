@@ -46,7 +46,7 @@ A declarative R0 resource can use a focused review path. Shell, network, credent
 
 ## 5. Create the canonical manifest
 
-A human curator writes or approves a new canonical manifest. Resolver-critical fields are controlled by Ossus:
+A Curator Agent prepares a new canonical manifest from the evidence. An independent Admission Review Agent checks it, and a distinct Closure Agent makes the final admission, rejection, or blocked decision. Human review is optional supporting evidence. Resolver-critical fields are controlled by Ossus:
 
 - capabilities;
 - categories;
@@ -66,7 +66,7 @@ The upstream manifest is evidence only.
 
 Submit the canonical manifest through the trusted Registry contribution path. Candidate content and candidate CI remain outside privileged branches.
 
-Reviewers verify source stability, license, risk, compatibility, taxonomy mapping, and required reviewer count.
+The Admission Review Agent verifies source stability, license, risk, compatibility, taxonomy mapping, and the required review depth. The Closure Agent records the final evidence-backed decision. The Researcher remains evidence-only and cannot approve, admit, or activate the candidate.
 
 ## 7. Sync or install
 

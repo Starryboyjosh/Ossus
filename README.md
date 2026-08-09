@@ -68,7 +68,7 @@ Scans the project, maps the task to a governed capability vocabulary, filters by
 external source
   -> quarantine
   -> candidate evidence
-  -> human-approved canonical manifest
+  -> agent-approved canonical manifest
   -> installed fixed content
   -> Resolver selection
   -> active host materialization
@@ -182,7 +182,7 @@ The two Spanish master documents are preserved under [`docs/implementation/00-or
 ## First useful vertical slice
 
 ```text
-20 manually curated canonical manifests
+20 agent-curated canonical manifests
         -> local Registry index
         -> bounded project scan
         -> task-to-capability mapping
@@ -197,14 +197,14 @@ The Researcher comes later. The Resolver is implemented and measured first.
 
 ## Security governance
 
-Security WAVEs require Opus 5 security ownership and human closure. Luna Max or another implementation agent may assist under Opus 5 review, but cannot satisfy the Opus 5 evidence requirement:
+Security WAVEs require separated Implementer, Independent Security Review, and Closure Agents. The Closure Agent has final technical authority after independently verifying the review and evidence; configured model names do not confer authority:
 
 ```text
 WAVE-000  WAVE-007  WAVE-010  WAVE-017
 WAVE-018  WAVE-020  WAVE-021  WAVE-023
 ```
 
-Model review is evidence, not certification. See:
+Human review may supplement the record but is not a required approval step. Model review is evidence, not certification. See:
 
 - [`SECURITY.md`](SECURITY.md)
 - [`docs/security/THREAT_MODEL.md`](docs/security/THREAT_MODEL.md)
@@ -216,11 +216,11 @@ Model review is evidence, not certification. See:
 The future end-to-end path is documented in [`docs/ADDING_A_RESOURCE.md`](docs/ADDING_A_RESOURCE.md):
 
 ```text
-discover -> quarantine -> inspect -> risk tier -> human canonicalization
+discover -> quarantine -> inspect -> risk tier -> agent canonicalization
          -> Registry approval -> install -> resolve -> activate -> lock
 ```
 
-Canonical capabilities, triggers, permissions, compatibility, and risk are controlled by Ossus reviewers. They are not imported blindly from upstream authors.
+Canonical capabilities, triggers, permissions, compatibility, and risk are controlled through the separated Curator, Admission Review, and Closure Agent roles. They are not imported blindly from upstream authors.
 
 ## Compatibility model
 
@@ -241,6 +241,8 @@ A standalone CLI can be usable from Claude Code with shell access while being un
 ## Contributing
 
 Read [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`GOVERNANCE.md`](GOVERNANCE.md). Changes to taxonomy meaning, trust boundaries, activation, source precedence, model defaults, or the deterministic algorithm require explicit change control and usually an ADR.
+
+[`docs/AGENT_AUTHORITY.md`](docs/AGENT_AUTHORITY.md) is the normative policy for agent-final technical acceptance, Registry admission, risk disposition, security gates, release readiness, and the required per-WAVE technical and practical summaries.
 
 Do not weaken goldens, policies, schemas, or security thresholds merely to make an implementation pass.
 

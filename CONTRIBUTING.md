@@ -5,7 +5,7 @@ Ossus accepts contributions only when they preserve its trust model and implemen
 ## Before opening a pull request
 
 1. Read `AGENTS.md`.
-2. Identify the active WAVE or approved issue.
+2. Identify the active WAVE or accepted issue.
 3. Confirm that the change does not implement future scope early.
 4. Add or update tests.
 5. Run the complete verification suite.
@@ -36,6 +36,8 @@ A pull request must explain:
 - acceptance criteria evidence;
 - residual risks;
 - whether security review is required.
+- the Implementer, Independent Review, and Closure Agent assignments where applicable;
+- links to the WAVE's technical and practical reader summaries.
 
 Use the repository pull request template.
 
@@ -59,7 +61,7 @@ Use the taxonomy issue form. A capability proposal needs a stable brand-neutral 
 
 ## Security changes
 
-Security WAVEs follow the Opus 5 security ownership -> findings disposition -> human closure workflow. Luna Max or another implementation agent may assist, but does not replace Opus 5. Do not merge unresolved critical or high findings.
+Security WAVEs follow Implementer Agent -> Independent Security Review Agent -> Closure Agent workflow. Model names are configuration, and human review is optional evidence rather than a required approval. Do not merge unresolved critical or high findings. See [`docs/AGENT_AUTHORITY.md`](docs/AGENT_AUTHORITY.md).
 
 ## Candidate resources
 

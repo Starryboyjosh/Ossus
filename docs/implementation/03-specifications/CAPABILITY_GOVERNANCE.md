@@ -6,9 +6,9 @@ The taxonomy is a product specification independent from the binary.
 
 Roles:
 
-- taxonomy maintainer;
-- domain reviewer;
-- Resolver reviewer.
+- taxonomy maintainer agent;
+- independent domain review agent;
+- Closure Agent.
 
 ## Adding a capability
 
@@ -25,7 +25,9 @@ A proposal must include:
 9. at least one changed or new golden case;
 10. migration impact.
 
-Approval requires two humans, one outside the author.
+Acceptance requires an independent domain review agent and a Closure Agent, both
+separate from the proposing implementer. Human evidence may be attached but is
+optional and does not replace the Closure Agent decision.
 
 ## Naming rules
 

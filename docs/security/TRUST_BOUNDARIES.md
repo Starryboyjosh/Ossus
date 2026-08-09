@@ -29,7 +29,7 @@ Evidence is not Resolver input.
 
 ## Boundary C — Evidence to canonical Registry
 
-A human creates or approves canonical metadata.
+A Curator Agent creates canonical metadata. An independent Admission Review Agent reviews it, and a distinct Closure Agent makes the final admission decision. Human review may supplement evidence but is not required. The Researcher remains evidence-only and may not create, approve, or close admission for a candidate it discovered.
 
 Required:
 

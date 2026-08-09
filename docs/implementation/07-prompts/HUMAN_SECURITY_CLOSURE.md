@@ -1,16 +1,23 @@
-# Human security closure checklist
+# Agent Closure checklist (legacy filename)
 
-A human closes the security WAVE only after confirming:
+This legacy filename remains a redirect for existing WAVE references. Under
+ADR-020, a separate Closure Agent closes the security WAVE; human evidence is
+optional and is not a required approval step.
 
-- [ ] Opus 5 security implementation or review report exists.
-- [ ] Every Luna Max or other implementation-agent contribution is attributed and reviewed by Opus 5.
+The Closure Agent records its identity, model/configuration, run identifier,
+and conflict-of-interest attestation, then confirms:
+
+- [ ] Implementer Agent, Independent Security Review Agent, and Closure Agent are recorded and are separate roles.
+- [ ] Independent security implementation or review report exists from the configured Security Review Agent.
+- [ ] Every implementation-support contribution is attributed and independently reviewed.
 - [ ] All critical findings are resolved.
 - [ ] All high findings are resolved.
-- [ ] Medium findings have a correction or accepted-risk owner.
+- [ ] Medium findings have a correction or bounded accepted-risk record with rationale, owner, expiry/revisit trigger, and compensating controls.
 - [ ] Required attack tests pass.
 - [ ] Threat model and trust boundaries are updated.
 - [ ] No security threshold was weakened without ADR.
 - [ ] No secrets appear in reports or fixtures.
 - [ ] Residual risks are understandable.
 - [ ] The next WAVE does not depend on an unresolved control.
-- [ ] Closure decision and approver are recorded.
+- [ ] Technical and practical WAVE summaries reflect final evidence.
+- [ ] Closure decision is recorded as `accepted`, `rejected`, or `blocked`.

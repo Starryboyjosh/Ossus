@@ -1,5 +1,7 @@
 # WAVE-000 — Opus 5 adversarial security and architecture plan review
 
+> **Historical evidence:** ADR-020 and `docs/AGENT_AUTHORITY.md` supersede this document's authority requirements for decisions on or after 2026-08-07. This note does not change recorded facts.
+
 **WAVE:** WAVE-000
 **Reviewer:** Opus 5 (`claude-opus-5`), acting as `security_implementer` per `specs/config/model-roles.yaml`
 **Implementation-agent contribution:** none. No Luna Max or other implementation-agent output was used as evidence for this review.

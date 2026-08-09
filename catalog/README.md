@@ -19,5 +19,7 @@ outside the privileged repository under the untracked `research-evidence/` tree,
 in a separate staging repository. Nothing under `catalog/` may be external-origin.
 
 Promotion of an imported entry requires the applicable Registry WAVE, immutable
-source locks, canonical metadata, license evidence, risk classification, and human
-approval.
+source locks, canonical metadata, license evidence, risk classification, an
+independent admission review, and a distinct Closure Agent decision. The
+Curator, Admission Review, and Closure Agents are separate; see
+[`docs/AGENT_AUTHORITY.md`](../docs/AGENT_AUTHORITY.md).
