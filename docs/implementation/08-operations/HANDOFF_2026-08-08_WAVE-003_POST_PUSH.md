@@ -61,9 +61,11 @@ Commits:
 
 - `4cc66c5` — `feat(registry): complete WAVE-003 local registry mechanics`
 - `0cb3987` — `docs(wave-003): record seed reconciliation and governance evidence`
+- `17d6e0d` — `data(registry): admit reviewed seed resources`
 
-Branch `main` was pushed normally to `origin` (`ec9f1aa..0cb3987`). No force
-push was used. The push triggered the configured pinned matrix workflow, whose
+Branch `main` was pushed normally to `origin` (`0cb3987..17d6e0d`; remote
+`main` resolves to `17d6e0d0bab711f85c7324877c565e3ebf66ec87`). No force push was
+used. The push triggered the configured pinned matrix workflow, whose
 release FTS5 command is `cargo +1.97.1 test -p ossus-registry --release
 --test release_fts5 --locked` on Ubuntu, macOS and Windows.
 

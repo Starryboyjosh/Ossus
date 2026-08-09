@@ -8,7 +8,8 @@
 - Closure Agent: distinct WAVE-003 security Closure Agent for ADR-021/CI and seed decisions; profiles 6 and 9 were accepted and admitted in the continuation batch
 - Date: 2026-08-08
 - Base commit: `ec9f1aa23aefa48f75a1db5396d232fd16bd02e0`
-- Checkpoint commits: `4cc66c5` (mechanics), `0cb3987` (governance/evidence); pushed to `origin/main`
+- Checkpoint commits: `4cc66c5` (mechanics), `0cb3987` (governance/evidence),
+  `17d6e0d` (admitted manifests and final handoff); pushed to `origin/main`
 
 ## Objective completed
 
