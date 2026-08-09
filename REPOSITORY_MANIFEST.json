@@ -10,7 +10,7 @@
       "docs/implementation/PACKAGE_MANIFEST.json"
     ]
   },
-  "file_count_excluding_generated_inventories": 368,
+  "file_count_excluding_generated_inventories": 371,
   "files": [
     {
       "path": ".cargo/config.toml",
@@ -201,6 +201,16 @@
       "path": "catalog/official/manifests/.gitkeep",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "catalog/official/manifests/mohitagw.database-schema-design.toml",
+      "bytes": 1676,
+      "sha256": "8d399f4473d5f22769cfb18bcc119ad53297b5047ec756e32d18c2b09666aa09"
+    },
+    {
+      "path": "catalog/official/manifests/mohitagw.technical-spec-template.toml",
+      "bytes": 1630,
+      "sha256": "c27ecf151da822dc2b2a64271c56bb8ea07d510c5b100548523f7d3313b43573"
     },
     {
       "path": "clippy.toml",
@@ -1238,6 +1248,11 @@
       "sha256": "32b3f59d943fcebb1f904d6ebe67972899632381907cd0f6612a754e74060326"
     },
     {
+      "path": "docs/implementation/08-operations/HANDOFF_2026-08-08_WAVE-003_POST_PUSH.md",
+      "bytes": 4069,
+      "sha256": "32f7ba616c17bc268c1367660e17cbca6a8aeca633b70353eb1fc7a46235ae30"
+    },
+    {
       "path": "docs/implementation/08-operations/HANDOFF_TEMPLATE.md",
       "bytes": 569,
       "sha256": "54e7da62d44da1eda50f093a52ad927d1d24c220bfdf821cd99e409cf9370cab"
@@ -1299,8 +1314,8 @@
     },
     {
       "path": "docs/implementation/08-operations/WAVE-003_REPORT.md",
-      "bytes": 5960,
-      "sha256": "c0c0978253c4ae24a210266b03df003d9ee68a991aa6d7b3be10891e41a8c1c3"
+      "bytes": 6012,
+      "sha256": "5994de8418aa2b6897ca37b5ad72794e9f0816074dc94d384ee77575aef3fd17"
     },
     {
       "path": "docs/implementation/08-operations/WAVE-003_SEED_ADMISSION_AND_SOURCE_REPORT.md",

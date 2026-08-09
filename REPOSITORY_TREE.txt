@@ -26,7 +26,9 @@ ossus/
 │   │   └── canonical-manifest.example.toml
 │   ├── official/
 │   │   ├── manifests/
-│   │   │   └── .gitkeep
+│   │   │   ├── .gitkeep
+│   │   │   ├── mohitagw.database-schema-design.toml
+│   │   │   └── mohitagw.technical-spec-template.toml
 │   │   └── README.md
 │   └── README.md
 ├── crates/
@@ -288,6 +290,7 @@ ossus/
 │   │   │   ├── HANDOFF_2026-08-07_AGENT_AUTHORITY.md
 │   │   │   ├── HANDOFF_2026-08-08_WAVE-003.md
 │   │   │   ├── HANDOFF_2026-08-08_WAVE-003_CLOSURE_PUSH.md
+│   │   │   ├── HANDOFF_2026-08-08_WAVE-003_POST_PUSH.md
 │   │   │   ├── HANDOFF_TEMPLATE.md
 │   │   │   ├── RELEASE_CHECKLIST.md
 │   │   │   ├── REVIEW_REPORT_TEMPLATE.md

@@ -7,7 +7,7 @@
     "source": "git tracked files under docs/implementation/",
     "self_excluded": "PACKAGE_MANIFEST.json"
   },
-  "file_count_excluding_manifest": 129,
+  "file_count_excluding_manifest": 130,
   "files": [
     {
       "path": "00-original-context/ORIGINAL_MASTER_PLAN_V1_SPANISH.md",
@@ -405,6 +405,11 @@
       "sha256": "32b3f59d943fcebb1f904d6ebe67972899632381907cd0f6612a754e74060326"
     },
     {
+      "path": "08-operations/HANDOFF_2026-08-08_WAVE-003_POST_PUSH.md",
+      "bytes": 4069,
+      "sha256": "32f7ba616c17bc268c1367660e17cbca6a8aeca633b70353eb1fc7a46235ae30"
+    },
+    {
       "path": "08-operations/HANDOFF_TEMPLATE.md",
       "bytes": 569,
       "sha256": "54e7da62d44da1eda50f093a52ad927d1d24c220bfdf821cd99e409cf9370cab"
@@ -466,8 +471,8 @@
     },
     {
       "path": "08-operations/WAVE-003_REPORT.md",
-      "bytes": 5960,
-      "sha256": "c0c0978253c4ae24a210266b03df003d9ee68a991aa6d7b3be10891e41a8c1c3"
+      "bytes": 6012,
+      "sha256": "5994de8418aa2b6897ca37b5ad72794e9f0816074dc94d384ee77575aef3fd17"
     },
     {
       "path": "08-operations/WAVE-003_SEED_ADMISSION_AND_SOURCE_REPORT.md",
