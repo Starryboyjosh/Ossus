@@ -11,8 +11,8 @@
 - Checkpoint commits: `4cc66c5` (mechanics), `0cb3987` (governance/evidence),
   `17d6e0d` (admitted manifests), `88b19b1` (post-push handoff), `3421b64`
   (checkpoint clarification), `603159f` (generated inventories), `aac6082`
-  (final-admission sprint), and `eb140f3` (hosted evidence); the
-  cross-platform inventory fix is staged for the next pushed checkpoint
+  (final-admission sprint), `eb140f3` (hosted evidence), and `c91d3a8`
+  (cross-platform inventory fix); pushed to `origin/main`
 
 ## Objective completed
 
@@ -20,13 +20,13 @@ Partially. Registry/search/CLI implementation is complete locally. Two R0
 standard-only resources are admitted; no additional candidate survived the
 bounded final-admission review. Hosted release FTS5 evidence is now observed
 for Ubuntu, macOS and Windows on CI run `31294757281` (workflow CI, run 14,
-commit `aac60826b3f8c69a5a35c3cb3e3ab12270718a74`). The same workflow's
-separate layout job failed. A true fresh-clone reproduction identified the
-cause: `.gitattributes` materializes `scripts/verify.ps1` as CRLF on hosted
-checkouts, while the inventory had hashed LF working-tree bytes. The inventory
-generator is now staged to hash Git index/blob bytes, which are
-platform-independent; a follow-up run is required before treating hosted CI as
-green. The profile reconciliation keeps 20 governed profile decisions but sets
+commit `aac60826b3f8c69a5a35c3cb3e3ab12270718a74`). That run exposed a
+checkout-filter mismatch in the separate layout job: `.gitattributes`
+materialized `scripts/verify.ps1` as CRLF while the inventory hashed LF
+working-tree bytes. The inventory generator now hashes Git index/blob bytes,
+which are platform-independent. Follow-up CI run **16** (`31295109423`) passed
+the complete workflow on commit `c91d3a8cc9c1a1fc19fe1d9766efe25e7d97f965`.
+The profile reconciliation keeps 20 governed profile decisions but sets
 a provisional 16 admission-bearing target;
 profiles 10, 17, 18, and 20 are intentionally unresolved. Profile 15 has an
 accepted surface correction, but its independent review is blocked on a bounded
@@ -83,33 +83,29 @@ with the repository generator; `./scripts/verify.sh` passes.
 | Search does not read bodies | Implemented and tested |
 | Exact/capability/category/FTS and filters | Implemented and tested |
 | CLI human and JSON output | Implemented; expanded suite passes |
-| Release FTS5 | Local release test passes. Hosted CI run `31294757281`/14 passed the pinned release test on Ubuntu job `93197926838`, macOS job `93197926836`, and Windows job `93197926835`; the separate layout job failed and needs a follow-up run |
+| Release FTS5 | Local release test passes. Hosted CI run `31295109423`/16 passed the pinned release test on Ubuntu job `93198830494`, macOS job `93198830507`, and Windows job `93198830495`; layout and all other workflow jobs also passed |
 | Reconciled seed profile decisions | Met for this checkpoint; 20 governed dispositions and provisional target 16 |
 | Admitted resources | 2 / 16 provisional admission-bearing slots; profiles 6 and 9 have Closure-approved manifests; no new candidate reached Closure in the final sprint |
 | Provenance/licenses/hashes/review | Profiles 6 and 9 have immutable MIT source locks, hashes, independent review and distinct Closure evidence; profile 10 remains blocked, 17/18 intentionally unresolved, and profile-20 replacement conditional |
-| Full repository verification | Met locally; `./scripts/verify.sh` passes. Hosted layout discrepancy remains under investigation |
+| Full repository verification | Met locally; `./scripts/verify.sh` passes; hosted CI run 16 is fully green |
 
 ## Hosted CI evidence
 
-The pushed checkpoint `aac60826b3f8c69a5a35c3cb3e3ab12270718a74` triggered
-workflow **CI**, run **14** (`31294757281`). The pinned matrix ran
+The pushed checkpoint `c91d3a8cc9c1a1fc19fe1d9766efe25e7d97f965` triggered
+workflow **CI**, run **16** (`31295109423`). The pinned matrix ran
 `cargo +1.97.1 test -p ossus-registry --release --test release_fts5 --locked`
 and completed successfully on all supported platforms:
 
 | Platform | Job | Result |
 |---|---:|---|
-| Ubuntu | `93197926838` | PASS — release FTS5 |
-| macOS | `93197926836` | PASS — release FTS5 |
-| Windows | `93197926835` | PASS — release FTS5 |
+| Ubuntu | `93198830494` | PASS — release FTS5 |
+| macOS | `93198830507` | PASS — release FTS5 |
+| Windows | `93198830495` | PASS — release FTS5 |
 
-The quality, advisory and cargo-deny jobs also passed. The independent
-`Repository layout invariants` job (`93197926856`) failed with exit code 1.
-A true fresh clone reproduces the failure as a stale `REPOSITORY_MANIFEST.json`
-entry for `scripts/verify.ps1`: the hosted checkout has 366 CRLF bytes while
-the committed inventory recorded 354 LF bytes. The staged generator correction
-reads canonical Git index blobs instead of checkout-filtered working-tree bytes;
-it leaves the inherited PowerShell file untouched and preserves deterministic
-hashes across platforms. A follow-up push is being used to verify the fix.
+The quality, advisory, cargo-deny and layout jobs also passed (`93198830455`,
+`93198830478`, `93198830480`, and `93198830448`). The inventory correction
+resolved the checkout-EOL mismatch without modifying the inherited PowerShell
+file.
 
 ## Known limitations and deferred work
 
@@ -118,10 +114,10 @@ candidate is rejected and its replacement needs build/provenance and host-adapte
 corrections. Profile 15 has an accepted explicit surface substitution but no
 admission. Profile 10 requires an immutable read-only enforcement adapter.
 Profiles 6 and 9 are admitted only as Agent Skills standard resources and do
-not satisfy aggregate cross-host diversity. Hosted FTS5 is observed on all
-three supported platforms, but the layout-job discrepancy still blocks a fully
-green hosted checkpoint. All deferred work remains within WAVE-003; WAVE-004 is
-not authorized.
+not satisfy aggregate cross-host diversity. Hosted FTS5 and the complete CI
+workflow are now green; remaining blockers are seed admissions/profile
+governance only. All deferred work remains within WAVE-003; WAVE-004 is not
+authorized.
 
 ## Security and residual risk
 

@@ -8,8 +8,8 @@ admission-bearing target is 16 and the official Registry contains 2 reviewed
 resources (profiles 6 and 9). The bounded final sprint added no new admission:
 profile 15 is independently blocked, profiles 5/7/11/12 have amendment
 packets, and profile 16 remains valid but unfilled. Hosted Ubuntu/macOS/Windows
-release FTS5 passes are recorded, but a separate layout-job discrepancy and
-final Closure remain unfinished.
+release FTS5 and complete CI run 16 pass; final Closure and admissions remain
+unfinished.
 
 ## Technical summary
 
@@ -43,8 +43,8 @@ Depends on complete WAVE-002 and closed Gate S1. It does not close a gate.
 Obtain distinct Closure decisions only for candidates that first pass bounded
 independent review, admit canonical manifests incrementally, record hosted
 release FTS5 evidence (already passing on all three supported CI platforms),
-resolve the separate hosted layout-job discrepancy, regenerate inventories with
-the generator, rerun full verification, and obtain final WAVE Closure. Profile 10 needs an immutable
+preserve the Git-index-byte inventory fix, regenerate inventories with the
+generator, rerun full verification, and obtain final WAVE Closure. Profile 10 needs an immutable
 read-only adapter; profile 15 needs a dependency-only adapter, freshness and
 redaction evidence; profile 16 needs a clean licensed, self-contained Claude
 candidate; profile 20 needs a safe MCP replacement or an architecture

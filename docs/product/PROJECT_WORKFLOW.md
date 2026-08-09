@@ -61,9 +61,9 @@ MCP candidate is rejected while a replacement is conditional. Profiles 5, 7,
 approvals.
 
 The pinned hosted release FTS5 jobs for Ubuntu, macOS and Windows passed on the
-latest pushed checkpoint. A separate hosted repository-layout job failed even
-though the exact commit passes the same check in a fresh clone; that discrepancy
-must be resolved before the hosted workflow is considered fully green.
+latest pushed checkpoint. The inventory generator now hashes canonical Git
+index/blob bytes, fixing the checkout-EOL discrepancy; hosted CI run 16 is fully
+green. This closes the CI evidence dimension, not seed admission.
 
 The catalog has no quota. Catalog growth is an outcome of successful review,
 never a goal that overrides review, and discovery volume must never create

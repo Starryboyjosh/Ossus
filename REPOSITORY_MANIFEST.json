@@ -819,8 +819,8 @@
     },
     {
       "path": "docs/architecture/IMPLEMENTATION_WORKFLOW.md",
-      "bytes": 6740,
-      "sha256": "f030b7a09d230b13ba7890f03441bda8e13f587b088c1bd92b742d60003db960"
+      "bytes": 6742,
+      "sha256": "fecacb010d0ac98d9423b0211bc06e722194a05ded057749b59e85cb9862c623"
     },
     {
       "path": "docs/architecture/REGISTRY_DESIGN.md",
@@ -1249,8 +1249,8 @@
     },
     {
       "path": "docs/implementation/08-operations/HANDOFF_2026-08-08_WAVE-003_FINAL_ADMISSION_SPRINT.md",
-      "bytes": 5589,
-      "sha256": "961903aa58ce7d60a800332fd2766281df106d15d2f6664b1186015607156056"
+      "bytes": 5610,
+      "sha256": "5771266b8ab3cdaffb06786b20aed901d11337f299699313b796736de79f6872"
     },
     {
       "path": "docs/implementation/08-operations/HANDOFF_2026-08-08_WAVE-003_POST_PUSH.md",
@@ -1324,8 +1324,8 @@
     },
     {
       "path": "docs/implementation/08-operations/WAVE-003_REPORT.md",
-      "bytes": 10499,
-      "sha256": "566fa700b318a6b7160e8e3a7e022ed776fd146432d27e4c692c1fbfe82a0865"
+      "bytes": 10057,
+      "sha256": "2ea7a621192e51a7040ec3c52eb6b981fd6da989ac62223de28e405e7d771dab"
     },
     {
       "path": "docs/implementation/08-operations/WAVE-003_SEED_ADMISSION_AND_SOURCE_REPORT.md",
@@ -1369,8 +1369,8 @@
     },
     {
       "path": "docs/implementation/08-operations/wave-summaries/WAVE-003_SUMMARY.md",
-      "bytes": 3617,
-      "sha256": "600728e80620c7f4de2aca7fb0dedc34d1f7fa32e2be6bf75225b7cf38c048ee"
+      "bytes": 3589,
+      "sha256": "d8d3c4149d11eae712b4784018b429d1ce36252c5a78aebc8bde3be052f8c8cb"
     },
     {
       "path": "docs/implementation/08-operations/wave-summaries/WAVE-004_SUMMARY.md",
@@ -1499,8 +1499,8 @@
     },
     {
       "path": "docs/implementation/CURRENT_WAVE.md",
-      "bytes": 3174,
-      "sha256": "0b4c702e616b169ffb53af5d8daa1af33ad14dcd1cc2f4ba846ea63ebbee015f"
+      "bytes": 3131,
+      "sha256": "f7f18e9933476d14b311c9f7eb573cbaf2c2a99f6871d7bc707b59093f4b2983"
     },
     {
       "path": "docs/implementation/README.md",
@@ -1539,8 +1539,8 @@
     },
     {
       "path": "docs/product/PROJECT_WORKFLOW.md",
-      "bytes": 4586,
-      "sha256": "79837997acd9a1623a8ab701eaeb2bf998985215fde0d94b5c37c417bfa7ce8b"
+      "bytes": 4578,
+      "sha256": "743171fbb6bc1ef65e7ed714a5d659fed25be9e53d4347a3525a692a0e06dee7"
     },
     {
       "path": "docs/product/ossus-explainer.html",
