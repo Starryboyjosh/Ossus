@@ -47,8 +47,8 @@ explicit amendment packets, not approvals.
   independent review of a replacement profile-20 MCP candidate, and Closure
   acceptance/materialization of profiles 6 and 9.
 - Cumulative technical and practical workflow documentation.
-- Arch Linux userspace CI validation lane with independent review and distinct
-  Closure acceptance; hosted result remains pending.
+- Arch Linux userspace CI validation lane with independent review, distinct
+  Closure acceptance and hosted evidence on CI run 19.
 - Bounded final-admission sprint: profile-amendment decision packets for 5, 7,
   11 and 12; targeted rejection/unresolved confirmations for profiles 1, 3, 4,
   14 and 16; and an independent block for the profile-15 substitution.
@@ -93,11 +93,11 @@ suite and the release FTS5 test.
 | Search does not read bodies | Implemented and tested |
 | Exact/capability/category/FTS and filters | Implemented and tested |
 | CLI human and JSON output | Implemented; expanded suite passes |
-| Release FTS5 | Local release test passes. Hosted CI run `31295109423`/16 passed the pinned release test on Ubuntu job `93198830494`, macOS job `93198830507`, and Windows job `93198830495`; the Arch-container lane was added after that run and is pending its first hosted result |
+| Release FTS5 | Local release test passes. Hosted CI run `31298472061`/19 passed the pinned release test on Ubuntu job `93207265221`, macOS job `93207265246`, Windows job `93207265192`, and Arch-container job `93207265220` |
 | Reconciled seed profile decisions | Met for this checkpoint; 20 governed dispositions and provisional target 16 |
 | Admitted resources | 2 / 16 provisional admission-bearing slots; profiles 6 and 9 have Closure-approved manifests; no new candidate reached Closure in the final sprint |
 | Provenance/licenses/hashes/review | Profiles 6 and 9 have immutable MIT source locks, hashes, independent review and distinct Closure evidence; profile 10 remains blocked, 17/18 intentionally unresolved, and profile-20 replacement conditional |
-| Full repository verification | Met locally; `./scripts/verify.sh` passes; hosted CI run 16 is fully green |
+| Full repository verification | Met locally; `./scripts/verify.sh` passes; hosted CI run 19 is fully green |
 
 ## Hosted CI evidence
 
@@ -112,25 +112,26 @@ and completed successfully on every platform declared in that run:
 | macOS | `93198830507` | PASS — release FTS5 |
 | Windows | `93198830495` | PASS — release FTS5 |
 
-This run predates the Arch Linux validation lane. The current workflow now
-also runs an immutable `archlinux:base-devel` image on an Ubuntu-hosted runner,
-selecting Linux/amd64 and executing the workspace suite plus the release FTS5
-test inside the Arch userspace. Local reproduction of that exact container
-configuration passed; hosted Arch evidence remains pending until the new lane
-completes. It must be reported separately from native Ubuntu and must never be
-described as a native Arch host result.
+CI run **19** (`31298472061`) for commit
+`65b79e1e21d96f406e099bfcd98b551c4f6198a7` passed every job. The Arch job
+(`93207265220`) ran the workspace suite and release FTS5 test inside the
+immutable Arch image index below on an Ubuntu-hosted Linux/amd64 runner. The
+workflow logs retain the x86_64 assertion, package/toolchain output and both
+locked test commands; unauthenticated API access in this environment exposes
+job conclusions but not downloadable logs.
 
 | Platform | Environment | Image / toolchain | Release FTS5 |
 |---|---|---|---|
-| Ubuntu | GitHub-hosted native runner | Rust `1.97.1`; bundled SQLite | PASS — run 16 |
-| Arch Linux | Arch userspace in Ubuntu-hosted Docker container (`linux/amd64`) | `archlinux:base-devel@sha256:c1829f370be8434135f43fb3acaef1256780804ac3b2d2eec90dfb1232e1ffdf`; Rust `1.97.1` | HOSTED PENDING; local container PASS |
-| macOS | GitHub-hosted native runner | Rust `1.97.1`; bundled SQLite | PASS — run 16 |
-| Windows | GitHub-hosted native runner | Rust `1.97.1`; bundled SQLite | PASS — run 16 |
+| Ubuntu | GitHub-hosted native runner; job [`93207265221`](https://github.com/Starryboyjosh/Ossus/actions/runs/31298472061/job/93207265221) | Rust `1.97.1`; bundled SQLite | PASS — run 19 |
+| Arch Linux | Arch userspace in Ubuntu-hosted Docker container (`linux/amd64`); job [`93207265220`](https://github.com/Starryboyjosh/Ossus/actions/runs/31298472061/job/93207265220) | `archlinux:base-devel@sha256:c1829f370be8434135f43fb3acaef1256780804ac3b2d2eec90dfb1232e1ffdf`; resolved amd64 child `sha256:fae033b815a16f930325c2697e620362be4d2e5d739a301b10ad1fc9c8643a06`; Rust `1.97.1`; bundled SQLite | PASS — run 19; containerized userspace, not native Arch |
+| macOS | GitHub-hosted native runner; job [`93207265246`](https://github.com/Starryboyjosh/Ossus/actions/runs/31298472061/job/93207265246) | Rust `1.97.1`; bundled SQLite | PASS — run 19 |
+| Windows | GitHub-hosted native runner; job [`93207265192`](https://github.com/Starryboyjosh/Ossus/actions/runs/31298472061/job/93207265192) | Rust `1.97.1`; bundled SQLite | PASS — run 19 |
 
-The quality, advisory, cargo-deny and layout jobs also passed (`93198830455`,
-`93198830478`, `93198830480`, and `93198830448`). The inventory correction
-resolved the checkout-EOL mismatch without modifying the inherited PowerShell
-file.
+The complete run is recorded at
+https://github.com/Starryboyjosh/Ossus/actions/runs/31298472061. The quality,
+advisory, cargo-deny and layout jobs also passed; the inventory correction
+continues to resolve the checkout-EOL mismatch without modifying the inherited
+PowerShell file.
 
 ## Known limitations and deferred work
 
@@ -139,11 +140,10 @@ candidate is rejected and its replacement needs build/provenance and host-adapte
 corrections. Profile 15 has an accepted explicit surface substitution but no
 admission. Profile 10 requires an immutable read-only enforcement adapter.
 Profiles 6 and 9 are admitted only as Agent Skills standard resources and do
-not satisfy aggregate cross-host diversity. Hosted Ubuntu/macOS/Windows FTS5 and
-the complete pre-Arch CI workflow are green. The Arch-container lane is locally
-green and its first hosted result is pending; remaining blockers are seed
-admissions/profile governance and that new hosted evidence. All deferred work
-remains within WAVE-003; WAVE-004 is not authorized.
+not satisfy aggregate cross-host diversity. Hosted Ubuntu/macOS/Windows and
+Arch-container FTS5 plus the complete CI run 19 are green. Remaining blockers
+are seed admissions and profile governance. All deferred work remains within
+WAVE-003; WAVE-004 is not authorized.
 
 ## Security and residual risk
 
@@ -187,8 +187,8 @@ the future Researcher.
 
 ## Technical reader summary
 
-Registry code is at a locally passing baseline. Admission and platform evidence,
-not core indexing behavior, are the closure blockers.
+Registry code is at a locally passing baseline. Admission and profile governance,
+not core indexing or platform validation, are the closure blockers.
 
 ## Practical plain-language summary
 
@@ -200,7 +200,7 @@ resources.
 ## Closure decision
 
 - Decision: blocked from acceptance; WAVE remains in progress
-- Evidence revision: 2026-08-08 reconciliation, Closure acceptance for profiles 6/9, and authorized push
+- Evidence revision: 2026-08-08 reconciliation, Closure acceptance for profiles 6/9, Arch CI Closure, and hosted CI run 19
 - Independence attestation: implementer has not self-approved any resource;
   official Registry count is 2; the provisional target is 16 admission-bearing
   slots; profile 15 admission remains blocked after independent review,

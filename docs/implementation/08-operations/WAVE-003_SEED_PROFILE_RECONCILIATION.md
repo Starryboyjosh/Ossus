@@ -83,8 +83,6 @@ decision; it is not a resource admission, and the provisional target is not a
 quota.
 
 The WAVE remains in progress because the remaining target has not completed the
-full authority chain. Hosted Ubuntu/macOS/Windows release FTS5 and the complete
-pre-Arch CI workflow are green in runs 16–18. The separately defined Arch
-userspace-container lane passes locally and awaits its first hosted result; it
-must be reported independently from native Ubuntu and is not native Arch-host
-evidence.
+full authority chain. Hosted Ubuntu, Arch userspace-container, macOS and
+Windows release FTS5 plus the complete CI run 19 are green. The Arch lane is
+reported independently from native Ubuntu and is not native Arch-host evidence.

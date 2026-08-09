@@ -57,7 +57,23 @@ residual risks are the mutable `pacman -Syu` package layer, Rustup/Cargo network
 inputs, the absence of a publisher-signature policy, and the distinction
 between Arch userspace and a native Arch host.
 
-Operational evidence is still required: a successful hosted run for the
-materialized commit, retained logs showing the platform/image/package/toolchain
-and both locked test commands, and a report entry with the run/job URL and the
-resolved amd64 child digest.
+## Hosted evidence
+
+CI run [19](https://github.com/Starryboyjosh/Ossus/actions/runs/31298472061)
+for commit `65b79e1e21d96f406e099bfcd98b551c4f6198a7` completed successfully.
+The Arch job is
+[`93207265220`](https://github.com/Starryboyjosh/Ossus/actions/runs/31298472061/job/93207265220).
+Its workflow step ran the x86_64 assertion, logged Arch package/toolchain
+versions, and passed both locked commands:
+
+```text
+cargo +1.97.1 test --workspace --all-features --locked
+cargo +1.97.1 test -p ossus-registry --release --test release_fts5 --locked
+```
+
+The image index is
+`archlinux:base-devel@sha256:c1829f370be8434135f43fb3acaef1256780804ac3b2d2eec90dfb1232e1ffdf`;
+its selected Linux/amd64 child is
+`sha256:fae033b815a16f930325c2697e620362be4d2e5d739a301b10ad1fc9c8643a06`.
+GitHub retains the job logs; unauthenticated API access used for this handoff
+exposes the conclusion and step metadata but denies log download.

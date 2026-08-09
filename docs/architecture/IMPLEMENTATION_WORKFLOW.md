@@ -132,9 +132,11 @@ the repository-layout, quality, advisory and cargo-deny jobs passed in CI run
 EOL filters cannot change tracked-file hashes. A separate Arch Linux userspace
 container job is now defined on an Ubuntu-hosted runner, pinned to
 `archlinux:base-devel@sha256:c1829f370be8434135f43fb3acaef1256780804ac3b2d2eec90dfb1232e1ffdf`
-and Rust `1.97.1`; its local workspace/FTS5 reproduction passes and its first
-hosted result remains pending. The container is not a native Arch host and is
-reported separately. The 20-resource catalog
+and Rust `1.97.1`; its local workspace/FTS5 reproduction and hosted CI run 19
+pass. The hosted Arch job is `93207265220`, with resolved amd64 child
+`sha256:fae033b815a16f930325c2697e620362be4d2e5d739a301b10ad1fc9c8643a06`.
+The container is not a native Arch host and is reported separately. The
+20-resource catalog
 and final admission report are still in progress. One Sol Medium advisory was used for the hardest
 profile-15/profile-16 reconciliation; it did not approve anything. No scanning,
 Resolver, policy scoring, installation,

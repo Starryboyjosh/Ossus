@@ -21,6 +21,9 @@ official Arch Linux `base-devel` image and selects `linux/amd64` explicitly:
 archlinux:base-devel@sha256:c1829f370be8434135f43fb3acaef1256780804ac3b2d2eec90dfb1232e1ffdf
 ```
 
+The selected Linux/amd64 child manifest is
+`sha256:fae033b815a16f930325c2697e620362be4d2e5d739a301b10ad1fc9c8643a06`.
+
 The container installs the current Arch package updates needed for
 certificates and rustup, installs Rust `1.97.1`, logs the package/toolchain
 versions, runs the workspace tests with `--all-features --locked`, and runs the
@@ -32,7 +35,13 @@ The image index resolves to the Linux/amd64 manifest used by the hosted
 runner. This is Arch userspace validation on an Ubuntu kernel, not a native
 Arch host or a packaging/AUR test.
 
-Hosted result for this new lane: **PENDING FIRST RUN**.
+Hosted result for this new lane: **PASS** on CI run
+[19](https://github.com/Starryboyjosh/Ossus/actions/runs/31298472061), job
+[`93207265220`](https://github.com/Starryboyjosh/Ossus/actions/runs/31298472061/job/93207265220),
+commit `65b79e1e21d96f406e099bfcd98b551c4f6198a7`. The job completed the
+x86_64 assertion, package/toolchain logging, workspace tests and release FTS5
+test. GitHub retains the logs; unauthenticated API access exposes job/step
+metadata but cannot download them.
 
 ## Existing hosted evidence
 
@@ -40,10 +49,10 @@ The previous declared matrix remains independently recorded:
 
 | Platform | Environment | Release FTS5 |
 |---|---|---|
-| Ubuntu | GitHub-hosted native runner | PASS — CI run 16, job `93198830494` |
-| macOS | GitHub-hosted native runner | PASS — CI run 16, job `93198830507` |
-| Windows | GitHub-hosted native runner | PASS — CI run 16, job `93198830495` |
-| Arch Linux | Arch userspace in Ubuntu-hosted Docker container | PENDING hosted; local PASS |
+| Ubuntu | GitHub-hosted native runner | PASS — CI run 19, job `93207265221` |
+| Arch Linux | Arch userspace in Ubuntu-hosted Docker container | PASS — CI run 19, job `93207265220`; not native Arch |
+| macOS | GitHub-hosted native runner | PASS — CI run 19, job `93207265246` |
+| Windows | GitHub-hosted native runner | PASS — CI run 19, job `93207265192` |
 
 Do not collapse these rows into a generic “Linux” result.
 
@@ -71,11 +80,7 @@ container-versus-native limitation remain recorded residual risks.
 1. Admit additional resources only after Curator → independent Review → Closure.
 2. Keep profiles 10, 16, 17, 18 and 20 fail-closed until their evidence or
    profile decisions change through the governed process.
-3. Obtain and record the hosted Arch result, separately from Ubuntu/macOS/
-   Windows and with its container limitation stated; retained logs must show
-   x86_64, the image/index and resolved amd64 digest, package/toolchain output,
-   and both locked test commands.
-4. Decide the final seed denominator through architecture authority; do not use
+3. Decide the final seed denominator through architecture authority; do not use
    the target as an admission quota.
 
 No Resolver, scanner, installation, activation, adapter, synchronization or

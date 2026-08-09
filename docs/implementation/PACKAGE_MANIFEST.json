@@ -401,8 +401,8 @@
     },
     {
       "path": "08-operations/HANDOFF_2026-08-08_WAVE-003_ARCH_COVERAGE.md",
-      "bytes": 3716,
-      "sha256": "79686ad0f9a3fb623ad0efbe4eefa64e3e7028bd83968657b894da5b377640a6"
+      "bytes": 4027,
+      "sha256": "4ce23205beb0ce5b35ec4bba6bd86ada0b99e4ad38685a185bf31bde6a5ecbf2"
     },
     {
       "path": "08-operations/HANDOFF_2026-08-08_WAVE-003_CLOSURE_PUSH.md",
@@ -476,8 +476,8 @@
     },
     {
       "path": "08-operations/WAVE-003_ARCH_CI_REVIEW.md",
-      "bytes": 2930,
-      "sha256": "1188c4756d10954cf336699fd38916ec44538c56ac78222752c8c4a9a375b6da"
+      "bytes": 3589,
+      "sha256": "8ac12c59cb57d09f12604ff611e99c725b02bb442e44fd87c55c0d9d535aafd5"
     },
     {
       "path": "08-operations/WAVE-003_CANONICAL_PROPOSALS.md",
@@ -491,8 +491,8 @@
     },
     {
       "path": "08-operations/WAVE-003_REPORT.md",
-      "bytes": 12047,
-      "sha256": "2f0b278a23029a03e2cb64d98c6579355c61e59ff2344df0747002bc7cf7cc9c"
+      "bytes": 12469,
+      "sha256": "3cf681b14c8ca34ff29a510bb467c68b2d1cce32a3bb5ea33a43620afcd6dac4"
     },
     {
       "path": "08-operations/WAVE-003_SEED_ADMISSION_AND_SOURCE_REPORT.md",
@@ -506,8 +506,8 @@
     },
     {
       "path": "08-operations/WAVE-003_SEED_PROFILE_RECONCILIATION.md",
-      "bytes": 13703,
-      "sha256": "e01e3d728dabc360f7932277eb96c26e2e1bd1433b58a427699b22010776a0d6"
+      "bytes": 13610,
+      "sha256": "44810be6c1887d7a9d9973ef3085f063c550d93c532167d94ff6ad856b207541"
     },
     {
       "path": "08-operations/WAVE_REPORT_TEMPLATE.md",
@@ -536,8 +536,8 @@
     },
     {
       "path": "08-operations/wave-summaries/WAVE-003_SUMMARY.md",
-      "bytes": 3866,
-      "sha256": "e51654d51190ce665872d590d9fb1ad2f09e976785ceefc8ab9b65fbfb28732a"
+      "bytes": 3742,
+      "sha256": "3b4a370b7741ff5daaae6eecb0cfdebdd2a8f7ed7845d14f08e262197f2add6c"
     },
     {
       "path": "08-operations/wave-summaries/WAVE-004_SUMMARY.md",
@@ -666,8 +666,8 @@
     },
     {
       "path": "CURRENT_WAVE.md",
-      "bytes": 3232,
-      "sha256": "ca08272a28fee11f1e2357658bfa862cb55d6ccd3a8102f9e22255f409750350"
+      "bytes": 3153,
+      "sha256": "4dc083df34e9715041e414d5ea768d6747216e1d253f3027f91e4694803b8263"
     },
     {
       "path": "README.md",

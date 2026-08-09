@@ -60,13 +60,12 @@ MCP candidate is rejected while a replacement is conditional. Profiles 5, 7,
 11 and 12 have explicit amendment packets, not approvals. These are not
 approvals.
 
-The pinned hosted release FTS5 jobs for Ubuntu, macOS and Windows passed on the
-latest pre-Arch checkpoint. The inventory generator now hashes canonical Git
-index/blob bytes, fixing the checkout-EOL discrepancy; CI run 18 is fully green
-for the then-declared jobs. A separate Arch Linux validation job now runs the
-workspace and release FTS5 tests inside a pinned Arch userspace container on an
-Ubuntu-hosted runner. Local reproduction passes; its first hosted result is
-pending. Arch container validation is not native Arch-host validation. This
+The pinned hosted release FTS5 jobs for Ubuntu, macOS and Windows, plus the
+separate Arch Linux userspace validation job, passed in CI run 19. The
+inventory generator now hashes canonical Git index/blob bytes, fixing the
+checkout-EOL discrepancy. The Arch job runs the workspace and release FTS5
+tests inside a pinned Arch userspace container on an Ubuntu-hosted runner;
+Arch container validation is not native Arch-host validation. This
 platform-evidence work does not close seed admission.
 
 The catalog has no quota. Catalog growth is an outcome of successful review,

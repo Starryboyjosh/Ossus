@@ -21,7 +21,7 @@ WAVE-003 implements the disposable local SQLite/FTS Registry index, deterministi
 | Seed profile reconciliation | Governed dispositions recorded for all 20 profiles; provisional admission-bearing target is 16, with profiles 10, 17, 18 and 20 intentionally unresolved |
 | Concrete candidates independently agent-admitted | 2 — profiles 6 and 9 crossed Curator → independent Review → Closure; 14 provisional admission-bearing slots remain; the final sprint admitted no additional candidate |
 | Final-admission sprint | Profile 15 independently blocked; profiles 5, 7, 11 and 12 have explicit R3 amendment packets; profile 16 remains valid and unfilled; profiles 1, 3, 4 and 14 were confirmed candidate-rejected/profile-valid |
-| WAVE-003 report and final verification | Reconciliation report, official manifests, amendment packets, sprint handoff and closure review written; local verification passes; hosted Ubuntu/macOS/Windows FTS5 and complete pre-Arch CI run 18 pass; local Arch-container workspace/FTS5 validation passes; first hosted Arch result is pending; remaining admissions are pending |
+| WAVE-003 report and final verification | Reconciliation report, official manifests, amendment packets, sprint handoff and closure review written; local verification passes; hosted Ubuntu, Arch-container, macOS and Windows FTS5 plus complete CI run 19 pass; remaining admissions are pending |
 
 ## Preceding WAVEs
 
