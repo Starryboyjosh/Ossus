@@ -7,7 +7,7 @@
     "source": "git tracked files under docs/implementation/",
     "self_excluded": "PACKAGE_MANIFEST.json"
   },
-  "file_count_excluding_manifest": 132,
+  "file_count_excluding_manifest": 134,
   "files": [
     {
       "path": "00-original-context/ORIGINAL_MASTER_PLAN_V1_SPANISH.md",
@@ -226,8 +226,8 @@
     },
     {
       "path": "06-waves/03-registry-and-search.md",
-      "bytes": 3168,
-      "sha256": "7e3518b4673bcc8d016fda71e05298a3ade8b9e18904fa2fb73aa1016d16e2a5"
+      "bytes": 3441,
+      "sha256": "8f62b4ec61acc04b9e57a4f956ece0547a77c8c24361b6f311fce89ae4796929"
     },
     {
       "path": "06-waves/04-project-scanner.md",
@@ -400,6 +400,11 @@
       "sha256": "0b82bfd7a151744377445d707d2c8a5c97ca360c77e1a2e38dd59eb18e40e692"
     },
     {
+      "path": "08-operations/HANDOFF_2026-08-08_WAVE-003_ARCH_COVERAGE.md",
+      "bytes": 3716,
+      "sha256": "79686ad0f9a3fb623ad0efbe4eefa64e3e7028bd83968657b894da5b377640a6"
+    },
+    {
       "path": "08-operations/HANDOFF_2026-08-08_WAVE-003_CLOSURE_PUSH.md",
       "bytes": 4947,
       "sha256": "32b3f59d943fcebb1f904d6ebe67972899632381907cd0f6612a754e74060326"
@@ -470,6 +475,11 @@
       "sha256": "ca481110635cc6b95a9891d50165ed9f17458651bb9024b475f857949c07e69e"
     },
     {
+      "path": "08-operations/WAVE-003_ARCH_CI_REVIEW.md",
+      "bytes": 2930,
+      "sha256": "1188c4756d10954cf336699fd38916ec44538c56ac78222752c8c4a9a375b6da"
+    },
+    {
       "path": "08-operations/WAVE-003_CANONICAL_PROPOSALS.md",
       "bytes": 7474,
       "sha256": "7debb717a463a474bd9fad83d00873c052cb14acdfe11f3112c73e9a8f634eba"
@@ -481,8 +491,8 @@
     },
     {
       "path": "08-operations/WAVE-003_REPORT.md",
-      "bytes": 10057,
-      "sha256": "2ea7a621192e51a7040ec3c52eb6b981fd6da989ac62223de28e405e7d771dab"
+      "bytes": 12047,
+      "sha256": "2f0b278a23029a03e2cb64d98c6579355c61e59ff2344df0747002bc7cf7cc9c"
     },
     {
       "path": "08-operations/WAVE-003_SEED_ADMISSION_AND_SOURCE_REPORT.md",
@@ -496,8 +506,8 @@
     },
     {
       "path": "08-operations/WAVE-003_SEED_PROFILE_RECONCILIATION.md",
-      "bytes": 13537,
-      "sha256": "8c893663000014219720cde66ea49d9146dc516ab1b14af5cc188be2d6ee89d9"
+      "bytes": 13703,
+      "sha256": "e01e3d728dabc360f7932277eb96c26e2e1bd1433b58a427699b22010776a0d6"
     },
     {
       "path": "08-operations/WAVE_REPORT_TEMPLATE.md",
@@ -526,8 +536,8 @@
     },
     {
       "path": "08-operations/wave-summaries/WAVE-003_SUMMARY.md",
-      "bytes": 3589,
-      "sha256": "d8d3c4149d11eae712b4784018b429d1ce36252c5a78aebc8bde3be052f8c8cb"
+      "bytes": 3866,
+      "sha256": "e51654d51190ce665872d590d9fb1ad2f09e976785ceefc8ab9b65fbfb28732a"
     },
     {
       "path": "08-operations/wave-summaries/WAVE-004_SUMMARY.md",
@@ -656,8 +666,8 @@
     },
     {
       "path": "CURRENT_WAVE.md",
-      "bytes": 3131,
-      "sha256": "f7f18e9933476d14b311c9f7eb573cbaf2c2a99f6871d7bc707b59093f4b2983"
+      "bytes": 3232,
+      "sha256": "ca08272a28fee11f1e2357658bfa862cb55d6ccd3a8102f9e22255f409750350"
     },
     {
       "path": "README.md",

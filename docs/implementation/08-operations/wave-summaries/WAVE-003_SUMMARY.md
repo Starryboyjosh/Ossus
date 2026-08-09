@@ -8,7 +8,9 @@ admission-bearing target is 16 and the official Registry contains 2 reviewed
 resources (profiles 6 and 9). The bounded final sprint added no new admission:
 profile 15 is independently blocked, profiles 5/7/11/12 have amendment
 packets, and profile 16 remains valid but unfilled. Hosted Ubuntu/macOS/Windows
-release FTS5 and complete CI run 16 pass; final Closure and admissions remain
+release FTS5 and complete pre-Arch CI run 18 pass. The new Arch Linux
+userspace-container lane reproduces the workspace and release FTS5 checks
+locally; its first hosted result is pending. Final Closure and admissions remain
 unfinished.
 
 ## Technical summary
@@ -33,6 +35,8 @@ Ossus can now build and search a local catalog by capability and compatibility w
 - Closure-push handoff: `../HANDOFF_2026-08-08_WAVE-003_CLOSURE_PUSH.md`.
 - Current post-push handoff: `../HANDOFF_2026-08-08_WAVE-003_POST_PUSH.md`.
 - Final-admission sprint handoff: `../HANDOFF_2026-08-08_WAVE-003_FINAL_ADMISSION_SPRINT.md`.
+- Arch coverage handoff: `../HANDOFF_2026-08-08_WAVE-003_ARCH_COVERAGE.md`.
+- Arch CI review: `../WAVE-003_ARCH_CI_REVIEW.md`.
 
 ## Dependencies and gates
 
@@ -42,7 +46,7 @@ Depends on complete WAVE-002 and closed Gate S1. It does not close a gate.
 
 Obtain distinct Closure decisions only for candidates that first pass bounded
 independent review, admit canonical manifests incrementally, record hosted
-release FTS5 evidence (already passing on all three supported CI platforms),
+release FTS5 evidence separately for Ubuntu, Arch container, macOS and Windows,
 preserve the Git-index-byte inventory fix, regenerate inventories with the
 generator, rerun full verification, and obtain final WAVE Closure. Profile 10 needs an immutable
 read-only adapter; profile 15 needs a dependency-only adapter, freshness and

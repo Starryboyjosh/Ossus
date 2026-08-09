@@ -127,9 +127,14 @@ coverage until host adapters exist.
 
 WAVE-003 does not close a security gate. Local Linux x86_64 release-mode FTS5 is
 verified, and pinned hosted Ubuntu, macOS and Windows release FTS5 jobs plus
-the repository-layout, quality, advisory and cargo-deny jobs have passed in CI
-run 16. The inventory generator hashes canonical Git index/blob bytes so
-checkout EOL filters cannot change tracked-file hashes. The 20-resource catalog
+the repository-layout, quality, advisory and cargo-deny jobs passed in CI run
+18. The inventory generator hashes canonical Git index/blob bytes so checkout
+EOL filters cannot change tracked-file hashes. A separate Arch Linux userspace
+container job is now defined on an Ubuntu-hosted runner, pinned to
+`archlinux:base-devel@sha256:c1829f370be8434135f43fb3acaef1256780804ac3b2d2eec90dfb1232e1ffdf`
+and Rust `1.97.1`; its local workspace/FTS5 reproduction passes and its first
+hosted result remains pending. The container is not a native Arch host and is
+reported separately. The 20-resource catalog
 and final admission report are still in progress. One Sol Medium advisory was used for the hardest
 profile-15/profile-16 reconciliation; it did not approve anything. No scanning,
 Resolver, policy scoring, installation,

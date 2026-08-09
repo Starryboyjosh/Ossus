@@ -45,6 +45,10 @@ Build the index-first Registry and searchable manual seed catalog.
 - **F-09** — a conflict fixture where two entries reference the same commit in different letter cases. Because WAVE-002 normalizes `source.commit` to lowercase at ingest, these must collide as one commit rather than index as two distinct sources.
 - Malformed manifest exclusion.
 - JSON output schema.
+- Hosted release FTS5 evidence recorded separately for Ubuntu, the Arch Linux
+  validation container, macOS and Windows. The Arch lane is an Arch userspace
+  running on an Ubuntu-hosted runner; it is not evidence from a native Arch
+  host and must not be reported as such.
 
 ## Acceptance criteria
 

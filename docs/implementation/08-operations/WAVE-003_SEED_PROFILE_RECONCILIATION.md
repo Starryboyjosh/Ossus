@@ -84,4 +84,7 @@ quota.
 
 The WAVE remains in progress because the remaining target has not completed the
 full authority chain. Hosted Ubuntu/macOS/Windows release FTS5 and the complete
-CI workflow are now green in run 16; hosted evidence is no longer a blocker.
+pre-Arch CI workflow are green in runs 16–18. The separately defined Arch
+userspace-container lane passes locally and awaits its first hosted result; it
+must be reported independently from native Ubuntu and is not native Arch-host
+evidence.

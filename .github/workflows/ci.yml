@@ -52,6 +52,44 @@ jobs:
       - name: Build the CLI
         run: cargo +1.97.1 build -p ossus
 
+  test-arch-container:
+    name: Test (Arch Linux container, Rust 1.97.1)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Run Arch Linux userspace validation
+        env:
+          # Official Arch Linux base-devel image, immutable multi-platform
+          # index digest. The command selects the hosted runner's amd64 image;
+          # this is container validation, not a native Arch host.
+          ARCH_IMAGE: archlinux:base-devel@sha256:c1829f370be8434135f43fb3acaef1256780804ac3b2d2eec90dfb1232e1ffdf
+        run: |
+          set -euo pipefail
+          test "$(uname -m)" = "x86_64"
+          mkdir -p "${RUNNER_TEMP}/ossus-arch-target"
+          docker run --rm --platform linux/amd64 \
+            --volume "${GITHUB_WORKSPACE}:/workspace:ro" \
+            --volume "${RUNNER_TEMP}/ossus-arch-target:/target" \
+            --workdir /workspace \
+            --env CARGO_TARGET_DIR=/target \
+            "${ARCH_IMAGE}" \
+            bash -euxo pipefail -c '
+              uname -a
+              uname -m
+              pacman -Syu --noconfirm --needed ca-certificates rustup
+              pacman -Q base-devel ca-certificates rustup
+              rustup toolchain install 1.97.1 --profile minimal
+              rustc +1.97.1 --version
+              rustup +1.97.1 show active-toolchain
+              cargo +1.97.1 test --workspace --all-features --locked
+              cargo +1.97.1 test -p ossus-registry --release --test release_fts5 --locked
+            '
+
   advisory-stable:
     name: Advisory checks (floating stable)
     runs-on: ubuntu-latest

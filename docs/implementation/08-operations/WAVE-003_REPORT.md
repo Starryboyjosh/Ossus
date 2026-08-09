@@ -12,7 +12,8 @@
   `17d6e0d` (admitted manifests), `88b19b1` (post-push handoff), `3421b64`
   (checkpoint clarification), `603159f` (generated inventories), `aac6082`
   (final-admission sprint), `eb140f3` (hosted evidence), and `c91d3a8`
-  (cross-platform inventory fix); pushed to `origin/main`
+  (cross-platform inventory fix), `59bbccd` (hosted closure documentation),
+  and `eecd2f5` (hosted verification checkpoint); pushed to `origin/main`
 
 ## Objective completed
 
@@ -46,6 +47,8 @@ explicit amendment packets, not approvals.
   independent review of a replacement profile-20 MCP candidate, and Closure
   acceptance/materialization of profiles 6 and 9.
 - Cumulative technical and practical workflow documentation.
+- Arch Linux userspace CI validation lane with independent review and distinct
+  Closure acceptance; hosted result remains pending.
 - Bounded final-admission sprint: profile-amendment decision packets for 5, 7,
   11 and 12; targeted rejection/unresolved confirmations for profiles 1, 3, 4,
   14 and 16; and an independent block for the profile-15 substitution.
@@ -63,7 +66,11 @@ ADR-020 governs agent-final authority. ADR-021 defines
 `ossus-git-tree-v1`; the distinct Security Closure Agent accepted it after the
 independent reviewer accepted the corrected NUL handling. The single permitted
 Sol Medium advisory reconciled profiles 15/16 but did not approve either. No
-taxonomy or later-WAVE behavior was added.
+taxonomy or later-WAVE behavior was added. The Arch CI trust-boundary change
+was independently reviewed by `/root/seed_admission_review_b` and accepted by
+`/root/wave003_security_closure` under
+`closure/wave003-arch-container-ci-20260809`; that decision is limited to the
+exact workflow diff and does not close WAVE-003.
 
 ## Tests and commands
 
@@ -73,7 +80,10 @@ Python hash suite passed 2. After Closure identified NUL handling, the focused
 Rust regression passed 1 and the Python suite again passed 2. The two official
 manifests pass schema validation and reindex to two resources; the staged
 profile-10 draft remains review-free and excluded. Inventories were regenerated
-with the repository generator; `./scripts/verify.sh` passes.
+with the repository generator; `./scripts/verify.sh` passes. The hardened local
+Arch Linux userspace reproduction (immutable image index, read-only checkout,
+isolated target directory, Rust `1.97.1`) also passed the 111-test workspace
+suite and the release FTS5 test.
 
 ## Acceptance criteria
 
@@ -83,7 +93,7 @@ with the repository generator; `./scripts/verify.sh` passes.
 | Search does not read bodies | Implemented and tested |
 | Exact/capability/category/FTS and filters | Implemented and tested |
 | CLI human and JSON output | Implemented; expanded suite passes |
-| Release FTS5 | Local release test passes. Hosted CI run `31295109423`/16 passed the pinned release test on Ubuntu job `93198830494`, macOS job `93198830507`, and Windows job `93198830495`; layout and all other workflow jobs also passed |
+| Release FTS5 | Local release test passes. Hosted CI run `31295109423`/16 passed the pinned release test on Ubuntu job `93198830494`, macOS job `93198830507`, and Windows job `93198830495`; the Arch-container lane was added after that run and is pending its first hosted result |
 | Reconciled seed profile decisions | Met for this checkpoint; 20 governed dispositions and provisional target 16 |
 | Admitted resources | 2 / 16 provisional admission-bearing slots; profiles 6 and 9 have Closure-approved manifests; no new candidate reached Closure in the final sprint |
 | Provenance/licenses/hashes/review | Profiles 6 and 9 have immutable MIT source locks, hashes, independent review and distinct Closure evidence; profile 10 remains blocked, 17/18 intentionally unresolved, and profile-20 replacement conditional |
@@ -92,15 +102,30 @@ with the repository generator; `./scripts/verify.sh` passes.
 ## Hosted CI evidence
 
 The pushed checkpoint `c91d3a8cc9c1a1fc19fe1d9766efe25e7d97f965` triggered
-workflow **CI**, run **16** (`31295109423`). The pinned matrix ran
+workflow **CI**, run **16** (`31295109423`). The pinned matrix for that run ran
 `cargo +1.97.1 test -p ossus-registry --release --test release_fts5 --locked`
-and completed successfully on all supported platforms:
+and completed successfully on every platform declared in that run:
 
 | Platform | Job | Result |
 |---|---:|---|
 | Ubuntu | `93198830494` | PASS — release FTS5 |
 | macOS | `93198830507` | PASS — release FTS5 |
 | Windows | `93198830495` | PASS — release FTS5 |
+
+This run predates the Arch Linux validation lane. The current workflow now
+also runs an immutable `archlinux:base-devel` image on an Ubuntu-hosted runner,
+selecting Linux/amd64 and executing the workspace suite plus the release FTS5
+test inside the Arch userspace. Local reproduction of that exact container
+configuration passed; hosted Arch evidence remains pending until the new lane
+completes. It must be reported separately from native Ubuntu and must never be
+described as a native Arch host result.
+
+| Platform | Environment | Image / toolchain | Release FTS5 |
+|---|---|---|---|
+| Ubuntu | GitHub-hosted native runner | Rust `1.97.1`; bundled SQLite | PASS — run 16 |
+| Arch Linux | Arch userspace in Ubuntu-hosted Docker container (`linux/amd64`) | `archlinux:base-devel@sha256:c1829f370be8434135f43fb3acaef1256780804ac3b2d2eec90dfb1232e1ffdf`; Rust `1.97.1` | HOSTED PENDING; local container PASS |
+| macOS | GitHub-hosted native runner | Rust `1.97.1`; bundled SQLite | PASS — run 16 |
+| Windows | GitHub-hosted native runner | Rust `1.97.1`; bundled SQLite | PASS — run 16 |
 
 The quality, advisory, cargo-deny and layout jobs also passed (`93198830455`,
 `93198830478`, `93198830480`, and `93198830448`). The inventory correction
@@ -114,10 +139,11 @@ candidate is rejected and its replacement needs build/provenance and host-adapte
 corrections. Profile 15 has an accepted explicit surface substitution but no
 admission. Profile 10 requires an immutable read-only enforcement adapter.
 Profiles 6 and 9 are admitted only as Agent Skills standard resources and do
-not satisfy aggregate cross-host diversity. Hosted FTS5 and the complete CI
-workflow are now green; remaining blockers are seed admissions/profile
-governance only. All deferred work remains within WAVE-003; WAVE-004 is not
-authorized.
+not satisfy aggregate cross-host diversity. Hosted Ubuntu/macOS/Windows FTS5 and
+the complete pre-Arch CI workflow are green. The Arch-container lane is locally
+green and its first hosted result is pending; remaining blockers are seed
+admissions/profile governance and that new hosted evidence. All deferred work
+remains within WAVE-003; WAVE-004 is not authorized.
 
 ## Security and residual risk
 
@@ -180,4 +206,4 @@ resources.
   slots; profile 15 admission remains blocked after independent review,
   profiles 10, 17, 18, and 20 are intentionally unresolved, and no staged
   draft carries approval claims
-- Latest handoff: `HANDOFF_2026-08-08_WAVE-003_FINAL_ADMISSION_SPRINT.md`
+- Latest handoff: `HANDOFF_2026-08-08_WAVE-003_ARCH_COVERAGE.md`
