@@ -126,9 +126,11 @@ coverage until host adapters exist.
 ### Current gates and limitations
 
 WAVE-003 does not close a security gate. Local Linux x86_64 release-mode FTS5 is
-verified; native macOS and Windows release evidence must come from the pinned CI
-matrix before closure. The 20-resource catalog and final admission report are
-still in progress. One Sol Medium advisory was used for the hardest
+verified, and pinned hosted Ubuntu, macOS and Windows release FTS5 jobs have
+passed. The same hosted run has an unexplained repository-layout job failure;
+the exact commit passes that check in a fresh clone, so a follow-up run is
+required before hosted CI is considered fully green. The 20-resource catalog
+and final admission report are still in progress. One Sol Medium advisory was used for the hardest
 profile-15/profile-16 reconciliation; it did not approve anything. No scanning,
 Resolver, policy scoring, installation,
 activation, host adapter, synchronization, or automated discovery is

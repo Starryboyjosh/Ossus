@@ -80,26 +80,33 @@ The deterministic SQLite rebuild hash remains
 ## Hosted FTS5
 
 The repository matrix targets Ubuntu, macOS and Windows with pinned Rust
-`1.97.1` and the release FTS5 test. `gh auth status` reports no authenticated
-GitHub host, and unauthenticated Actions/API inspection cannot observe this
-repository's runs. Therefore the accurate state for all three platforms is:
+`1.97.1` and the release FTS5 test. CI workflow run **14** (`31294757281`) for
+commit `aac60826b3f8c69a5a35c3cb3e3ab12270718a74` reported:
 
-`HOSTED RESULT PENDING AUTHENTICATED INSPECTION`
+| Platform | Job | Release FTS5 |
+|---|---:|---|
+| Ubuntu | `93197926838` | PASS |
+| macOS | `93197926836` | PASS |
+| Windows | `93197926835` | PASS |
 
-Do not infer a hosted pass or failure from local Linux evidence.
+Cargo deny, pinned format/Clippy and floating advisory checks also passed. The
+separate layout job `93197926856` failed. Its logs require authenticated
+repository administration; a fresh clone of the exact commit passes both
+inventory and layout checks locally. Hosted FTS5 is therefore evidenced, but
+the workflow is not yet fully green pending a follow-up run.
 
 ## Git state and next actions
 
 Branch: `main`  
 Remote: `origin git@github.com:Starryboyjosh/Ossus.git`  
-Last pushed checkpoint before this sprint's documentation changes:
-`603159fc86242e4a946262782986d1bb09cb4438`.
+Last pushed checkpoint before this follow-up documentation update:
+`aac60826b3f8c69a5a35c3cb3e3ab12270718a74`.
 
 The current documentation changes should be committed coherently, inventories
 regenerated through `scripts/generate-repository-inventories.py`, and pushed
-normally. Do not force-push or rewrite inherited history. After authenticated
-GitHub access is available, inspect the pushed workflow and record the exact
-Ubuntu/macOS/Windows release-FTS5 results.
+normally to trigger the follow-up run. Do not force-push or rewrite inherited
+history. The public Actions API exposed job conclusions, but job logs remain
+admin-authenticated.
 
 ## Remaining blockers
 
@@ -112,7 +119,8 @@ Ubuntu/macOS/Windows release-FTS5 results.
    accepted substitution unfilled.
 4. Keep profiles 10, 16, 17, 18 and 20 fail-closed until their specific evidence
    blockers are repaired.
-5. Obtain authenticated hosted FTS5 evidence for all supported platforms.
+5. Obtain a fully green follow-up hosted workflow, specifically resolving the
+   unexplained layout-job discrepancy without weakening the check.
 
 The Closure Agent retains final authority under ADR-020. WAVE-004 must not be
 started from this handoff.

@@ -60,6 +60,11 @@ MCP candidate is rejected while a replacement is conditional. Profiles 5, 7,
 11 and 12 have explicit amendment packets, not approvals. These are not
 approvals.
 
+The pinned hosted release FTS5 jobs for Ubuntu, macOS and Windows passed on the
+latest pushed checkpoint. A separate hosted repository-layout job failed even
+though the exact commit passes the same check in a fresh clone; that discrepancy
+must be resolved before the hosted workflow is considered fully green.
+
 The catalog has no quota. Catalog growth is an outcome of successful review,
 never a goal that overrides review, and discovery volume must never create
 admission pressure. A profile substitution changes a coverage requirement; it

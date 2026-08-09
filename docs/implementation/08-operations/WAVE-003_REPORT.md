@@ -10,16 +10,20 @@
 - Base commit: `ec9f1aa23aefa48f75a1db5396d232fd16bd02e0`
 - Checkpoint commits: `4cc66c5` (mechanics), `0cb3987` (governance/evidence),
   `17d6e0d` (admitted manifests), `88b19b1` (post-push handoff), `3421b64`
-  (checkpoint clarification), and `603159f` (generated inventories); pushed to
-  `origin/main`
+  (checkpoint clarification), `603159f` (generated inventories), and `aac6082`
+  (final-admission sprint); pushed to `origin/main`
 
 ## Objective completed
 
 Partially. Registry/search/CLI implementation is complete locally. Two R0
 standard-only resources are admitted; no additional candidate survived the
-bounded final-admission review. Hosted platform FTS5 evidence is not observable
-without authenticated project access. The profile reconciliation keeps 20
-governed profile decisions but sets a provisional 16 admission-bearing target;
+bounded final-admission review. Hosted release FTS5 evidence is now observed
+for Ubuntu, macOS and Windows on CI run `31294757281` (workflow CI, run 14,
+commit `aac60826b3f8c69a5a35c3cb3e3ab12270718a74`). The same workflow's
+separate layout job failed, although the exact commit passes the layout check
+in a fresh clone; a follow-up run is required before treating hosted CI as
+green. The profile reconciliation keeps 20 governed profile decisions but sets
+a provisional 16 admission-bearing target;
 profiles 10, 17, 18, and 20 are intentionally unresolved. Profile 15 has an
 accepted surface correction, but its independent review is blocked on a bounded
 adapter, freshness and redaction evidence. Profiles 5, 7, 11 and 12 have
@@ -75,11 +79,33 @@ with the repository generator; `./scripts/verify.sh` passes.
 | Search does not read bodies | Implemented and tested |
 | Exact/capability/category/FTS and filters | Implemented and tested |
 | CLI human and JSON output | Implemented; expanded suite passes |
-| Release FTS5 | Local release test passes; hosted matrix was triggered by the authorized push but is not observable without authenticated project access |
+| Release FTS5 | Local release test passes. Hosted CI run `31294757281`/14 passed the pinned release test on Ubuntu job `93197926838`, macOS job `93197926836`, and Windows job `93197926835`; the separate layout job failed and needs a follow-up run |
 | Reconciled seed profile decisions | Met for this checkpoint; 20 governed dispositions and provisional target 16 |
 | Admitted resources | 2 / 16 provisional admission-bearing slots; profiles 6 and 9 have Closure-approved manifests; no new candidate reached Closure in the final sprint |
 | Provenance/licenses/hashes/review | Profiles 6 and 9 have immutable MIT source locks, hashes, independent review and distinct Closure evidence; profile 10 remains blocked, 17/18 intentionally unresolved, and profile-20 replacement conditional |
-| Full repository verification | Met locally; `./scripts/verify.sh` passes |
+| Full repository verification | Met locally; `./scripts/verify.sh` passes. Hosted layout discrepancy remains under investigation |
+
+## Hosted CI evidence
+
+The pushed checkpoint `aac60826b3f8c69a5a35c3cb3e3ab12270718a74` triggered
+workflow **CI**, run **14** (`31294757281`). The pinned matrix ran
+`cargo +1.97.1 test -p ossus-registry --release --test release_fts5 --locked`
+and completed successfully on all supported platforms:
+
+| Platform | Job | Result |
+|---|---:|---|
+| Ubuntu | `93197926838` | PASS — release FTS5 |
+| macOS | `93197926836` | PASS — release FTS5 |
+| Windows | `93197926835` | PASS — release FTS5 |
+
+The quality, advisory and cargo-deny jobs also passed. The independent
+`Repository layout invariants` job (`93197926856`) failed with exit code 1.
+Because job logs require authenticated repository administration, the exact
+remote message is not observable from this environment. The same script passes
+against a fresh clone of the exact pushed commit (`repository inventories: ok;
+repository layout: ok` locally), so this is recorded as a CI discrepancy rather
+than a product failure. A coherent follow-up documentation push is being used
+to obtain a second run; no implementation or policy weakening is inferred.
 
 ## Known limitations and deferred work
 
@@ -88,9 +114,10 @@ candidate is rejected and its replacement needs build/provenance and host-adapte
 corrections. Profile 15 has an accepted explicit surface substitution but no
 admission. Profile 10 requires an immutable read-only enforcement adapter.
 Profiles 6 and 9 are admitted only as Agent Skills standard resources and do
-not satisfy aggregate cross-host diversity. Hosted CI was triggered by the
-authorized push but its results are not visible without authenticated project
-access. All deferred work remains within WAVE-003; WAVE-004 is not authorized.
+not satisfy aggregate cross-host diversity. Hosted FTS5 is observed on all
+three supported platforms, but the layout-job discrepancy still blocks a fully
+green hosted checkpoint. All deferred work remains within WAVE-003; WAVE-004 is
+not authorized.
 
 ## Security and residual risk
 
