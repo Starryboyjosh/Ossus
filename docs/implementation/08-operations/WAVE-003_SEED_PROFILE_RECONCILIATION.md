@@ -83,4 +83,5 @@ decision; it is not a resource admission, and the provisional target is not a
 quota.
 
 The WAVE remains in progress because the remaining target has not completed the
-full authority chain and hosted FTS5 evidence is still pending.
+full authority chain. Hosted Ubuntu/macOS/Windows release FTS5 and the complete
+CI workflow are now green in run 16; hosted evidence is no longer a blocker.
