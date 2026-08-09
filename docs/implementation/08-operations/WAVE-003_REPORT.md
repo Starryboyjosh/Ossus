@@ -10,8 +10,9 @@
 - Base commit: `ec9f1aa23aefa48f75a1db5396d232fd16bd02e0`
 - Checkpoint commits: `4cc66c5` (mechanics), `0cb3987` (governance/evidence),
   `17d6e0d` (admitted manifests), `88b19b1` (post-push handoff), `3421b64`
-  (checkpoint clarification), `603159f` (generated inventories), and `aac6082`
-  (final-admission sprint); pushed to `origin/main`
+  (checkpoint clarification), `603159f` (generated inventories), `aac6082`
+  (final-admission sprint), and `eb140f3` (hosted evidence); the
+  cross-platform inventory fix is staged for the next pushed checkpoint
 
 ## Objective completed
 
@@ -20,8 +21,11 @@ standard-only resources are admitted; no additional candidate survived the
 bounded final-admission review. Hosted release FTS5 evidence is now observed
 for Ubuntu, macOS and Windows on CI run `31294757281` (workflow CI, run 14,
 commit `aac60826b3f8c69a5a35c3cb3e3ab12270718a74`). The same workflow's
-separate layout job failed, although the exact commit passes the layout check
-in a fresh clone; a follow-up run is required before treating hosted CI as
+separate layout job failed. A true fresh-clone reproduction identified the
+cause: `.gitattributes` materializes `scripts/verify.ps1` as CRLF on hosted
+checkouts, while the inventory had hashed LF working-tree bytes. The inventory
+generator is now staged to hash Git index/blob bytes, which are
+platform-independent; a follow-up run is required before treating hosted CI as
 green. The profile reconciliation keeps 20 governed profile decisions but sets
 a provisional 16 admission-bearing target;
 profiles 10, 17, 18, and 20 are intentionally unresolved. Profile 15 has an
@@ -100,12 +104,12 @@ and completed successfully on all supported platforms:
 
 The quality, advisory and cargo-deny jobs also passed. The independent
 `Repository layout invariants` job (`93197926856`) failed with exit code 1.
-Because job logs require authenticated repository administration, the exact
-remote message is not observable from this environment. The same script passes
-against a fresh clone of the exact pushed commit (`repository inventories: ok;
-repository layout: ok` locally), so this is recorded as a CI discrepancy rather
-than a product failure. A coherent follow-up documentation push is being used
-to obtain a second run; no implementation or policy weakening is inferred.
+A true fresh clone reproduces the failure as a stale `REPOSITORY_MANIFEST.json`
+entry for `scripts/verify.ps1`: the hosted checkout has 366 CRLF bytes while
+the committed inventory recorded 354 LF bytes. The staged generator correction
+reads canonical Git index blobs instead of checkout-filtered working-tree bytes;
+it leaves the inherited PowerShell file untouched and preserves deterministic
+hashes across platforms. A follow-up push is being used to verify the fix.
 
 ## Known limitations and deferred work
 

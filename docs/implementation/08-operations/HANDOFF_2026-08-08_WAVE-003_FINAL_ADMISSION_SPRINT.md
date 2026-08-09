@@ -90,17 +90,19 @@ commit `aac60826b3f8c69a5a35c3cb3e3ab12270718a74` reported:
 | Windows | `93197926835` | PASS |
 
 Cargo deny, pinned format/Clippy and floating advisory checks also passed. The
-separate layout job `93197926856` failed. Its logs require authenticated
-repository administration; a fresh clone of the exact commit passes both
-inventory and layout checks locally. Hosted FTS5 is therefore evidenced, but
+separate layout job `93197926856` failed. A true fresh clone reproduces the
+failure: `.gitattributes` turns `scripts/verify.ps1` into 366 CRLF bytes on
+checkout while the inventory recorded 354 LF bytes. The staged generator fix
+hashes canonical Git index/blob bytes instead of checkout-filtered bytes and
+leaves the inherited PowerShell file untouched. Hosted FTS5 is evidenced, but
 the workflow is not yet fully green pending a follow-up run.
 
 ## Git state and next actions
 
 Branch: `main`  
 Remote: `origin git@github.com:Starryboyjosh/Ossus.git`  
-Last pushed checkpoint before this follow-up documentation update:
-`aac60826b3f8c69a5a35c3cb3e3ab12270718a74`.
+Last pushed checkpoint before this inventory-fix update:
+`eb140f33313fc271c013611069cfb000a5b299b4`.
 
 The current documentation changes should be committed coherently, inventories
 regenerated through `scripts/generate-repository-inventories.py`, and pushed
@@ -119,8 +121,8 @@ admin-authenticated.
    accepted substitution unfilled.
 4. Keep profiles 10, 16, 17, 18 and 20 fail-closed until their specific evidence
    blockers are repaired.
-5. Obtain a fully green follow-up hosted workflow, specifically resolving the
-   unexplained layout-job discrepancy without weakening the check.
+5. Obtain a fully green follow-up hosted workflow, specifically verifying the
+   Git-index-byte inventory fix without weakening the layout check.
 
 The Closure Agent retains final authority under ADR-020. WAVE-004 must not be
 started from this handoff.

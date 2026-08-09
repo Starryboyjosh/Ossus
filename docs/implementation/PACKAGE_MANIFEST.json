@@ -406,8 +406,8 @@
     },
     {
       "path": "08-operations/HANDOFF_2026-08-08_WAVE-003_FINAL_ADMISSION_SPRINT.md",
-      "bytes": 5437,
-      "sha256": "763913ae711ecfecd12930195331ca09aef8255ce72b08c85648827cc438dfcc"
+      "bytes": 5589,
+      "sha256": "961903aa58ce7d60a800332fd2766281df106d15d2f6664b1186015607156056"
     },
     {
       "path": "08-operations/HANDOFF_2026-08-08_WAVE-003_POST_PUSH.md",
@@ -481,8 +481,8 @@
     },
     {
       "path": "08-operations/WAVE-003_REPORT.md",
-      "bytes": 10195,
-      "sha256": "553dd13c06f5e0c410f1d9f8ca0a544381e2ff429fae71af04470d71d0594b53"
+      "bytes": 10499,
+      "sha256": "566fa700b318a6b7160e8e3a7e022ed776fd146432d27e4c692c1fbfe82a0865"
     },
     {
       "path": "08-operations/WAVE-003_SEED_ADMISSION_AND_SOURCE_REPORT.md",

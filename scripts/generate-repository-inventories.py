@@ -33,8 +33,26 @@ def tracked_paths() -> list[str]:
     )
 
 
+def tracked_blob_bytes(path: str) -> bytes:
+    """Read the canonical Git index blob, independent of checkout EOL filters.
+
+    The repository declares platform-specific checkout filters for PowerShell
+    files. Hashing working-tree bytes therefore made the generated inventory
+    disagree between a Linux checkout and a Windows checkout (and between a
+    clean clone and a developer tree). The index/blob representation is the
+    source-of-truth byte sequence used by the tracked-file inventory.
+    """
+    result = subprocess.run(
+        ["git", "cat-file", "blob", f":{path}"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+    )
+    return result.stdout
+
+
 def file_record(path: str, *, relative_to: str | None = None) -> dict[str, Any]:
-    data = (ROOT / path).read_bytes()
+    data = tracked_blob_bytes(path)
     display_path = path
     if relative_to is not None:
         display_path = str(Path(path).relative_to(relative_to))
