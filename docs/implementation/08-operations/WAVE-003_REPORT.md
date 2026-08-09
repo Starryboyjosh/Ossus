@@ -255,7 +255,7 @@ The authoritative coverage record is
 `WAVE-003_PROFILE_AMENDMENT_DECISIONS.md`. No Registry mechanics or hosted
 infrastructure were changed by this pass.
 
-The latest documented green hosted matrix is CI run **21** on commit
-`7cdd3c0`: Ubuntu native FTS5 PASS, Arch userspace-container FTS5 PASS (not
+The latest documented green hosted matrix is CI run **22** on commit
+`f6e58a0`: Ubuntu native FTS5 PASS, Arch userspace-container FTS5 PASS (not
 native Arch), macOS native FTS5 PASS, and Windows native FTS5 PASS. The run
 also passed the workspace, quality, advisory, cargo-deny and layout jobs.

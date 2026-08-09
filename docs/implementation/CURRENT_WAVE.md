@@ -21,7 +21,7 @@ WAVE-003 implements the disposable local SQLite/FTS Registry index, deterministi
 | Seed profile reconciliation | Final coverage authority recorded for all 20 profiles: 9 `SEED_REQUIRED`, 7 `SEED_REQUIRED_WITH_SUBSTITUTION`, and 4 `INTENTIONALLY_UNRESOLVED`; provisional planning denominator is 16, while the active completion obligation remains 20 |
 | Concrete candidates independently agent-admitted | 2 — profiles 6 and 9 crossed Curator → independent Review → Closure; 14 current admission slots remain; the final coverage pass admitted no additional candidate |
 | Final-admission and coverage authority | Profile 15 is useful but deferred pending adapter/freshness/redaction evidence; Closure accepted profile-only corrections P5 R3, P7 R2, P11 R2 and P12 R3; profile 16 remains valid and unfilled; no candidate was admitted |
-| WAVE-003 report and final verification | Coverage authority, reconciliation report, official manifests, amendment packets, handoffs and closure evidence written; local verification passes; hosted Ubuntu, Arch-container, macOS and Windows FTS5 plus complete CI run 21 pass; positive seed diversity and admissions remain pending |
+| WAVE-003 report and final verification | Coverage authority, reconciliation report, official manifests, amendment packets, handoffs and closure evidence written; local verification passes; hosted Ubuntu, Arch-container, macOS and Windows FTS5 plus complete CI run 22 pass; positive seed diversity and admissions remain pending |
 
 ## Preceding WAVEs
 

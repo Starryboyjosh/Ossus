@@ -82,7 +82,7 @@ Local baseline remains green:
 - formatting, Clippy (`-D warnings`), inventories, layout, and
   `./scripts/verify.sh`.
 
-Hosted CI run **21**, commit `7cdd3c0`, passed the release FTS5 and workspace
+Hosted CI run **22**, commit `f6e58a0`, passed the release FTS5 and workspace
 checks on:
 
 - Ubuntu native runner — PASS;

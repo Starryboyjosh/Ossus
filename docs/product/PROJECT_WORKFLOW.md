@@ -65,7 +65,7 @@ These are not approvals.
 
 The pinned hosted release FTS5 jobs for Ubuntu, macOS and Windows, plus the
 separate Arch Linux userspace validation job, passed in the documented green CI
-run 21. The
+run 22. The
 inventory generator now hashes canonical Git index/blob bytes, fixing the
 checkout-EOL discrepancy. The Arch job runs the workspace and release FTS5
 tests inside a pinned Arch userspace container on an Ubuntu-hosted runner;

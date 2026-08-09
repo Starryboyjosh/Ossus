@@ -422,7 +422,7 @@
     {
       "path": "08-operations/HANDOFF_2026-08-09_WAVE-003_FINAL_COVERAGE.md",
       "bytes": 4873,
-      "sha256": "cc569a0cd14712933f968a42265308cd9744b86e667cf9f43aa4dde0e05995af"
+      "sha256": "93111d40f77c562258b877b1d00305cf98ebd0bac3f69d3f4512fe241558a0fc"
     },
     {
       "path": "08-operations/HANDOFF_TEMPLATE.md",
@@ -502,7 +502,7 @@
     {
       "path": "08-operations/WAVE-003_REPORT.md",
       "bytes": 15025,
-      "sha256": "d4520a492ed9adcc4a3dd7a458d576084f16e28d0016b3b9af7d6e96b4830171"
+      "sha256": "0312c23b2c2eb70d76e8cb5023ad24ab483cef3ba82ecca2e9c7a5de3adaa9bf"
     },
     {
       "path": "08-operations/WAVE-003_SEED_ADMISSION_AND_SOURCE_REPORT.md",
@@ -547,7 +547,7 @@
     {
       "path": "08-operations/wave-summaries/WAVE-003_SUMMARY.md",
       "bytes": 4237,
-      "sha256": "476120075e60fa8dfe2745312ec1492cc6470b215f7a14787c1bfac26f8f5813"
+      "sha256": "8a1342d1c84b43bbb4820a94f2b3678adff8d1824784ed7eba791a2e53cb59f4"
     },
     {
       "path": "08-operations/wave-summaries/WAVE-004_SUMMARY.md",
@@ -677,7 +677,7 @@
     {
       "path": "CURRENT_WAVE.md",
       "bytes": 3447,
-      "sha256": "3ac84d133ebfca486b480b31de76663912b40068cd70ff5cf5e86660ac748f1c"
+      "sha256": "ece1f0067d6c4507a12889daf35b940846369553e3ae81340c624b170ca83b5c"
     },
     {
       "path": "README.md",

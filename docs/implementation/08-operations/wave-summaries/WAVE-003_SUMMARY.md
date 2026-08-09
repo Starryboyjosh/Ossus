@@ -11,7 +11,7 @@ changes it. The official Registry contains 2 reviewed resources (profiles 6
 and 9). The coverage pass added no admission: profile 15 is useful but
 deferred, profiles 5/7/11/12 have Closure-accepted profile-only ceiling
 corrections (R3/R2/R2/R3), and profile 16 remains valid but unfilled. Hosted
-Ubuntu/macOS/Windows and Arch-container release FTS5 plus complete CI run 21
+Ubuntu/macOS/Windows and Arch-container release FTS5 plus complete CI run 22
 pass. Positive seed diversity and final admissions remain unfinished.
 
 ## Technical summary
@@ -50,7 +50,7 @@ Obtain distinct Closure decisions only for candidates that first pass bounded
 independent review, admit canonical manifests incrementally, preserve the
 Git-index-byte inventory fix, regenerate inventories with the generator, rerun
 full verification, and obtain final WAVE Closure. Hosted Ubuntu, Arch
-container, macOS and Windows release FTS5 evidence is recorded in CI run 21.
+container, macOS and Windows release FTS5 evidence is recorded in CI run 22.
 Profile 10 needs an immutable read-only adapter; profile 15 needs a
 dependency-only adapter, freshness and redaction evidence; profile 16 needs a
 clean licensed, self-contained Claude candidate; profile 20 needs a safe MCP

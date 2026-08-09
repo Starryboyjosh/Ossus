@@ -134,12 +134,12 @@ exist.
 WAVE-003 does not close a security gate. Local Linux x86_64 release-mode FTS5 is
 verified, and pinned hosted Ubuntu, macOS and Windows release FTS5 jobs plus
 the repository-layout, quality, advisory and cargo-deny jobs passed in the
-documented green CI run 21. The inventory generator hashes canonical Git
+documented green CI run 22. The inventory generator hashes canonical Git
 index/blob bytes so checkout
 EOL filters cannot change tracked-file hashes. A separate Arch Linux userspace
 container job is now defined on an Ubuntu-hosted runner, pinned to
 `archlinux:base-devel@sha256:c1829f370be8434135f43fb3acaef1256780804ac3b2d2eec90dfb1232e1ffdf`
-and Rust `1.97.1`; its local workspace/FTS5 reproduction and hosted CI run 21
+and Rust `1.97.1`; its local workspace/FTS5 reproduction and hosted CI run 22
 pass. The hosted Arch job is `93207265220`, with resolved amd64 child
 `sha256:fae033b815a16f930325c2697e620362be4d2e5d739a301b10ad1fc9c8643a06`.
 The container is not a native Arch host and is reported separately. The
