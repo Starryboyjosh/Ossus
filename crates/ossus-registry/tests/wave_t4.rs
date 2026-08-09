@@ -173,6 +173,32 @@ fn missing_required_fields_have_stable_paths() {
 }
 
 #[test]
+fn git_subpaths_require_canonical_relative_posix_form() {
+    for subpath in [
+        "",
+        "/skills/example",
+        "skills//example",
+        "skills/./example",
+        "../example",
+        "skills\\example",
+    ] {
+        let source = replace_once(
+            EXAMPLE,
+            "subpath = \"skills/frontend-review\"",
+            &format!("subpath = {subpath:?}"),
+        );
+        assert_code(&source, "source.subpath.not-canonical");
+    }
+
+    let nul = replace_once(
+        EXAMPLE,
+        "subpath = \"skills/frontend-review\"",
+        "subpath = \"skills\\u0000example\"",
+    );
+    assert_code(&nul, "source.subpath.not-canonical");
+}
+
+#[test]
 fn duplicate_and_overlapping_capabilities_are_rejected() {
     let duplicate = replace_once(
         EXAMPLE,

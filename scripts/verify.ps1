@@ -8,4 +8,5 @@ if (-not (Get-Command cargo -ErrorAction SilentlyContinue)) {
 cargo fmt --all -- --check
 cargo clippy --workspace --all-targets --all-features -- -D warnings
 cargo test --workspace --all-features
+python scripts/test-hash-git-resource.py
 cargo run -q -p ossus -- status

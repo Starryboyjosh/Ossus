@@ -51,10 +51,20 @@ pub fn validate_manifest(manifest: &CanonicalManifest, taxonomy: &Taxonomy) -> V
     check_optional_string(
         &manifest.source.subpath,
         "source.subpath",
-        0,
+        1,
         512,
         &mut diagnostics,
     );
+    if let Some(subpath) = &manifest.source.subpath
+        && !canonical_git_subpath(subpath)
+    {
+        diagnostics.push(Diagnostic::error(
+            DiagnosticClass::Schema,
+            "source.subpath.not-canonical",
+            "source.subpath",
+            "Git subpath must be relative POSIX form without NUL, empty, '.' or '..' components",
+        ));
+    }
     check_optional_string(
         &manifest.source.license,
         "source.license",
@@ -348,6 +358,16 @@ pub fn validate_manifest(manifest: &CanonicalManifest, taxonomy: &Taxonomy) -> V
     diagnostics
 }
 
+fn canonical_git_subpath(value: &str) -> bool {
+    !value.is_empty()
+        && !value.starts_with('/')
+        && !value.contains('\\')
+        && !value.contains('\0')
+        && value
+            .split('/')
+            .all(|component| !matches!(component, "" | "." | ".."))
+}
+
 fn validate_capabilities(
     capabilities: &[ossus_core::CapabilityId],
     field_path: &str,
@@ -409,11 +429,11 @@ fn runtime_minimum_risk(requirement: &RuntimeRequirement) -> RiskTier {
     }
 }
 
-// Derived from the "Review:" lines of `docs/security/RISK_TIERS.md`, which are the
-// only statement of review depth in the repository. R0 requires "focused human
-// reading"; R1 and R2 both require "complete human reading", so R1 floors at
-// full-human, not light-human. This mapping is inferred policy awaiting human
-// ratification into RISK_TIERS.md — see DIV-4 in the Gate S1 record.
+// Derived from the "Review:" lines of `docs/security/RISK_TIERS.md`. R0 requires
+// focused independent agent review; R1 and R2 require complete independent
+// agent review, so the schema-v1 compatibility label for R1 floors at
+// `full-human`, not `light-human`. ADR-020 defines these strings as legacy wire
+// labels and gives the distinct Closure Agent final authority.
 const fn minimum_review_tier(risk: RiskTier) -> ReviewTier {
     match risk {
         RiskTier::R0 => ReviewTier::LightHuman,

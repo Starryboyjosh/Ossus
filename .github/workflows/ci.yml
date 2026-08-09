@@ -46,6 +46,9 @@ jobs:
       - name: Run workspace tests
         run: cargo +1.97.1 test --workspace --all-features
 
+      - name: Verify FTS5 in release mode
+        run: cargo +1.97.1 test -p ossus-registry --release --test release_fts5 --locked
+
       - name: Build the CLI
         run: cargo +1.97.1 build -p ossus
 
