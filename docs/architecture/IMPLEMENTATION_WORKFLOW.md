@@ -98,14 +98,19 @@ content hash, license, reviewed capabilities/compatibility/runtime/risk/context,
 and separated Curator Agent, Admission Review Agent, and Closure Agent evidence.
 Research output cannot approve itself. The current admission ledger has **two
 official entries** (profiles 6 and 9): both are standard-only profile
-substitutions. Profile 10 needs an enforced read-only adapter; profile 15 has
-an accepted surface correction but its independent admission review is blocked
-on a dependency-only adapter, freshness protocol and redaction evidence;
-profile 16 retains a valid but unfilled profile, profiles 17/18 are
-intentionally unresolved, and profile 20's original calculator is rejected
-while its replacement is conditional. Profiles 5, 7, 11 and 12 have
-Curator-only R3 amendment packets; no amendment or candidate is approved by
-those packets.
+substitutions. The coverage authority recommends 9 `SEED_REQUIRED` profiles,
+7 `SEED_REQUIRED_WITH_SUBSTITUTION` profiles, and 4 intentionally unresolved
+profiles (10, 17, 18 and 20), but Closure accepted 16 only as a provisional
+planning denominator. The active WAVE completion obligation remains the
+original 20 real seed entries until an explicit architecture decision changes
+it. Profile 10 needs an enforced read-only adapter; profile 15 has an accepted
+surface correction but its independent admission review is blocked on a
+dependency-only adapter, freshness protocol and redaction evidence; profile 16
+retains a valid but unfilled profile, and profile 20's original calculator is
+rejected while its replacement is conditional. Closure record
+`closure/wave003-profile-amendments-5-7-11-12-20260809` accepts the profile-only
+ceiling corrections (P5 R3, P7 R2, P11 R2, P12 R3), without approving any
+candidate or manifest.
 
 #### Catalog-pressure invariant
 
@@ -116,28 +121,30 @@ create admission pressure. Profile correctness and candidate correctness are
 recorded separately, and a profile substitution does not admit a resource.
 WAVE-003 closure therefore requires governed final dispositions for every seed
 profile, policy-compliant canonical manifests for every admitted resource, and
-minimum useful catalog coverage—not an unconditional `official_resources ==
-20` test. The reconciliation currently records 16 provisional
-admission-bearing slots and four intentionally unresolved profiles; the official
-Registry contains two resources and remains empty for every candidate whose
-authority chain is incomplete. The two admitted manifests are explicitly excluded from aggregate cross-host
-coverage until host adapters exist.
+minimum useful catalog coverage. The coverage pass records 16 provisional
+admission-bearing planning slots and four intentionally unresolved profiles;
+Closure has not authorized replacing the active 20-entry completion obligation
+with 16. The official Registry contains two resources and remains empty for
+every candidate whose authority chain is incomplete. The two admitted manifests
+are explicitly excluded from aggregate cross-host coverage until host adapters
+exist.
 
 ### Current gates and limitations
 
 WAVE-003 does not close a security gate. Local Linux x86_64 release-mode FTS5 is
 verified, and pinned hosted Ubuntu, macOS and Windows release FTS5 jobs plus
-the repository-layout, quality, advisory and cargo-deny jobs passed in CI run
-18. The inventory generator hashes canonical Git index/blob bytes so checkout
+the repository-layout, quality, advisory and cargo-deny jobs passed in the
+documented green CI run 21. The inventory generator hashes canonical Git
+index/blob bytes so checkout
 EOL filters cannot change tracked-file hashes. A separate Arch Linux userspace
 container job is now defined on an Ubuntu-hosted runner, pinned to
 `archlinux:base-devel@sha256:c1829f370be8434135f43fb3acaef1256780804ac3b2d2eec90dfb1232e1ffdf`
-and Rust `1.97.1`; its local workspace/FTS5 reproduction and hosted CI run 19
+and Rust `1.97.1`; its local workspace/FTS5 reproduction and hosted CI run 21
 pass. The hosted Arch job is `93207265220`, with resolved amd64 child
 `sha256:fae033b815a16f930325c2697e620362be4d2e5d739a301b10ad1fc9c8643a06`.
 The container is not a native Arch host and is reported separately. The
-20-resource catalog
-and final admission report are still in progress. One Sol Medium advisory was used for the hardest
+20-resource catalog and final admission report are still in progress. One Sol
+Medium advisory was used in an earlier continuation for the hardest
 profile-15/profile-16 reconciliation; it did not approve anything. No scanning,
 Resolver, policy scoring, installation,
 activation, host adapter, synchronization, or automated discovery is

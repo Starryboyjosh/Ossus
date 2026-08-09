@@ -1,8 +1,10 @@
 # WAVE-003 profile-amendment decision packets
 
 **Date:** 2026-08-08  
-**Authority:** ADR-020; these are Curator evidence packets, not profile
-approval and not resource admission.
+**Authority:** ADR-020; the original packets are Curator evidence. The
+independent review addendum below records a bounded review recommendation; it
+is not resource admission. A separate Closure Agent decision is still required
+for any amendment to become operative.
 
 These packets separate profile design from candidate admission. A proposed
 amendment changes what a seed profile honestly asks for; it does not approve
@@ -52,22 +54,23 @@ real ecosystem evidence: openai/skills aspnet-core at the pinned immutable
   source; it is API-relevant but broader than the seed contract and lacks
   direct Claude evidence.
 proposed requirement: retain type, capability and both required surfaces;
-  amend the maximum risk to R3 and restrict the scope to API work. Exclude
+  amend the maximum risk to R2 and restrict the scope to API work. Exclude
   deployment, production databases, credentials, and auth/authorization
   changes unless separately authorized.
-security delta: makes code-writing, command and network authority explicit;
-  adds confirmation, command/network limits and a separate security review.
+security delta: makes scoped project writes explicit; adds path allowlists,
+  expected-diff/rollback and confirmation while denying shell, network,
+  deployment, production-database, credential and auth changes by default.
 surface delta: both surfaces remain requirements; no Claude compatibility is
   inferred from the source format.
-risk delta: R1 -> R3.
+risk delta: R1 -> R2.
 candidate availability: conditional candidate exists; scope and Claude evidence
   remain incomplete, so it is not admission-ready.
-golden/evaluation impact: retain GOLD-011 and GOLD-017 and add R1-deny/R3-
+golden/evaluation impact: retain GOLD-011 and GOLD-017 and add R1-deny/R2-
   allow cases proving API-only scope cannot select deployment, auth or database
   mutation behavior.
 recommended decision: propose the R3 amendment; keep the candidate blocked.
-required authority: Curator amendment, independent security review and policy
-  tests, distinct Closure Agent decision.
+required authority: Curator amendment, independent review of the adapter and
+  policy tests, distinct Closure Agent decision.
 ```
 
 ## Profile 11 — unit testing
@@ -82,21 +85,22 @@ reason original requirement failed: the investigated Superpowers TDD resource
 real ecosystem evidence: obra/superpowers test-driven-development at the pinned
   MIT source; the selected tree is locally closed but remains unreviewed at R3.
 proposed requirement: retain type, capability and required surfaces; amend the
-  maximum risk to R3. Limit writes to new or explicitly approved paths, deny
+  maximum risk to R2. Limit writes to test files or explicitly approved paths, deny
   blind deletion, require expected-diff/rollback checks and a disposable
   no-secret runner, and deny dependency installation/network by default.
-security delta: converts hidden mutation into explicit R3 authority with
-  confirmation, scope and rollback controls.
+security delta: converts test-file mutation into explicit R2 authority with
+  confirmation, scope and rollback controls while denying shell, network,
+  dependency installation and production-code deletion by default.
 surface delta: all three surfaces remain requirements; none is inferred until
   host evidence exists.
-risk delta: R0 -> R3.
+risk delta: R0 -> R2.
 candidate availability: one plausible candidate exists; it has no independent
   admission review or Closure decision.
-golden/evaluation impact: retain GOLD-024; add R3 runner/path/rollback cases and
-  a denial case proving the resource cannot pass the R0 contract.
+golden/evaluation impact: retain GOLD-024; add R2 path/rollback cases and a
+  denial case proving the resource cannot pass the R0 contract.
 recommended decision: propose the R3 amendment; do not admit the candidate yet.
-required authority: Curator amendment, independent security review and R3
-  activation evidence, distinct Closure Agent decision.
+required authority: Curator amendment, independent review and activation
+  evidence for the bounded runner, distinct Closure Agent decision.
 ```
 
 ## Profile 12 — integration testing
@@ -133,9 +137,49 @@ required authority: Curator amendment, independent review of source/adapter and
   golden impact, distinct Closure Agent decision.
 ```
 
+## Independent review addendum — 2026-08-09
+
+Admission Review Agent A independently reviewed the four packets against the
+capability taxonomy, GOLD-007/011/024/025/026 and the Resolver risk boundary.
+The review rejects a blanket R3 upgrade:
+
+| Profile | Independent review recommendation | Required boundary | Candidate state |
+|---:|---|---|---|
+| 5 | `R2 → R3`; `SEED_REQUIRED_WITH_SUBSTITUTION` | localhost-by-default browser runner, explicit origin/egress allowlists, no credentials/cookies/storage, confirmation before state changes, pre-provisioned dependencies, bounded actions/time/output, disposable no-secret runner | Blocked; SKILL format does not prove Claude compatibility |
+| 7 | `R1 → R2`; `SEED_REQUIRED_WITH_SUBSTITUTION` | path allowlists, expected diff/rollback, confirmation, explicit denial of shell/network/deployment/credential work; Claude/Codex evidence remains required | Blocked; candidate breadth and missing Claude evidence remain |
+| 11 | `R0 → R2`; `SEED_REQUIRED_WITH_SUBSTITUTION` | test-only/explicit write paths, no production deletion, expected diff/rollback, confirmation, shell/network/dependency-install denial | Blocked; candidate's generic feature/TDD and blind deletion behavior exceed the amended scope |
+| 12 | `R1 → R3`; `SEED_REQUIRED_WITH_SUBSTITUTION` | disposable no-secret runner, isolated test DB/namespace, bounded commands/processes/ports/time, localhost and explicit egress allowlist, no production/deployment authority or credentials | Blocked; browser/DevTools, external-reference and host evidence remain incomplete |
+
+The review conclusion is that execution risk is intrinsic for profiles 5 and
+12, while the investigated candidates added unnecessary R3 behavior for
+profiles 7 and 11. The narrower R2 amendments preserve useful implementation
+and test-file-write coverage without granting shell, network, deployment or
+unbounded runner authority. No amendment creates a canonical manifest.
+
+## Closure state
+
+The distinct Closure Agent recorded
+`closure/wave003-profile-amendments-5-7-11-12-20260809` and **accepted the
+profile-only ceiling corrections**: profile 5 R3, profile 7 R2, profile 11 R2,
+and profile 12 R3. This is a design decision only. The following are
+explicitly not approved:
+
+- no candidate resource;
+- no host adapter;
+- no runtime permission;
+- no risk override beyond the bounded amendment text;
+- no Registry entry.
+
+The historical reconciliation ledger remains `PROFILE_SUBSTITUTION_PROPOSED`
+because it records the original packet state; the final coverage authority
+records the Closure-accepted corrections. The coverage denominator does not
+turn the amendments into admission or waive the Curator → independent Review →
+Closure chain for resources.
+
 ## Decision status
 
-All four packets remain **PROFILE_SUBSTITUTION_PROPOSED**. None lowers a
-security requirement silently, changes the taxonomy, creates a canonical
-manifest, or authorizes a Registry entry. Until the required authorities act,
-profiles 5, 7, 11 and 12 remain proposed substitutions with blocked candidates.
+All four packets remain profile substitutions at the design level, now with
+Closure-accepted ceilings. The independent review and Closure decision do not
+lower a security requirement silently, change taxonomy, create a canonical
+manifest, or authorize a Registry entry. Profiles 5, 7, 11 and 12 remain
+unfilled and their candidates remain blocked.

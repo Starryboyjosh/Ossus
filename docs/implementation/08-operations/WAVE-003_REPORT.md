@@ -207,3 +207,55 @@ resources.
   profiles 10, 17, 18, and 20 are intentionally unresolved, and no staged
   draft carries approval claims
 - Latest handoff: `HANDOFF_2026-08-08_WAVE-003_ARCH_COVERAGE.md`
+
+## Final coverage authority pass — 2026-08-09
+
+The coverage audit separated profile correctness, candidate correctness and
+admission. It confirms the following governed denominator:
+
+| Classification | Profiles | Count |
+|---|---|---:|
+| `SEED_REQUIRED` | 1, 2, 3, 4, 8, 13, 14, 16, 19 | 9 |
+| `SEED_REQUIRED_WITH_SUBSTITUTION` | 5, 6, 7, 9, 11, 12, 15 | 7 |
+| `INTENTIONALLY_UNRESOLVED` | 10, 17, 18, 20 | 4 |
+| `REDUNDANT_FOR_SEED` | none | 0 |
+| `INVALID_ORIGINAL_PROFILE` | none | 0 |
+
+The resulting **provisional planning denominator is 16**, while the original
+governed WAVE completion obligation remains 20. The four intentionally unresolved profiles
+are useful future coverage, not discarded profiles, and they do not create
+quota pressure. The profile-level accepted substitutions for 6, 9 and 15 do
+not admit candidates; only profiles 6 and 9 have official manifests.
+
+Independent Review Agent A narrowed the amendment recommendations: profile 5
+is R2→R3, profile 7 is R1→R2, profile 11 is R0→R2, and profile 12 is R1→R3.
+Closure record `closure/wave003-profile-amendments-5-7-11-12-20260809`
+accepted those profile-only corrections; no candidate, host adapter, or
+manifest was approved. Profile 15's candidate is **USEFUL_BUT_DEFERRED**
+pending an immutable dependency-only adapter, advisory freshness, strict
+redaction and source-scope closure.
+
+The final authority document records the dimensions the seed Registry must
+prove. The official catalog currently has only two R0 Agent Skills-standard
+prompt-packs, covers three of the 24 profile capabilities, and has no admitted
+skill, MCP server, Claude/Codex/standalone-CLI/generic-MCP surface, R1/R2/R3
+resource, cross-host resource, or overlapping competitor. Synthetic fixtures
+may cover negative, adversarial and no-candidate behavior, but cannot replace
+real provenance and Closure evidence for exact-resource seed coverage.
+
+Accordingly the final coverage decision remains:
+
+```text
+WAVE-003 — IN PROGRESS
+WAVE-004 AUTHORIZATION RECOMMENDED: NO
+```
+
+The authoritative coverage record is
+`WAVE-003_FINAL_COVERAGE_AUTHORITY.md`; the amendment review addendum is in
+`WAVE-003_PROFILE_AMENDMENT_DECISIONS.md`. No Registry mechanics or hosted
+infrastructure were changed by this pass.
+
+The latest documented green hosted matrix is CI run **21** on commit
+`7cdd3c0`: Ubuntu native FTS5 PASS, Arch userspace-container FTS5 PASS (not
+native Arch), macOS native FTS5 PASS, and Windows native FTS5 PASS. The run
+also passed the workspace, quality, advisory, cargo-deny and layout jobs.

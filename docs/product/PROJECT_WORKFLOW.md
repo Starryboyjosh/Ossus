@@ -49,19 +49,23 @@ reindex` in human and JSON forms.
 The WAVE is not complete until the reconciled seed profiles have governed
 dispositions, admitted resources have immutable provenance/license/hash and
 independent Closure evidence, and cross-platform release-mode FTS5 and final
-verification are recorded. The official catalog is currently **2** against a
-provisional 16 admission-bearing slots; profiles 10, 17, 18, and 20 are
-intentionally unresolved. Profiles 6 and 9 are standard-only admissions with
-no Claude/Codex claim; profile 10 needs an enforced read-only adapter; profile
-15 has an accepted surface correction but its candidate is blocked after an
-independent review found no bounded adapter, freshness protocol or redaction
-evidence; profile 16 remains valid but unfilled; and the original profile-20
-MCP candidate is rejected while a replacement is conditional. Profiles 5, 7,
-11 and 12 have explicit amendment packets, not approvals. These are not
-approvals.
+verification are recorded. The final coverage authority recommends **16
+current admission-bearing responsibilities**: 9 unchanged required profiles
+and 7 required profiles with explicit substitutions. Profiles 10, 17, 18 and
+20 are intentionally unresolved future coverage, not a quota reduction. The
+official catalog currently contains **2** resources, both R0
+Agent-Skills-standard prompt-packs. They provide no admitted skill, MCP,
+Claude, Codex, standalone-CLI, generic-MCP, cross-host, R1/R2/R3, or
+overlapping competitor coverage. Profiles 6 and 9 are standard-only
+admissions; profile 15's surface correction is accepted but its candidate is
+useful and deferred pending an enforced adapter, freshness and redaction; and
+profiles 5, 7, 11 and 12 have independently reviewed amendment
+recommendations (R3, R2, R2 and R3 respectively), not candidate approvals.
+These are not approvals.
 
 The pinned hosted release FTS5 jobs for Ubuntu, macOS and Windows, plus the
-separate Arch Linux userspace validation job, passed in CI run 19. The
+separate Arch Linux userspace validation job, passed in the documented green CI
+run 21. The
 inventory generator now hashes canonical Git index/blob bytes, fixing the
 checkout-EOL discrepancy. The Arch job runs the workspace and release FTS5
 tests inside a pinned Arch userspace container on an Ubuntu-hosted runner;
@@ -88,12 +92,17 @@ authorized WAVE only after WAVE-003 closes; it adds bounded project scanning.
 Resolution, installation, activation, host adapters, remote synchronization,
 and automated Researcher discovery belong to still later WAVEs.
 
-The final-admission sprint used bounded reviews rather than a quota-driven
-discovery sweep. Catalog growth is an outcome of successful review, and
-discovery volume must never create admission pressure. The amendment packets
-and temporary governance lessons are recorded in the WAVE-003 operations
-documents.
+The final-admission and coverage pass used bounded reviews rather than a
+quota-driven discovery sweep. Catalog growth is an outcome of successful
+review, and discovery volume must never create admission pressure. Synthetic
+fixtures may exercise Resolver negative/risk/overlap behavior, but cannot
+replace real Registry provenance or exact-resource seed evidence. The final
+coverage authority, amendment review, and temporary governance lessons are
+recorded in the WAVE-003 operations documents.
 
 The Closure Agent has the last word on an evidence-backed WAVE decision. The
 implementer, independent reviewer, and Closure Agent remain separate roles;
 human review may add evidence but is not a required approval step under ADR-020.
+The 16 figure is a provisional planning denominator accepted for coverage
+analysis only; the active WAVE-003 completion obligation remains the original
+20 real seed entries until architecture records an explicit change.

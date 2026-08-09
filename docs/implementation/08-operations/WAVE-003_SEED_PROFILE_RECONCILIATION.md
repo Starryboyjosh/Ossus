@@ -24,6 +24,18 @@ This target is not a completion claim: each of the 16 still needs a legitimate
 admission, and Closure may change the target through an explicit architecture
 decision.
 
+### 2026-08-09 coverage-authority addendum
+
+The final coverage authority keeps the 20 original profile responsibilities and
+records 16 only as a **provisional planning denominator**. The active WAVE
+completion obligation remains 20 real admitted seeds until an explicit
+architecture decision/ADR changes it. Distinct Closure record
+`closure/wave003-profile-amendments-5-7-11-12-20260809` corrected the proposed
+ceilings to profile 5 R3, profile 7 R2, profile 11 R2, and profile 12 R3. These
+are profile-only decisions and do not admit candidates or create manifests.
+See `WAVE-003_FINAL_COVERAGE_AUTHORITY.md` for the capability, type, surface,
+risk, overlap, and synthetic-fixture coverage analysis.
+
 ## Profile decisions
 
 | Profile | Original requirement | Evidence | Candidate status | Profile status | Proposed/accepted change | Security impact | Final disposition |

@@ -158,3 +158,18 @@ explicit R3 contracts where execution, browser, command or write behavior is
 intrinsic; they are not profile approvals or resource admissions. A bounded
 profile-16 replacement triage found no clean candidate, so the profile remains
 valid and intentionally unfilled. No later-WAVE implementation was started.
+
+## Subsequent profile-only Closure — 2026-08-09
+
+Admission Review Agent A independently narrowed the four amendments: profile 5
+R2→R3, profile 7 R1→R2, profile 11 R0→R2, and profile 12 R1→R3. The distinct
+Closure Agent recorded
+`closure/wave003-profile-amendments-5-7-11-12-20260809` and accepted those
+ceilings as **profile-only** decisions. No candidate, adapter, host activation,
+canonical manifest or Registry entry was approved. Future resources still need
+their own Curator → independent Review → Closure chain.
+
+The same Closure decision accepted 16 only as a provisional planning
+denominator; it did not replace the active WAVE completion obligation of 20
+real admitted seeds. The final coverage authority is recorded in
+`WAVE-003_FINAL_COVERAGE_AUTHORITY.md`.
