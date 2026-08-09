@@ -1,12 +1,13 @@
 # WAVE-003 canonical manifest proposals
 
-These are Curator proposals only. They are not official manifests and are not
-indexed by the official Registry. The `review` object is intentionally absent:
-the independent Admission Review and distinct Closure Agent must validate every
-field before a proposal can become `catalog/official/manifests/*.toml`. Exact
-field drafts for profiles 6, 9 and 10 are also held in the ignored quarantine
-path `research-evidence/wave003-staging/`; they are evidence packets, not
-canonical Registry files.
+These records distinguish proposals from admitted resources. The exact drafts
+for profiles 6, 9 and 10 remain in the ignored quarantine path
+`research-evidence/wave003-staging/`; the profile-10 draft is still not
+official. Profiles 6 and 9 completed the Curator → independent Admission
+Review → Closure chain and were materialized as the two official manifests in
+`catalog/official/manifests/`. Their accepted substitution is
+`agent-skills-standard` only; no Claude Code, Codex, standalone CLI or
+cross-host claim is implied.
 
 ## Proposal matrix
 
@@ -14,8 +15,8 @@ canonical Registry files.
 |---:|---|---|---|---|
 | 2 | `wshobson.responsive-design` / `skill` | `frontend.responsive-layout`, `frontend.accessibility` | R0 / `instruction-only` | `wshobson/agents@c4b82b0ad771190355eb8e204b1329732a18449a`, `plugins/ui-design/skills/responsive-design`, `sha256:0c8319415cae9458b074f6306b3e3f96b2a8b7d1a4340efdd36ec35b197a312d`, MIT |
 | 3 | `anthropic.frontend-design` / `skill` | `frontend.implementation` | R1 / `filesystem-only` | `anthropics/skills@f17010c9bb483898c1d9c9f42dde2b3a98889434`, `skills/frontend-design`, `sha256:dce2d83607b10db4a0464a0638b94a8f4f5fc5835e245d58a0de0cb155746008`, Apache-2.0 |
-| 6 | `mohitagw.technical-spec-template` / `prompt-pack` | `architecture.api-design` | R0 / `instruction-only`; exact draft currently standard-only | `mohitagw15856/pm-claude-skills@fddfbc4a6caa8b4d3d41a69c666efaaff9d42def`, `skills/technical-spec-template`, `sha256:ab0ad71bfa86b59235f8832f6cdd3ba2088655ea99370652f10a904816c8962e`, MIT |
-| 9 | `mohitagw.database-schema-design` / `prompt-pack` | `database.schema-design`, `architecture.data-modeling` | R0 / `instruction-only`; exact draft currently standard-only | `mohitagw15856/pm-claude-skills@fddfbc4a6caa8b4d3d41a69c666efaaff9d42def`, `skills/database-schema-design`, `sha256:9824fbc8b7e52af48bfbca811c624697d8c7201bbfc187cd6fdea49a7ce5c61b`, MIT |
+| 6 | `mohitagw.technical-spec-template` / `prompt-pack` | `architecture.api-design` | R0 / `instruction-only`; standard-only substitution accepted; **official** | `mohitagw15856/pm-claude-skills@fddfbc4a6caa8b4d3d41a69c666efaaff9d42def`, `skills/technical-spec-template`, `sha256:ab0ad71bfa86b59235f8832f6cdd3ba2088655ea99370652f10a904816c8962e`, MIT |
+| 9 | `mohitagw.database-schema-design` / `prompt-pack` | `database.schema-design`, `architecture.data-modeling` | R0 / `instruction-only`; standard-only substitution accepted; **official** | `mohitagw15856/pm-claude-skills@fddfbc4a6caa8b4d3d41a69c666efaaff9d42def`, `skills/database-schema-design`, `sha256:9824fbc8b7e52af48bfbca811c624697d8c7201bbfc187cd6fdea49a7ce5c61b`, MIT |
 | 10 | `supabase.postgres-best-practices` / `skill` | `database.migrations`, bounded `quality.code-review` | R1 / `filesystem-only`; exact draft currently standard-only, adapter missing | `supabase/agent-skills@1207767388a0ffb55f21fb4e6988fee96942431d`, `skills/supabase-postgres-best-practices`, `sha256:bcacf5fbb85c8c0e407ebb5eab85240349526b682ea311217da21411e2b695e9`, MIT |
 | 17 | `github.multi-stage-dockerfile` / `skill` | `devops.containers` | R1 / pending evidence | `github/awesome-copilot@ab7544d03d4c49fdd07f5958e1888ad39c4118e2`, `skills/multi-stage-dockerfile`, `sha256:f59c1d1d3564f561d6c93374fadf8c50abdf75f81a4801213bef1378e6134549`, MIT |
 | 18 | `github.github-actions-hardening` / `skill` | `devops.ci-cd` | R1 / pending evidence | `github/awesome-copilot@ab7544d03d4c49fdd07f5958e1888ad39c4118e2`, `skills/github-actions-hardening`, `sha256:febf13fe2571020b1063e5c75340d2d7560da2ae8036aefbabc842861026c5cb`, MIT |
@@ -44,25 +45,27 @@ Every proposal needs bounded triggers and exclusions. In particular:
   observed in the selected tree.
 
 The current exact-draft review found two explicit profile substitutions rather
-than silent metadata changes: profiles 6 and 9 may drop unproven Claude Code
-and Codex surfaces and retain only the standard surface, but only after Closure
-records the degraded coverage and verifies aggregate cross-host diversity. The
-profile-10 draft cannot proceed on exclusions alone; its read-only adapter must
-be independently evidenced and enforce denial of mutation, shell, network,
-credentials and database access.
+than silent metadata changes: profiles 6 and 9 drop unproven Claude Code and
+Codex surfaces and retain only the standard surface. Closure accepted that
+substitution and the two manifests are now official, while explicitly recording
+that they do not satisfy aggregate cross-host diversity. The profile-10 draft
+cannot proceed on exclusions alone; its read-only adapter must be independently
+evidenced and enforce denial of mutation, shell, network, credentials and
+database access.
 
 ## Required next review
 
-Admission Review Agent A's independent review marked profiles 2, 3, 6, 9 and
-10 conditional with the corrections above, and rejected profiles 17 and 18
-pending missing evidence. The exact re-review did not approve any draft.
+Admission Review Agent A's independent review marked profiles 2, 3 and 10
+conditional, passed profiles 6 and 9 pending Closure, and identified the
+surface/risk corrections above. The distinct Closure Agent accepted profiles 6
+and 9 and the official manifests now carry the required review block.
 Admission Review Agent B's earlier second pass was interrupted, but its later
 independent profile-20 replacement review is recorded in the seed source and
-closure reports. Admission Review Agents must independently validate the exact source tuple,
-canonical capabilities, type classification, compatibility, runtime, risk,
-triggers, exclusions and scopes. A distinct Closure Agent then decides each
-proposal. Until those records exist, these entries must not be copied into the
-official Registry.
+closure reports. Admission Review Agents must independently validate the exact
+source tuple, canonical capabilities, type classification, compatibility,
+runtime, risk, triggers, exclusions and scopes. A distinct Closure Agent then
+decides each proposal. Profile 10, profile 15, and all other unaccepted
+candidates must not be copied into the official Registry.
 
 ## Exact draft ledger (not official)
 
@@ -75,5 +78,7 @@ Closure evidence are intentionally absent from these drafts.
 | `mohitagw.database-schema-design` | `prompt-pack` / `database` | `database.schema-design`, `architecture.data-modeling` | `agent-skills-standard` / `portable-standard` | `instruction-only` / R0 | `pm-claude-skills@fddfbc4a6caa8b4d3d41a69c666efaaff9d42def`, `skills/database-schema-design`, `sha256:9824fbc8b7e52af48bfbca811c624697d8c7201bbfc187cd6fdea49a7ce5c61b`, MIT |
 | `supabase.postgres-best-practices` | `skill` / `database`, `quality` | `database.migrations`, `quality.code-review` | `agent-skills-standard` / `portable-with-adapter` | `filesystem-only` / R1 | `supabase/agent-skills@1207767388a0ffb55f21fb4e6988fee96942431d`, `skills/supabase-postgres-best-practices`, `sha256:bcacf5fbb85c8c0e407ebb5eab85240349526b682ea311217da21411e2b695e9`, MIT |
 
-The exact drafts are valid field shapes only when the required review block is
-added after independent review. They are not counted, indexed or approved.
+The exact drafts remain evidence-only; the official copies are the two reviewed
+files under `catalog/official/manifests/`, each carrying Closure-approved
+`[review]` evidence. The staged profile-10 draft remains unapproved and is not
+indexed.

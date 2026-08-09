@@ -1,7 +1,9 @@
 # WAVE-003 seed admission and source report
 
 Date: 2026-08-08
-State: profile reconciliation completed for the active batch; no candidate in this report is an official Registry entry. The provisional admission-bearing target is 16 of 20 governed profiles.
+State: profile reconciliation completed for the active batch; two candidates are
+official Registry entries and the remaining candidates are evidence-only. The
+provisional admission-bearing target is 16 of 20 governed profiles.
 
 ## Decision boundary
 
@@ -18,10 +20,10 @@ decision. No manifest was added merely to reach twenty.
 | 4 | `seed.frontend-performance` | GitHub `premium-frontend-ui` | `ab7544d03d4c49fdd07f5958e1888ad39c4118e2`; `skills/premium-frontend-ui`; `sha256:842fdc00c81bd078a0381f1486a68c0867d688dac739f9d6805a895490cb2566`; MIT | Conditional R3; dependency/CDN and automatic-change controls required; profile R1 substitution required |
 | 5 | `seed.visual-browser-validation` | GitHub `webapp-testing` | `ab7544…`; `sha256:9e221…6ef5`; MIT | Conditional R3; URL, credential, egress and action controls required; profile R2 substitution required |
 | 3 | `seed.frontend-implementation` | Anthropic `frontend-design` | `f170…`; `sha256:dce2…6008`; Apache-2.0 | Independent review conditional; write behavior may exceed the profile's R1 ceiling; no manifest |
-| 6 | `seed.api-design` | `mohitagw15856/pm-claude-skills` `technical-spec-template` | `fddfbc4a6caa8b4d3d41a69c666efaaff9d42def`; `skills/technical-spec-template`; `sha256:ab0ad71bfa86b59235f8832f6cdd3ba2088655ea99370652f10a904816c8962e`; MIT | Static R0 proposal validates; required Claude/Codex surfaces are unproven; standard-only profile substitution is conditional and has no Closure decision |
+| 6 | `seed.api-design` | `mohitagw15856/pm-claude-skills` `technical-spec-template` | `fddfbc4a6caa8b4d3d41a69c666efaaff9d42def`; `skills/technical-spec-template`; `sha256:ab0ad71bfa86b59235f8832f6cdd3ba2088655ea99370652f10a904816c8962e`; MIT | **Admitted** after accepted standard-only substitution; official manifest present; no Claude/Codex claim |
 | 7 | `seed.backend-api` | OpenAI `aspnet-core` | `49f948faa9258a0c61caceaf225e179651397431`; `skills/.curated/aspnet-core`; `sha256:c5aa64c6e3d9d9a239f2d7b87e1f12d859d002de28d10469d0d96ba39233e2e3`; Apache-2.0 | Source acceptable at R3 with restrictions; profile R1 substitution required |
 | 8 | `seed.auth-security` | OpenAI `security-best-practices` | `49f948faa9258a0c61caceaf225e179651397431`; `skills/.curated/security-best-practices`; `sha256:d75eee606ccaed65b2a31d4a6ce8198f8fddfc3191c815142f8b0126df39dab4`; Apache-2.0 | Rejected as supplied: repository-policy elevation and raw-secret reporting defects require a distinct corrected artifact |
-| 9 | `seed.schema-design` | `mohitagw15856/pm-claude-skills` `database-schema-design` | `fddfbc4a6caa8b4d3d41a69c666efaaff9d42def`; `skills/database-schema-design`; `sha256:9824fbc8b7e52af48bfbca811c624697d8c7201bbfc187cd6fdea49a7ce5c61b`; MIT | Static R0 proposal validates; required Claude/Codex surfaces are unproven; standard-only profile substitution is conditional and has no Closure decision |
+| 9 | `seed.schema-design` | `mohitagw15856/pm-claude-skills` `database-schema-design` | `fddfbc4a6caa8b4d3d41a69c666efaaff9d42def`; `skills/database-schema-design`; `sha256:9824fbc8b7e52af48bfbca811c624697d8c7201bbfc187cd6fdea49a7ce5c61b`; MIT | **Admitted** after accepted standard-only substitution; official manifest present; no Claude/Codex claim |
 | 10 | `seed.migration-review` | Supabase `postgres-best-practices` | `1207767388a0ffb55f21fb4e6988fee96942431d`; `skills/supabase-postgres-best-practices`; `sha256:bcacf5fbb85c8c0e407ebb5eab85240349526b682ea311217da21411e2b695e9`; MIT | Postgres-bound R1 mapping is conditional; required surfaces and an enforced read-only adapter are missing; no manifest |
 | 11 | `seed.unit-testing` | obra/superpowers `test-driven-development` | `44c9…`; `sha256:cce799…c674`; MIT | Conditional R3; destructive instruction and test execution controls required; profile R0 substitution required |
 | 12 | `seed.integration-testing` | addyosmani `test-driven-development` | `f493…`; `sha256:215b…cfda`; MIT | Profile R3 amendment/split required; current source is blocked for local writes, shell/test and browser/MCP execution; no admission |
@@ -63,8 +65,10 @@ re-review found that profiles 6 and 9 can only proceed through an explicit
 standard-only profile substitution, which still requires a distinct Closure
 decision and an aggregate cross-host coverage check. Profile 10 additionally
 needs an immutable, enforced read-only adapter; manifest exclusions alone do
-not establish the R1 boundary. No review approval was asserted and no official
-manifest was created.
+not establish the R1 boundary. At the time of this staging inspection no
+review approval was asserted and no staging manifest was created; the later
+Closure record authorized only the separate official profile-6 and profile-9
+copies.
 
 ## Rejected candidates
 
@@ -110,17 +114,19 @@ did not research, implement, or independently review either candidate.
   evaluator bounds, adversarial exhaustion tests, frozen build inputs and fresh
   independent security review.
 
-For the Curator proposal matrix, the Closure Agent previously blocked profiles
-2, 3, 6, 9 and 10 pending complete canonical fields and evidence. The current
-independent re-review confirms the surface and adapter gaps; no new Closure
-acceptance has been issued. Profiles 17 and 18 are intentionally unresolved,
-not admitted, until their fresh evidence bundles are complete. No official
-manifest is authorized for any of them.
+The distinct Closure Agent later recorded
+`closure/wave003-r0-standard-6-9-20260808`, accepting the explicit
+standard-only substitutions and authorizing the two exact profile-6/profile-9
+resources. Their official manifests carry the required review block and are
+the only two entries currently indexed. Profile 10 remains blocked by the
+missing read-only adapter; profiles 17 and 18 remain intentionally unresolved
+until fresh evidence bundles are complete. No other official manifest is
+authorized.
 
 ## Open admission work
 
-1. Obtain a distinct admission Closure Agent decision for each acceptable source
-   and every profile substitution; no official manifest exists yet.
+1. Obtain distinct admission Closure decisions for the remaining acceptable
+   sources and every proposed profile substitution; official count is 2.
 2. Keep profile 16 unresolved unless its licensing, references, capability and
    direct Claude Code evidence are repaired.
 3. Resolve profile 15 only as an explicit agent-skill substitution, never as a
@@ -129,5 +135,5 @@ manifest is authorized for any of them.
    narrow immutable MCP server; then obtain fresh security review.
 5. Expand every abbreviated coordinate and normalize capabilities, exclusions,
    surfaces, runtime, risk and permissions into canonical Ossus manifests.
-6. Only after Closure accepts the exact evidence, add approved manifests to
+6. Only after Closure accepts exact evidence, add approved manifests to
    `catalog/official/manifests/` and rebuild the Registry incrementally.

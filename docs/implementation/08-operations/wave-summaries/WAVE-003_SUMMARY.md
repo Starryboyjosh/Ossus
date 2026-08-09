@@ -4,12 +4,13 @@
 
 **In progress.** Registry/index/search implementation is locally verified. All
 20 seed profiles now have governed dispositions; the provisional
-admission-bearing target is 16 and the official Registry remains empty (0).
-Seed admission, hosted FTS5 evidence and final Closure remain unfinished.
+admission-bearing target is 16 and the official Registry contains 2 reviewed
+resources (profiles 6 and 9). Remaining admission, hosted FTS5 evidence and
+final Closure remain unfinished.
 
 ## Technical summary
 
-The disposable local SQLite/FTS Registry index, deterministic rebuild, trusted-metadata search/show APIs, status and reindex commands are implemented. Release FTS5 and deterministic Git-tree hashing now have dedicated tests. Twenty profiles were reconciled, but no proposal becomes official without independent review and Closure. Profiles 6 and 9 have sound static candidates but need proposed standard-only substitutions; profile 10 needs an enforced read-only adapter; profile 15 has an accepted surface correction but remains unadmitted; profile 16 retains a valid but unfilled profile; and the original profile-20 candidate is rejected while its replacement is conditional.
+The disposable local SQLite/FTS Registry index, deterministic rebuild, trusted-metadata search/show APIs, status and reindex commands are implemented. Release FTS5 and deterministic Git-tree hashing now have dedicated tests. Twenty profiles were reconciled, but no proposal becomes official without independent review and Closure. Profiles 6 and 9 are now admitted as standard-only static prompt packs; profile 10 needs an enforced read-only adapter; profile 15 has an accepted surface correction but remains unadmitted; profile 16 retains a valid but unfilled profile; and the original profile-20 candidate is rejected while its replacement is conditional.
 
 ## Practical plain-language summary
 
@@ -21,9 +22,12 @@ Ossus can now build and search a local catalog by capability and compatibility w
 - Current acceptance-state table: `../../CURRENT_WAVE.md`.
 - Expected implementation evidence: deterministic rebuild and filter tests, FTS5 availability evidence, conflict and malformed-manifest tests, JSON output checks, provenance/license records, and a WAVE report.
 - Interim seed evidence and closure-oriented re-review: `../WAVE-003_SEED_ADMISSION_AND_SOURCE_REPORT.md`.
+- Profile reconciliation: `../WAVE-003_SEED_PROFILE_RECONCILIATION.md`.
+- Official admitted manifests: `../../../../catalog/official/manifests/` (profiles 6 and 9).
 - Curator-only exact field drafts (quarantined, not official): `research-evidence/wave003-staging/`.
 - Interrupted-work handoff: `../HANDOFF_2026-08-08_WAVE-003.md`.
 - Closure-push handoff: `../HANDOFF_2026-08-08_WAVE-003_CLOSURE_PUSH.md`.
+- Current post-push handoff: `../HANDOFF_2026-08-08_WAVE-003_POST_PUSH.md`.
 
 ## Dependencies and gates
 
@@ -31,7 +35,7 @@ Depends on complete WAVE-002 and closed Gate S1. It does not close a gate.
 
 ## Remaining work
 
-Obtain distinct Closure decisions for the strongest evidence bundles, add only
+Obtain distinct Closure decisions for the strongest remaining evidence bundles,
 admitted canonical manifests, rebuild and search the real Registry
 incrementally, record hosted release FTS5 evidence, regenerate inventories with
 the generator, rerun full verification, and obtain final WAVE Closure. Profile

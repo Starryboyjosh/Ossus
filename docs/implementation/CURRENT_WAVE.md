@@ -6,7 +6,7 @@ WAVE-003 — Registry and local search
 
 Status: **in progress**. Security Gate S1 was closed by the named project owner, Starryboyjosh, on 2026-08-06 in `08-operations/WAVE-002_GATE_S1_CLOSURE.md`. This is a historical fact; ADR-020 governs all new admission and closure decisions.
 
-WAVE-003 implements the disposable local SQLite/FTS Registry index, deterministic rebuild, trusted-metadata search and show APIs, Registry status, and the corresponding CLI commands. It also requires 20 real seed resources with provenance and license evidence. Each resource must be independently admitted by a Curator Agent, Admission Review Agent, and distinct Closure Agent; automated validation alone cannot substitute for that decision, and entries must not be fabricated.
+WAVE-003 implements the disposable local SQLite/FTS Registry index, deterministic rebuild, trusted-metadata search and show APIs, Registry status, and the corresponding CLI commands. It reconciles 20 seed profiles into governed dispositions and currently has a provisional 16 admission-bearing target. Each admitted resource must be independently admitted by a Curator Agent, Admission Review Agent, and distinct Closure Agent; automated validation alone cannot substitute for that decision, and entries must not be fabricated.
 
 ## WAVE-003 acceptance state
 
@@ -19,8 +19,8 @@ WAVE-003 implements the disposable local SQLite/FTS Registry index, deterministi
 | Surface, source, runtime and risk filters | Implemented and locally verified |
 | `search`, `show`, `registry status`, `registry reindex` CLI | Implemented and locally verified |
 | Seed profile reconciliation | Governed dispositions recorded for all 20 profiles; provisional admission-bearing target is 16, with profiles 10, 17, 18 and 20 intentionally unresolved |
-| Concrete candidates independently agent-admitted | Pending — official count remains zero; no candidate has crossed Curator → independent Review → Closure |
-| WAVE-003 report and final verification | Reconciliation report, interim report/handoff and closure-oriented review written; local verification passes; hosted FTS5 and admission Closure pending |
+| Concrete candidates independently agent-admitted | 2 — profiles 6 and 9 crossed Curator → independent Review → Closure; 14 provisional admission-bearing slots remain |
+| WAVE-003 report and final verification | Reconciliation report, official manifests, interim report/handoff and closure review written; local verification passes; hosted FTS5 evidence and remaining admissions pending |
 
 ## Preceding WAVEs
 

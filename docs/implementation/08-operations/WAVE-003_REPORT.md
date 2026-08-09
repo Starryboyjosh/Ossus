@@ -5,20 +5,21 @@
 - WAVE: WAVE-003 — Seed Registry and local search
 - Implementer: root Codex agent
 - Independent reviewers: seed Admission Review Agents A/B; FTS/hash Security Review Agent
-- Closure Agent: distinct WAVE-003 security Closure Agent for ADR-021/CI and seed decisions; no new admission acceptance was issued in the continuation batch
+- Closure Agent: distinct WAVE-003 security Closure Agent for ADR-021/CI and seed decisions; profiles 6 and 9 were accepted and admitted in the continuation batch
 - Date: 2026-08-08
 - Base commit: `ec9f1aa23aefa48f75a1db5396d232fd16bd02e0`
-- Final working tree state: dirty, preserved, uncommitted and unpushed
+- Checkpoint commits: `4cc66c5` (mechanics), `0cb3987` (governance/evidence); pushed to `origin/main`
 
 ## Objective completed
 
-Partially. Registry/search/CLI implementation is complete locally. The WAVE is
-not complete because no resource is admitted and hosted platform FTS5 evidence
-is absent. The profile reconciliation keeps 20 governed profile decisions but
-sets a provisional 16 admission-bearing target; profiles 10, 17, 18, and 20
-are intentionally unresolved. Profile 15 has an accepted surface correction
-but no admission, profiles 6/9 have proposed standard-only substitutions, and
-the current candidates for the remaining profiles are rejected or conditional.
+Partially. Registry/search/CLI implementation is complete locally. Two R0
+standard-only resources are now admitted; hosted platform FTS5 evidence is not
+yet observable because the GitHub Actions/API endpoint is private to the
+authenticated project account. The profile reconciliation keeps 20 governed
+profile decisions but sets a provisional 16 admission-bearing target; profiles
+10, 17, 18, and 20 are intentionally unresolved. Profile 15 has an accepted
+surface correction but no admission, and the remaining candidates are rejected
+or conditional.
 
 ## Scope implemented
 
@@ -29,8 +30,9 @@ the current candidates for the remaining profiles are rejected or conditional.
 - Release FTS5 CI target.
 - Deterministic immutable Git source hashing and canonical subpath validation.
 - Parallel real-resource research and independent admission/security review.
-- Closure-oriented exact-manifest re-review for profiles 6, 9 and 10, plus an
-  independent review of a replacement profile-20 MCP candidate.
+- Closure-oriented exact-manifest re-review for profiles 6, 9 and 10, an
+  independent review of a replacement profile-20 MCP candidate, and Closure
+  acceptance/materialization of profiles 6 and 9.
 - Cumulative technical and practical workflow documentation.
 
 ## Files changed
@@ -53,11 +55,10 @@ taxonomy or later-WAVE behavior was added.
 The final local baseline passed formatting, Clippy and 111 Rust workspace
 tests. The CLI suite passed 24 tests; the release FTS5 target passed 1; the
 Python hash suite passed 2. After Closure identified NUL handling, the focused
-Rust regression passed 1 and the Python suite again passed 2. The three staged
-manifest drafts passed schema validation when review fields were supplied;
-they intentionally omit review fields now because admission review was
-conditional and no new Closure acceptance was issued. Inventories were
-regenerated with the repository generator; `./scripts/verify.sh` passes.
+Rust regression passed 1 and the Python suite again passed 2. The two official
+manifests pass schema validation and reindex to two resources; the staged
+profile-10 draft remains review-free and excluded. Inventories were regenerated
+with the repository generator; `./scripts/verify.sh` passes.
 
 ## Acceptance criteria
 
@@ -67,20 +68,22 @@ regenerated with the repository generator; `./scripts/verify.sh` passes.
 | Search does not read bodies | Implemented and tested |
 | Exact/capability/category/FTS and filters | Implemented and tested |
 | CLI human and JSON output | Implemented; expanded suite passes |
-| Release FTS5 | Local release test passes; hosted matrix pending |
-| Twenty admitted resources | Not met; official count remains zero |
-| Provenance/licenses/hashes/review | Interim evidence and Curator proposals recorded; exact re-review blocks 2/3/6/9/10 on surfaces/adapter controls, 17/18 remain intentionally unresolved pending complete evidence, and profile-20 replacement remains conditional; no official manifest |
+| Release FTS5 | Local release test passes; hosted matrix was triggered by the authorized push but is not observable without authenticated project access |
+| Reconciled seed profile decisions | Met for this checkpoint; 20 governed dispositions and provisional target 16 |
+| Admitted resources | 2 / 16 provisional admission-bearing slots; profiles 6 and 9 have Closure-approved manifests |
+| Provenance/licenses/hashes/review | Profiles 6 and 9 have immutable MIT source locks, hashes, independent review and distinct Closure evidence; profile 10 remains blocked, 17/18 intentionally unresolved, and profile-20 replacement conditional |
 | Full repository verification | Met locally; `./scripts/verify.sh` passes |
 
 ## Known limitations and deferred work
 
-Profile 16 remains unresolved; the original profile-20 candidate is rejected
-and its replacement needs build/provenance and host-adapter corrections. Profile
-15 has only a conditional explicit surface substitution. Profiles 6 and 9 may
-be viable only after Closure records standard-only profile substitutions; profile
-10 requires an immutable read-only enforcement adapter. Official manifests must
-not be added until Closure. Hosted CI requires a future authorized push. All
-deferred work remains within WAVE-003; WAVE-004 is not authorized.
+Profile 16 remains a valid but unfilled profile; the original profile-20
+candidate is rejected and its replacement needs build/provenance and host-adapter
+corrections. Profile 15 has an accepted explicit surface substitution but no
+admission. Profile 10 requires an immutable read-only enforcement adapter.
+Profiles 6 and 9 are admitted only as Agent Skills standard resources and do
+not satisfy aggregate cross-host diversity. Hosted CI was triggered by the
+authorized push but its results are not visible without authenticated project
+access. All deferred work remains within WAVE-003; WAVE-004 is not authorized.
 
 ## Security and residual risk
 
@@ -95,17 +98,18 @@ not core indexing behavior, are the closure blockers.
 
 ## Practical plain-language summary
 
-The search engine works, but the official catalog is still empty because the
-project refused to label questionable resources as approved merely to reach
-twenty.
+The search engine works and two carefully bounded resources are now in the
+official catalog. The other candidates remain out until their source, risk and
+host claims survive review; the project is not filling a number by relabeling
+resources.
 
 ## Closure decision
 
 - Decision: blocked from acceptance; WAVE remains in progress
-- Evidence revision: 2026-08-08 closure-oriented continuation and interrupted-work handoff
+- Evidence revision: 2026-08-08 reconciliation, Closure acceptance for profiles 6/9, and authorized push
 - Independence attestation: implementer has not self-approved any resource;
-  official Registry count remains 0; the provisional target is 16 admission-
-  bearing slots; profile 15 admission remains blocked,
+  official Registry count is 2; the provisional target is 16 admission-bearing
+  slots; profile 15 admission remains blocked,
   profiles 10, 17, 18, and 20 are intentionally unresolved, and no staged
   draft carries approval claims
-- Latest handoff: `HANDOFF_2026-08-08_WAVE-003_CLOSURE_PUSH.md`
+- Latest handoff: `HANDOFF_2026-08-08_WAVE-003_POST_PUSH.md`

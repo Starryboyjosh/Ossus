@@ -1,6 +1,10 @@
 # Ossus WAVE-003 closure-push handoff — 2026-08-08
 
-## Status
+> Superseded by `HANDOFF_2026-08-08_WAVE-003_POST_PUSH.md`, which records the
+> authorized push, the two Closure-approved admissions, and current hosted-CI
+> visibility blocker.
+
+## Status at handoff creation
 
 `WAVE-003 — IN PROGRESS`
 

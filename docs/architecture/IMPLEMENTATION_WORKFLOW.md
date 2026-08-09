@@ -96,9 +96,9 @@ The official catalog accepts only `skill`, `prompt-pack`, and `mcp-server`
 manifests. Every seed requires a fixed upstream commit and subpath, reproducible
 content hash, license, reviewed capabilities/compatibility/runtime/risk/context,
 and separated Curator Agent, Admission Review Agent, and Closure Agent evidence.
-Research output cannot approve itself. The current admission ledger has **zero
-official entries**: profiles 6 and 9 have conditional standard-only profile
-substitutions, profile 10 needs an enforced read-only adapter, profile 15 has
+Research output cannot approve itself. The current admission ledger has **two
+official entries** (profiles 6 and 9): both are standard-only profile
+substitutions. Profile 10 needs an enforced read-only adapter, profile 15 has
 an accepted surface correction but no admitted resource, profile 16 retains a
 valid but unfilled profile, profiles 17/18 are intentionally unresolved, and
 profile 20's original calculator is rejected while its replacement is
@@ -116,7 +116,9 @@ profile, policy-compliant canonical manifests for every admitted resource, and
 minimum useful catalog coverage—not an unconditional `official_resources ==
 20` test. The reconciliation currently records 16 provisional
 admission-bearing slots and four intentionally unresolved profiles; the official
-Registry remains empty until the authority chain is complete.
+Registry contains two resources and remains empty for every candidate whose
+authority chain is incomplete. The two admitted manifests are explicitly excluded from aggregate cross-host
+coverage until host adapters exist.
 
 ### Current gates and limitations
 

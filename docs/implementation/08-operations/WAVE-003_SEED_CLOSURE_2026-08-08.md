@@ -8,7 +8,8 @@
 - Closure Agent: `/root/wave003_security_closure`
 - Advisory consultation: `/root/hardest_seed_reconciliation` (Sol Medium),
   advisory only and not an approval role
-- No candidate content was executed; no official manifest was created.
+- No candidate content was executed. The two official manifests recorded later
+  are metadata-only source locks; no resource body was installed or activated.
 
 ## Profile 15 — dependency-audit CLI substitution
 
@@ -48,8 +49,8 @@ independent security review.
 
 ## WAVE effect
 
-These decisions do not admit, install, activate, or close WAVE-003. The official
-Registry remains empty. Profile 16 remains unresolved; the profile-15
+These decisions do not admit, install, activate, or close WAVE-003. At that
+stage the official Registry was empty. Profile 16 remains unresolved; the profile-15
 substitution still needs a Curator proposal and full admission chain; profile 20
 needs a corrected candidate or an approved architecture-compliant replacement.
 
@@ -76,7 +77,9 @@ proposals. Review A is the counted independent review; Review B was interrupted.
   content inventory, capability and host evidence are incomplete. A fresh
   evidence bundle is required before a new proposal.
 
-No official manifest is authorized by these decisions.
+No official manifest was authorized by those earlier decisions; the later
+profile-6/profile-9 Closure record below supersedes that interim block for
+those two exact resources only.
 
 ## Closure-oriented continuation review
 
@@ -96,12 +99,8 @@ validation evidence only.
 Admission Review Agent A then independently re-reviewed the exact drafts:
 
 - Profiles 6 and 9 have defensible static R0 prompt-pack classifications and
-  exact source evidence, but the seed profiles require
-  `agent-skills-standard`, `claude-code-cli` and `codex-cli`. Only the standard
-  surface is evidenced. A standard-only profile substitution is permissible in
-  principle, but requires this Closure Agent to record the dropped surfaces,
-  degraded coverage, and an aggregate cross-host coverage check. No such
-  acceptance has been issued.
+  exact source evidence. Only the standard surface is evidenced, so the
+  proposed substitution drops the unproven Claude Code and Codex surfaces.
 - Profile 10 has a defensible Postgres-bound capability mapping, but its
   upstream content includes authoring, configuration, restore/import, RLS and
   contributor-test branches. An R1 read-only classification needs an immutable,
@@ -121,5 +120,22 @@ source, missing Codex evidence, no explicit wall-clock bound for expensive
 transcendental chains, and input-sensitive logging. The original calculator
 remains rejected.
 
-These re-reviews did not authorize a manifest, did not substitute a host
-surface silently, and did not change the official Registry count: **0 / 20**.
+## Closure decision — profiles 6 and 9
+
+On 2026-08-08 the distinct Closure Agent recorded
+`closure/wave003-r0-standard-6-9-20260808`:
+
+- Profile 6 substitution accepted (`agent-skills-standard` only) and
+  `mohitagw.technical-spec-template` admitted.
+- Profile 9 substitution accepted (`agent-skills-standard` only) and
+  `mohitagw.database-schema-design` admitted.
+- Independent review: `admission-review-a/wave003-r0-standard-6-9-20260808`.
+- Curator: `/root`; Closure Agent: `/root/wave003_security_closure`.
+- Review wire tier: `light-human`; `approved_commit` equals the immutable
+  upstream commit `fddfbc4a6caa8b4d3d41a69c666efaaff9d42def`.
+
+The two manifests are now the only official Registry entries. They claim only
+the Agent Skills standard surface and do not supply Claude Code, Codex,
+standalone-CLI, or aggregate cross-host coverage. Materialization checks remain
+future host work and are not inferred as implemented adapters. The official
+Registry count is **2 / 16 provisional admission-bearing slots**.

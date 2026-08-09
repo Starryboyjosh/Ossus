@@ -1,0 +1,54 @@
+schema_version = "1.0.0"
+capability_schema = "1.0.0"
+id = "mohitagw.technical-spec-template"
+name = "Technical Specification Template"
+description = "Creates decision-oriented technical specifications with API contracts, alternatives, security considerations, testing, rollout, and rollback planning."
+resource_type = "prompt-pack"
+categories = ["backend"]
+triggers = [
+  "design an API contract",
+  "write a technical specification",
+  "create an engineering spec",
+  "document API requests and errors",
+]
+exclusions = [
+  "trivial bug fix",
+  "implementation-only task without a design decision",
+  "database schema-only design",
+  "executing API calls or commands",
+  "mutating project files",
+]
+
+[source]
+mode = "remote-index"
+repository = "https://github.com/mohitagw15856/pm-claude-skills.git"
+commit = "fddfbc4a6caa8b4d3d41a69c666efaaff9d42def"
+subpath = "skills/technical-spec-template"
+tree_hash = "sha256:ab0ad71bfa86b59235f8832f6cdd3ba2088655ea99370652f10a904816c8962e"
+license = "MIT"
+
+[capabilities]
+required = ["architecture.api-design"]
+
+[compatibility]
+surfaces = ["agent-skills-standard"]
+portability = "portable-standard"
+scopes = ["project"]
+
+[runtime]
+requirements = ["instruction-only"]
+external_tools = []
+
+[risk]
+tier = "R0"
+notes = "Static Markdown instructions, references, and templates; illustrative API examples do not authorize execution or file mutation."
+
+[review]
+status = "approved"
+tier = "light-human"
+approved_commit = "fddfbc4a6caa8b4d3d41a69c666efaaff9d42def"
+reviewer_ids = ["admission-review-a/wave003-r0-standard-6-9-20260808"]
+
+[distribution]
+mode = "source-only"
+notice_required = false

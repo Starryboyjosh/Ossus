@@ -1,0 +1,54 @@
+schema_version = "1.0.0"
+capability_schema = "1.0.0"
+id = "mohitagw.database-schema-design"
+name = "Database Schema Design"
+description = "Produces a database schema design document with entity relationships, DDL, constraints, indexes, access patterns, normalization decisions, and migration notes."
+resource_type = "prompt-pack"
+categories = ["database"]
+triggers = [
+  "design a database schema",
+  "model entities and relationships",
+  "define table constraints and indexes",
+  "prepare a data model for review",
+]
+exclusions = [
+  "database migration execution",
+  "query-performance investigation without schema changes",
+  "API contract design without data-model work",
+  "executing SQL or database commands",
+  "mutating project files",
+]
+
+[source]
+mode = "remote-index"
+repository = "https://github.com/mohitagw15856/pm-claude-skills.git"
+commit = "fddfbc4a6caa8b4d3d41a69c666efaaff9d42def"
+subpath = "skills/database-schema-design"
+tree_hash = "sha256:9824fbc8b7e52af48bfbca811c624697d8c7201bbfc187cd6fdea49a7ce5c61b"
+license = "MIT"
+
+[capabilities]
+required = ["database.schema-design", "architecture.data-modeling"]
+
+[compatibility]
+surfaces = ["agent-skills-standard"]
+portability = "portable-standard"
+scopes = ["project"]
+
+[runtime]
+requirements = ["instruction-only"]
+external_tools = []
+
+[risk]
+tier = "R0"
+notes = "Static Markdown schema-design instructions only; illustrative SQL is not an execution instruction."
+
+[review]
+status = "approved"
+tier = "light-human"
+approved_commit = "fddfbc4a6caa8b4d3d41a69c666efaaff9d42def"
+reviewer_ids = ["admission-review-a/wave003-r0-standard-6-9-20260808"]
+
+[distribution]
+mode = "source-only"
+notice_required = false

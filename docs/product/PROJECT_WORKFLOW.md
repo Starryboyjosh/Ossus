@@ -49,11 +49,12 @@ reindex` in human and JSON forms.
 The WAVE is not complete until the reconciled seed profiles have governed
 dispositions, admitted resources have immutable provenance/license/hash and
 independent Closure evidence, and cross-platform release-mode FTS5 and final
-verification are recorded. The official catalog is currently **0** against a
+verification are recorded. The official catalog is currently **2** against a
 provisional 16 admission-bearing slots; profiles 10, 17, 18, and 20 are
-intentionally unresolved. Profiles 6 and 9 have proposed standard-only substitutions; profile
-10 needs an enforced read-only adapter; profile 15 has an accepted surface
-correction but no admission; profile 16 remains valid but unfilled; and the
+intentionally unresolved. Profiles 6 and 9 are standard-only admissions with
+no Claude/Codex claim; profile 10 needs an enforced read-only adapter; profile
+15 has an accepted surface correction but no admission; profile 16 remains
+valid but unfilled; and the
 original profile-20 MCP candidate is rejected while a replacement is
 conditional. These are not approvals.
 

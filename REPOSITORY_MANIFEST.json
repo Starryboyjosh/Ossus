@@ -10,7 +10,7 @@
       "docs/implementation/PACKAGE_MANIFEST.json"
     ]
   },
-  "file_count_excluding_generated_inventories": 364,
+  "file_count_excluding_generated_inventories": 368,
   "files": [
     {
       "path": ".cargo/config.toml",
@@ -194,8 +194,8 @@
     },
     {
       "path": "catalog/official/README.md",
-      "bytes": 641,
-      "sha256": "d2f418fb84c4f0b164831595dd25beac932fa8caf22726073f38c2acb78d1a0c"
+      "bytes": 784,
+      "sha256": "8e180671c48e691ae9d22575fa31ca9566818646a554e0bfb8004dbb1756f245"
     },
     {
       "path": "catalog/official/manifests/.gitkeep",
@@ -809,8 +809,8 @@
     },
     {
       "path": "docs/architecture/IMPLEMENTATION_WORKFLOW.md",
-      "bytes": 6194,
-      "sha256": "39ccbf967087d9077905af03506bdec93fb7071bead3a60597cc19b36890b2b4"
+      "bytes": 6345,
+      "sha256": "c126605249fefae81d9c9e91ecd106fc1cfee645cf0ab693eeace3c61738bf81"
     },
     {
       "path": "docs/architecture/REGISTRY_DESIGN.md",
@@ -1233,6 +1233,11 @@
       "sha256": "0b82bfd7a151744377445d707d2c8a5c97ca360c77e1a2e38dd59eb18e40e692"
     },
     {
+      "path": "docs/implementation/08-operations/HANDOFF_2026-08-08_WAVE-003_CLOSURE_PUSH.md",
+      "bytes": 4947,
+      "sha256": "32b3f59d943fcebb1f904d6ebe67972899632381907cd0f6612a754e74060326"
+    },
+    {
       "path": "docs/implementation/08-operations/HANDOFF_TEMPLATE.md",
       "bytes": 569,
       "sha256": "54e7da62d44da1eda50f093a52ad927d1d24c220bfdf821cd99e409cf9370cab"
@@ -1288,14 +1293,29 @@
       "sha256": "ca481110635cc6b95a9891d50165ed9f17458651bb9024b475f857949c07e69e"
     },
     {
+      "path": "docs/implementation/08-operations/WAVE-003_CANONICAL_PROPOSALS.md",
+      "bytes": 7223,
+      "sha256": "f621bf6538bd4e233a877aead56bb7c064a8f2d45a46588935c60216542f34d2"
+    },
+    {
       "path": "docs/implementation/08-operations/WAVE-003_REPORT.md",
-      "bytes": 5561,
-      "sha256": "0be5b7a5a01c631e3c2bc18a07d6c8f33911112542cedf670d2062d0e4c17477"
+      "bytes": 5960,
+      "sha256": "c0c0978253c4ae24a210266b03df003d9ee68a991aa6d7b3be10891e41a8c1c3"
     },
     {
       "path": "docs/implementation/08-operations/WAVE-003_SEED_ADMISSION_AND_SOURCE_REPORT.md",
-      "bytes": 12117,
-      "sha256": "f23483faa6b98b8ecebcb98d5efe6548ba5f87a9d384337fe0a41047b26c72cc"
+      "bytes": 12259,
+      "sha256": "c3001e02ecc6bae4e46feb6226d08e7d45c4c58cd04e2a2f9d75f1be1afc8728"
+    },
+    {
+      "path": "docs/implementation/08-operations/WAVE-003_SEED_CLOSURE_2026-08-08.md",
+      "bytes": 7038,
+      "sha256": "bb636b91f7e62e5bf62ac0c0681783a933aa87ce5b5a7ae363c7e9b062f8f8da"
+    },
+    {
+      "path": "docs/implementation/08-operations/WAVE-003_SEED_PROFILE_RECONCILIATION.md",
+      "bytes": 13217,
+      "sha256": "2997b46147db001a94e05827301ecf8081301dbc8ee76c60e8a0f8e77d248b8b"
     },
     {
       "path": "docs/implementation/08-operations/WAVE_REPORT_TEMPLATE.md",
@@ -1324,8 +1344,8 @@
     },
     {
       "path": "docs/implementation/08-operations/wave-summaries/WAVE-003_SUMMARY.md",
-      "bytes": 2704,
-      "sha256": "1548b6fac64aa7230131d5b89c00e78e8aae8bc8e68fda3f02ccc023d381da46"
+      "bytes": 2961,
+      "sha256": "8174db73cf9ed56bfff38654b79e8915a0c235d908a97fdd0f28b4f1171ee8c5"
     },
     {
       "path": "docs/implementation/08-operations/wave-summaries/WAVE-004_SUMMARY.md",
@@ -1454,8 +1474,8 @@
     },
     {
       "path": "docs/implementation/CURRENT_WAVE.md",
-      "bytes": 2708,
-      "sha256": "2f333813661bc167253cbf3e413a9b515e4bb838cabc07a1cb18c33cf90aac59"
+      "bytes": 2793,
+      "sha256": "871ab499d646b039c85b33d4f86bf3302b8db7b3569ed937f75fce9b097154b0"
     },
     {
       "path": "docs/implementation/README.md",
@@ -1494,8 +1514,8 @@
     },
     {
       "path": "docs/product/PROJECT_WORKFLOW.md",
-      "bytes": 3772,
-      "sha256": "a1dff2f03769bb1742cb5ad9b3fe7ecd3d8cdb8bce3307c592b65309a660dbc2"
+      "bytes": 3786,
+      "sha256": "2ed8adafc0b0ade65593d1721796f6632ef5006af2b6fbc80aa97bc6cb71f3f5"
     },
     {
       "path": "docs/product/ossus-explainer.html",
