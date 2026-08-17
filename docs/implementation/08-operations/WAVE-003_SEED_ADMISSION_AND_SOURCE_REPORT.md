@@ -1,8 +1,8 @@
 # WAVE-003 seed admission and source report
 
 Date: 2026-08-08
-State: profile reconciliation completed for the active batch; two candidates are
-official Registry entries and the remaining candidates are evidence-only. The
+State: profile reconciliation completed for the active batch; three candidates
+are official Registry entries and the remaining candidates are evidence-only. The
 provisional admission-bearing target is 16 of 20 governed profiles. The final
 bounded sprint added no official entry: profile 15 is independently blocked and
 profiles 5, 7, 11 and 12 have amendment packets only.
@@ -18,7 +18,7 @@ decision. No manifest was added merely to reach twenty.
 | # | Seed profile | Candidate | Immutable source evidence | Current disposition |
 |---:|---|---|---|---|
 | 1 | `seed.frontend-design-review` | Microsoft `frontend-design-review` | `757d…`; `sha256:7a9f…e38b`; MIT | Source acceptable only at R3; profile R0 substitution and closure required |
-| 2 | `seed.frontend-responsive-a11y` | wshobson `responsive-design` | `c4b82…`; `sha256:0c831…a312d`; MIT | Independent review conditional; required standard/Claude/Codex host activation evidence is missing; no manifest |
+| 2 | `seed.frontend-responsive-a11y` | wshobson `responsive-design` | `c4b82…`; `sha256:0c831…a312d`; MIT | **Admitted** as an R0 standard-only skill; official manifest present; no Claude/Codex/CLI claim |
 | 4 | `seed.frontend-performance` | GitHub `premium-frontend-ui` | `ab7544d03d4c49fdd07f5958e1888ad39c4118e2`; `skills/premium-frontend-ui`; `sha256:842fdc00c81bd078a0381f1486a68c0867d688dac739f9d6805a895490cb2566`; MIT | Conditional R3; dependency/CDN and automatic-change controls required; profile R1 substitution required |
 | 5 | `seed.visual-browser-validation` | GitHub `webapp-testing` | `ab7544…`; `sha256:9e221…6ef5`; MIT | Conditional R3; URL, credential, egress and action controls required; profile R2 substitution required |
 | 3 | `seed.frontend-implementation` | Anthropic `frontend-design` | `f170…`; `sha256:dce2…6008`; Apache-2.0 | Independent review conditional; write behavior may exceed the profile's R1 ceiling; no manifest |
@@ -119,8 +119,9 @@ did not research, implement, or independently review either candidate.
 The distinct Closure Agent later recorded
 `closure/wave003-r0-standard-6-9-20260808`, accepting the explicit
 standard-only substitutions and authorizing the two exact profile-6/profile-9
-resources. Their official manifests carry the required review block and are
-the only two entries currently indexed. Profile 10 remains blocked by the
+resources. A separate Closure Agent accepted profile 2 on 2026-08-16. Their
+official manifests carry the required review block and three entries are now
+indexed. Profile 10 remains blocked by the
 missing read-only adapter; profiles 17 and 18 remain intentionally unresolved
 until fresh evidence bundles are complete. No other official manifest is
 authorized.
@@ -128,7 +129,7 @@ authorized.
 ## Open admission work
 
 1. Obtain distinct admission Closure decisions for the remaining acceptable
-   sources and every proposed profile substitution; official count is 2.
+   sources and every proposed profile substitution; official count is 3.
 2. Keep profile 16 unresolved unless its licensing, references, capability and
    direct Claude Code evidence are repaired.
 3. Resolve profile 15 only as an explicit agent-skill substitution, never as a
@@ -152,3 +153,20 @@ advisory freshness and secret-redaction protocol. It is therefore **BLOCKED —
 NOT READY FOR CLOSURE**. Profiles 5, 7, 11 and 12 are documented as proposed R3
 amendments in `WAVE-003_PROFILE_AMENDMENT_DECISIONS.md`; no profile amendment or
 candidate admission was silently applied.
+
+## Targeted admission continuation — 2026-08-16
+
+The subsequent targeted packet for profile 2,
+`wshobson.responsive-design`, completed the required Curator → independent
+Admission Review → Closure chain. The independent review
+`admission-review-codex/wave003-responsive-design-20260816-r1` returned
+`READY_FOR_CLOSURE`; the distinct Closure Agent
+`closure-agent/wave003-responsive-design-20260816-c1` returned `ACCEPTED`.
+
+The accepted manifest is an R0 `skill` with `instruction-only` runtime,
+`source-only` distribution, project scope, and the standard Agent Skills
+surface only. It covers responsive layout and bounded responsive interaction
+accessibility semantics. Claude Code, Codex, standalone CLI, and other host
+surfaces remain unproven and are not recorded. The official Registry now
+contains three resources; all other candidate dispositions and the active
+20-entry WAVE obligation remain unchanged.

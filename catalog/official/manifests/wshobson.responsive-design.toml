@@ -1,0 +1,59 @@
+schema_version = "1.0.0"
+capability_schema = "1.0.0"
+id = "wshobson.responsive-design"
+name = "Responsive Design"
+description = "Implements modern responsive layouts using container queries, fluid typography, CSS Grid, and mobile-first breakpoint strategies."
+resource_type = "skill"
+categories = ["frontend"]
+triggers = [
+  "implement a mobile-first responsive layout",
+  "use CSS Grid or Flexbox for an adaptive layout",
+  "design fluid typography or spacing",
+  "add container queries or content-based breakpoints",
+  "make navigation, tables, or images responsive",
+]
+exclusions = [
+  "perform a complete accessibility audit",
+  "run browser, screen-reader, or visual-regression tests",
+  "install packages or change dependencies",
+  "execute build or test commands",
+  "modify CI, deployment, or security policy",
+  "claim Claude Code, Codex, or standalone-CLI compatibility without host evidence",
+]
+
+[source]
+mode = "remote-index"
+repository = "https://github.com/wshobson/agents"
+commit = "c4b82b0ad771190355eb8e204b1329732a18449a"
+subpath = "plugins/ui-design/skills/responsive-design"
+tree_hash = "sha256:0c8319415cae9458b074f6306b3e3f96b2a8b7d1a4340efdd36ec35b197a312d"
+license = "MIT"
+
+[capabilities]
+required = ["frontend.responsive-layout", "frontend.accessibility"]
+
+[compatibility]
+surfaces = ["agent-skills-standard"]
+portability = "portable-standard"
+scopes = ["project"]
+
+[runtime]
+requirements = ["instruction-only"]
+external_tools = []
+
+[risk]
+tier = "R0"
+notes = "Selected source is five regular Markdown files with CSS/TSX examples and bounded responsive interaction guidance. No executable files or runtime requirements, network access, credentials, or external tools were observed in the selected subpath; canonical metadata does not authorize automatic file mutation or testing."
+
+[review]
+status = "approved"
+tier = "light-human"
+approved_commit = "c4b82b0ad771190355eb8e204b1329732a18449a"
+reviewer_ids = [
+  "admission-review-codex/wave003-responsive-design-20260816-r1",
+  "closure-agent/wave003-responsive-design-20260816-c1",
+]
+
+[distribution]
+mode = "source-only"
+notice_required = false

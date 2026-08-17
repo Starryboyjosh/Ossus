@@ -28,7 +28,8 @@ ossus/
 │   │   ├── manifests/
 │   │   │   ├── .gitkeep
 │   │   │   ├── mohitagw.database-schema-design.toml
-│   │   │   └── mohitagw.technical-spec-template.toml
+│   │   │   ├── mohitagw.technical-spec-template.toml
+│   │   │   └── wshobson.responsive-design.toml
 │   │   └── README.md
 │   └── README.md
 ├── crates/
@@ -308,11 +309,14 @@ ossus/
 │   │   │   ├── WAVE-003_ARCH_CI_REVIEW.md
 │   │   │   ├── WAVE-003_CANONICAL_PROPOSALS.md
 │   │   │   ├── WAVE-003_FINAL_COVERAGE_AUTHORITY.md
+│   │   │   ├── WAVE-003_INDEPENDENT_ACCEPTANCE_2026-08-16.md
 │   │   │   ├── WAVE-003_PROFILE_AMENDMENT_DECISIONS.md
 │   │   │   ├── WAVE-003_REPORT.md
+│   │   │   ├── WAVE-003_RESPONSIVE_DESIGN_CLOSURE_2026-08-16.md
 │   │   │   ├── WAVE-003_SEED_ADMISSION_AND_SOURCE_REPORT.md
 │   │   │   ├── WAVE-003_SEED_CLOSURE_2026-08-08.md
 │   │   │   ├── WAVE-003_SEED_PROFILE_RECONCILIATION.md
+│   │   │   ├── WAVE-003_TARGETED_ADMISSION_2026-08-16.md
 │   │   │   └── WAVE_REPORT_TEMPLATE.md
 │   │   ├── 09-roadmap/
 │   │   │   ├── BACKLOG_AFTER_BETA.md

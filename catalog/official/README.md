@@ -3,8 +3,8 @@
 Canonical manifests accepted for the official source by the Registry admission
 workflow live under `manifests/`.
 
-WAVE-003 currently contains two Closure-approved static R0 manifests (profiles
-6 and 9). Do not add a manifest without the separated Curator → independent
+WAVE-003 currently contains three Closure-approved static R0 manifests
+(profiles 2, 6 and 9). Do not add a manifest without the separated Curator → independent
 Admission Review → Closure chain; do not fabricate approvals merely to grow
 the catalog.
 

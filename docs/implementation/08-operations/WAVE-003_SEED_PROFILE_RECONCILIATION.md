@@ -7,6 +7,12 @@ status below is not, by itself, an admission record.  A candidate is admitted
 only after the separate
 Curator → independent review → Closure chain and a canonical manifest.
 
+> **Historical snapshot notice (2026-08-08/09).** This reconciliation records
+> the profile and catalog state before the targeted profile-2 admission on
+> 2026-08-16. The conditional profile-2 row and the count of two at the end
+> are historical facts for that review; the current count and admission
+> decision are recorded in the addendum below.
+
 ## Decision rule
 
 The original twenty entries are a coverage objective, not an acceptance quota.
@@ -86,9 +92,10 @@ duplicated after admission, not merely that the first candidate failed.
 
 ## Catalog coverage and next decision
 
-The profile ledger now has 20 governed dispositions, 16 provisional
-admission-bearing slots, and four intentionally unresolved slots. Official
-Registry entries now number **2** (profiles 6 and 9). The bounded final sprint
+The profile ledger has 20 governed dispositions, 16 provisional
+admission-bearing slots, and four intentionally unresolved slots. At the
+historical 2026-08-08/09 snapshot, official Registry entries numbered **2**
+(profiles 6 and 9). The bounded final sprint
 confirmed that profile 15 is not ready for Closure and that profiles 5, 7, 11
 and 12 need explicit amendment authority. A profile substitution is a design
 decision; it is not a resource admission, and the provisional target is not a
@@ -98,3 +105,21 @@ The WAVE remains in progress because the remaining target has not completed the
 full authority chain. Hosted Ubuntu, Arch userspace-container, macOS and
 Windows release FTS5 plus the complete CI run 19 are green. The Arch lane is
 reported independently from native Ubuntu and is not native Arch-host evidence.
+
+### 2026-08-16 targeted admission addendum
+
+The Curator's profile-2 proposal for `wshobson.responsive-design` completed a
+separate Admission Review and Closure chain. Review
+`admission-review-codex/wave003-responsive-design-20260816-r1` returned
+`READY_FOR_CLOSURE`; distinct Closure record
+`closure-agent/wave003-responsive-design-20260816-c1` returned `ACCEPTED`.
+The resulting official manifest is an R0, instruction-only, source-only
+`skill` limited to `agent-skills-standard` and the recorded responsive-layout
+capabilities; it makes no Claude, Codex, CLI, or MCP claim.
+
+The current official Registry count is therefore **3** (profiles 2, 6 and 9),
+with 13 provisional planning slots and 17 entries still missing from the
+active 20-entry completion obligation. This admission does not close
+WAVE-003 or authorize WAVE-004. The independent WAVE acceptance review
+`wave003-independent-acceptance-20260816-r1` records the remaining coverage,
+diversity, documentation, and reproducibility blockers.

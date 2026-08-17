@@ -5,7 +5,7 @@
 - WAVE: WAVE-003 — Seed Registry and local search
 - Implementer: root Codex agent
 - Independent reviewers: seed Admission Review Agents A/B; FTS/hash Security Review Agent
-- Closure Agent: distinct WAVE-003 security Closure Agent for ADR-021/CI and seed decisions; profiles 6 and 9 were accepted and admitted in the continuation batch
+- Closure Agent: distinct WAVE-003 security Closure Agent for ADR-021/CI and seed decisions; profiles 6 and 9 were accepted and admitted in the continuation batch, followed by the separately closed profile-2 admission on 2026-08-16
 - Date: 2026-08-08
 - Base commit: `ec9f1aa23aefa48f75a1db5396d232fd16bd02e0`
 - Checkpoint commits: `4cc66c5` (mechanics), `0cb3987` (governance/evidence),
@@ -17,9 +17,9 @@
 
 ## Objective completed
 
-Partially. Registry/search/CLI implementation is complete locally. Two R0
-standard-only resources are admitted; no additional candidate survived the
-bounded final-admission review. Hosted release FTS5 evidence is now observed
+Partially. Registry/search/CLI implementation is complete locally. Three R0
+standard-only resources are admitted; profile 2 was added in the targeted
+2026-08-16 admission continuation. Hosted release FTS5 evidence is now observed
 for Ubuntu, macOS and Windows on CI run `31294757281` (workflow CI, run 14,
 commit `aac60826b3f8c69a5a35c3cb3e3ab12270718a74`). That run exposed a
 checkout-filter mismatch in the separate layout job: `.gitattributes`
@@ -45,7 +45,8 @@ explicit amendment packets, not approvals.
 - Parallel real-resource research and independent admission/security review.
 - Closure-oriented exact-manifest re-review for profiles 6, 9 and 10, an
   independent review of a replacement profile-20 MCP candidate, and Closure
-  acceptance/materialization of profiles 6 and 9.
+  acceptance/materialization of profiles 6 and 9; the later targeted
+  continuation accepted profile 2 as a standard-only skill.
 - Cumulative technical and practical workflow documentation.
 - Arch Linux userspace CI validation lane with independent review, distinct
   Closure acceptance and hosted evidence on CI run 19.
@@ -77,8 +78,9 @@ exact workflow diff and does not close WAVE-003.
 The final local baseline passed formatting, Clippy and 111 Rust workspace
 tests. The CLI suite passed 24 tests; the release FTS5 target passed 1; the
 Python hash suite passed 2. After Closure identified NUL handling, the focused
-Rust regression passed 1 and the Python suite again passed 2. The two official
-manifests pass schema validation and reindex to two resources; the staged
+Rust regression passed 1 and the Python suite again passed 2. The three official
+manifests pass schema validation and the disposable Registry reindexes to three
+resources with no exclusions; the staged
 profile-10 draft remains review-free and excluded. Inventories were regenerated
 with the repository generator; `./scripts/verify.sh` passes. The hardened local
 Arch Linux userspace reproduction (immutable image index, read-only checkout,
@@ -95,8 +97,8 @@ suite and the release FTS5 test.
 | CLI human and JSON output | Implemented; expanded suite passes |
 | Release FTS5 | Local release test passes. Hosted CI run `31298472061`/19 passed the pinned release test on Ubuntu job `93207265221`, macOS job `93207265246`, Windows job `93207265192`, and Arch-container job `93207265220` |
 | Reconciled seed profile decisions | Met for this checkpoint; 20 governed dispositions and provisional target 16 |
-| Admitted resources | 2 / 16 provisional admission-bearing slots; profiles 6 and 9 have Closure-approved manifests; no new candidate reached Closure in the final sprint |
-| Provenance/licenses/hashes/review | Profiles 6 and 9 have immutable MIT source locks, hashes, independent review and distinct Closure evidence; profile 10 remains blocked, 17/18 intentionally unresolved, and profile-20 replacement conditional |
+| Admitted resources | 3 / 16 provisional admission-bearing slots; profiles 2, 6 and 9 have Closure-approved manifests; profile 2 is standard-only |
+| Provenance/licenses/hashes/review | Profiles 2, 6 and 9 have immutable MIT source locks, hashes, independent review and distinct Closure evidence; profile 10 remains blocked, 17/18 intentionally unresolved, and profile-20 replacement conditional |
 | Full repository verification | Met locally; `./scripts/verify.sh` passes; hosted CI run 19 is fully green |
 
 ## Hosted CI evidence
@@ -139,7 +141,7 @@ Profile 16 remains a valid but unfilled profile; the original profile-20
 candidate is rejected and its replacement needs build/provenance and host-adapter
 corrections. Profile 15 has an accepted explicit surface substitution but no
 admission. Profile 10 requires an immutable read-only enforcement adapter.
-Profiles 6 and 9 are admitted only as Agent Skills standard resources and do
+Profiles 2, 6 and 9 are admitted only as Agent Skills standard resources and do
 not satisfy aggregate cross-host diversity. Hosted Ubuntu/macOS/Windows and
 Arch-container FTS5 plus the complete CI run 19 are green. Remaining blockers
 are seed admissions and profile governance. All deferred work remains within
@@ -166,7 +168,7 @@ the future Researcher.
   API implementation, TDD, and integration testing are operationally R3
   activities, not passive R0/R1 resources. Their amendment packets make the
   risk delta explicit instead of laundering execution as a low-risk skill.
-- Profiles 6, 9 and 15 showed a surface mistake. A standard `SKILL.md` package
+- Profiles 2, 6, 9 and 15 showed a surface mistake. A standard `SKILL.md` package
   does not prove Claude Code, Codex, or CLI compatibility. Profiles 6 and 9
   were admitted only after narrowing to the Agent Skills standard; profile 15
   received the same profile-level correction but remains blocked because its
@@ -192,7 +194,7 @@ not core indexing or platform validation, are the closure blockers.
 
 ## Practical plain-language summary
 
-The search engine works and two carefully bounded resources are now in the
+The search engine works and three carefully bounded resources are now in the
 official catalog. The other candidates remain out until their source, risk and
 host claims survive review; the project is not filling a number by relabeling
 resources.
@@ -200,9 +202,9 @@ resources.
 ## Closure decision
 
 - Decision: blocked from acceptance; WAVE remains in progress
-- Evidence revision: 2026-08-08 reconciliation, Closure acceptance for profiles 6/9, Arch CI Closure, and hosted CI run 19
+- Evidence revision: 2026-08-08 reconciliation, Closure acceptance for profiles 6/9, the 2026-08-16 profile-2 Closure, Arch CI Closure, and hosted CI run 19
 - Independence attestation: implementer has not self-approved any resource;
-  official Registry count is 2; the provisional target is 16 admission-bearing
+  official Registry count is 3; the provisional target is 16 admission-bearing
   slots; profile 15 admission remains blocked after independent review,
   profiles 10, 17, 18, and 20 are intentionally unresolved, and no staged
   draft carries approval claims
@@ -225,7 +227,7 @@ The resulting **provisional planning denominator is 16**, while the original
 governed WAVE completion obligation remains 20. The four intentionally unresolved profiles
 are useful future coverage, not discarded profiles, and they do not create
 quota pressure. The profile-level accepted substitutions for 6, 9 and 15 do
-not admit candidates; only profiles 6 and 9 have official manifests.
+not admit candidates; profiles 2, 6 and 9 now have official manifests.
 
 Independent Review Agent A narrowed the amendment recommendations: profile 5
 is R2→R3, profile 7 is R1→R2, profile 11 is R0→R2, and profile 12 is R1→R3.
@@ -236,10 +238,11 @@ pending an immutable dependency-only adapter, advisory freshness, strict
 redaction and source-scope closure.
 
 The final authority document records the dimensions the seed Registry must
-prove. The official catalog currently has only two R0 Agent Skills-standard
-prompt-packs, covers three of the 24 profile capabilities, and has no admitted
-skill, MCP server, Claude/Codex/standalone-CLI/generic-MCP surface, R1/R2/R3
-resource, cross-host resource, or overlapping competitor. Synthetic fixtures
+prove. At the 2026-08-09 coverage pass, the official catalog had only two R0
+Agent Skills-standard prompt-packs. The subsequent profile-2 admission added
+one R0 standard-only skill, but the catalog still has no admitted MCP server,
+Claude/Codex/standalone-CLI/generic-MCP surface, R1/R2/R3 resource, cross-host
+resource, or overlapping competitor. Synthetic fixtures
 may cover negative, adversarial and no-candidate behavior, but cannot replace
 real provenance and Closure evidence for exact-resource seed coverage.
 
@@ -255,7 +258,41 @@ The authoritative coverage record is
 `WAVE-003_PROFILE_AMENDMENT_DECISIONS.md`. No Registry mechanics or hosted
 infrastructure were changed by this pass.
 
+The independent WAVE acceptance review is
+`WAVE-003_INDEPENDENT_ACCEPTANCE_2026-08-16.md`; its verdict is `BLOCKED`
+because the active 20-entry obligation and required resource/surface/risk
+diversity remain unmet.
+
 The latest documented green hosted matrix is CI run **22** on commit
 `f6e58a0`: Ubuntu native FTS5 PASS, Arch userspace-container FTS5 PASS (not
 native Arch), macOS native FTS5 PASS, and Windows native FTS5 PASS. The run
 also passed the workspace, quality, advisory, cargo-deny and layout jobs.
+
+## Targeted admission continuation — 2026-08-16
+
+After the 2026-08-09 coverage authority pass, the Curator prepared a bounded
+proposal for profile 2: `wshobson.responsive-design`. The immutable source
+tuple and `ossus-git-tree-v1` hash were independently verified. The selected
+subtree contains five regular Markdown files, totals 43,958 bytes, and is
+MIT-licensed; no executable files or runtime requirements were observed.
+
+Independent Admission Review Agent
+`admission-review-codex/wave003-responsive-design-20260816-r1` returned
+`READY_FOR_CLOSURE` with no critical, high, or medium findings. The distinct
+Closure Agent `closure-agent/wave003-responsive-design-20260816-c1` returned
+`ACCEPTED` for a narrowly bounded R0 `skill` with `instruction-only` runtime,
+`source-only` distribution, project scope, and `agent-skills-standard` only.
+The `frontend.accessibility` mapping is limited to responsive interaction
+semantics and is not a WCAG or screen-reader audit.
+
+The accepted canonical manifest is
+`catalog/official/manifests/wshobson.responsive-design.toml`; the full Closure
+record is `WAVE-003_RESPONSIVE_DESIGN_CLOSURE_2026-08-16.md`. The disposable
+Registry reindexed successfully with three resources, no exclusions, FTS5
+available, and fingerprint `fnv1a64:5061c5129b71b19a`. The manifest validated;
+the capability search and exact show command returned the new entry.
+
+This admission increases the official count from two to three. It does not
+prove Claude Code, Codex, standalone-CLI, or aggregate cross-host coverage and
+does not close WAVE-003. The active 20-entry obligation, remaining diversity
+gaps, and WAVE-004 prohibition are unchanged.

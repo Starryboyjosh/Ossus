@@ -13,6 +13,13 @@ source reviewer `/root/seed_admission_review_b`; profile-only Closure Agent
 this pass. The profile-only closure record is
 `closure/wave003-profile-amendments-5-7-11-12-20260809`.
 
+> **Historical snapshot notice (2026-08-09).** The decision body below records
+> the coverage state before the targeted profile-2 admission on 2026-08-16.
+> Counts and resource-state phrases such as “current Registry” therefore
+> describe that historical snapshot. The current state is recorded in the
+> post-authority addendum at the end of this document and in the dated
+> independent acceptance review.
+
 ## Decision in brief
 
 The original seed target is **20 governed profile responsibilities**. The
@@ -38,8 +45,9 @@ or Registry admission. It also accepted 16 only as a provisional planning
 denominator; the active WAVE completion obligation remains the original 20
 real seed entries until an explicit architecture decision/ADR changes it.
 
-This decision does **not** close WAVE-003. Only two resources are admitted,
-both R0 Agent Skills-standard prompt-packs. The official catalog does not yet
+This decision does **not** close WAVE-003. At this historical snapshot, only two
+resources were admitted, both R0 Agent Skills-standard prompt-packs. The
+official catalog did not yet
 provide enough positive capability, type, surface, risk, or overlap diversity
 for meaningful Resolver evaluation, and the WAVE-003 acceptance requirement
 for host-exclusive, cross-host, and genuine standalone-CLI examples is not
@@ -79,8 +87,8 @@ participate in Layer 1 metrics; it must not silently shrink the frozen goldens.
 
 The approved initial types are `skill`, `prompt-pack`, and `mcp-server`.
 WAVE-003's active acceptance contract calls for real positive examples of the
-three types. The current Registry has only two prompt-packs: no admitted skill
-and no admitted MCP server exists. Synthetic fixtures can exercise type
+three types. At this historical snapshot, the Registry had only two
+prompt-packs: no admitted skill or MCP server existed. Synthetic fixtures can exercise type
 mismatch and policy denial, but cannot substitute for a real admitted
 provenance/license/closure record when a type is part of the seed contract.
 
@@ -94,7 +102,8 @@ agent-skills-standard   claude-code-cli   codex-cli
 standalone-cli          generic-mcp-client
 ```
 
-The two admitted manifests prove only `agent-skills-standard`. The accepted
+The two manifests admitted at this snapshot proved only
+`agent-skills-standard`. The accepted
 profile-15 substitution also narrows a candidate to that surface; it does not
 create a standalone CLI. A standard `SKILL.md` is not evidence of Claude,
 Codex, or CLI compatibility. Surface-negative behavior can be covered with
@@ -107,7 +116,8 @@ The official catalog should contain truthful low-risk and executable examples
 where the admission evidence supports them. The current minimum useful
 coverage calls for real R0, R1, and R3 examples; R2 is not required merely for
 numeric variety. R4/R5 and unsafe R0/R1 claims belong in adversarial fixtures
-and must be denied before scoring. No R1/R2/R3 resource is currently official.
+and must be denied before scoring. No R1/R2/R3 resource was official in this
+snapshot.
 
 ### Selection overlap and negative cases
 
@@ -190,8 +200,8 @@ standalone-CLI example requirement.
 
 ## Coverage result and remaining genuine gaps
 
-The official Registry contains two entries and only three of the 24 profile
-capabilities (`architecture.api-design`, `database.schema-design`,
+At this historical snapshot, the official Registry contained two entries and
+only three of the 24 profile capabilities (`architecture.api-design`, `database.schema-design`,
 `architecture.data-modeling`). It lacks:
 
 - every admitted `skill` and `mcp-server` positive;
@@ -224,7 +234,7 @@ useful-but-deferred (profile)     = 0
 intentionally_unresolved           = 4 (10, 17, 18, 20)
 redundant_for_seed                 = 0
 invalid_original_profile           = 0
-official_admitted                  = 2
+official_admitted                  = 2 (historical snapshot)
 ```
 
 The four intentionally unresolved profiles are useful-but-deferred in
@@ -233,8 +243,8 @@ product terms, but are recorded under the single governed profile disposition
 classification. The denominator is not a quota and may change only through a
 new architecture decision supported by evidence.
 
-Because positive catalog diversity is insufficient, 14 provisional planning
-slots remain without Closure-approved resources, and the active 20-entry
+Because positive catalog diversity was insufficient, 14 provisional planning
+slots remained without Closure-approved resources at that snapshot, and the active 20-entry
 completion obligation has not been met, the closure recommendation is:
 
 ```text
@@ -261,3 +271,27 @@ the denominator itself as completion.
 - `docs/implementation/08-operations/WAVE-003_PROFILE_AMENDMENT_DECISIONS.md`
 - `docs/implementation/08-operations/WAVE-003_SEED_CLOSURE_2026-08-08.md`
 - `docs/implementation/08-operations/WAVE-003_REPORT.md`
+
+## Post-authority targeted admission addendum — 2026-08-16
+
+The dated coverage decision above recorded the official count at two. A
+subsequent targeted admission has now accepted and materialized
+`wshobson.responsive-design` as profile 2's `skill` candidate. Its independent
+review and distinct Closure records are:
+
+- `admission-review-codex/wave003-responsive-design-20260816-r1` —
+  `READY_FOR_CLOSURE`;
+- `closure-agent/wave003-responsive-design-20260816-c1` — `ACCEPTED`.
+
+The accepted scope is R0, `instruction-only`, `source-only`, project scope,
+`frontend.responsive-layout` plus bounded responsive `frontend.accessibility`,
+and `agent-skills-standard` / `portable-standard` only. The immutable source
+tuple and tree hash are recorded in
+`catalog/official/manifests/wshobson.responsive-design.toml` and
+`WAVE-003_RESPONSIVE_DESIGN_CLOSURE_2026-08-16.md`.
+
+The current official Registry count is therefore **3**, leaving 13 slots in
+the provisional 16-resource planning denominator. This does not change the
+active 20-entry completion obligation, does not establish Claude/Codex/CLI or
+aggregate cross-host coverage, and does not close WAVE-003 or authorize
+WAVE-004.

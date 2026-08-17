@@ -10,7 +10,7 @@
       "docs/implementation/PACKAGE_MANIFEST.json"
     ]
   },
-  "file_count_excluding_generated_inventories": 377,
+  "file_count_excluding_generated_inventories": 381,
   "files": [
     {
       "path": ".cargo/config.toml",
@@ -194,8 +194,8 @@
     },
     {
       "path": "catalog/official/README.md",
-      "bytes": 784,
-      "sha256": "8e180671c48e691ae9d22575fa31ca9566818646a554e0bfb8004dbb1756f245"
+      "bytes": 789,
+      "sha256": "3e20e743cd90d75f8fdea7ebf61b1ace761dd82dee051b548141cdd7855d60a5"
     },
     {
       "path": "catalog/official/manifests/.gitkeep",
@@ -211,6 +211,11 @@
       "path": "catalog/official/manifests/mohitagw.technical-spec-template.toml",
       "bytes": 1630,
       "sha256": "c27ecf151da822dc2b2a64271c56bb8ea07d510c5b100548523f7d3313b43573"
+    },
+    {
+      "path": "catalog/official/manifests/wshobson.responsive-design.toml",
+      "bytes": 2121,
+      "sha256": "056fd8d6d3afc0c41ee41834d6865a8a206e1605fef9fa5293240ba2e094cfdb"
     },
     {
       "path": "clippy.toml",
@@ -1329,13 +1334,18 @@
     },
     {
       "path": "docs/implementation/08-operations/WAVE-003_CANONICAL_PROPOSALS.md",
-      "bytes": 7474,
-      "sha256": "7debb717a463a474bd9fad83d00873c052cb14acdfe11f3112c73e9a8f634eba"
+      "bytes": 8125,
+      "sha256": "e686c532487bffb0ebd5a69a5ac359ffff7e321cf80e0adbcba3401256965bae"
     },
     {
       "path": "docs/implementation/08-operations/WAVE-003_FINAL_COVERAGE_AUTHORITY.md",
-      "bytes": 16567,
-      "sha256": "58295346f912b13fc7dfbc5a22ede79ed897d69fa49d850a623fe564cf362629"
+      "bytes": 18296,
+      "sha256": "0d3fe27d031485be3c41321c4f4c67e75b3705d143aa1a5d0e6ba5f25ab6a919"
+    },
+    {
+      "path": "docs/implementation/08-operations/WAVE-003_INDEPENDENT_ACCEPTANCE_2026-08-16.md",
+      "bytes": 3980,
+      "sha256": "7016fadc1b6ef6bcbac7337f9a041fddf1c7b7af7432db69b4c3e8743674bd6c"
     },
     {
       "path": "docs/implementation/08-operations/WAVE-003_PROFILE_AMENDMENT_DECISIONS.md",
@@ -1344,13 +1354,18 @@
     },
     {
       "path": "docs/implementation/08-operations/WAVE-003_REPORT.md",
-      "bytes": 15025,
-      "sha256": "0312c23b2c2eb70d76e8cb5023ad24ab483cef3ba82ecca2e9c7a5de3adaa9bf"
+      "bytes": 17186,
+      "sha256": "ed6d8b165d2aa78ce737cbe4f9a6fcd52539dbd49888a82c7fd9e1e3d7d4c3d7"
+    },
+    {
+      "path": "docs/implementation/08-operations/WAVE-003_RESPONSIVE_DESIGN_CLOSURE_2026-08-16.md",
+      "bytes": 4286,
+      "sha256": "a894e4ddc8e7b875aa8c3f1af9f39459a7695b2e2af8c43ad8d59d8dbb64440f"
     },
     {
       "path": "docs/implementation/08-operations/WAVE-003_SEED_ADMISSION_AND_SOURCE_REPORT.md",
-      "bytes": 13312,
-      "sha256": "9fd532e9bce4dbbc04e6691a11c18898481edbb6ccea75cd7730a9cee06de289"
+      "bytes": 14262,
+      "sha256": "5260c5ced6817c51576beddc6539296ede90bdb1d61ef7bd356ebfec17c1b0b7"
     },
     {
       "path": "docs/implementation/08-operations/WAVE-003_SEED_CLOSURE_2026-08-08.md",
@@ -1359,8 +1374,13 @@
     },
     {
       "path": "docs/implementation/08-operations/WAVE-003_SEED_PROFILE_RECONCILIATION.md",
-      "bytes": 14312,
-      "sha256": "afe877ab341bfbac33389348fd85f4dac51555271dfe80860b2fad01921ed0f2"
+      "bytes": 15699,
+      "sha256": "7901e612e751ca450e697dcd5a7acd35d10c4b2905ced8fc34ff5545b59243bb"
+    },
+    {
+      "path": "docs/implementation/08-operations/WAVE-003_TARGETED_ADMISSION_2026-08-16.md",
+      "bytes": 5299,
+      "sha256": "ebe7f09d00d04f26e851fdcbc8330a1d7212d26e11699e7d9640ba030f4931ef"
     },
     {
       "path": "docs/implementation/08-operations/WAVE_REPORT_TEMPLATE.md",
@@ -1389,8 +1409,8 @@
     },
     {
       "path": "docs/implementation/08-operations/wave-summaries/WAVE-003_SUMMARY.md",
-      "bytes": 4237,
-      "sha256": "8a1342d1c84b43bbb4820a94f2b3678adff8d1824784ed7eba791a2e53cb59f4"
+      "bytes": 4735,
+      "sha256": "6c1dc776f72e15be683954f91462aac5a17a3d5e6219b32186338a6dc0970142"
     },
     {
       "path": "docs/implementation/08-operations/wave-summaries/WAVE-004_SUMMARY.md",
@@ -1519,8 +1539,8 @@
     },
     {
       "path": "docs/implementation/CURRENT_WAVE.md",
-      "bytes": 3447,
-      "sha256": "ece1f0067d6c4507a12889daf35b940846369553e3ae81340c624b170ca83b5c"
+      "bytes": 3502,
+      "sha256": "6bca86f679b44c1036281c0b6b1e81344da6877d27afac4c28d874d965b91d84"
     },
     {
       "path": "docs/implementation/README.md",
